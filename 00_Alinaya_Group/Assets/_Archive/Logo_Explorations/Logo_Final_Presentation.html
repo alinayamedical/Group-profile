@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alinaya — Final Logo Presentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0E1117;font-family:'Raleway',sans-serif;color:white}
+
+  /* ── page chrome ── */
+  .cover{background:#0E1117;padding:72px 80px 56px;border-bottom:1px solid #1F2937}
+  .cover-tag{font-size:10px;font-weight:700;letter-spacing:5px;color:#4B5563;text-transform:uppercase;margin-bottom:14px}
+  .cover-title{font-size:38px;font-weight:800;color:#F9FAFB;line-height:1.15;margin-bottom:8px}
+  .cover-sub{font-size:14px;color:#6B7280;font-weight:400;letter-spacing:.5px}
+
+  .section{padding:64px 80px;border-bottom:1px solid #1F2937}
+  .section-label{font-size:9px;font-weight:800;letter-spacing:5px;color:#374151;text-transform:uppercase;margin-bottom:6px}
+  .section-title{font-size:18px;font-weight:700;color:#D1D5DB;margin-bottom:32px}
+
+  /* ── mark display ── */
+  .mark-hero{background:#111827;border-radius:20px;padding:72px;display:flex;justify-content:center;align-items:center;margin-bottom:16px}
+  .mark-on-white{background:#FFFFFF;border-radius:20px;padding:72px;display:flex;justify-content:center;align-items:center;margin-bottom:16px}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+  .three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:16px}
+  .four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+
+  .card-dark{background:#111827;border-radius:16px;padding:48px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+  .card-white{background:#FFFFFF;border-radius:16px;padding:48px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+  .card-offwhite{background:#F8F9FC;border-radius:16px;padding:48px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+  .card-green{background:#1B4D3E;border-radius:16px;padding:48px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+  .card-black{background:#0A0A0A;border-radius:16px;padding:48px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+
+  .card-label{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#4B5563}
+  .card-green .card-label,.card-black .card-dark .card-label{color:rgba(255,255,255,.3)}
+
+  /* favicon strip */
+  .fav-strip{display:flex;gap:24px;align-items:flex-end;background:#111827;border-radius:16px;padding:32px 40px}
+  .fav-item{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .fav-size{font-size:9px;color:#4B5563;font-weight:700;letter-spacing:2px}
+
+  /* ── navbar sim ── */
+  .navbar-sim{background:#FFFFFF;border-radius:12px;display:flex;align-items:center;justify-content:space-between;padding:16px 36px;margin-bottom:10px}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-link{font-size:12px;font-weight:600;color:#1B4D3E;letter-spacing:.5px}
+  .nav-lang{display:flex;gap:6px;align-items:center;font-size:11px;font-weight:700}
+  .navbar-dark{background:#1B4D3E;border-radius:12px;display:flex;align-items:center;justify-content:space-between;padding:16px 36px;margin-bottom:10px}
+  .nav-link-w{font-size:12px;font-weight:600;color:rgba(255,255,255,.8);letter-spacing:.5px}
+
+  /* ── hero sim ── */
+  .hero-sim{background:#1B4D3E;border-radius:16px;padding:56px 64px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:16px}
+  .hero-accent{width:3px;height:44px;background:#C9A84C;border-radius:2px;margin-bottom:20px}
+  .hero-heading{font-size:32px;font-weight:800;color:#FFFFFF;line-height:1.2;margin-bottom:12px}
+  .hero-body{font-size:13px;color:rgba(255,255,255,.6);line-height:1.8;margin-bottom:28px}
+  .hero-btn{display:inline-block;background:#C9A84C;color:#1B4D3E;font-size:11px;font-weight:700;letter-spacing:2px;padding:12px 28px;border-radius:3px;text-transform:uppercase}
+  .hero-placeholder{background:rgba(255,255,255,.05);border-radius:12px;height:220px;border:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.15);font-size:12px;letter-spacing:2px}
+
+  /* ── colour swatches ── */
+  .swatches{display:flex;gap:12px;flex-wrap:wrap}
+  .swatch-card{border-radius:10px;overflow:hidden;width:160px}
+  .swatch-color{height:80px}
+  .swatch-info{background:#1F2937;padding:12px 14px}
+  .swatch-name{font-size:11px;font-weight:700;color:#D1D5DB;margin-bottom:2px}
+  .swatch-hex{font-size:10px;color:#6B7280;font-family:monospace}
+
+  /* ── palette 8 column ── */
+  .p8-bg{background:#1B3A2D}
+  .p8-color{color:#C4956A}
+
+  svg{max-width:100%;height:auto;overflow:visible}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-tag">Alinaya Alrafia Medical Company · Brand Identity · July 2026</div>
+  <div class="cover-title">Logo Mark — Final Presentation</div>
+  <div class="cover-sub">Abstract Geometric · Ascending Bars · Palette comparison: Emerald + Gold vs Forest + Rose Gold</div>
+</div>
+
+
+<!-- ═══ 1. THE MARK ═══ -->
+<div class="section">
+  <div class="section-label">01</div>
+  <div class="section-title">The Mark — Ascending Bars with Gold Trajectory</div>
+
+  <div class="two-col">
+    <!-- P2 large -->
+    <div>
+      <div style="font-size:9px;font-weight:700;letter-spacing:3px;color:#1B4D3E;text-transform:uppercase;margin-bottom:10px">P2 · Emerald #1B4D3E + Gold #C9A84C</div>
+      <div class="mark-on-white">
+        <svg viewBox="0 0 140 140" width="200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="17"  y="98" width="22" height="30"  rx="2" fill="#1B4D3E"/>
+          <rect x="45"  y="72" width="22" height="56"  rx="2" fill="#1B4D3E"/>
+          <rect x="73"  y="46" width="22" height="82"  rx="2" fill="#1B4D3E"/>
+          <rect x="101" y="16" width="22" height="112" rx="2" fill="#1B4D3E"/>
+          <polyline points="28,98 56,72 84,46 112,16" fill="none" stroke="#C9A84C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="mark-hero">
+        <svg viewBox="0 0 140 140" width="200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="17"  y="98" width="22" height="30"  rx="2" fill="#FFFFFF"/>
+          <rect x="45"  y="72" width="22" height="56"  rx="2" fill="#FFFFFF"/>
+          <rect x="73"  y="46" width="22" height="82"  rx="2" fill="#FFFFFF"/>
+          <rect x="101" y="16" width="22" height="112" rx="2" fill="#FFFFFF"/>
+          <polyline points="28,98 56,72 84,46 112,16" fill="none" stroke="#C9A84C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- P8 large -->
+    <div>
+      <div style="font-size:9px;font-weight:700;letter-spacing:3px;color:#C4956A;text-transform:uppercase;margin-bottom:10px">P8 · Forest #1B3A2D + Rose Gold #C4956A</div>
+      <div class="mark-on-white">
+        <svg viewBox="0 0 140 140" width="200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="17"  y="98" width="22" height="30"  rx="2" fill="#1B3A2D"/>
+          <rect x="45"  y="72" width="22" height="56"  rx="2" fill="#1B3A2D"/>
+          <rect x="73"  y="46" width="22" height="82"  rx="2" fill="#1B3A2D"/>
+          <rect x="101" y="16" width="22" height="112" rx="2" fill="#1B3A2D"/>
+          <polyline points="28,98 56,72 84,46 112,16" fill="none" stroke="#C4956A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="mark-hero" style="background:#1B3A2D">
+        <svg viewBox="0 0 140 140" width="200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="17"  y="98" width="22" height="30"  rx="2" fill="#FFFFFF"/>
+          <rect x="45"  y="72" width="22" height="56"  rx="2" fill="#FFFFFF"/>
+          <rect x="73"  y="46" width="22" height="82"  rx="2" fill="#FFFFFF"/>
+          <rect x="101" y="16" width="22" height="112" rx="2" fill="#FFFFFF"/>
+          <polyline points="28,98 56,72 84,46 112,16" fill="none" stroke="#C4956A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ 2. FULL WORDMARK ═══ -->
+<div class="section">
+  <div class="section-label">02</div>
+  <div class="section-title">Full Wordmark — Bilingual Lockup</div>
+
+  <!-- P2 white bg -->
+  <div style="font-size:9px;font-weight:700;letter-spacing:3px;color:#4B5563;text-transform:uppercase;margin-bottom:10px">Palette 2 — On White</div>
+  <div class="mark-on-white" style="padding:44px 64px;justify-content:flex-start;margin-bottom:10px">
+    <svg viewBox="0 0 620 140" width="560" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8"  y="98" width="17" height="30"  rx="2" fill="#1B4D3E"/>
+      <rect x="32" y="72" width="17" height="56"  rx="2" fill="#1B4D3E"/>
+      <rect x="56" y="46" width="17" height="82"  rx="2" fill="#1B4D3E"/>
+      <rect x="80" y="16" width="17" height="112" rx="2" fill="#1B4D3E"/>
+      <polyline points="16.5,98 40.5,72 64.5,46 88.5,16" fill="none" stroke="#C9A84C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="120" y="50" font-family="Raleway,sans-serif" font-weight="700" font-size="30" fill="#1B4D3E" letter-spacing="2">ALINAYA ALRAFIA</text>
+      <rect x="120" y="60" width="480" height="2" fill="#C9A84C"/>
+      <text x="120" y="80" font-family="Raleway,sans-serif" font-weight="400" font-size="11.5" fill="#6B7280" letter-spacing="8">MEDICAL COMPANY</text>
+      <line x1="120" y1="96" x2="600" y2="96" stroke="#E5E7EB" stroke-width="1"/>
+      <text x="600" y="118" font-family="Cairo,sans-serif" font-weight="500" font-size="18" fill="#1B4D3E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+    </svg>
+  </div>
+
+  <!-- P2 dark bg -->
+  <div style="font-size:9px;font-weight:700;letter-spacing:3px;color:#4B5563;text-transform:uppercase;margin-bottom:10px">Palette 2 — On Emerald Dark</div>
+  <div style="background:#1B4D3E;border-radius:16px;padding:44px 64px;display:flex;justify-content:flex-start;margin-bottom:10px">
+    <svg viewBox="0 0 620 140" width="560" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8"  y="98" width="17" height="30"  rx="2" fill="#FFFFFF"/>
+      <rect x="32" y="72" width="17" height="56"  rx="2" fill="#FFFFFF"/>
+      <rect x="56" y="46" width="17" height="82"  rx="2" fill="#FFFFFF"/>
+      <rect x="80" y="16" width="17" height="112" rx="2" fill="#FFFFFF"/>
+      <polyline points="16.5,98 40.5,72 64.5,46 88.5,16" fill="none" stroke="#C9A84C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="120" y="50" font-family="Raleway,sans-serif" font-weight="700" font-size="30" fill="#FFFFFF" letter-spacing="2">ALINAYA ALRAFIA</text>
+      <rect x="120" y="60" width="480" height="2" fill="#C9A84C"/>
+      <text x="120" y="80" font-family="Raleway,sans-serif" font-weight="400" font-size="11.5" fill="rgba(255,255,255,.5)" letter-spacing="8">MEDICAL COMPANY</text>
+      <line x1="120" y1="96" x2="600" y2="96" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+      <text x="600" y="118" font-family="Cairo,sans-serif" font-weight="500" font-size="18" fill="rgba(255,255,255,.88)" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+    </svg>
+  </div>
+
+  <!-- P8 white bg -->
+  <div style="font-size:9px;font-weight:700;letter-spacing:3px;color:#4B5563;text-transform:uppercase;margin-bottom:10px">Palette 8 — On White</div>
+  <div class="mark-on-white" style="padding:44px 64px;justify-content:flex-start;margin-bottom:10px">
+    <svg viewBox="0 0 620 140" width="560" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8"  y="98" width="17" height="30"  rx="2" fill="#1B3A2D"/>
+      <rect x="32" y="72" width="17" height="56"  rx="2" fill="#1B3A2D"/>
+      <rect x="56" y="46" width="17" height="82"  rx="2" fill="#1B3A2D"/>
+      <rect x="80" y="16" width="17" height="112" rx="2" fill="#1B3A2D"/>
+      <polyline points="16.5,98 40.5,72 64.5,46 88.5,16" fill="none" stroke="#C4956A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="120" y="50" font-family="Raleway,sans-serif" font-weight="700" font-size="30" fill="#1B3A2D" letter-spacing="2">ALINAYA ALRAFIA</text>
+      <rect x="120" y="60" width="480" height="2" fill="#C4956A"/>
+      <text x="120" y="80" font-family="Raleway,sans-serif" font-weight="400" font-size="11.5" fill="#6B7280" letter-spacing="8">MEDICAL COMPANY</text>
+      <line x1="120" y1="96" x2="600" y2="96" stroke="#E5E7EB" stroke-width="1"/>
+      <text x="600" y="118" font-family="Cairo,sans-serif" font-weight="500" font-size="18" fill="#1B3A2D" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+    </svg>
+  </div>
+
+  <!-- P8 dark bg -->
+  <div style="font-size:9px;font-weight:700;letter-spacing:3px;color:#4B5563;text-transform:uppercase;margin-bottom:10px">Palette 8 — On Forest Dark</div>
+  <div style="background:#1B3A2D;border-radius:16px;padding:44px 64px;display:flex;justify-content:flex-start">
+    <svg viewBox="0 0 620 140" width="560" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8"  y="98" width="17" height="30"  rx="2" fill="#FFFFFF"/>
+      <rect x="32" y="72" width="17" height="56"  rx="2" fill="#FFFFFF"/>
+      <rect x="56" y="46" width="17" height="82"  rx="2" fill="#FFFFFF"/>
+      <rect x="80" y="16" width="17" height="112" rx="2" fill="#FFFFFF"/>
+      <polyline points="16.5,98 40.5,72 64.5,46 88.5,16" fill="none" stroke="#C4956A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="120" y="50" font-family="Raleway,sans-serif" font-weight="700" font-size="30" fill="#FFFFFF" letter-spacing="2">ALINAYA ALRAFIA</text>
+      <rect x="120" y="60" width="480" height="2" fill="#C4956A"/>
+      <text x="120" y="80" font-family="Raleway,sans-serif" font-weight="400" font-size="11.5" fill="rgba(255,255,255,.5)" letter-spacing="8">MEDICAL COMPANY</text>
+      <line x1="120" y1="96" x2="600" y2="96" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+      <text x="600" y="118" font-family="Cairo,sans-serif" font-weight="500" font-size="18" fill="rgba(255,255,255,.88)" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+    </svg>
+  </div>
+</div>
+
+
+<!-- ═══ 3. FAVICON / SIZE TEST ═══ -->
+<div class="section">
+  <div class="section-label">03</div>
+  <div class="section-title">Scale Test — Favicon to Large Format</div>
+
+  <div class="two-col">
+    <div class="fav-strip">
+      <div class="fav-item">
+        <svg viewBox="0 0 140 140" width="16" xmlns="http://www.w3.org/2000/svg">
+          <rect x="17" y="98" width="22" height="30" rx="2" fill="#1B4D3E"/>
+          <rect x="45" y="72" width="22" height="56" rx="2" fill="#1B4D3E"/>
+          <rect x="73" y="46" width="22" height="82" rx="2" fill="#1B4D3E"/>
+          <rect x="101" y="16" width="22" height="112" rx="2" fill="#1B4D3E"/>
+          <polyline points="28,98 56,72 84,46 112,16" fill="none" stroke="#C9A84C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="fav-size">16px</div>
+      </div>
+      <div class="fav-item">
+        <svg viewBox="0 0 140 140" width="32" xmlns="http://www.w3.org/2000/svg">
+          <rect x="17" y="98" width="22" height="30" rx="2" fill="#1B4D3E"/>
+          <rect x="45" y="72" width="22" height="56" rx="2" fill="#1B4D3E"/>
+          <rect x="73" y="46" width="22" height="82" rx="2" fill="#1B4D3E"/>
+          <rect x="101" y="16" width="22" height="112" rx="2" fill="#1B4D3E"/>
+          <polyline points="28,98 56,72 84,46 112,16" fill="none" stroke="#C9A84C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="fav-size">32px</div>
+      </div>
+      <div class="fav-item">
+        <svg viewBox="0 0 140 140" width="64" xmlns="http://www.w3.org/2000/svg">
+          <rect x="17" y="98" width="22" height="30" rx="2" fill="#1B4D3E"/>
+          <rect x="45" y="72" width="22" height="56" rx="2" fill="#1B4D3E"/>
+          <rect x="73" y="46" width="22" height="82" rx="2" fill="#1B4D3E"/>
+          <rect x="101" y="16" width="22" height="112" rx="2" fill="#1B4D3E"/>
+          <polyline points="28,98 56,72 84,46 112,16" fill="none" stroke="#C9A84C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="fav-size">64px</div>
+      </div>
+      <div class="fav-item">
+        <svg viewBox="0 0 140 140" width="120" xmlns="http://www.w3.org/2000/svg">
+          <rect x="17" y="98" width="22" height="30" rx="2" fill="#1B4D3E"/>
+          <rect x="45" y="72" width="22" height="56" rx="2" fill="#1B4D3E"/>
+          <rect x="73" y="46" width="22" height="82" rx="2" fill="#1B4D3E"/>
+          <rect x="101" y="16" width="22" height="112" rx="2" fill="#1B4D3E"/>
+          <polyline points="28,98 56,72 84,46 112,16" fill="none" stroke="#C9A84C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="fav-size">120px</div>
+      </div>
+      <div class="fav-item">
+        <svg viewBox="0 0 140 140" width="200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="17" y="98" width="22" height="30" rx="2" fill="#1B4D3E"/>
+          <rect x="45" y="72" width="22" height="56" rx="2" fill="#1B4D3E"/>
+          <rect x="73" y="46" width="22" height="82" rx="2" fill="#1B4D3E"/>
+          <rect x="101" y="16" width="22" height="112" rx="2" fill="#1B4D3E"/>
+          <polyline points="28,98 56,72 84,46 112,16" fill="none" stroke="#C9A84C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="fav-size">200px</div>
+      </div>
+    </div>
+
+    <!-- favicon on green bg -->
+    <div class="fav-strip" style="background:#1B4D3E">
+      <div class="fav-item">
+        <svg viewBox="0 0 140 140" width="16" xmlns="http://www.w3.org/2000/svg">
+          <rect x="17" y="98" width="22" height="30" rx="2" fill="#FFF"/>
+          <rect x="45" y="72" width="22" height="56" rx="2" fill="#FFF"/>
+          <rect x="73" y="46" width="22" height="82" rx="2" fill="#FFF"/>
+          <rect x="101" y="16" width="22" height="112" rx="2" fill="#FFF"/>
+          <polyline points="28,98 56,72 84,46 112,16" fill="none" stroke="#C9A84C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="fav-size" style="color:rgba(255,255,255,.3)">16px</div>
+      </div>
+      <div class="fav-item">
+        <svg viewBox="0 0 140 140" width="32" xmlns="http://www.w3.org/2000/svg">
+          <rect x="17" y="98" width="22" height="30" rx="2" fill="#FFF"/>
+          <rect x="45" y="72" width="22" height="56" rx="2" fill="#FFF"/>
+          <rect x="73" y="46" width="22" height="82" rx="2" fill="#FFF"/>
+          <rect x="101" y="16" width="22" height="112" rx="2" fill="#FFF"/>
+          <polyline points="28,98 56,72 84,46 112,16" fill="none" stroke="#C9A84C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="fav-size" style="color:rgba(255,255,255,.3)">32px</div>
+      </div>
+      <div class="fav-item">
+        <svg viewBox="0 0 140 140" width="64" xmlns="http://www.w3.org/2000/svg">
+          <rect x="17" y="98" width="22" height="30" rx="2" fill="#FFF"/>
+          <rect x="45" y="72" width="22" height="56" rx="2" fill="#FFF"/>
+          <rect x="73" y="46" width="22" height="82" rx="2" fill="#FFF"/>
+          <rect x="101" y="16" width="22" height="112" rx="2" fill="#FFF"/>
+          <polyline points="28,98 56,72 84,46 112,16" fill="none" stroke="#C9A84C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="fav-size" style="color:rgba(255,255,255,.3)">64px</div>
+      </div>
+      <div class="fav-item">
+        <svg viewBox="0 0 140 140" width="120" xmlns="http://www.w3.org/2000/svg">
+          <rect x="17" y="98" width="22" height="30" rx="2" fill="#FFF"/>
+          <rect x="45" y="72" width="22" height="56" rx="2" fill="#FFF"/>
+          <rect x="73" y="46" width="22" height="82" rx="2" fill="#FFF"/>
+          <rect x="101" y="16" width="22" height="112" rx="2" fill="#FFF"/>
+          <polyline points="28,98 56,72 84,46 112,16" fill="none" stroke="#C9A84C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="fav-size" style="color:rgba(255,255,255,.3)">120px</div>
+      </div>
+      <div class="fav-item">
+        <svg viewBox="0 0 140 140" width="200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="17" y="98" width="22" height="30" rx="2" fill="#FFF"/>
+          <rect x="45" y="72" width="22" height="56" rx="2" fill="#FFF"/>
+          <rect x="73" y="46" width="22" height="82" rx="2" fill="#FFF"/>
+          <rect x="101" y="16" width="22" height="112" rx="2" fill="#FFF"/>
+          <polyline points="28,98 56,72 84,46 112,16" fill="none" stroke="#C9A84C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="fav-size" style="color:rgba(255,255,255,.3)">200px</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ 4. IN CONTEXT ═══ -->
+<div class="section">
+  <div class="section-label">04</div>
+  <div class="section-title">In Context — Navbar & Hero</div>
+
+  <!-- Navbar P2 white -->
+  <div style="font-size:9px;font-weight:700;letter-spacing:3px;color:#4B5563;text-transform:uppercase;margin-bottom:10px">Navbar — White (P2)</div>
+  <div class="navbar-sim" style="border-bottom:3px solid #C9A84C;margin-bottom:20px">
+    <svg viewBox="0 0 260 52" width="210" xmlns="http://www.w3.org/2000/svg">
+      <rect x="3" y="37" width="7" height="12" rx="1" fill="#1B4D3E"/>
+      <rect x="13" y="28" width="7" height="21" rx="1" fill="#1B4D3E"/>
+      <rect x="23" y="19" width="7" height="30" rx="1" fill="#1B4D3E"/>
+      <rect x="33" y="8"  width="7" height="41" rx="1" fill="#1B4D3E"/>
+      <polyline points="6.5,37 16.5,28 26.5,19 36.5,8" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="52" y="20" font-family="Raleway,sans-serif" font-weight="700" font-size="13" fill="#1B4D3E" letter-spacing="1">ALINAYA ALRAFIA</text>
+      <rect x="52" y="25" width="200" height="1.2" fill="#C9A84C"/>
+      <text x="52" y="36" font-family="Raleway,sans-serif" font-weight="400" font-size="6.5" fill="#9CA3AF" letter-spacing="3.5">MEDICAL COMPANY</text>
+      <text x="252" y="49" font-family="Cairo,sans-serif" font-weight="500" font-size="9" fill="#1B4D3E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+    </svg>
+    <div class="nav-links">
+      <span class="nav-link">About</span>
+      <span class="nav-link">Contact</span>
+      <div class="nav-lang">
+        <span style="color:#1B4D3E">EN</span>
+        <span style="color:#D1D5DB">|</span>
+        <span style="color:#9CA3AF">AR</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar P2 dark -->
+  <div style="font-size:9px;font-weight:700;letter-spacing:3px;color:#4B5563;text-transform:uppercase;margin-bottom:10px">Navbar — Dark Emerald (P2)</div>
+  <div class="navbar-dark" style="margin-bottom:28px">
+    <svg viewBox="0 0 260 52" width="210" xmlns="http://www.w3.org/2000/svg">
+      <rect x="3" y="37" width="7" height="12" rx="1" fill="#FFFFFF"/>
+      <rect x="13" y="28" width="7" height="21" rx="1" fill="#FFFFFF"/>
+      <rect x="23" y="19" width="7" height="30" rx="1" fill="#FFFFFF"/>
+      <rect x="33" y="8"  width="7" height="41" rx="1" fill="#FFFFFF"/>
+      <polyline points="6.5,37 16.5,28 26.5,19 36.5,8" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="52" y="20" font-family="Raleway,sans-serif" font-weight="700" font-size="13" fill="#FFFFFF" letter-spacing="1">ALINAYA ALRAFIA</text>
+      <rect x="52" y="25" width="200" height="1.2" fill="#C9A84C"/>
+      <text x="52" y="36" font-family="Raleway,sans-serif" font-weight="400" font-size="6.5" fill="rgba(255,255,255,.4)" letter-spacing="3.5">MEDICAL COMPANY</text>
+      <text x="252" y="49" font-family="Cairo,sans-serif" font-weight="500" font-size="9" fill="rgba(255,255,255,.8)" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+    </svg>
+    <div class="nav-links">
+      <span class="nav-link-w">About</span>
+      <span class="nav-link-w">Contact</span>
+      <div class="nav-lang" style="color:rgba(255,255,255,.5)">
+        <span style="color:#C9A84C">EN</span>
+        <span style="margin:0 6px">|</span>
+        <span>AR</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero P2 -->
+  <div style="font-size:9px;font-weight:700;letter-spacing:3px;color:#4B5563;text-transform:uppercase;margin-bottom:10px">Hero Section (P2)</div>
+  <div class="hero-sim">
+    <div>
+      <div class="hero-accent"></div>
+      <div class="hero-heading">Your Health,<br>Our Commitment.</div>
+      <div class="hero-body">Alinaya Alrafia Medical Company delivers trusted healthcare services and solutions across Saudi Arabia — through a group of specialised subsidiaries.</div>
+      <div class="hero-btn">Learn More About Us</div>
+    </div>
+    <div>
+      <div class="hero-placeholder">MEDICAL IMAGE PLACEHOLDER</div>
+    </div>
+  </div>
+
+  <!-- Hero P8 -->
+  <div style="font-size:9px;font-weight:700;letter-spacing:3px;color:#4B5563;text-transform:uppercase;margin-bottom:10px">Hero Section (P8 — Forest)</div>
+  <div class="hero-sim" style="background:#1B3A2D">
+    <div>
+      <div class="hero-accent" style="background:#C4956A"></div>
+      <div class="hero-heading">Your Health,<br>Our Commitment.</div>
+      <div class="hero-body">Alinaya Alrafia Medical Company delivers trusted healthcare services and solutions across Saudi Arabia — through a group of specialised subsidiaries.</div>
+      <div class="hero-btn" style="background:#C4956A;color:#1B3A2D">Learn More About Us</div>
+    </div>
+    <div>
+      <div class="hero-placeholder" style="border-color:rgba(255,255,255,.06)">MEDICAL IMAGE PLACEHOLDER</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ 5. COLOUR SYSTEM ═══ -->
+<div class="section">
+  <div class="section-label">05</div>
+  <div class="section-title">Colour System — Palette 2 vs Palette 8</div>
+
+  <div class="two-col">
+    <!-- P2 swatches -->
+    <div>
+      <div style="font-size:9px;font-weight:700;letter-spacing:3px;color:#1B4D3E;text-transform:uppercase;margin-bottom:16px">Palette 2 — Emerald + Gold</div>
+      <div class="swatches">
+        <div class="swatch-card">
+          <div class="swatch-color" style="background:#1B4D3E"></div>
+          <div class="swatch-info"><div class="swatch-name">Emerald</div><div class="swatch-hex">#1B4D3E</div></div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-color" style="background:#C9A84C"></div>
+          <div class="swatch-info"><div class="swatch-name">Gold</div><div class="swatch-hex">#C9A84C</div></div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-color" style="background:#FFFFFF;border:1px solid #1F2937"></div>
+          <div class="swatch-info"><div class="swatch-name">White</div><div class="swatch-hex">#FFFFFF</div></div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-color" style="background:#F8F9FC;border:1px solid #1F2937"></div>
+          <div class="swatch-info"><div class="swatch-name">Off White</div><div class="swatch-hex">#F8F9FC</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- P8 swatches -->
+    <div>
+      <div style="font-size:9px;font-weight:700;letter-spacing:3px;color:#C4956A;text-transform:uppercase;margin-bottom:16px">Palette 8 — Forest + Rose Gold</div>
+      <div class="swatches">
+        <div class="swatch-card">
+          <div class="swatch-color" style="background:#1B3A2D"></div>
+          <div class="swatch-info"><div class="swatch-name">Forest</div><div class="swatch-hex">#1B3A2D</div></div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-color" style="background:#C4956A"></div>
+          <div class="swatch-info"><div class="swatch-name">Rose Gold</div><div class="swatch-hex">#C4956A</div></div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-color" style="background:#FFFFFF;border:1px solid #1F2937"></div>
+          <div class="swatch-info"><div class="swatch-name">White</div><div class="swatch-hex">#FFFFFF</div></div>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-color" style="background:#F8F9FC;border:1px solid #1F2937"></div>
+          <div class="swatch-info"><div class="swatch-name">Off White</div><div class="swatch-hex">#F8F9FC</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<div style="padding:40px 80px;text-align:center;color:#374151;font-size:12px;line-height:2">
+  Alinaya Alrafia Medical Company &nbsp;·&nbsp; شركة العناية الرفيعة الطبية<br>
+  alinayamedical.com &nbsp;·&nbsp; Brand Identity System &nbsp;·&nbsp; July 2026<br><br>
+  <strong style="color:#6B7280;font-size:13px">Reply "P2" or "P8" to lock the palette — then we build the website.</strong>
+</div>
+
+</body>
+</html>

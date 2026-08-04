@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alinaya Alrafia — Business Card Template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ── VARIABLES ───────────────────────────────────────────────── */
+:root {
+  --emerald:  #1B4D3E;
+  --gold:     #C9A84C;
+  --white:    #FFFFFF;
+  --charcoal: #1A1A2E;
+  --grey:     #6B7280;
+  --border:   #E5E7EB;
+  --page-bg:  #0C1410;
+  --card-w:   340px;
+  --card-h:   216px;  /* 85:54 ratio */
+  --card-r:   6px;    /* ≈3mm at screen scale */
+}
+
+/* ── RESET ───────────────────────────────────────────────────── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+/* ── SCREEN PAGE ─────────────────────────────────────────────── */
+body {
+  background: var(--page-bg);
+  font-family: 'Raleway', sans-serif;
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 40px 80px;
+  gap: 0;
+}
+
+/* ── SCREEN HEADER ───────────────────────────────────────────── */
+.screen-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+.hd-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: rgba(201,168,76,0.55);
+  margin-bottom: 12px;
+}
+.hd-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.3px;
+  margin-bottom: 6px;
+}
+.hd-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ── CARD WRAP ───────────────────────────────────────────────── */
+.cards-wrap {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.card-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.card-caption {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.2);
+}
+
+/* ── CARD BASE ───────────────────────────────────────────────── */
+.card {
+  width: var(--card-w);
+  height: var(--card-h);
+  border-radius: var(--card-r);
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 28px 72px rgba(0,0,0,0.45),
+    0 6px 20px rgba(0,0,0,0.25);
+  flex-shrink: 0;
+}
+
+/* ── FRONT — Emerald ─────────────────────────────────────────── */
+.card-front {
+  background: var(--emerald);
+}
+
+.card-front::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 90% 80% at 110% 110%, rgba(201,168,76,0.10) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 60% at -10% -10%, rgba(255,255,255,0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.front-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 24px 28px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.front-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.2px;
+  margin-bottom: 2px;
+}
+
+.front-name-ar {
+  font-family: 'Cairo', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  direction: rtl;
+  margin-bottom: 6px;
+}
+
+.front-title {
+  font-size: 8px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.front-divider {
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.45;
+  margin-bottom: 10px;
+}
+
+.front-contact {
+  font-size: 8.5px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.9;
+}
+
+/* ── BACK — White ────────────────────────────────────────────── */
+.card-back {
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 28px;
+}
+
+.back-wordmark { width: 100%; max-width: 264px; }
+
+.back-divider {
+  width: 72%;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.3;
+}
+
+.back-contact {
+  font-size: 8px;
+  font-weight: 400;
+  color: var(--grey);
+  text-align: center;
+  line-height: 1.9;
+  letter-spacing: 0.2px;
+}
+
+/* ── SPECS ROW ───────────────────────────────────────────────── */
+.specs-row {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.spec-item {
+  text-align: center;
+}
+
+.spec-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(201,168,76,0.5);
+  margin-bottom: 4px;
+}
+
+.spec-value {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ── PRINT NOTE ──────────────────────────────────────────────── */
+.print-note {
+  max-width: 540px;
+  text-align: center;
+  padding: 18px 28px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.28);
+  line-height: 1.9;
+}
+
+.print-note strong { color: rgba(201,168,76,0.65); font-weight: 600; }
+
+/* ── PRINT PAGES (hidden on screen) ─────────────────────────── */
+.print-only { display: none; }
+
+/* ── PRINT MEDIA ─────────────────────────────────────────────── */
+@media print {
+
+  @page { size: 89mm 58mm; margin: 0; }
+
+  html { background: transparent; }
+
+  body {
+    display: block;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    min-height: 0;
+  }
+
+  .screen-only { display: none !important; }
+
+  .print-only {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ── PRINT FRONT ── */
+  .print-front {
+    width: 89mm;
+    height: 58mm;
+    page-break-after: always;
+    overflow: hidden;
+  }
+
+  .pf-inner {
+    width: 89mm;
+    height: 58mm;
+    background: #1B4D3E;
+    padding: 5mm 6mm 5mm 6mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .pf-inner::before {
+    content: '';
+    position: absolute;
+    bottom: -10mm;
+    right: -10mm;
+    width: 40mm;
+    height: 40mm;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+  }
+
+  .pf-logo { position: relative; z-index: 1; }
+
+  .pf-bottom { position: relative; z-index: 1; }
+
+  .pf-name {
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 0.1pt;
+    margin-bottom: 1.2mm;
+  }
+
+  .pf-name-ar {
+    font-family: 'Cairo', Arial, sans-serif;
+    font-size: 6pt;
+    font-weight: 600;
+    color: rgba(255,255,255,0.68);
+    direction: rtl;
+    margin-bottom: 1.5mm;
+  }
+
+  .pf-title {
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 4.8pt;
+    font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 1.4pt;
+    text-transform: uppercase;
+    margin-bottom: 2.5mm;
+  }
+
+  .pf-divider {
+    width: 100%;
+    height: 0.3pt;
+    background: #C9A84C;
+    opacity: 0.5;
+    margin-bottom: 2.5mm;
+  }
+
+  .pf-contact {
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 5.2pt;
+    font-weight: 400;
+    color: rgba(255,255,255,0.52);
+    line-height: 1.75;
+  }
+
+  /* ── PRINT BACK ── */
+  .print-back {
+    width: 89mm;
+    height: 58mm;
+    overflow: hidden;
+  }
+
+  .pb-inner {
+    width: 89mm;
+    height: 58mm;
+    background: #FFFFFF;
+    padding: 5mm 6mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5mm;
+    box-sizing: border-box;
+  }
+
+  .pb-divider {
+    width: 70%;
+    height: 0.3pt;
+    background: #C9A84C;
+    opacity: 0.38;
+  }
+
+  .pb-contact {
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 5pt;
+    font-weight: 400;
+    color: #6B7280;
+    text-align: center;
+    line-height: 1.75;
+  }
+
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- SCREEN PREVIEW                                            -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="screen-only">
+
+  <div class="screen-header">
+    <div class="hd-label">Corporate Identity · 2026</div>
+    <div class="hd-title">Business Card</div>
+    <div class="hd-sub">85 × 54 mm &nbsp;·&nbsp; Template</div>
+  </div>
+
+  <div class="cards-wrap">
+
+    <!-- ── FRONT ── -->
+    <div class="card-col">
+      <div class="card card-front">
+        <div class="front-inner">
+          <!-- White reversed icon mark -->
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="46" height="46">
+              <path d="M10,70 L70,8 L70,70 Z" fill="#FFFFFF"/>
+              <path d="M130,70 L70,8 L70,70 Z" fill="#FFFFFF" opacity="0.45"/>
+              <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+              <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+            </svg>
+          </div>
+          <!-- Name + contact -->
+          <div>
+            <div class="front-name">[Your Name]</div>
+            <div class="front-name-ar">[اسمك]</div>
+            <div class="front-title">General Manager &nbsp;·&nbsp; المدير العام</div>
+            <div class="front-divider"></div>
+            <div class="front-contact">
+              +966 5X XXX XXXX<br>
+              name@alinayamedical.com<br>
+              alinayamedical.com
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-caption">Front &nbsp;·&nbsp; Emerald</div>
+    </div>
+
+    <!-- ── BACK ── -->
+    <div class="card-col">
+      <div class="card card-back">
+        <!-- Full colour wordmark -->
+        <svg class="back-wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 140">
+          <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+          <text x="152" y="48" font-family="Raleway,Arial,sans-serif" font-weight="700" font-size="28" fill="#1B4D3E" letter-spacing="1.5">ALINAYA ALRAFIA</text>
+          <rect x="152" y="58" width="448" height="2" fill="#C9A84C"/>
+          <text x="152" y="76" font-family="Raleway,Arial,sans-serif" font-weight="500" font-size="11" fill="#6B7280" letter-spacing="6">MEDICAL COMPANY</text>
+          <line x1="152" y1="92" x2="600" y2="92" stroke="#E5E7EB" stroke-width="1"/>
+          <text x="600" y="114" font-family="Cairo,Arial,sans-serif" font-weight="600" font-size="18" fill="#1B4D3E" text-anchor="start" direction="rtl">شركة العناية الرفيعة الطبية</text>
+        </svg>
+        <div class="back-divider"></div>
+        <div class="back-contact">
+          Riyadh, Kingdom of Saudi Arabia<br>
+          info@alinayamedical.com &nbsp;·&nbsp; alinayamedical.com
+        </div>
+      </div>
+      <div class="card-caption">Back &nbsp;·&nbsp; White</div>
+    </div>
+
+  </div><!-- /cards-wrap -->
+
+  <div class="specs-row">
+    <div class="spec-item">
+      <div class="spec-label">Size</div>
+      <div class="spec-value">85 × 54 mm</div>
+    </div>
+    <div class="spec-item">
+      <div class="spec-label">Bleed</div>
+      <div class="spec-value">2 mm all sides</div>
+    </div>
+    <div class="spec-item">
+      <div class="spec-label">Stock</div>
+      <div class="spec-value">350 gsm silk / matte</div>
+    </div>
+    <div class="spec-item">
+      <div class="spec-label">Finish</div>
+      <div class="spec-value">Spot UV on mark (optional)</div>
+    </div>
+    <div class="spec-item">
+      <div class="spec-label">Corners</div>
+      <div class="spec-value">3 mm rounded (optional)</div>
+    </div>
+  </div>
+
+  <div class="print-note">
+    <strong>To print:</strong> File → Print &nbsp;·&nbsp;
+    Paper size <strong>89 × 58 mm</strong> (includes 2 mm bleed) &nbsp;·&nbsp;
+    Scale <strong>100%</strong> &nbsp;·&nbsp; Margins <strong>none</strong><br>
+    Front prints on page 1, Back on page 2 &nbsp;·&nbsp;
+    Trim to <strong>85 × 54 mm</strong> after printing
+  </div>
+
+</div><!-- /screen-only -->
+
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- PRINT PAGES (hidden on screen)                            -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="print-only">
+
+  <!-- PAGE 1: Front -->
+  <div class="print-front">
+    <div class="pf-inner">
+      <div class="pf-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" style="width:16mm;height:16mm;display:block;">
+          <path d="M10,70 L70,8 L70,70 Z" fill="#FFFFFF"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#FFFFFF" opacity="0.45"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+          <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+        </svg>
+      </div>
+      <div class="pf-bottom">
+        <div class="pf-name">[Your Name]</div>
+        <div class="pf-name-ar">[اسمك]</div>
+        <div class="pf-title">General Manager &nbsp;·&nbsp; المدير العام</div>
+        <div class="pf-divider"></div>
+        <div class="pf-contact">
+          +966 5X XXX XXXX<br>
+          name@alinayamedical.com<br>
+          alinayamedical.com
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: Back -->
+  <div class="print-back">
+    <div class="pb-inner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 140" style="width:66mm;height:auto;display:block;">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+        <text x="152" y="48" font-family="Raleway,Arial,sans-serif" font-weight="700" font-size="28" fill="#1B4D3E" letter-spacing="1.5">ALINAYA ALRAFIA</text>
+        <rect x="152" y="58" width="448" height="2" fill="#C9A84C"/>
+        <text x="152" y="76" font-family="Raleway,Arial,sans-serif" font-weight="500" font-size="11" fill="#6B7280" letter-spacing="6">MEDICAL COMPANY</text>
+        <line x1="152" y1="92" x2="600" y2="92" stroke="#E5E7EB" stroke-width="1"/>
+        <text x="600" y="114" font-family="Cairo,Arial,sans-serif" font-weight="600" font-size="18" fill="#1B4D3E" text-anchor="start" direction="rtl">شركة العناية الرفيعة الطبية</text>
+      </svg>
+      <div class="pb-divider"></div>
+      <div class="pb-contact">
+        Riyadh, Kingdom of Saudi Arabia<br>
+        info@alinayamedical.com &nbsp;·&nbsp; alinayamedical.com
+      </div>
+    </div>
+  </div>
+
+</div><!-- /print-only -->
+
+</body>
+</html>

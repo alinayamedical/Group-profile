@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alinaya — Ribbon Heart V2</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Cairo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#EAEEF3; font-family:'Raleway',sans-serif; padding:56px 72px; }
+h1 { font-size:11px; font-weight:700; letter-spacing:5px; color:#9CA3AF; text-transform:uppercase; margin-bottom:8px; }
+h2 { font-size:24px; font-weight:700; color:#111827; margin-bottom:6px; }
+p  { font-size:13px; color:#6B7280; margin-bottom:44px; line-height:1.7; max-width:580px; }
+.sec { font-size:10px; font-weight:700; letter-spacing:4px; color:#6B7280; text-transform:uppercase; margin:44px 0 16px; }
+.row { display:flex; gap:20px; flex-wrap:wrap; margin-bottom:20px; }
+.card { border-radius:20px; padding:52px 40px; display:flex; flex-direction:column; align-items:center; gap:20px; position:relative; }
+.card-w  { background:#FFFFFF; box-shadow:0 2px 24px rgba(0,0,0,0.07); }
+.card-dk { background:#0D1A15; box-shadow:0 6px 36px rgba(0,0,0,0.50); }
+.card-em { background:#1B4D3E; box-shadow:0 6px 28px rgba(27,77,62,0.45); }
+.lbl { font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#9CA3AF; }
+.card-dk .lbl, .card-em .lbl { color:rgba(255,255,255,0.20); }
+svg { overflow:visible; display:block; }
+
+/* ── Wordmark text helpers ── */
+.wm-row { display:flex; flex-direction:row; align-items:center; gap:28px; }
+.wm-text { display:flex; flex-direction:column; gap:5px; }
+.wm-en   { font:700 28px/1 'Raleway'; letter-spacing:-0.5px; }
+.wm-div  { height:1.5px; background:currentColor; opacity:0.35; margin:3px 0; }
+.wm-sub  { font:400 11.5px/1 'Raleway'; letter-spacing:5px; text-transform:uppercase; }
+.wm-ar   { font:500 15px/1 'Cairo'; direction:rtl; margin-top:3px; }
+
+/* on-white wordmark colours */
+.wm-row.light .wm-en  { color:#C9A84C; }
+.wm-row.light .wm-div { color:#C9A84C; }
+.wm-row.light .wm-sub { color:#4B6E5C; }
+.wm-row.light .wm-ar  { color:#1B4D3E; }
+
+/* on-dark wordmark colours */
+.wm-row.dark .wm-en  { color:#C9A84C; }
+.wm-row.dark .wm-div { color:#C9A84C; }
+.wm-row.dark .wm-sub { color:rgba(255,255,255,0.45); }
+.wm-row.dark .wm-ar  { color:rgba(255,255,255,0.80); }
+</style>
+</head>
+<body>
+
+<h1>Ribbon Heart — V2 · Rebuilt</h1>
+<h2>3D Interlocking Ribbon Mark</h2>
+<p>Two ribbon strands — each tracing the outer and inner edge of one heart lobe — interlock at the top notch. Gradient depth: light teal at the lobe peaks → very dark green at the inner fold center. Left strand passes in front at the crossing.</p>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ICON MARK -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="sec">Icon Mark</div>
+<div class="row">
+
+  <!-- ── On White ── -->
+  <div class="card card-w">
+    <span class="lbl">On White</span>
+    <svg viewBox="0 0 400 440" width="200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="a-gL" x1="28" y1="88" x2="210" y2="430" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#80E2C2"/>
+          <stop offset="30%"  stop-color="#38B082"/>
+          <stop offset="65%"  stop-color="#16654A"/>
+          <stop offset="100%" stop-color="#062014"/>
+        </linearGradient>
+        <linearGradient id="a-gR" x1="372" y1="88" x2="190" y2="430" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#80E2C2"/>
+          <stop offset="30%"  stop-color="#38B082"/>
+          <stop offset="65%"  stop-color="#16654A"/>
+          <stop offset="100%" stop-color="#062014"/>
+        </linearGradient>
+        <radialGradient id="a-cs" cx="200" cy="156" rx="30" ry="22" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#010A05" stop-opacity="0.62"/>
+          <stop offset="100%" stop-color="#010A05" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <!-- RIGHT ribbon — drawn first (behind at notch) -->
+      <path fill="url(#a-gR)"
+        d="M 200,140
+           C 218,108 245,88 275,88
+           C 335,88  372,138 372,208
+           C 372,290 292,355 200,410
+           L 200,388
+           C 248,330 320,278 320,210
+           C 320,168 304,133 257,133
+           C 235,133 215,148 200,170
+           Z"/>
+      <!-- Crossing shadow (LEFT ribbon casts onto RIGHT) -->
+      <ellipse cx="200" cy="156" rx="30" ry="22" fill="url(#a-cs)"/>
+      <!-- LEFT ribbon — drawn last (front at notch) -->
+      <path fill="url(#a-gL)"
+        d="M 200,140
+           C 182,108 155,88 125,88
+           C 65,88  28,138  28,208
+           C 28,290 108,355 200,410
+           L 200,388
+           C 152,330 80,278  80,210
+           C 80,168  96,133 143,133
+           C 165,133 185,148 200,170
+           Z"/>
+    </svg>
+  </div>
+
+  <!-- ── On Dark ── -->
+  <div class="card card-dk">
+    <span class="lbl">On Dark</span>
+    <svg viewBox="0 0 400 440" width="200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="b-gL" x1="28" y1="88" x2="210" y2="430" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#80E2C2"/>
+          <stop offset="30%"  stop-color="#38B082"/>
+          <stop offset="65%"  stop-color="#16654A"/>
+          <stop offset="100%" stop-color="#062014"/>
+        </linearGradient>
+        <linearGradient id="b-gR" x1="372" y1="88" x2="190" y2="430" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#80E2C2"/>
+          <stop offset="30%"  stop-color="#38B082"/>
+          <stop offset="65%"  stop-color="#16654A"/>
+          <stop offset="100%" stop-color="#062014"/>
+        </linearGradient>
+        <radialGradient id="b-cs" cx="200" cy="156" rx="30" ry="22" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#000000" stop-opacity="0.65"/>
+          <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <path fill="url(#b-gR)" d="M 200,140 C 218,108 245,88 275,88 C 335,88 372,138 372,208 C 372,290 292,355 200,410 L 200,388 C 248,330 320,278 320,210 C 320,168 304,133 257,133 C 235,133 215,148 200,170 Z"/>
+      <ellipse cx="200" cy="156" rx="30" ry="22" fill="url(#b-cs)"/>
+      <path fill="url(#b-gL)" d="M 200,140 C 182,108 155,88 125,88 C 65,88 28,138 28,208 C 28,290 108,355 200,410 L 200,388 C 152,330 80,278 80,210 C 80,168 96,133 143,133 C 165,133 185,148 200,170 Z"/>
+    </svg>
+  </div>
+
+  <!-- ── On Emerald ── -->
+  <div class="card card-em">
+    <span class="lbl">On Emerald</span>
+    <svg viewBox="0 0 400 440" width="200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="c-gL" x1="28" y1="88" x2="210" y2="430" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#B0EDD8"/>
+          <stop offset="30%"  stop-color="#50CCAA"/>
+          <stop offset="65%"  stop-color="#1E7A54"/>
+          <stop offset="100%" stop-color="#082D1C"/>
+        </linearGradient>
+        <linearGradient id="c-gR" x1="372" y1="88" x2="190" y2="430" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#B0EDD8"/>
+          <stop offset="30%"  stop-color="#50CCAA"/>
+          <stop offset="65%"  stop-color="#1E7A54"/>
+          <stop offset="100%" stop-color="#082D1C"/>
+        </linearGradient>
+        <radialGradient id="c-cs" cx="200" cy="156" rx="30" ry="22" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#000000" stop-opacity="0.50"/>
+          <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <path fill="url(#c-gR)" d="M 200,140 C 218,108 245,88 275,88 C 335,88 372,138 372,208 C 372,290 292,355 200,410 L 200,388 C 248,330 320,278 320,210 C 320,168 304,133 257,133 C 235,133 215,148 200,170 Z"/>
+      <ellipse cx="200" cy="156" rx="30" ry="22" fill="url(#c-cs)"/>
+      <path fill="url(#c-gL)" d="M 200,140 C 182,108 155,88 125,88 C 65,88 28,138 28,208 C 28,290 108,355 200,410 L 200,388 C 152,330 80,278 80,210 C 80,168 96,133 143,133 C 165,133 185,148 200,170 Z"/>
+    </svg>
+  </div>
+
+</div><!-- /icon row -->
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- FULL WORDMARK -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="sec">Full Wordmark — Horizontal</div>
+<div class="row">
+
+  <!-- Wordmark on White -->
+  <div class="card card-w" style="padding:44px 52px; flex:1; min-width:520px;">
+    <span class="lbl" style="position:absolute;top:18px;left:24px;">On White</span>
+    <div class="wm-row light">
+      <svg viewBox="0 0 400 440" width="68" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+        <defs>
+          <linearGradient id="d-gL" x1="28" y1="88" x2="210" y2="430" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#80E2C2"/>
+            <stop offset="30%"  stop-color="#38B082"/>
+            <stop offset="65%"  stop-color="#16654A"/>
+            <stop offset="100%" stop-color="#062014"/>
+          </linearGradient>
+          <linearGradient id="d-gR" x1="372" y1="88" x2="190" y2="430" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#80E2C2"/>
+            <stop offset="30%"  stop-color="#38B082"/>
+            <stop offset="65%"  stop-color="#16654A"/>
+            <stop offset="100%" stop-color="#062014"/>
+          </linearGradient>
+          <radialGradient id="d-cs" cx="200" cy="156" rx="30" ry="22" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#010A05" stop-opacity="0.60"/>
+            <stop offset="100%" stop-color="#010A05" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <path fill="url(#d-gR)" d="M 200,140 C 218,108 245,88 275,88 C 335,88 372,138 372,208 C 372,290 292,355 200,410 L 200,388 C 248,330 320,278 320,210 C 320,168 304,133 257,133 C 235,133 215,148 200,170 Z"/>
+        <ellipse cx="200" cy="156" rx="30" ry="22" fill="url(#d-cs)"/>
+        <path fill="url(#d-gL)" d="M 200,140 C 182,108 155,88 125,88 C 65,88 28,138 28,208 C 28,290 108,355 200,410 L 200,388 C 152,330 80,278 80,210 C 80,168 96,133 143,133 C 165,133 185,148 200,170 Z"/>
+      </svg>
+      <div class="wm-text">
+        <div class="wm-en">Alinaya Alrafia</div>
+        <div class="wm-div"></div>
+        <div class="wm-sub">Medical Company</div>
+        <div class="wm-ar">شركة العناية الرفيعة الطبية</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <!-- Wordmark on Dark -->
+  <div class="card card-dk" style="padding:44px 52px; flex:1; min-width:520px;">
+    <span class="lbl" style="position:absolute;top:18px;left:24px;">On Dark</span>
+    <div class="wm-row dark">
+      <svg viewBox="0 0 400 440" width="68" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+        <defs>
+          <linearGradient id="e-gL" x1="28" y1="88" x2="210" y2="430" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#80E2C2"/>
+            <stop offset="30%"  stop-color="#38B082"/>
+            <stop offset="65%"  stop-color="#16654A"/>
+            <stop offset="100%" stop-color="#062014"/>
+          </linearGradient>
+          <linearGradient id="e-gR" x1="372" y1="88" x2="190" y2="430" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#80E2C2"/>
+            <stop offset="30%"  stop-color="#38B082"/>
+            <stop offset="65%"  stop-color="#16654A"/>
+            <stop offset="100%" stop-color="#062014"/>
+          </linearGradient>
+          <radialGradient id="e-cs" cx="200" cy="156" rx="30" ry="22" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#000000" stop-opacity="0.65"/>
+            <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <path fill="url(#e-gR)" d="M 200,140 C 218,108 245,88 275,88 C 335,88 372,138 372,208 C 372,290 292,355 200,410 L 200,388 C 248,330 320,278 320,210 C 320,168 304,133 257,133 C 235,133 215,148 200,170 Z"/>
+        <ellipse cx="200" cy="156" rx="30" ry="22" fill="url(#e-cs)"/>
+        <path fill="url(#e-gL)" d="M 200,140 C 182,108 155,88 125,88 C 65,88 28,138 28,208 C 28,290 108,355 200,410 L 200,388 C 152,330 80,278 80,210 C 80,168 96,133 143,133 C 165,133 185,148 200,170 Z"/>
+      </svg>
+      <div class="wm-text">
+        <div class="wm-en">Alinaya Alrafia</div>
+        <div class="wm-div"></div>
+        <div class="wm-sub">Medical Company</div>
+        <div class="wm-ar">شركة العناية الرفيعة الطبية</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SCALE TEST -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="sec">Scale Test</div>
+<div class="card card-w" style="display:inline-flex; flex-direction:row; align-items:flex-end; gap:36px; padding:40px 48px;">
+
+  <!-- 20px -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+    <svg viewBox="0 0 400 440" width="20" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="s1-gL" x1="28" y1="88" x2="210" y2="430" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#80E2C2"/><stop offset="50%" stop-color="#38B082"/><stop offset="100%" stop-color="#062014"/></linearGradient>
+        <linearGradient id="s1-gR" x1="372" y1="88" x2="190" y2="430" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#80E2C2"/><stop offset="50%" stop-color="#38B082"/><stop offset="100%" stop-color="#062014"/></linearGradient>
+      </defs>
+      <path fill="url(#s1-gR)" d="M 200,140 C 218,108 245,88 275,88 C 335,88 372,138 372,208 C 372,290 292,355 200,410 L 200,388 C 248,330 320,278 320,210 C 320,168 304,133 257,133 C 235,133 215,148 200,170 Z"/>
+      <path fill="url(#s1-gL)" d="M 200,140 C 182,108 155,88 125,88 C 65,88 28,138 28,208 C 28,290 108,355 200,410 L 200,388 C 152,330 80,278 80,210 C 80,168 96,133 143,133 C 165,133 185,148 200,170 Z"/>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">20</span>
+  </div>
+
+  <!-- 32px -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+    <svg viewBox="0 0 400 440" width="32" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="s2-gL" x1="28" y1="88" x2="210" y2="430" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#80E2C2"/><stop offset="50%" stop-color="#38B082"/><stop offset="100%" stop-color="#062014"/></linearGradient>
+        <linearGradient id="s2-gR" x1="372" y1="88" x2="190" y2="430" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#80E2C2"/><stop offset="50%" stop-color="#38B082"/><stop offset="100%" stop-color="#062014"/></linearGradient>
+      </defs>
+      <path fill="url(#s2-gR)" d="M 200,140 C 218,108 245,88 275,88 C 335,88 372,138 372,208 C 372,290 292,355 200,410 L 200,388 C 248,330 320,278 320,210 C 320,168 304,133 257,133 C 235,133 215,148 200,170 Z"/>
+      <path fill="url(#s2-gL)" d="M 200,140 C 182,108 155,88 125,88 C 65,88 28,138 28,208 C 28,290 108,355 200,410 L 200,388 C 152,330 80,278 80,210 C 80,168 96,133 143,133 C 165,133 185,148 200,170 Z"/>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">32</span>
+  </div>
+
+  <!-- 56px -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+    <svg viewBox="0 0 400 440" width="56" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="s3-gL" x1="28" y1="88" x2="210" y2="430" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#80E2C2"/><stop offset="50%" stop-color="#38B082"/><stop offset="100%" stop-color="#062014"/></linearGradient>
+        <linearGradient id="s3-gR" x1="372" y1="88" x2="190" y2="430" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#80E2C2"/><stop offset="50%" stop-color="#38B082"/><stop offset="100%" stop-color="#062014"/></linearGradient>
+      </defs>
+      <path fill="url(#s3-gR)" d="M 200,140 C 218,108 245,88 275,88 C 335,88 372,138 372,208 C 372,290 292,355 200,410 L 200,388 C 248,330 320,278 320,210 C 320,168 304,133 257,133 C 235,133 215,148 200,170 Z"/>
+      <path fill="url(#s3-gL)" d="M 200,140 C 182,108 155,88 125,88 C 65,88 28,138 28,208 C 28,290 108,355 200,410 L 200,388 C 152,330 80,278 80,210 C 80,168 96,133 143,133 C 165,133 185,148 200,170 Z"/>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">56</span>
+  </div>
+
+  <!-- 100px -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+    <svg viewBox="0 0 400 440" width="100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="s4-gL" x1="28" y1="88" x2="210" y2="430" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#80E2C2"/><stop offset="50%" stop-color="#38B082"/><stop offset="100%" stop-color="#062014"/></linearGradient>
+        <linearGradient id="s4-gR" x1="372" y1="88" x2="190" y2="430" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#80E2C2"/><stop offset="50%" stop-color="#38B082"/><stop offset="100%" stop-color="#062014"/></linearGradient>
+        <radialGradient id="s4-cs" cx="200" cy="156" rx="30" ry="22" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#010A05" stop-opacity="0.60"/><stop offset="100%" stop-color="#010A05" stop-opacity="0"/></radialGradient>
+      </defs>
+      <path fill="url(#s4-gR)" d="M 200,140 C 218,108 245,88 275,88 C 335,88 372,138 372,208 C 372,290 292,355 200,410 L 200,388 C 248,330 320,278 320,210 C 320,168 304,133 257,133 C 235,133 215,148 200,170 Z"/>
+      <ellipse cx="200" cy="156" rx="30" ry="22" fill="url(#s4-cs)"/>
+      <path fill="url(#s4-gL)" d="M 200,140 C 182,108 155,88 125,88 C 65,88 28,138 28,208 C 28,290 108,355 200,410 L 200,388 C 152,330 80,278 80,210 C 80,168 96,133 143,133 C 165,133 185,148 200,170 Z"/>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">100</span>
+  </div>
+
+  <!-- 180px -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+    <svg viewBox="0 0 400 440" width="180" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="s5-gL" x1="28" y1="88" x2="210" y2="430" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#80E2C2"/><stop offset="30%" stop-color="#38B082"/><stop offset="65%" stop-color="#16654A"/><stop offset="100%" stop-color="#062014"/></linearGradient>
+        <linearGradient id="s5-gR" x1="372" y1="88" x2="190" y2="430" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#80E2C2"/><stop offset="30%" stop-color="#38B082"/><stop offset="65%" stop-color="#16654A"/><stop offset="100%" stop-color="#062014"/></linearGradient>
+        <radialGradient id="s5-cs" cx="200" cy="156" rx="30" ry="22" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#010A05" stop-opacity="0.62"/><stop offset="100%" stop-color="#010A05" stop-opacity="0"/></radialGradient>
+      </defs>
+      <path fill="url(#s5-gR)" d="M 200,140 C 218,108 245,88 275,88 C 335,88 372,138 372,208 C 372,290 292,355 200,410 L 200,388 C 248,330 320,278 320,210 C 320,168 304,133 257,133 C 235,133 215,148 200,170 Z"/>
+      <ellipse cx="200" cy="156" rx="30" ry="22" fill="url(#s5-cs)"/>
+      <path fill="url(#s5-gL)" d="M 200,140 C 182,108 155,88 125,88 C 65,88 28,138 28,208 C 28,290 108,355 200,410 L 200,388 C 152,330 80,278 80,210 C 80,168 96,133 143,133 C 165,133 185,148 200,170 Z"/>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">180</span>
+  </div>
+
+</div><!-- /scale test -->
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ADJUSTMENTS GUIDE -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="sec">What to Adjust</div>
+<div style="background:#fff;border-radius:16px;padding:32px 36px;max-width:660px;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px 40px;font-size:13px;line-height:1.8;color:#374151;">
+    <div><strong style="color:#111827;">Ribbon wider</strong><br>Decrease inner heart x range: change 80→65 and 320→335</div>
+    <div><strong style="color:#111827;">Ribbon narrower</strong><br>Increase inner: change 80→95 and 320→305</div>
+    <div><strong style="color:#111827;">Heart taller</strong><br>Increase bottom y: change 410→430 and 388→408</div>
+    <div><strong style="color:#111827;">Notch deeper</strong><br>Lower outer notch y: change 140→125, adjust inner 170→155</div>
+    <div><strong style="color:#111827;">Lobes rounder</strong><br>Push lobe peak outward: change 125,88 → 110,80 and mirror</div>
+    <div><strong style="color:#111827;">Lighter gradient top</strong><br>Change first stop from #80E2C2 → #A5EDD5</div>
+  </div>
+</div>
+
+<div style="margin-top:52px; font-size:12px; color:#9CA3AF; letter-spacing:2px; text-transform:uppercase;">
+  Reply <strong style="color:#1B4D3E;">adjust</strong> + describe what to change &nbsp;·&nbsp; or <strong style="color:#1B4D3E;">yes lock it</strong> to save as production mark
+</div>
+
+</body>
+</html>

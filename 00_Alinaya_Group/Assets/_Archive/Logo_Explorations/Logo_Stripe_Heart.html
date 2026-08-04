@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alinaya — Stripe Heart Mark</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&family=Cairo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#EAEEF3; font-family:'Raleway',sans-serif; padding:56px 72px; }
+h1 { font-size:11px; font-weight:700; letter-spacing:5px; color:#9CA3AF; text-transform:uppercase; margin-bottom:8px; }
+h2 { font-size:24px; font-weight:700; color:#111827; margin-bottom:6px; }
+p  { font-size:13px; color:#6B7280; margin-bottom:44px; line-height:1.7; max-width:600px; }
+.sec { font-size:10px; font-weight:700; letter-spacing:4px; color:#6B7280; text-transform:uppercase; margin:44px 0 16px; }
+.row { display:flex; gap:20px; flex-wrap:wrap; margin-bottom:20px; }
+.card { border-radius:20px; padding:52px 40px; display:flex; flex-direction:column; align-items:center; gap:20px; position:relative; }
+.card-w  { background:#FFFFFF; box-shadow:0 2px 24px rgba(0,0,0,0.07); }
+.card-dk { background:#0D1A15; box-shadow:0 6px 36px rgba(0,0,0,0.50); }
+.card-em { background:#1B4D3E; box-shadow:0 6px 28px rgba(27,77,62,0.45); }
+.lbl { font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#9CA3AF; }
+.card-dk .lbl, .card-em .lbl { color:rgba(255,255,255,0.22); }
+svg { display:block; }
+.wm-row { display:flex; flex-direction:row; align-items:center; gap:26px; }
+.wm-text { display:flex; flex-direction:column; gap:5px; }
+.wm-en   { font:700 26px/1 'Raleway'; }
+.wm-div  { height:1.5px; background:currentColor; opacity:0.35; margin:2px 0; }
+.wm-sub  { font:400 11px/1 'Raleway'; letter-spacing:5px; text-transform:uppercase; }
+.wm-ar   { font:500 14px/1 'Cairo'; direction:rtl; margin-top:2px; }
+.on-w .wm-en, .on-w .wm-div { color:#1B4D3E; }
+.on-w .wm-sub { color:#6B8C7E; }
+.on-w .wm-ar  { color:#1B4D3E; }
+.on-dk .wm-en, .on-dk .wm-div { color:#C9A84C; }
+.on-dk .wm-sub { color:rgba(255,255,255,0.45); }
+.on-dk .wm-ar  { color:rgba(255,255,255,0.82); }
+.on-em .wm-en, .on-em .wm-div { color:#C9A84C; }
+.on-em .wm-sub { color:rgba(255,255,255,0.55); }
+.on-em .wm-ar  { color:rgba(255,255,255,0.88); }
+</style>
+</head>
+<body>
+
+<h1>Stripe Heart — Style Exploration</h1>
+<h2>Flat Geometric Heart + Diagonal Stripes</h2>
+<p>Heart formed by a bold ring outline. Inside: 3 diagonal stripes cut through the negative space and extend outside the heart at the lower right — adding motion, depth, and care. Shown in brand Emerald, with a gold-accent variant.</p>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- VARIATION A — Solid Emerald (like reference) -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="sec">Variant A — Solid Emerald (closest to reference)</div>
+<div class="row">
+
+  <!-- On White -->
+  <div class="card card-w">
+    <span class="lbl">On White</span>
+    <!--
+      PATHS:
+      Outer heart: wide, round lobes. Notch at (250,148). Bottom tip (250,468).
+      Inner heart: ~64px inset ribbon. Notch at (250,202). Bottom (250,444).
+      3 diagonal stripes at 45°, starting within outer ring, extending lower-right.
+      Mask: stripes only visible inside inner white area + outside outer heart.
+    -->
+    <svg viewBox="0 0 500 540" width="200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="mA">
+          <!-- White = show, black = hide -->
+          <rect width="500" height="540" fill="white"/>
+          <!-- Hide the teal ring region (outer heart area) -->
+          <path fill="black"
+            d="M 250,148
+               C 226,112 191,90 154,90
+               C 82,90 36,146 36,222
+               C 36,312 132,386 250,470
+               C 368,386 464,312 464,222
+               C 464,146 418,90 346,90
+               C 309,90 274,112 250,148 Z"/>
+          <!-- Re-show the inner white area -->
+          <path fill="white"
+            d="M 250,202
+               C 230,168 205,148 178,148
+               C 120,148 88,196 88,246
+               C 88,320 164,376 250,446
+               C 336,376 412,320 412,246
+               C 412,196 380,148 322,148
+               C 295,148 270,168 250,202 Z"/>
+        </mask>
+      </defs>
+
+      <!-- 1. Outer heart ring (teal fill) -->
+      <path fill="#1B4D3E"
+        d="M 250,148
+           C 226,112 191,90 154,90
+           C 82,90 36,146 36,222
+           C 36,312 132,386 250,470
+           C 368,386 464,312 464,222
+           C 464,146 418,90 346,90
+           C 309,90 274,112 250,148 Z
+           M 250,202
+           C 270,168 295,148 322,148
+           C 380,148 412,196 412,246
+           C 412,320 336,376 250,446
+           C 164,376 88,320 88,246
+           C 88,196 120,148 178,148
+           C 205,148 230,168 250,202 Z"
+        fill-rule="evenodd"/>
+
+      <!-- 2. Diagonal stripes — masked so only visible inside white area + outside heart -->
+      <g mask="url(#mA)">
+        <line x1="120" y1="72"  x2="560" y2="512" stroke="#1B4D3E" stroke-width="28" stroke-linecap="round"/>
+        <line x1="120" y1="132" x2="560" y2="572" stroke="#1B4D3E" stroke-width="28" stroke-linecap="round"/>
+        <line x1="120" y1="192" x2="560" y2="632" stroke="#1B4D3E" stroke-width="28" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- On Dark -->
+  <div class="card card-dk">
+    <span class="lbl">On Dark</span>
+    <svg viewBox="0 0 500 540" width="200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="mB">
+          <rect width="500" height="540" fill="white"/>
+          <path fill="black"
+            d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z"/>
+          <path fill="white"
+            d="M 250,202 C 230,168 205,148 178,148 C 120,148 88,196 88,246 C 88,320 164,376 250,446 C 336,376 412,320 412,246 C 412,196 380,148 322,148 C 295,148 270,168 250,202 Z"/>
+        </mask>
+      </defs>
+      <!-- White version of ring for dark bg -->
+      <path fill="#FFFFFF"
+        d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z M 250,202 C 270,168 295,148 322,148 C 380,148 412,196 412,246 C 412,320 336,376 250,446 C 164,376 88,320 88,246 C 88,196 120,148 178,148 C 205,148 230,168 250,202 Z"
+        fill-rule="evenodd"/>
+      <g mask="url(#mB)">
+        <line x1="120" y1="72"  x2="560" y2="512" stroke="#FFFFFF" stroke-width="28" stroke-linecap="round"/>
+        <line x1="120" y1="132" x2="560" y2="572" stroke="#FFFFFF" stroke-width="28" stroke-linecap="round"/>
+        <line x1="120" y1="192" x2="560" y2="632" stroke="#FFFFFF" stroke-width="28" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- On Brand Emerald -->
+  <div class="card card-em">
+    <span class="lbl">On Emerald</span>
+    <svg viewBox="0 0 500 540" width="200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="mC">
+          <rect width="500" height="540" fill="white"/>
+          <path fill="black"
+            d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z"/>
+          <path fill="white"
+            d="M 250,202 C 230,168 205,148 178,148 C 120,148 88,196 88,246 C 88,320 164,376 250,446 C 336,376 412,320 412,246 C 412,196 380,148 322,148 C 295,148 270,168 250,202 Z"/>
+        </mask>
+      </defs>
+      <path fill="rgba(255,255,255,0.90)"
+        d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z M 250,202 C 270,168 295,148 322,148 C 380,148 412,196 412,246 C 412,320 336,376 250,446 C 164,376 88,320 88,246 C 88,196 120,148 178,148 C 205,148 230,168 250,202 Z"
+        fill-rule="evenodd"/>
+      <g mask="url(#mC)">
+        <line x1="120" y1="72"  x2="560" y2="512" stroke="rgba(255,255,255,0.90)" stroke-width="28" stroke-linecap="round"/>
+        <line x1="120" y1="132" x2="560" y2="572" stroke="rgba(255,255,255,0.90)" stroke-width="28" stroke-linecap="round"/>
+        <line x1="120" y1="192" x2="560" y2="632" stroke="rgba(255,255,255,0.90)" stroke-width="28" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+
+</div><!-- /row A -->
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- VARIATION B — Emerald ring + Gold stripes -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="sec">Variant B — Emerald Ring + Gold Stripes (brand accent)</div>
+<div class="row">
+
+  <!-- On White -->
+  <div class="card card-w">
+    <span class="lbl">On White</span>
+    <svg viewBox="0 0 500 540" width="200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="mD">
+          <rect width="500" height="540" fill="white"/>
+          <path fill="black" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z"/>
+          <path fill="white" d="M 250,202 C 230,168 205,148 178,148 C 120,148 88,196 88,246 C 88,320 164,376 250,446 C 336,376 412,320 412,246 C 412,196 380,148 322,148 C 295,148 270,168 250,202 Z"/>
+        </mask>
+      </defs>
+      <!-- Emerald ring -->
+      <path fill="#1B4D3E"
+        d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z M 250,202 C 270,168 295,148 322,148 C 380,148 412,196 412,246 C 412,320 336,376 250,446 C 164,376 88,320 88,246 C 88,196 120,148 178,148 C 205,148 230,168 250,202 Z"
+        fill-rule="evenodd"/>
+      <!-- Gold stripes -->
+      <g mask="url(#mD)">
+        <line x1="120" y1="72"  x2="560" y2="512" stroke="#C9A84C" stroke-width="28" stroke-linecap="round"/>
+        <line x1="120" y1="132" x2="560" y2="572" stroke="#C9A84C" stroke-width="28" stroke-linecap="round"/>
+        <line x1="120" y1="192" x2="560" y2="632" stroke="#C9A84C" stroke-width="28" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- On Dark -->
+  <div class="card card-dk">
+    <span class="lbl">On Dark</span>
+    <svg viewBox="0 0 500 540" width="200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="mE">
+          <rect width="500" height="540" fill="white"/>
+          <path fill="black" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z"/>
+          <path fill="white" d="M 250,202 C 230,168 205,148 178,148 C 120,148 88,196 88,246 C 88,320 164,376 250,446 C 336,376 412,320 412,246 C 412,196 380,148 322,148 C 295,148 270,168 250,202 Z"/>
+        </mask>
+      </defs>
+      <path fill="#1B4D3E"
+        d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z M 250,202 C 270,168 295,148 322,148 C 380,148 412,196 412,246 C 412,320 336,376 250,446 C 164,376 88,320 88,246 C 88,196 120,148 178,148 C 205,148 230,168 250,202 Z"
+        fill-rule="evenodd"/>
+      <g mask="url(#mE)">
+        <line x1="120" y1="72"  x2="560" y2="512" stroke="#C9A84C" stroke-width="28" stroke-linecap="round"/>
+        <line x1="120" y1="132" x2="560" y2="572" stroke="#C9A84C" stroke-width="28" stroke-linecap="round"/>
+        <line x1="120" y1="192" x2="560" y2="632" stroke="#C9A84C" stroke-width="28" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- On Emerald -->
+  <div class="card card-em">
+    <span class="lbl">On Emerald</span>
+    <svg viewBox="0 0 500 540" width="200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="mF">
+          <rect width="500" height="540" fill="white"/>
+          <path fill="black" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z"/>
+          <path fill="white" d="M 250,202 C 230,168 205,148 178,148 C 120,148 88,196 88,246 C 88,320 164,376 250,446 C 336,376 412,320 412,246 C 412,196 380,148 322,148 C 295,148 270,168 250,202 Z"/>
+        </mask>
+      </defs>
+      <path fill="rgba(255,255,255,0.18)"
+        d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z M 250,202 C 270,168 295,148 322,148 C 380,148 412,196 412,246 C 412,320 336,376 250,446 C 164,376 88,320 88,246 C 88,196 120,148 178,148 C 205,148 230,168 250,202 Z"
+        fill-rule="evenodd"/>
+      <g mask="url(#mF)">
+        <line x1="120" y1="72"  x2="560" y2="512" stroke="#C9A84C" stroke-width="28" stroke-linecap="round"/>
+        <line x1="120" y1="132" x2="560" y2="572" stroke="#C9A84C" stroke-width="28" stroke-linecap="round"/>
+        <line x1="120" y1="192" x2="560" y2="632" stroke="#C9A84C" stroke-width="28" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+
+</div><!-- /row B -->
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- FULL WORDMARK — Variant A on White -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="sec">Full Wordmark</div>
+<div class="row">
+
+  <!-- Horizontal on White -->
+  <div class="card card-w on-w" style="padding:40px 52px; flex:1; min-width:500px; flex-direction:row; align-items:center; justify-content:center;">
+    <span class="lbl" style="position:absolute;top:18px;left:24px;">A · On White</span>
+    <div class="wm-row">
+      <svg viewBox="0 0 500 540" width="62" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+        <defs>
+          <mask id="mG">
+            <rect width="500" height="540" fill="white"/>
+            <path fill="black" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z"/>
+            <path fill="white" d="M 250,202 C 230,168 205,148 178,148 C 120,148 88,196 88,246 C 88,320 164,376 250,446 C 336,376 412,320 412,246 C 412,196 380,148 322,148 C 295,148 270,168 250,202 Z"/>
+          </mask>
+        </defs>
+        <path fill="#1B4D3E" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z M 250,202 C 270,168 295,148 322,148 C 380,148 412,196 412,246 C 412,320 336,376 250,446 C 164,376 88,320 88,246 C 88,196 120,148 178,148 C 205,148 230,168 250,202 Z" fill-rule="evenodd"/>
+        <g mask="url(#mG)">
+          <line x1="120" y1="72"  x2="560" y2="512" stroke="#1B4D3E" stroke-width="28" stroke-linecap="round"/>
+          <line x1="120" y1="132" x2="560" y2="572" stroke="#1B4D3E" stroke-width="28" stroke-linecap="round"/>
+          <line x1="120" y1="192" x2="560" y2="632" stroke="#1B4D3E" stroke-width="28" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div class="wm-text">
+        <div class="wm-en">ALINAYA ALRAFIA</div>
+        <div class="wm-div"></div>
+        <div class="wm-sub">Medical Company</div>
+        <div class="wm-ar">شركة العناية الرفيعة الطبية</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Variant B on White -->
+  <div class="card card-w on-w" style="padding:40px 52px; flex:1; min-width:500px; flex-direction:row; align-items:center; justify-content:center;">
+    <span class="lbl" style="position:absolute;top:18px;left:24px;">B · On White</span>
+    <div class="wm-row">
+      <svg viewBox="0 0 500 540" width="62" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+        <defs>
+          <mask id="mH">
+            <rect width="500" height="540" fill="white"/>
+            <path fill="black" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z"/>
+            <path fill="white" d="M 250,202 C 230,168 205,148 178,148 C 120,148 88,196 88,246 C 88,320 164,376 250,446 C 336,376 412,320 412,246 C 412,196 380,148 322,148 C 295,148 270,168 250,202 Z"/>
+          </mask>
+        </defs>
+        <path fill="#1B4D3E" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z M 250,202 C 270,168 295,148 322,148 C 380,148 412,196 412,246 C 412,320 336,376 250,446 C 164,376 88,320 88,246 C 88,196 120,148 178,148 C 205,148 230,168 250,202 Z" fill-rule="evenodd"/>
+        <g mask="url(#mH)">
+          <line x1="120" y1="72"  x2="560" y2="512" stroke="#C9A84C" stroke-width="28" stroke-linecap="round"/>
+          <line x1="120" y1="132" x2="560" y2="572" stroke="#C9A84C" stroke-width="28" stroke-linecap="round"/>
+          <line x1="120" y1="192" x2="560" y2="632" stroke="#C9A84C" stroke-width="28" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div class="wm-text">
+        <div class="wm-en">ALINAYA ALRAFIA</div>
+        <div class="wm-div"></div>
+        <div class="wm-sub">Medical Company</div>
+        <div class="wm-ar">شركة العناية الرفيعة الطبية</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /wordmark row -->
+
+<div class="row">
+
+  <!-- Variant A on Dark -->
+  <div class="card card-dk on-dk" style="padding:40px 52px; flex:1; min-width:500px; flex-direction:row; align-items:center; justify-content:center;">
+    <span class="lbl" style="position:absolute;top:18px;left:24px;">A · On Dark</span>
+    <div class="wm-row">
+      <svg viewBox="0 0 500 540" width="62" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+        <defs>
+          <mask id="mI">
+            <rect width="500" height="540" fill="white"/>
+            <path fill="black" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z"/>
+            <path fill="white" d="M 250,202 C 230,168 205,148 178,148 C 120,148 88,196 88,246 C 88,320 164,376 250,446 C 336,376 412,320 412,246 C 412,196 380,148 322,148 C 295,148 270,168 250,202 Z"/>
+          </mask>
+        </defs>
+        <path fill="#FFFFFF" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z M 250,202 C 270,168 295,148 322,148 C 380,148 412,196 412,246 C 412,320 336,376 250,446 C 164,376 88,320 88,246 C 88,196 120,148 178,148 C 205,148 230,168 250,202 Z" fill-rule="evenodd"/>
+        <g mask="url(#mI)">
+          <line x1="120" y1="72"  x2="560" y2="512" stroke="#FFFFFF" stroke-width="28" stroke-linecap="round"/>
+          <line x1="120" y1="132" x2="560" y2="572" stroke="#FFFFFF" stroke-width="28" stroke-linecap="round"/>
+          <line x1="120" y1="192" x2="560" y2="632" stroke="#FFFFFF" stroke-width="28" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div class="wm-text">
+        <div class="wm-en" style="color:#FFFFFF;">ALINAYA ALRAFIA</div>
+        <div class="wm-div" style="background:#FFFFFF;"></div>
+        <div class="wm-sub">Medical Company</div>
+        <div class="wm-ar">شركة العناية الرفيعة الطبية</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SCALE TEST -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="sec">Scale Test — Variant A</div>
+<div class="card card-w" style="display:inline-flex; flex-direction:row; align-items:flex-end; gap:36px; padding:36px 48px;">
+
+  <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+    <svg viewBox="0 0 500 540" width="20" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#1B4D3E" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z M 250,202 C 270,168 295,148 322,148 C 380,148 412,196 412,246 C 412,320 336,376 250,446 C 164,376 88,320 88,246 C 88,196 120,148 178,148 C 205,148 230,168 250,202 Z" fill-rule="evenodd"/>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">20</span>
+  </div>
+
+  <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+    <svg viewBox="0 0 500 540" width="32" xmlns="http://www.w3.org/2000/svg">
+      <defs><mask id="s2m"><rect width="500" height="540" fill="white"/><path fill="black" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z"/><path fill="white" d="M 250,202 C 230,168 205,148 178,148 C 120,148 88,196 88,246 C 88,320 164,376 250,446 C 336,376 412,320 412,246 C 412,196 380,148 322,148 C 295,148 270,168 250,202 Z"/></mask></defs>
+      <path fill="#1B4D3E" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z M 250,202 C 270,168 295,148 322,148 C 380,148 412,196 412,246 C 412,320 336,376 250,446 C 164,376 88,320 88,246 C 88,196 120,148 178,148 C 205,148 230,168 250,202 Z" fill-rule="evenodd"/>
+      <g mask="url(#s2m)"><line x1="120" y1="72" x2="560" y2="512" stroke="#1B4D3E" stroke-width="28"/><line x1="120" y1="132" x2="560" y2="572" stroke="#1B4D3E" stroke-width="28"/><line x1="120" y1="192" x2="560" y2="632" stroke="#1B4D3E" stroke-width="28"/></g>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">32</span>
+  </div>
+
+  <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+    <svg viewBox="0 0 500 540" width="56" xmlns="http://www.w3.org/2000/svg">
+      <defs><mask id="s3m"><rect width="500" height="540" fill="white"/><path fill="black" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z"/><path fill="white" d="M 250,202 C 230,168 205,148 178,148 C 120,148 88,196 88,246 C 88,320 164,376 250,446 C 336,376 412,320 412,246 C 412,196 380,148 322,148 C 295,148 270,168 250,202 Z"/></mask></defs>
+      <path fill="#1B4D3E" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z M 250,202 C 270,168 295,148 322,148 C 380,148 412,196 412,246 C 412,320 336,376 250,446 C 164,376 88,320 88,246 C 88,196 120,148 178,148 C 205,148 230,168 250,202 Z" fill-rule="evenodd"/>
+      <g mask="url(#s3m)"><line x1="120" y1="72" x2="560" y2="512" stroke="#1B4D3E" stroke-width="28"/><line x1="120" y1="132" x2="560" y2="572" stroke="#1B4D3E" stroke-width="28"/><line x1="120" y1="192" x2="560" y2="632" stroke="#1B4D3E" stroke-width="28"/></g>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">56</span>
+  </div>
+
+  <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+    <svg viewBox="0 0 500 540" width="100" xmlns="http://www.w3.org/2000/svg">
+      <defs><mask id="s4m"><rect width="500" height="540" fill="white"/><path fill="black" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z"/><path fill="white" d="M 250,202 C 230,168 205,148 178,148 C 120,148 88,196 88,246 C 88,320 164,376 250,446 C 336,376 412,320 412,246 C 412,196 380,148 322,148 C 295,148 270,168 250,202 Z"/></mask></defs>
+      <path fill="#1B4D3E" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z M 250,202 C 270,168 295,148 322,148 C 380,148 412,196 412,246 C 412,320 336,376 250,446 C 164,376 88,320 88,246 C 88,196 120,148 178,148 C 205,148 230,168 250,202 Z" fill-rule="evenodd"/>
+      <g mask="url(#s4m)"><line x1="120" y1="72" x2="560" y2="512" stroke="#1B4D3E" stroke-width="28"/><line x1="120" y1="132" x2="560" y2="572" stroke="#1B4D3E" stroke-width="28"/><line x1="120" y1="192" x2="560" y2="632" stroke="#1B4D3E" stroke-width="28"/></g>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">100</span>
+  </div>
+
+  <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+    <svg viewBox="0 0 500 540" width="170" xmlns="http://www.w3.org/2000/svg">
+      <defs><mask id="s5m"><rect width="500" height="540" fill="white"/><path fill="black" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z"/><path fill="white" d="M 250,202 C 230,168 205,148 178,148 C 120,148 88,196 88,246 C 88,320 164,376 250,446 C 336,376 412,320 412,246 C 412,196 380,148 322,148 C 295,148 270,168 250,202 Z"/></mask></defs>
+      <path fill="#1B4D3E" d="M 250,148 C 226,112 191,90 154,90 C 82,90 36,146 36,222 C 36,312 132,386 250,470 C 368,386 464,312 464,222 C 464,146 418,90 346,90 C 309,90 274,112 250,148 Z M 250,202 C 270,168 295,148 322,148 C 380,148 412,196 412,246 C 412,320 336,376 250,446 C 164,376 88,320 88,246 C 88,196 120,148 178,148 C 205,148 230,168 250,202 Z" fill-rule="evenodd"/>
+      <g mask="url(#s5m)"><line x1="120" y1="72" x2="560" y2="512" stroke="#1B4D3E" stroke-width="28"/><line x1="120" y1="132" x2="560" y2="572" stroke="#1B4D3E" stroke-width="28"/><line x1="120" y1="192" x2="560" y2="632" stroke="#1B4D3E" stroke-width="28"/></g>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">170</span>
+  </div>
+
+</div><!-- /scale test -->
+
+
+<div style="margin-top:52px; font-size:12px; color:#9CA3AF; letter-spacing:2px; text-transform:uppercase; line-height:2;">
+  Reply <strong style="color:#1B4D3E;">A</strong> (solid, one color) &nbsp;·&nbsp;
+  <strong style="color:#1B4D3E;">B</strong> (emerald + gold stripes) &nbsp;·&nbsp;
+  <strong style="color:#1B4D3E;">adjust</strong> (wider stripes, deeper ring, spacing, etc.) &nbsp;·&nbsp;
+  <strong style="color:#1B4D3E;">back to bars</strong> (ascending bars mark)
+</div>
+
+</body>
+</html>

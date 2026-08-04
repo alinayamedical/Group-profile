@@ -1,0 +1,240 @@
+================================================================
+ALINAYA ALRAFIA MEDICAL COMPANY — DESIGN SPECIFICATION
+alinayamedical.com | July 2026 | v1.1
+================================================================
+
+
+════════════════════════════════════════════════════════════════
+1. DESIGN DIRECTION
+════════════════════════════════════════════════════════════════
+
+Style:      Clean & Corporate
+Feel:       Prestigious, trustworthy, authoritative
+Tone:       Professional but approachable
+Audience:   Partners, government bodies, investors, general public
+
+
+════════════════════════════════════════════════════════════════
+2. COLOR PALETTE
+════════════════════════════════════════════════════════════════
+
+PRIMARY — Emerald Green                          ✓ PALETTE 2 CONFIRMED
+  Hex:      #1B4D3E
+  RGB:      27, 77, 62
+  Use:      Navbar, headings, hero background, footer, CTAs
+  Note:     Approved July 2026 — Palette 2 selected (over Palette 8 Forest)
+
+SECONDARY — Gold                                 ✓ PALETTE 2 CONFIRMED
+  Hex:      #C9A84C
+  RGB:      201, 168, 76
+  Use:      Accents, underlines, dividers, hover states, icons
+
+WHITE
+  Hex:      #FFFFFF
+  Use:      Text on dark backgrounds, cards, section backgrounds
+
+BACKGROUND — Off White
+  Hex:      #F8F9FC
+  Use:      Page background, alternating sections
+
+TEXT — Dark Charcoal
+  Hex:      #1A1A2E
+  Use:      Body text on light backgrounds
+
+TEXT — Medium Grey
+  Hex:      #6B7280
+  Use:      Subheadings, captions, labels
+
+BORDER / DIVIDER
+  Hex:      #E5E7EB
+  Use:      Subtle separators, card borders
+
+
+════════════════════════════════════════════════════════════════
+3. TYPOGRAPHY
+════════════════════════════════════════════════════════════════
+
+── ENGLISH — Raleway (Google Fonts) ──
+
+  H1 (Hero heading):    Raleway Bold 700 | 56–64px | Emerald #1B4D3E
+  H2 (Section heading): Raleway SemiBold 600 | 36–42px | Emerald #1B4D3E
+  H3 (Sub-heading):     Raleway SemiBold 600 | 24px | Emerald #1B4D3E
+  H4 (Card title):      Raleway Medium 500 | 18px | Emerald #1B4D3E
+  Body:                 Raleway Regular 400 | 16px | Charcoal #1A1A2E
+  Caption / Label:      Raleway Medium 500 | 13px | Grey #6B7280
+  Button:               Raleway SemiBold 600 | 14px | Uppercase
+
+── ARABIC — Cairo (Google Fonts) ──
+
+  H1 (Hero heading):    Cairo Bold 700 | 48–56px | Emerald #1B4D3E
+  H2 (Section heading): Cairo SemiBold 600 | 32–36px | Emerald #1B4D3E
+  H3 (Sub-heading):     Cairo SemiBold 600 | 22px | Emerald #1B4D3E
+  H4 (Card title):      Cairo Medium 500 | 17px | Emerald #1B4D3E
+  Body:                 Cairo Regular 400 | 16px | Charcoal #1A1A2E
+  Caption / Label:      Cairo Medium 500 | 13px | Grey #6B7280
+  Button:               Cairo SemiBold 600 | 14px
+
+── LINE HEIGHT & SPACING ──
+
+  Body line height:     1.7
+  Heading line height:  1.2
+  Letter spacing H1:    -0.5px (EN) | 0 (AR)
+  Paragraph spacing:    24px
+
+
+════════════════════════════════════════════════════════════════
+4. LOGO  (LOCKED — July 2026)
+════════════════════════════════════════════════════════════════
+
+Company name:
+  Arabic:   شركة العناية الرفيعة الطبية
+  English:  Alinaya Alrafia Medical Company
+  Short:    Alinaya Medical
+
+Approved design:
+  Style:    Abstract Wedge — Clean Minimalist
+  Mark:     Two upper triangular wedges (left solid, right 62% opacity)
+            pointing upward, forming an implied "A" peak.
+            Lower half: gold diamond completing the rhombus shape.
+            Thin white vertical line at center apex.
+  Colors:   Emerald #1B4D3E (primary) + Gold #C9A84C (accent)
+  Feel:     Geometric precision, premium, timeless
+
+Files created:
+  Assets/Logo_Icon_Only.svg      — 140×140px icon mark
+  Assets/Logo_Full_Color.svg     — 620×140px full wordmark (on white)
+  Assets/Logo_White.svg          — 620×140px reversed (for dark bg)
+
+Still needed:
+  - PNG exports (transparent background)
+  - Favicon 32×32px
+  - Monochrome version
+
+
+════════════════════════════════════════════════════════════════
+5. BUTTONS
+════════════════════════════════════════════════════════════════
+
+Primary Button:
+  Background:   #1B4D3E (Emerald)
+  Text:         #FFFFFF (White)
+  Border:       none
+  Border radius: 4px
+  Padding:      14px 32px
+  Hover:        Background #C9A84C (Gold), Text #1B4D3E
+
+Secondary Button (outline):
+  Background:   transparent
+  Text:         #1B4D3E (Emerald)
+  Border:       2px solid #1B4D3E
+  Border radius: 4px
+  Padding:      14px 32px
+  Hover:        Background #1B4D3E, Text #FFFFFF
+
+Text Link:
+  Color:        #C9A84C (Gold)
+  Hover:        Underline
+
+
+════════════════════════════════════════════════════════════════
+6. LAYOUT & SPACING
+════════════════════════════════════════════════════════════════
+
+Max content width:    1200px
+Side padding:         80px (desktop) | 24px (mobile)
+Section padding:      96px top/bottom (desktop) | 64px (mobile)
+Grid:                 12-column
+Column gutter:        24px
+
+Breakpoints:
+  Mobile:   < 768px
+  Tablet:   768px – 1024px
+  Desktop:  > 1024px
+
+
+════════════════════════════════════════════════════════════════
+7. PAGE WIREFRAME — HOMEPAGE
+════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────┐
+│  NAVBAR                                                 │
+│  Logo (left)          Navigation links     AR | EN      │
+├─────────────────────────────────────────────────────────┤
+│  HERO  (full width, Emerald background #1B4D3E)          │
+│                                                         │
+│  [Gold line accent]                                     │
+│  A Healthcare Group Built                               │
+│  for Saudi Arabia's Future. [subtle medical image right]│
+│                                                         │
+│  [sub-headline text]                                    │
+│  [Learn More About Us] ← Primary button                │
+│                                                         │
+├─────────────────────────────────────────────────────────┤
+│  KEY FIGURES BAR  (white bg, Charcoal text, Gold accents)│
+│  3 Years | ___ Professionals | ___ Patients | ___ Cities│
+├─────────────────────────────────────────────────────────┤
+│  ABOUT  (off-white bg, 2-column: text left, image right)│
+│  H2: About Alinaya Alrafia Medical Company              │
+│  3 paragraphs...                 [facility/team image]  │
+├─────────────────────────────────────────────────────────┤
+│  MISSION & VISION  (Emerald bg #1B4D3E, white text)     │
+│  2 columns: Mission left | Vision right                 │
+│  [Gold divider line between]                            │
+├─────────────────────────────────────────────────────────┤
+│  VALUES  (off-white bg)                                 │
+│  H2: Our Core Values                                    │
+│  5 cards in a row (icon + title + 1-line description)   │
+├─────────────────────────────────────────────────────────┤
+│  CONTACT  (white bg)                                    │
+│  H2: Get in Touch                                       │
+│  Email | Hours | Address | WhatsApp button              │
+├─────────────────────────────────────────────────────────┤
+│  FOOTER  (Emerald bg #1B4D3E, white text)               │
+│  Logo | © 2026 Alinaya Alrafia Medical Company          │
+│  Email | LinkedIn | Social links                        │
+└─────────────────────────────────────────────────────────┘
+
+
+════════════════════════════════════════════════════════════════
+8. NAVBAR
+════════════════════════════════════════════════════════════════
+
+Background:     White (scrolled: White with shadow)
+Logo:           Left aligned
+Links:          About | Contact
+Language toggle: AR | EN  (right side)
+Mobile:         Hamburger menu
+Sticky:         Yes (stays at top on scroll)
+
+
+════════════════════════════════════════════════════════════════
+9. FOOTER
+════════════════════════════════════════════════════════════════
+
+Background:     #1B4D3E (Emerald)
+Text:           #FFFFFF
+Logo:           White version
+Content:
+  - © 2026 Alinaya Alrafia Medical Company. All rights reserved.
+  - Email: info@alinayamedical.com
+  - Working Hours: Sunday – Thursday, 9:00 AM – 6:00 PM
+  - Social media icons (if available)
+Divider:        #C9A84C (Gold) thin line above footer
+
+
+════════════════════════════════════════════════════════════════
+10. ARABIC (RTL) NOTES FOR DEVELOPER
+════════════════════════════════════════════════════════════════
+
+- Set <html dir="rtl" lang="ar"> for Arabic version
+- Mirror all layouts: text aligns right, columns flip
+- Navbar logo stays left (or mirrors right in RTL)
+- Button icons flip direction in RTL
+- Font: Cairo loaded via Google Fonts (weights: 400, 500, 600, 700)
+- Test on Safari iOS (most common in Saudi Arabia)
+- WhatsApp link format: https://wa.me/966XXXXXXXXX
+
+================================================================
+END OF DESIGN SPEC
+Alinaya Alrafia Medical Company | alinayamedical.com | July 2026
+================================================================

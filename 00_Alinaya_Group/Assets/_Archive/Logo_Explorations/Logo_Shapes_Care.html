@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alinaya — Hearts & Hands Shapes</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #F0F2F7; font-family: 'Raleway', sans-serif; padding: 48px; }
+  h1 { color: #1A1A2E; font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  p.meta { color: #6B7280; font-size: 13px; margin-bottom: 16px; }
+  .divider { height: 3px; background: linear-gradient(to right,#1B4D3E,#C9A84C,#F0F2F7); margin-bottom: 40px; border-radius: 2px; }
+
+  .palettes { display: flex; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; }
+  .pal { display: flex; align-items: center; gap: 10px; background: white; padding: 10px 16px; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.07); }
+  .dot { width: 20px; height: 20px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.08); }
+  .pal-text { font-size: 12px; font-weight: 600; color: #374151; }
+  .pal-hex { font-size: 11px; color: #9CA3AF; }
+
+  .section { margin-bottom: 60px; }
+  .section-label { font-size: 11px; font-weight: 700; color: #9CA3AF; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 8px; }
+  .section-title { font-size: 20px; font-weight: 700; color: #1A1A2E; margin-bottom: 24px; }
+
+  /* 4-column grid: [label] [P2 white] [P2 dark] [P8 white] [P8 dark] */
+  .row { display: grid; grid-template-columns: 180px 1fr 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px; align-items: center; }
+  .row-header { display: grid; grid-template-columns: 180px 1fr 1fr 1fr 1fr; gap: 16px; margin-bottom: 10px; }
+  .col-head { font-size: 10px; font-weight: 700; color: #9CA3AF; letter-spacing: 2px; text-transform: uppercase; text-align: center; padding: 6px 0; border-radius: 6px; }
+  .col-head.p2 { background: #1B4D3E22; color: #1B4D3E; }
+  .col-head.p8 { background: #1B3A2D22; color: #1B3A2D; }
+
+  .var-label { font-size: 13px; font-weight: 700; color: #1A1A2E; }
+  .var-desc { font-size: 11px; color: #6B7280; margin-top: 3px; line-height: 1.4; }
+  .var-tag { display: inline-block; font-size: 10px; font-weight: 700; color: white; background: #1B4D3E; padding: 2px 7px; border-radius: 4px; letter-spacing: 1px; margin-bottom: 6px; }
+
+  .card { background: white; border-radius: 12px; padding: 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.07); min-height: 130px; }
+  .card-dark-p2 { background: #1B4D3E; border-radius: 12px; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 130px; box-shadow: 0 2px 8px rgba(27,77,62,0.25); }
+  .card-dark-p8 { background: #1B3A2D; border-radius: 12px; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 130px; box-shadow: 0 2px 8px rgba(27,58,45,0.25); }
+  svg { max-width: 100%; height: auto; }
+
+  /* Wordmark rows */
+  .wm-row { display: grid; grid-template-columns: 180px 1fr 1fr; gap: 16px; margin-bottom: 20px; align-items: center; }
+  .wm-card { background: white; border-radius: 12px; padding: 24px 28px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+  .wm-card-dark-p2 { background: #1B4D3E; border-radius: 12px; padding: 24px 28px; box-shadow: 0 2px 8px rgba(27,77,62,0.25); }
+  .wm-card-dark-p8 { background: #1B3A2D; border-radius: 12px; padding: 24px 28px; box-shadow: 0 2px 8px rgba(27,58,45,0.25); }
+</style>
+</head>
+<body>
+
+<h1>Alinaya Alrafia — Hearts & Hands Shape Exploration</h1>
+<p class="meta">6 new shapes — shown in Palette 2 (Emerald + Gold) and Palette 8 (Forest + Rose Gold)</p>
+<div class="divider"></div>
+
+<div class="palettes">
+  <div class="pal">
+    <div class="dot" style="background:#1B4D3E"></div>
+    <div class="dot" style="background:#C9A84C"></div>
+    <div>
+      <div class="pal-text">Palette 2 — Emerald + Gold</div>
+      <div class="pal-hex">#1B4D3E + #C9A84C</div>
+    </div>
+  </div>
+  <div class="pal">
+    <div class="dot" style="background:#1B3A2D"></div>
+    <div class="dot" style="background:#C4956A"></div>
+    <div>
+      <div class="pal-text">Palette 8 — Forest + Rose Gold</div>
+      <div class="pal-hex">#1B3A2D + #C4956A</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SECTION 1: HEARTS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Section 1</div>
+  <div class="section-title">Heart Shapes</div>
+
+  <div class="row-header">
+    <div></div>
+    <div class="col-head p2">P2 On White</div>
+    <div class="col-head p2">P2 On Dark</div>
+    <div class="col-head p8">P8 On White</div>
+    <div class="col-head p8">P8 On Dark</div>
+  </div>
+
+  <!-- I: Heart + Gold Bar -->
+  <div class="row">
+    <div>
+      <div class="var-tag">I</div>
+      <div class="var-label">Heart + Gold Bar</div>
+      <div class="var-desc">Solid heart with gold crossbar — care meets precision</div>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="#1B4D3E"/>
+        <rect x="22" y="41" width="56" height="8" rx="4" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <div class="card-dark-p2">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="white"/>
+        <rect x="22" y="41" width="56" height="8" rx="4" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="#1B3A2D"/>
+        <rect x="22" y="41" width="56" height="8" rx="4" fill="#C4956A"/>
+      </svg>
+    </div>
+    <div class="card-dark-p8">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="white"/>
+        <rect x="22" y="41" width="56" height="8" rx="4" fill="#C4956A"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- J: Split Heart -->
+  <div class="row">
+    <div>
+      <div class="var-tag">J</div>
+      <div class="var-label">Split Heart</div>
+      <div class="var-desc">Top half primary, bottom half gold — two-tone premium feel</div>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="top-j1"><rect x="0" y="0" width="100" height="46"/></clipPath>
+          <clipPath id="bot-j1"><rect x="0" y="46" width="100" height="54"/></clipPath>
+        </defs>
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="#1B4D3E" clip-path="url(#top-j1)"/>
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="#C9A84C" clip-path="url(#bot-j1)"/>
+      </svg>
+    </div>
+    <div class="card-dark-p2">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="top-j2"><rect x="0" y="0" width="100" height="46"/></clipPath>
+          <clipPath id="bot-j2"><rect x="0" y="46" width="100" height="54"/></clipPath>
+        </defs>
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="white" clip-path="url(#top-j2)"/>
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="#C9A84C" clip-path="url(#bot-j2)"/>
+      </svg>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="top-j3"><rect x="0" y="0" width="100" height="46"/></clipPath>
+          <clipPath id="bot-j3"><rect x="0" y="46" width="100" height="54"/></clipPath>
+        </defs>
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="#1B3A2D" clip-path="url(#top-j3)"/>
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="#C4956A" clip-path="url(#bot-j3)"/>
+      </svg>
+    </div>
+    <div class="card-dark-p8">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="top-j4"><rect x="0" y="0" width="100" height="46"/></clipPath>
+          <clipPath id="bot-j4"><rect x="0" y="46" width="100" height="54"/></clipPath>
+        </defs>
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="white" clip-path="url(#top-j4)"/>
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="#C4956A" clip-path="url(#bot-j4)"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- K: Heart + Wedge inside -->
+  <div class="row">
+    <div>
+      <div class="var-tag">K</div>
+      <div class="var-label">Heart + Wedge</div>
+      <div class="var-desc">Heart shell with the approved wedge mark inside — care + identity combined</div>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="#1B4D3E"/>
+        <path d="M26,54 L50,22 L50,54 Z" fill="rgba(255,255,255,0.92)"/>
+        <path d="M74,54 L50,22 L50,54 Z" fill="rgba(255,255,255,0.50)"/>
+        <path d="M26,54 L50,76 L74,54 L50,54 Z" fill="#C9A84C"/>
+        <line x1="50" y1="22" x2="50" y2="54" stroke="#1B4D3E" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="card-dark-p2">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="rgba(255,255,255,0.18)"/>
+        <path d="M26,54 L50,22 L50,54 Z" fill="rgba(255,255,255,0.9)"/>
+        <path d="M74,54 L50,22 L50,54 Z" fill="rgba(255,255,255,0.45)"/>
+        <path d="M26,54 L50,76 L74,54 L50,54 Z" fill="#C9A84C"/>
+        <line x1="50" y1="22" x2="50" y2="54" stroke="#1B4D3E" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+      </svg>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="#1B3A2D"/>
+        <path d="M26,54 L50,22 L50,54 Z" fill="rgba(255,255,255,0.92)"/>
+        <path d="M74,54 L50,22 L50,54 Z" fill="rgba(255,255,255,0.50)"/>
+        <path d="M26,54 L50,76 L74,54 L50,54 Z" fill="#C4956A"/>
+        <line x1="50" y1="22" x2="50" y2="54" stroke="#1B3A2D" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="card-dark-p8">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="rgba(255,255,255,0.18)"/>
+        <path d="M26,54 L50,22 L50,54 Z" fill="rgba(255,255,255,0.9)"/>
+        <path d="M74,54 L50,22 L50,54 Z" fill="rgba(255,255,255,0.45)"/>
+        <path d="M26,54 L50,76 L74,54 L50,54 Z" fill="#C4956A"/>
+        <line x1="50" y1="22" x2="50" y2="54" stroke="#1B3A2D" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Heart + Pulse -->
+  <div class="row">
+    <div>
+      <div class="var-tag">L</div>
+      <div class="var-label">Heart + Pulse</div>
+      <div class="var-desc">Heart with ECG pulse line — unmistakably medical</div>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="#1B4D3E"/>
+        <!-- ECG pulse line in gold -->
+        <polyline points="16,46 28,46 34,30 40,58 46,38 52,46 60,46 66,36 70,46 84,46" fill="none" stroke="#C9A84C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="card-dark-p2">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="rgba(255,255,255,0.15)"/>
+        <polyline points="16,46 28,46 34,30 40,58 46,38 52,46 60,46 66,36 70,46 84,46" fill="none" stroke="#C9A84C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="#1B3A2D"/>
+        <polyline points="16,46 28,46 34,30 40,58 46,38 52,46 60,46 66,36 70,46 84,46" fill="none" stroke="#C4956A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="card-dark-p8">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,82 L14,46 C3,35 3,17 16,9 C26,2 40,7 50,20 C60,7 74,2 84,9 C97,17 97,35 86,46 Z" fill="rgba(255,255,255,0.15)"/>
+        <polyline points="16,46 28,46 34,30 40,58 46,38 52,46 60,46 66,36 70,46 84,46" fill="none" stroke="#C4956A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SECTION 2: HANDS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Section 2</div>
+  <div class="section-title">Hand Shapes</div>
+
+  <div class="row-header">
+    <div></div>
+    <div class="col-head p2">P2 On White</div>
+    <div class="col-head p2">P2 On Dark</div>
+    <div class="col-head p8">P8 On White</div>
+    <div class="col-head p8">P8 On Dark</div>
+  </div>
+
+  <!-- M: Cupped Hands -->
+  <div class="row">
+    <div>
+      <div class="var-tag">M</div>
+      <div class="var-label">Cupped Hands</div>
+      <div class="var-desc">Two hands forming a bowl — universal care & nurturing symbol</div>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Left hand -->
+        <path d="M6,82 C6,58 18,36 34,28 C34,28 36,40 33,52 C29,62 20,70 14,82 Z" fill="#1B4D3E"/>
+        <!-- Left fingers hint -->
+        <path d="M34,28 C34,18 38,12 43,15 C47,18 46,28 44,38 L36,52 Z" fill="#1B4D3E"/>
+        <!-- Right hand -->
+        <path d="M94,82 C94,58 82,36 66,28 C66,28 64,40 67,52 C71,62 80,70 86,82 Z" fill="#1B4D3E"/>
+        <!-- Right fingers hint -->
+        <path d="M66,28 C66,18 62,12 57,15 C53,18 54,28 56,38 L64,52 Z" fill="#1B4D3E"/>
+        <!-- Gold base / joined palms -->
+        <path d="M14,82 C18,94 34,98 50,98 C66,98 82,94 86,82 C74,76 60,74 50,74 C40,74 26,76 14,82 Z" fill="#C9A84C"/>
+        <!-- Small center dot -->
+        <circle cx="50" cy="72" r="3" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <div class="card-dark-p2">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6,82 C6,58 18,36 34,28 C34,28 36,40 33,52 C29,62 20,70 14,82 Z" fill="white"/>
+        <path d="M34,28 C34,18 38,12 43,15 C47,18 46,28 44,38 L36,52 Z" fill="white"/>
+        <path d="M94,82 C94,58 82,36 66,28 C66,28 64,40 67,52 C71,62 80,70 86,82 Z" fill="white"/>
+        <path d="M66,28 C66,18 62,12 57,15 C53,18 54,28 56,38 L64,52 Z" fill="white"/>
+        <path d="M14,82 C18,94 34,98 50,98 C66,98 82,94 86,82 C74,76 60,74 50,74 C40,74 26,76 14,82 Z" fill="#C9A84C"/>
+        <circle cx="50" cy="72" r="3" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6,82 C6,58 18,36 34,28 C34,28 36,40 33,52 C29,62 20,70 14,82 Z" fill="#1B3A2D"/>
+        <path d="M34,28 C34,18 38,12 43,15 C47,18 46,28 44,38 L36,52 Z" fill="#1B3A2D"/>
+        <path d="M94,82 C94,58 82,36 66,28 C66,28 64,40 67,52 C71,62 80,70 86,82 Z" fill="#1B3A2D"/>
+        <path d="M66,28 C66,18 62,12 57,15 C53,18 54,28 56,38 L64,52 Z" fill="#1B3A2D"/>
+        <path d="M14,82 C18,94 34,98 50,98 C66,98 82,94 86,82 C74,76 60,74 50,74 C40,74 26,76 14,82 Z" fill="#C4956A"/>
+        <circle cx="50" cy="72" r="3" fill="#C4956A"/>
+      </svg>
+    </div>
+    <div class="card-dark-p8">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6,82 C6,58 18,36 34,28 C34,28 36,40 33,52 C29,62 20,70 14,82 Z" fill="white"/>
+        <path d="M34,28 C34,18 38,12 43,15 C47,18 46,28 44,38 L36,52 Z" fill="white"/>
+        <path d="M94,82 C94,58 82,36 66,28 C66,28 64,40 67,52 C71,62 80,70 86,82 Z" fill="white"/>
+        <path d="M66,28 C66,18 62,12 57,15 C53,18 54,28 56,38 L64,52 Z" fill="white"/>
+        <path d="M14,82 C18,94 34,98 50,98 C66,98 82,94 86,82 C74,76 60,74 50,74 C40,74 26,76 14,82 Z" fill="#C4956A"/>
+        <circle cx="50" cy="72" r="3" fill="#C4956A"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- N: Hands holding heart -->
+  <div class="row">
+    <div>
+      <div class="var-tag">N</div>
+      <div class="var-label">Hands + Heart</div>
+      <div class="var-desc">Cupped hands cradling a heart — care, compassion, medical</div>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Heart (smaller, upper) -->
+        <path d="M50,52 L30,34 C23,27 23,16 30,11 C36,7 43,10 50,18 C57,10 64,7 70,11 C77,16 77,27 70,34 Z" fill="#1B4D3E"/>
+        <!-- Cupped hands below -->
+        <path d="M6,90 C6,70 16,54 30,48 C30,48 31,58 28,66 C24,74 16,80 12,90 Z" fill="#1B4D3E"/>
+        <path d="M94,90 C94,70 84,54 70,48 C70,48 69,58 72,66 C76,74 84,80 88,90 Z" fill="#1B4D3E"/>
+        <!-- Gold base of hands -->
+        <path d="M12,90 C16,98 34,100 50,100 C66,100 84,98 88,90 C76,84 62,82 50,82 C38,82 24,84 12,90 Z" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <div class="card-dark-p2">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,52 L30,34 C23,27 23,16 30,11 C36,7 43,10 50,18 C57,10 64,7 70,11 C77,16 77,27 70,34 Z" fill="white"/>
+        <path d="M6,90 C6,70 16,54 30,48 C30,48 31,58 28,66 C24,74 16,80 12,90 Z" fill="white"/>
+        <path d="M94,90 C94,70 84,54 70,48 C70,48 69,58 72,66 C76,74 84,80 88,90 Z" fill="white"/>
+        <path d="M12,90 C16,98 34,100 50,100 C66,100 84,98 88,90 C76,84 62,82 50,82 C38,82 24,84 12,90 Z" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,52 L30,34 C23,27 23,16 30,11 C36,7 43,10 50,18 C57,10 64,7 70,11 C77,16 77,27 70,34 Z" fill="#1B3A2D"/>
+        <path d="M6,90 C6,70 16,54 30,48 C30,48 31,58 28,66 C24,74 16,80 12,90 Z" fill="#1B3A2D"/>
+        <path d="M94,90 C94,70 84,54 70,48 C70,48 69,58 72,66 C76,74 84,80 88,90 Z" fill="#1B3A2D"/>
+        <path d="M12,90 C16,98 34,100 50,100 C66,100 84,98 88,90 C76,84 62,82 50,82 C38,82 24,84 12,90 Z" fill="#C4956A"/>
+      </svg>
+    </div>
+    <div class="card-dark-p8">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,52 L30,34 C23,27 23,16 30,11 C36,7 43,10 50,18 C57,10 64,7 70,11 C77,16 77,27 70,34 Z" fill="white"/>
+        <path d="M6,90 C6,70 16,54 30,48 C30,48 31,58 28,66 C24,74 16,80 12,90 Z" fill="white"/>
+        <path d="M94,90 C94,70 84,54 70,48 C70,48 69,58 72,66 C76,74 84,80 88,90 Z" fill="white"/>
+        <path d="M12,90 C16,98 34,100 50,100 C66,100 84,98 88,90 C76,84 62,82 50,82 C38,82 24,84 12,90 Z" fill="#C4956A"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- O: Open Palm -->
+  <div class="row">
+    <div>
+      <div class="var-tag">O</div>
+      <div class="var-label">Open Palm</div>
+      <div class="var-desc">Single raised palm — generosity, healing, open care (Arabic: كف العطاء)</div>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Palm -->
+        <rect x="26" y="55" width="48" height="34" rx="10" fill="#1B4D3E"/>
+        <!-- Thumb -->
+        <path d="M26,68 C20,65 14,60 14,52 C14,44 20,40 26,44 L26,68 Z" fill="#1B4D3E"/>
+        <!-- Index -->
+        <rect x="28" y="18" width="11" height="42" rx="5.5" fill="#1B4D3E"/>
+        <!-- Middle (tallest) -->
+        <rect x="41" y="11" width="11" height="48" rx="5.5" fill="#1B4D3E"/>
+        <!-- Ring -->
+        <rect x="54" y="16" width="11" height="43" rx="5.5" fill="#1B4D3E"/>
+        <!-- Pinky -->
+        <rect x="67" y="24" width="9" height="35" rx="4.5" fill="#1B4D3E"/>
+        <!-- Gold accent on palm -->
+        <rect x="28" y="70" width="44" height="9" rx="4.5" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <div class="card-dark-p2">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="26" y="55" width="48" height="34" rx="10" fill="white"/>
+        <path d="M26,68 C20,65 14,60 14,52 C14,44 20,40 26,44 L26,68 Z" fill="white"/>
+        <rect x="28" y="18" width="11" height="42" rx="5.5" fill="white"/>
+        <rect x="41" y="11" width="11" height="48" rx="5.5" fill="white"/>
+        <rect x="54" y="16" width="11" height="43" rx="5.5" fill="white"/>
+        <rect x="67" y="24" width="9" height="35" rx="4.5" fill="white"/>
+        <rect x="28" y="70" width="44" height="9" rx="4.5" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="26" y="55" width="48" height="34" rx="10" fill="#1B3A2D"/>
+        <path d="M26,68 C20,65 14,60 14,52 C14,44 20,40 26,44 L26,68 Z" fill="#1B3A2D"/>
+        <rect x="28" y="18" width="11" height="42" rx="5.5" fill="#1B3A2D"/>
+        <rect x="41" y="11" width="11" height="48" rx="5.5" fill="#1B3A2D"/>
+        <rect x="54" y="16" width="11" height="43" rx="5.5" fill="#1B3A2D"/>
+        <rect x="67" y="24" width="9" height="35" rx="4.5" fill="#1B3A2D"/>
+        <rect x="28" y="70" width="44" height="9" rx="4.5" fill="#C4956A"/>
+      </svg>
+    </div>
+    <div class="card-dark-p8">
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="26" y="55" width="48" height="34" rx="10" fill="white"/>
+        <path d="M26,68 C20,65 14,60 14,52 C14,44 20,40 26,44 L26,68 Z" fill="white"/>
+        <rect x="28" y="18" width="11" height="42" rx="5.5" fill="white"/>
+        <rect x="41" y="11" width="11" height="48" rx="5.5" fill="white"/>
+        <rect x="54" y="16" width="11" height="43" rx="5.5" fill="white"/>
+        <rect x="67" y="24" width="9" height="35" rx="4.5" fill="white"/>
+        <rect x="28" y="70" width="44" height="9" rx="4.5" fill="#C4956A"/>
+      </svg>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SECTION 3: FULL WORDMARK PREVIEWS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">Section 3</div>
+  <div class="section-title">Wordmark Previews — Top Picks</div>
+
+  <!-- K + P2 -->
+  <div style="margin-bottom:8px;font-size:11px;font-weight:700;color:#9CA3AF;letter-spacing:3px;text-transform:uppercase">K — Heart + Wedge &nbsp;× &nbsp;Palette 2 (Emerald + Gold)</div>
+  <div class="wm-card" style="margin-bottom:20px">
+    <svg viewBox="0 0 580 120" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50,95 L14,59 C3,48 3,30 16,22 C26,15 40,20 50,33 C60,20 74,15 84,22 C97,30 97,48 86,59 Z" fill="#1B4D3E"/>
+      <path d="M26,67 L50,35 L50,67 Z" fill="rgba(255,255,255,0.92)"/>
+      <path d="M74,67 L50,35 L50,67 Z" fill="rgba(255,255,255,0.5)"/>
+      <path d="M26,67 L50,89 L74,67 L50,67 Z" fill="#C9A84C"/>
+      <line x1="50" y1="35" x2="50" y2="67" stroke="#1B4D3E" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="116" y="44" font-family="Raleway,sans-serif" font-weight="700" font-size="28" fill="#1B4D3E" letter-spacing="1.2">ALINAYA ALRAFIA</text>
+      <rect x="116" y="54" width="440" height="2.5" fill="#C9A84C"/>
+      <text x="116" y="74" font-family="Raleway,sans-serif" font-weight="500" font-size="12" fill="#6B7280" letter-spacing="6.5">MEDICAL COMPANY</text>
+      <line x1="116" y1="90" x2="556" y2="90" stroke="#E5E7EB" stroke-width="1"/>
+      <text x="556" y="112" font-family="Cairo,sans-serif" font-weight="600" font-size="18" fill="#1B4D3E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+    </svg>
+  </div>
+
+  <!-- K + P8 -->
+  <div style="margin-bottom:8px;font-size:11px;font-weight:700;color:#9CA3AF;letter-spacing:3px;text-transform:uppercase">K — Heart + Wedge &nbsp;× &nbsp;Palette 8 (Forest + Rose Gold)</div>
+  <div class="wm-card" style="margin-bottom:20px">
+    <svg viewBox="0 0 580 120" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50,95 L14,59 C3,48 3,30 16,22 C26,15 40,20 50,33 C60,20 74,15 84,22 C97,30 97,48 86,59 Z" fill="#1B3A2D"/>
+      <path d="M26,67 L50,35 L50,67 Z" fill="rgba(255,255,255,0.92)"/>
+      <path d="M74,67 L50,35 L50,67 Z" fill="rgba(255,255,255,0.5)"/>
+      <path d="M26,67 L50,89 L74,67 L50,67 Z" fill="#C4956A"/>
+      <line x1="50" y1="35" x2="50" y2="67" stroke="#1B3A2D" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="116" y="44" font-family="Raleway,sans-serif" font-weight="700" font-size="28" fill="#1B3A2D" letter-spacing="1.2">ALINAYA ALRAFIA</text>
+      <rect x="116" y="54" width="440" height="2.5" fill="#C4956A"/>
+      <text x="116" y="74" font-family="Raleway,sans-serif" font-weight="500" font-size="12" fill="#6B7280" letter-spacing="6.5">MEDICAL COMPANY</text>
+      <line x1="116" y1="90" x2="556" y2="90" stroke="#E5E7EB" stroke-width="1"/>
+      <text x="556" y="112" font-family="Cairo,sans-serif" font-weight="600" font-size="18" fill="#1B3A2D" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+    </svg>
+  </div>
+
+  <!-- N + P2 -->
+  <div style="margin-bottom:8px;font-size:11px;font-weight:700;color:#9CA3AF;letter-spacing:3px;text-transform:uppercase">N — Hands + Heart &nbsp;× &nbsp;Palette 2 (Emerald + Gold)</div>
+  <div class="wm-card" style="margin-bottom:20px">
+    <svg viewBox="0 0 580 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- Heart -->
+      <path d="M50,55 L33,38 C26,31 26,21 33,16 C38,12 44,15 50,22 C56,15 62,12 67,16 C74,21 74,31 67,38 Z" fill="#1B4D3E"/>
+      <!-- Left hand -->
+      <path d="M6,100 C6,80 14,62 28,56 L28,68 C22,72 16,80 12,100 Z" fill="#1B4D3E"/>
+      <!-- Right hand -->
+      <path d="M94,100 C94,80 86,62 72,56 L72,68 C78,72 84,80 88,100 Z" fill="#1B4D3E"/>
+      <!-- Gold base -->
+      <path d="M12,100 C16,108 34,112 50,112 C66,112 84,108 88,100 C76,95 62,93 50,93 C38,93 24,95 12,100 Z" fill="#C9A84C"/>
+      <text x="116" y="44" font-family="Raleway,sans-serif" font-weight="700" font-size="28" fill="#1B4D3E" letter-spacing="1.2">ALINAYA ALRAFIA</text>
+      <rect x="116" y="54" width="440" height="2.5" fill="#C9A84C"/>
+      <text x="116" y="74" font-family="Raleway,sans-serif" font-weight="500" font-size="12" fill="#6B7280" letter-spacing="6.5">MEDICAL COMPANY</text>
+      <line x1="116" y1="90" x2="556" y2="90" stroke="#E5E7EB" stroke-width="1"/>
+      <text x="556" y="112" font-family="Cairo,sans-serif" font-weight="600" font-size="18" fill="#1B4D3E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+    </svg>
+  </div>
+
+  <!-- O + P2 -->
+  <div style="margin-bottom:8px;font-size:11px;font-weight:700;color:#9CA3AF;letter-spacing:3px;text-transform:uppercase">O — Open Palm &nbsp;× &nbsp;Palette 2 (Emerald + Gold)</div>
+  <div class="wm-card" style="margin-bottom:20px">
+    <svg viewBox="0 0 580 120" xmlns="http://www.w3.org/2000/svg">
+      <rect x="30" y="66" width="42" height="42" rx="9" fill="#1B4D3E"/>
+      <path d="M30,78 C24,75 18,70 18,63 C18,56 24,52 30,55 L30,78 Z" fill="#1B4D3E"/>
+      <rect x="32" y="28" width="10" height="41" rx="5" fill="#1B4D3E"/>
+      <rect x="44" y="21" width="10" height="48" rx="5" fill="#1B4D3E"/>
+      <rect x="56" y="25" width="10" height="44" rx="5" fill="#1B4D3E"/>
+      <rect x="68" y="33" width="8" height="36" rx="4" fill="#1B4D3E"/>
+      <rect x="32" y="82" width="38" height="8" rx="4" fill="#C9A84C"/>
+      <text x="116" y="44" font-family="Raleway,sans-serif" font-weight="700" font-size="28" fill="#1B4D3E" letter-spacing="1.2">ALINAYA ALRAFIA</text>
+      <rect x="116" y="54" width="440" height="2.5" fill="#C9A84C"/>
+      <text x="116" y="74" font-family="Raleway,sans-serif" font-weight="500" font-size="12" fill="#6B7280" letter-spacing="6.5">MEDICAL COMPANY</text>
+      <line x1="116" y1="90" x2="556" y2="90" stroke="#E5E7EB" stroke-width="1"/>
+      <text x="556" y="112" font-family="Cairo,sans-serif" font-weight="600" font-size="18" fill="#1B4D3E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+    </svg>
+  </div>
+
+</div>
+
+
+<!-- Footer -->
+<div style="border-top:1px solid #E5E7EB;padding-top:24px;color:#9CA3AF;font-size:12px;text-align:center">
+  Alinaya Alrafia Medical Company &nbsp;|&nbsp; Hearts & Hands Exploration — July 2026<br><br>
+  <strong style="color:#6B7280">
+    Reply with shape + palette — e.g. "K2" (Heart+Wedge, Emerald) or "N8" (Hands+Heart, Forest)<br>
+    Or go back to "H2" / "H8" for the original Abstract Wedge
+  </strong>
+</div>
+
+</body>
+</html>

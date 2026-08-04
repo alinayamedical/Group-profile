@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Alinaya Alrafia Medical Company</title>
+<meta name="description" content="Privacy Policy for Alinaya Alrafia Medical Company. How we collect, use, and protect your personal data in compliance with Saudi PDPL.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://alinayamedical.com/privacy">
+<link rel="alternate" hreflang="en" href="https://alinayamedical.com/privacy">
+<link rel="alternate" hreflang="ar" href="https://alinayamedical.com/privacy?lang=ar">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════════════════════ */
+:root {
+  --emerald:     #1B4D3E;
+  --emerald-dk:  #122F26;
+  --emerald-lt:  #235A49;
+  --gold:        #C9A84C;
+  --gold-lt:     #DBBF6F;
+  --white:       #FFFFFF;
+  --offwhite:    #F8F9FC;
+  --charcoal:    #1A1A2E;
+  --grey:        #6B7280;
+  --border:      #E5E7EB;
+  --nav-h:       80px;
+  --max-w:       860px;
+  --pad-x:       80px;
+  --r:           4px;
+  --ease:        cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ═══════════════════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-weight: 400;
+  color: var(--charcoal);
+  background: var(--white);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+html[lang="ar"] body {
+  font-family: 'Cairo', 'Arial', sans-serif;
+}
+
+img, svg { display: block; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+}
+
+@media (max-width: 1024px) { :root { --pad-x: 40px; } }
+@media (max-width: 767px)  { :root { --pad-x: 24px; } }
+
+/* ═══════════════════════════════════════════════════════
+   NAVBAR
+═══════════════════════════════════════════════════════ */
+#nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: var(--nav-h);
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+#nav.scrolled {
+  border-bottom-color: var(--border);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+
+.nav-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 0 var(--pad-x);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  flex-shrink: 0;
+  direction: ltr;
+}
+.nav-logo svg {
+  height: 46px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  flex: 1;
+  justify-content: center;
+}
+.nav-links a {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--grey);
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.25s var(--ease);
+  transform-origin: left;
+}
+html[dir="rtl"] .nav-links a::after { transform-origin: right; }
+.nav-links a:hover { color: var(--emerald); }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.lang-toggle button {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 6px 12px;
+  color: var(--grey);
+  transition: background 0.2s, color 0.2s;
+  font-family: 'Raleway', sans-serif;
+}
+.lang-toggle button.active {
+  background: var(--emerald);
+  color: var(--white);
+}
+.lang-toggle button:not(.active):hover { background: var(--offwhite); color: var(--emerald); }
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--emerald);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding: 16px 0;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--grey);
+  padding: 12px 24px;
+  transition: color 0.2s, background 0.2s;
+}
+.mobile-menu a:hover { color: var(--emerald); background: var(--offwhite); }
+
+.mobile-lang {
+  display: flex;
+  gap: 0;
+  padding: 12px 24px;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+}
+.mobile-lang button {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 6px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 3px;
+  color: var(--grey);
+  margin-right: 8px;
+  font-family: 'Raleway', sans-serif;
+}
+.mobile-lang button.active { background: var(--emerald); color: var(--white); border-color: var(--emerald); }
+
+@media (max-width: 767px) {
+  .nav-links { display: none; }
+  .lang-toggle { display: none; }
+  .nav-hamburger { display: flex; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   PAGE HERO
+═══════════════════════════════════════════════════════ */
+.page-hero {
+  background: var(--emerald);
+  padding: calc(var(--nav-h) + 64px) var(--pad-x) 64px;
+  text-align: center;
+}
+.page-hero-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+html[lang="ar"] .page-hero-eyebrow { letter-spacing: 2px; }
+.page-hero h1 {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+html[lang="ar"] .page-hero h1 { font-family: 'Cairo', sans-serif; }
+.page-hero-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+html[lang="ar"] .page-hero-sub { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
+
+/* Gold divider line */
+.page-hero-line {
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin: 20px auto 0;
+}
+
+/* ═══════════════════════════════════════════════════════
+   TABLE OF CONTENTS
+═══════════════════════════════════════════════════════ */
+.toc {
+  background: var(--offwhite);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--r) var(--r) 0;
+  padding: 24px 28px;
+  margin-bottom: 48px;
+}
+html[dir="rtl"] .toc {
+  border-left: none;
+  border-right: 3px solid var(--gold);
+  border-radius: var(--r) 0 0 var(--r);
+}
+.toc-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+html[lang="ar"] .toc-title { letter-spacing: 0; font-family: 'Cairo', sans-serif; }
+.toc ol {
+  list-style: none;
+  counter-reset: toc-counter;
+}
+.toc ol li {
+  counter-increment: toc-counter;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.toc ol li::before {
+  content: counter(toc-counter, decimal-leading-zero);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+  width: 22px;
+}
+html[dir="rtl"] .toc ol li { flex-direction: row-reverse; }
+.toc ol li a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--emerald);
+  transition: color 0.2s;
+}
+.toc ol li a:hover { color: var(--gold); }
+html[lang="ar"] .toc ol li a { font-family: 'Cairo', sans-serif; }
+
+/* ═══════════════════════════════════════════════════════
+   POLICY BODY
+═══════════════════════════════════════════════════════ */
+.policy-body {
+  padding: 72px var(--pad-x) 80px;
+}
+
+.policy-section {
+  margin-bottom: 56px;
+  scroll-margin-top: calc(var(--nav-h) + 24px);
+}
+
+.policy-section-num {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.policy-section-num::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+html[dir="rtl"] .policy-section-num { flex-direction: row-reverse; }
+html[dir="rtl"] .policy-section-num::after { order: -1; }
+
+.policy-section h2 {
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 700;
+  color: var(--emerald);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+html[lang="ar"] .policy-section h2 { font-family: 'Cairo', sans-serif; }
+
+.policy-section p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--charcoal);
+  margin-bottom: 16px;
+  max-width: 72ch;
+}
+html[lang="ar"] .policy-section p { font-family: 'Cairo', sans-serif; font-size: 16px; }
+html[dir="rtl"] .policy-section p { max-width: 100%; }
+
+.policy-section p:last-child { margin-bottom: 0; }
+
+.policy-list {
+  list-style: none;
+  margin: 16px 0;
+}
+.policy-list li {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--charcoal);
+  padding: 10px 0 10px 20px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.policy-list li:last-child { border-bottom: none; }
+.policy-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 18px;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+html[dir="rtl"] .policy-list li {
+  padding: 10px 20px 10px 0;
+}
+html[dir="rtl"] .policy-list li::before {
+  left: auto;
+  right: 0;
+}
+html[lang="ar"] .policy-list li { font-family: 'Cairo', sans-serif; font-size: 16px; }
+
+.policy-rights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.rights-card {
+  background: var(--offwhite);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--emerald);
+  border-radius: var(--r);
+  padding: 20px;
+}
+.rights-card-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(27,77,62,0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.rights-card-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--emerald);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.rights-card h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--emerald);
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+html[lang="ar"] .rights-card h3 { font-family: 'Cairo', sans-serif; }
+.rights-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--grey);
+  margin: 0;
+  max-width: 100%;
+}
+html[lang="ar"] .rights-card p { font-family: 'Cairo', sans-serif; font-size: 14px; }
+
+.highlight-box {
+  background: rgba(27,77,62,0.05);
+  border-left: 4px solid var(--emerald);
+  border-radius: 0 var(--r) var(--r) 0;
+  padding: 20px 24px;
+  margin: 20px 0;
+}
+html[dir="rtl"] .highlight-box {
+  border-left: none;
+  border-right: 4px solid var(--emerald);
+  border-radius: var(--r) 0 0 var(--r);
+}
+.highlight-box p {
+  font-size: 14px;
+  color: var(--emerald);
+  margin: 0;
+  font-weight: 500;
+}
+html[lang="ar"] .highlight-box p { font-family: 'Cairo', sans-serif; font-size: 15px; }
+
+.contact-block {
+  background: var(--emerald);
+  border-radius: var(--r);
+  padding: 32px;
+  margin-top: 20px;
+}
+.contact-block p {
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.contact-block a {
+  color: var(--gold);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.contact-block a:hover { color: var(--gold-lt); }
+html[lang="ar"] .contact-block p { font-family: 'Cairo', sans-serif; font-size: 15px; }
+
+/* Last updated banner */
+.last-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(201,168,76,0.10);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-bottom: 48px;
+}
+html[lang="ar"] .last-updated { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
+
+/* ═══════════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════════ */
+#footer {
+  background: var(--emerald-dk);
+  padding: 56px 0 0;
+  color: var(--white);
+}
+.footer-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-logo svg {
+  height: 52px;
+  width: auto;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-links a {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--gold); }
+html[lang="ar"] .footer-links a { font-family: 'Cairo', sans-serif; letter-spacing: 0; font-size: 13px; }
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+.footer-copy {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.5px;
+}
+html[lang="ar"] .footer-copy { font-family: 'Cairo', sans-serif; }
+.footer-email a {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  transition: color 0.2s;
+}
+.footer-email a:hover { color: var(--gold); }
+
+@media (max-width: 767px) {
+  .footer-inner { flex-direction: column; gap: 32px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+/* Medical disclaimer */
+.disclaimer {
+  background: #0f0f1a;
+  padding: 14px 24px;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  line-height: 1.6;
+}
+html[lang="ar"] .disclaimer { font-family: 'Cairo', sans-serif; }
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+  .policy-rights-grid { grid-template-columns: 1fr; }
+  .page-hero { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════ -->
+<header id="nav" role="banner">
+  <div class="nav-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo" aria-label="Alinaya Alrafia Medical Company — Home">
+      <svg viewBox="0 0 620 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <title>Alinaya Alrafia Medical Company</title>
+        <defs><style>.fh{font-family:'Raleway','Arial',sans-serif;font-weight:700}.fs{font-family:'Raleway','Arial',sans-serif;font-weight:500}.fa{font-family:'Cairo','Arial',sans-serif;font-weight:600}</style></defs>
+        <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity=".62"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+        <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity=".45"/>
+        <text x="152" y="48" class="fh" font-size="28" fill="#1A1A2E" letter-spacing="1.5">ALINAYA ALRAFIA</text>
+        <rect x="152" y="58" width="448" height="2" fill="#C9A84C"/>
+        <text x="152" y="76" class="fs" font-size="11" fill="#6B7280" letter-spacing="6">MEDICAL COMPANY</text>
+        <line x1="152" y1="92" x2="600" y2="92" stroke="#E5E7EB" stroke-width="1"/>
+        <text x="600" y="114" class="fa" font-size="18" fill="#1A1A2E" text-anchor="start" direction="rtl">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </a>
+
+    <!-- Nav links -->
+    <nav class="nav-links" aria-label="Site navigation">
+      <a href="index.html#about"   data-en="About"    data-ar="من نحن">About</a>
+      <a href="index.html#contact" data-en="Contact"  data-ar="تواصل معنا">Contact</a>
+      <a href="privacy.html"       data-en="Privacy"  data-ar="الخصوصية" aria-current="page">Privacy</a>
+    </nav>
+
+    <!-- Language toggle -->
+    <div class="lang-toggle" role="group" aria-label="Language selection">
+      <button id="btn-en" class="active" onclick="setLang('en')" aria-label="English">EN</button>
+      <button id="btn-ar"               onclick="setLang('ar')" aria-label="العربية">AR</button>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html#about"   data-en="About"   data-ar="من نحن">About</a>
+    <a href="index.html#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+    <a href="privacy.html"       data-en="Privacy" data-ar="الخصوصية">Privacy</a>
+    <div class="mobile-lang">
+      <button id="m-btn-en" class="active" onclick="setLang('en')">EN</button>
+      <button id="m-btn-ar"               onclick="setLang('ar')">AR</button>
+    </div>
+  </div>
+</header>
+
+
+<!-- ════════════════════════════════════════════════════
+     PAGE HERO
+════════════════════════════════════════════════════ -->
+<section class="page-hero" aria-labelledby="page-title">
+  <p class="page-hero-eyebrow"
+     data-en="Legal &amp; Compliance"
+     data-ar="الشؤون القانونية والامتثال">Legal &amp; Compliance</p>
+  <h1 id="page-title"
+      data-en="Privacy Policy"
+      data-ar="سياسة الخصوصية">Privacy Policy</h1>
+  <p class="page-hero-sub"
+     data-en="Alinaya Alrafia Medical Company — alinayamedical.com"
+     data-ar="شركة العناية الرفيعة الطبية — alinayamedical.com">
+    Alinaya Alrafia Medical Company — alinayamedical.com
+  </p>
+  <div class="page-hero-line" aria-hidden="true"></div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     POLICY BODY
+════════════════════════════════════════════════════ -->
+<main class="policy-body" id="main" tabindex="-1">
+<div class="container">
+
+  <!-- Last updated -->
+  <div class="last-updated" role="note" aria-label="Last updated date">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    <span data-en="Last updated: July 2026" data-ar="آخر تحديث: يوليو 2026">Last updated: July 2026</span>
+  </div>
+
+  <!-- Table of contents -->
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-title" data-en="Contents" data-ar="المحتويات">Contents</p>
+    <ol>
+      <li><a href="#s1" data-en="About This Policy"             data-ar="حول هذه السياسة">About This Policy</a></li>
+      <li><a href="#s2" data-en="Data We Collect"               data-ar="البيانات التي نجمعها">Data We Collect</a></li>
+      <li><a href="#s3" data-en="How We Use Your Data"          data-ar="كيف نستخدم بياناتك">How We Use Your Data</a></li>
+      <li><a href="#s4" data-en="Legal Basis for Processing"    data-ar="الأساس القانوني للمعالجة">Legal Basis for Processing</a></li>
+      <li><a href="#s5" data-en="Data Sharing"                  data-ar="مشاركة البيانات">Data Sharing</a></li>
+      <li><a href="#s6" data-en="Data Retention"                data-ar="الاحتفاظ بالبيانات">Data Retention</a></li>
+      <li><a href="#s7" data-en="Your Rights"                   data-ar="حقوقك">Your Rights</a></li>
+      <li><a href="#s8" data-en="Cookies &amp; Tracking"        data-ar="ملفات تعريف الارتباط والتتبع">Cookies &amp; Tracking</a></li>
+      <li><a href="#s9" data-en="Data Security"                 data-ar="أمان البيانات">Data Security</a></li>
+      <li><a href="#s10" data-en="Children's Privacy"           data-ar="خصوصية الأطفال">Children's Privacy</a></li>
+      <li><a href="#s11" data-en="Policy Updates"               data-ar="تحديثات السياسة">Policy Updates</a></li>
+      <li><a href="#s12" data-en="Contact Us"                   data-ar="اتصل بنا">Contact Us</a></li>
+    </ol>
+  </nav>
+
+
+  <!-- ── Section 1: About This Policy ───────────────────────── -->
+  <section class="policy-section" id="s1">
+    <p class="policy-section-num" aria-hidden="true">
+      <span data-en="01" data-ar="٠١">01</span>
+    </p>
+    <h2 data-en="About This Policy" data-ar="حول هذه السياسة">About This Policy</h2>
+
+    <p data-en="This Privacy Policy explains how Alinaya Alrafia Medical Company ('we', 'us', or 'the Company') collects, uses, stores, and protects personal data obtained through our website alinayamedical.com and any related communications."
+       data-ar="توضح سياسة الخصوصية هذه كيفية جمع شركة العناية الرفيعة الطبية ('نحن' أو 'الشركة') للبيانات الشخصية من خلال موقعنا الإلكتروني alinayamedical.com وأي اتصالات ذات صلة، وكيفية استخدامها وتخزينها وحمايتها.">
+      This Privacy Policy explains how Alinaya Alrafia Medical Company ("we", "us", or "the Company") collects, uses, stores, and protects personal data obtained through our website alinayamedical.com and any related communications.
+    </p>
+
+    <p data-en="We are committed to protecting your privacy in accordance with the Saudi Personal Data Protection Law (PDPL), issued by Royal Decree M/19 dated 9/2/1443H, and its implementing regulations."
+       data-ar="نحن ملتزمون بحماية خصوصيتك وفقاً لنظام حماية البيانات الشخصية السعودي الصادر بالمرسوم الملكي م/19 بتاريخ 9/2/1443هـ ولوائحه التنفيذية.">
+      We are committed to protecting your privacy in accordance with the Saudi Personal Data Protection Law (PDPL), issued by Royal Decree M/19 dated 9/2/1443H, and its implementing regulations.
+    </p>
+
+    <div class="highlight-box">
+      <p data-en="This website is operated by Alinaya Alrafia Medical Company, a healthcare holding group registered in Riyadh, Saudi Arabia. This website does not collect health or medical records. It is for informational purposes only."
+         data-ar="هذا الموقع تشغّله شركة العناية الرفيعة الطبية، وهي مجموعة قابضة للرعاية الصحية مسجلة في الرياض، المملكة العربية السعودية. لا يجمع هذا الموقع سجلات صحية أو طبية، وهو لأغراض إعلامية فقط.">
+        This website is operated by Alinaya Alrafia Medical Company, a healthcare holding group registered in Riyadh, Saudi Arabia. This website does not collect health or medical records. It is for informational purposes only.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ── Section 2: Data We Collect ─────────────────────────── -->
+  <section class="policy-section" id="s2">
+    <p class="policy-section-num" aria-hidden="true">
+      <span data-en="02" data-ar="٠٢">02</span>
+    </p>
+    <h2 data-en="Data We Collect" data-ar="البيانات التي نجمعها">Data We Collect</h2>
+
+    <p data-en="We may collect the following categories of personal data when you interact with our website or contact us directly:"
+       data-ar="قد نجمع الفئات التالية من البيانات الشخصية عند تفاعلك مع موقعنا أو تواصلك معنا مباشرة:">
+      We may collect the following categories of personal data when you interact with our website or contact us directly:
+    </p>
+
+    <ul class="policy-list">
+      <li data-en="Contact information you submit voluntarily — such as your name, email address, and phone number via our contact form or email."
+          data-ar="معلومات الاتصال التي تقدمها طوعاً — مثل اسمك وعنوان بريدك الإلكتروني ورقم هاتفك عبر نموذج الاتصال أو البريد الإلكتروني.">
+        Contact information you submit voluntarily — such as your name, email address, and phone number via our contact form or email.
+      </li>
+      <li data-en="Technical data automatically collected when you visit our website — including IP address, browser type and version, device type, operating system, pages viewed, time and date of visit, and referring URL."
+          data-ar="البيانات التقنية التي تُجمع تلقائياً عند زيارتك لموقعنا — بما في ذلك عنوان IP ونوع المتصفح وإصداره ونوع الجهاز ونظام التشغيل والصفحات التي تمت زيارتها ووقت وتاريخ الزيارة وعنوان URL المُحيل.">
+        Technical data automatically collected when you visit our website — including IP address, browser type and version, device type, operating system, pages viewed, time and date of visit, and referring URL.
+      </li>
+      <li data-en="Communication data — the content of any messages, emails, or inquiries you send us."
+          data-ar="بيانات الاتصال — محتوى أي رسائل أو بريد إلكتروني أو استفسارات ترسلها إلينا.">
+        Communication data — the content of any messages, emails, or inquiries you send us.
+      </li>
+      <li data-en="Language preference — we store your selected language (English or Arabic) locally in your browser to improve your experience. This data does not leave your device."
+          data-ar="تفضيلات اللغة — نحفظ اللغة المختارة (الإنجليزية أو العربية) محلياً في متصفحك لتحسين تجربتك. لا تغادر هذه البيانات جهازك.">
+        Language preference — we store your selected language (English or Arabic) locally in your browser to improve your experience. This data does not leave your device.
+      </li>
+    </ul>
+
+    <p data-en="We do not collect sensitive personal data (health records, biometric data, national ID numbers, financial account details) through this website."
+       data-ar="لا نجمع بيانات شخصية حساسة (سجلات صحية، أو بيانات بيومترية، أو أرقام هوية وطنية، أو تفاصيل حسابات مالية) من خلال هذا الموقع.">
+      We do not collect sensitive personal data (health records, biometric data, national ID numbers, financial account details) through this website.
+    </p>
+  </section>
+
+
+  <!-- ── Section 3: How We Use Your Data ───────────────────── -->
+  <section class="policy-section" id="s3">
+    <p class="policy-section-num" aria-hidden="true">
+      <span data-en="03" data-ar="٠٣">03</span>
+    </p>
+    <h2 data-en="How We Use Your Data" data-ar="كيف نستخدم بياناتك">How We Use Your Data</h2>
+
+    <p data-en="We use collected data solely for the following purposes:"
+       data-ar="نستخدم البيانات المجمعة حصراً للأغراض التالية:">
+      We use collected data solely for the following purposes:
+    </p>
+
+    <ul class="policy-list">
+      <li data-en="To respond to your inquiries and communications in a timely and professional manner."
+          data-ar="للرد على استفساراتك واتصالاتك في الوقت المناسب وبصورة مهنية.">
+        To respond to your inquiries and communications in a timely and professional manner.
+      </li>
+      <li data-en="To improve our website's performance, usability, and content based on aggregated usage patterns."
+          data-ar="لتحسين أداء موقعنا وسهولة استخدامه ومحتواه بناءً على أنماط الاستخدام المجمعة.">
+        To improve our website's performance, usability, and content based on aggregated usage patterns.
+      </li>
+      <li data-en="To fulfil legal and regulatory obligations we are subject to as a company registered in Saudi Arabia."
+          data-ar="للوفاء بالالتزامات القانونية والتنظيمية التي تخضع لها الشركة المسجلة في المملكة العربية السعودية.">
+        To fulfil legal and regulatory obligations we are subject to as a company registered in Saudi Arabia.
+      </li>
+      <li data-en="To send you information about our services or updates, only if you have explicitly requested this or consented to receiving such communications."
+          data-ar="لإرسال معلومات حول خدماتنا أو التحديثات إليك، فقط إذا طلبت ذلك صراحةً أو وافقت على تلقي هذه الاتصالات.">
+        To send you information about our services or updates, only if you have explicitly requested this or consented to receiving such communications.
+      </li>
+    </ul>
+
+    <p data-en="We do not use your personal data for automated decision-making or profiling."
+       data-ar="لا نستخدم بياناتك الشخصية لاتخاذ قرارات آلية أو إنشاء ملفات تعريفية.">
+      We do not use your personal data for automated decision-making or profiling.
+    </p>
+  </section>
+
+
+  <!-- ── Section 4: Legal Basis ─────────────────────────────── -->
+  <section class="policy-section" id="s4">
+    <p class="policy-section-num" aria-hidden="true">
+      <span data-en="04" data-ar="٠٤">04</span>
+    </p>
+    <h2 data-en="Legal Basis for Processing" data-ar="الأساس القانوني للمعالجة">Legal Basis for Processing</h2>
+
+    <p data-en="Under the Saudi Personal Data Protection Law (PDPL), we process your personal data on the following legal bases:"
+       data-ar="بموجب نظام حماية البيانات الشخصية السعودي (PDPL)، نعالج بياناتك الشخصية على الأسس القانونية التالية:">
+      Under the Saudi Personal Data Protection Law (PDPL), we process your personal data on the following legal bases:
+    </p>
+
+    <ul class="policy-list">
+      <li data-en="Consent — when you voluntarily submit a contact form or email inquiry, you consent to us processing those contact details to respond to you."
+          data-ar="الموافقة — عند تقديمك نموذج اتصال أو استفسار بالبريد الإلكتروني طوعاً، توافق على معالجة بيانات الاتصال هذه للرد عليك.">
+        <strong>Consent</strong> — when you voluntarily submit a contact form or email inquiry, you consent to us processing those contact details to respond to you.
+      </li>
+      <li data-en="Legitimate interest — we process technical/analytics data to operate, secure, and improve our website. This does not override your privacy rights."
+          data-ar="المصلحة المشروعة — نعالج البيانات التقنية/التحليلية لتشغيل موقعنا وتأمينه وتحسينه، دون أن يؤثر ذلك على حقوق الخصوصية الخاصة بك.">
+        <strong>Legitimate interest</strong> — we process technical/analytics data to operate, secure, and improve our website. This does not override your privacy rights.
+      </li>
+      <li data-en="Legal obligation — we may retain or disclose data where required by applicable Saudi law, court order, or regulatory authority."
+          data-ar="الالتزام القانوني — قد نحتفظ بالبيانات أو نفصح عنها حيثما تقتضي ذلك القوانين السعودية المعمول بها أو أمر قضائي أو جهة تنظيمية.">
+        <strong>Legal obligation</strong> — we may retain or disclose data where required by applicable Saudi law, court order, or regulatory authority.
+      </li>
+    </ul>
+  </section>
+
+
+  <!-- ── Section 5: Data Sharing ────────────────────────────── -->
+  <section class="policy-section" id="s5">
+    <p class="policy-section-num" aria-hidden="true">
+      <span data-en="05" data-ar="٠٥">05</span>
+    </p>
+    <h2 data-en="Data Sharing" data-ar="مشاركة البيانات">Data Sharing</h2>
+
+    <p data-en="We do not sell, rent, or trade your personal data to third parties. We may share your data only in the following limited circumstances:"
+       data-ar="لا نبيع بياناتك الشخصية أو نؤجرها أو نتاجر بها مع أطراف ثالثة. قد نشارك بياناتك فقط في الحالات المحدودة التالية:">
+      We do not sell, rent, or trade your personal data to third parties. We may share your data only in the following limited circumstances:
+    </p>
+
+    <ul class="policy-list">
+      <li data-en="Service providers — trusted third-party companies that assist us in operating our website or conducting our business (e.g., website hosting, email services), subject to strict confidentiality obligations."
+          data-ar="مزودو الخدمات — شركات موثوقة تساعدنا في تشغيل موقعنا أو إدارة أعمالنا (مثل استضافة المواقع وخدمات البريد الإلكتروني)، وذلك وفق التزامات صارمة بالسرية.">
+        <strong>Service providers</strong> — trusted third-party companies that assist us in operating our website or conducting our business (e.g., website hosting, email services), subject to strict confidentiality obligations.
+      </li>
+      <li data-en="Legal authorities — when we are legally required to disclose information to governmental or regulatory bodies under Saudi law."
+          data-ar="الجهات القانونية — عندما يُلزمنا القانون بالإفصاح عن المعلومات للجهات الحكومية أو التنظيمية بموجب القانون السعودي.">
+        <strong>Legal authorities</strong> — when we are legally required to disclose information to governmental or regulatory bodies under Saudi law.
+      </li>
+      <li data-en="Group companies — within the Alinaya Alrafia Medical Company group, where necessary for operational or administrative purposes, under the same privacy standards."
+          data-ar="شركات المجموعة — داخل مجموعة شركة العناية الرفيعة الطبية، عند الضرورة لأغراض تشغيلية أو إدارية، وفق معايير الخصوصية ذاتها.">
+        <strong>Group companies</strong> — within the Alinaya Alrafia Medical Company group, where necessary for operational or administrative purposes, under the same privacy standards.
+      </li>
+    </ul>
+
+    <p data-en="Any third party receiving your data is required to process it only for the specified purpose and in compliance with applicable data protection laws."
+       data-ar="يُلتزم أي طرف ثالث يتلقى بياناتك بمعالجتها للغرض المحدد فحسب، ووفقاً لقوانين حماية البيانات المعمول بها.">
+      Any third party receiving your data is required to process it only for the specified purpose and in compliance with applicable data protection laws.
+    </p>
+  </section>
+
+
+  <!-- ── Section 6: Data Retention ─────────────────────────── -->
+  <section class="policy-section" id="s6">
+    <p class="policy-section-num" aria-hidden="true">
+      <span data-en="06" data-ar="٠٦">06</span>
+    </p>
+    <h2 data-en="Data Retention" data-ar="الاحتفاظ بالبيانات">Data Retention</h2>
+
+    <p data-en="We retain personal data only for as long as necessary to fulfil the purposes for which it was collected, or as required by applicable law:"
+       data-ar="نحتفظ بالبيانات الشخصية فقط للمدة اللازمة لتحقيق الأغراض التي جُمعت من أجلها، أو وفقاً لما يقتضيه القانون المعمول به:">
+      We retain personal data only for as long as necessary to fulfil the purposes for which it was collected, or as required by applicable law:
+    </p>
+
+    <ul class="policy-list">
+      <li data-en="Contact inquiries — retained for up to 2 years from the date of last correspondence, then securely deleted."
+          data-ar="استفسارات الاتصال — يُحتفظ بها لمدة تصل إلى سنتين من تاريخ آخر مراسلة، ثم تُحذف بشكل آمن.">
+        Contact inquiries — retained for up to 2 years from the date of last correspondence, then securely deleted.
+      </li>
+      <li data-en="Technical/analytics data — typically retained in aggregated, anonymised form for up to 13 months."
+          data-ar="البيانات التقنية/التحليلية — تُحتفظ بها عادةً في صورة مجمعة ومجهولة الهوية لمدة تصل إلى 13 شهراً.">
+        Technical/analytics data — typically retained in aggregated, anonymised form for up to 13 months.
+      </li>
+      <li data-en="Legal compliance records — retained for the period required by applicable Saudi regulations."
+          data-ar="سجلات الامتثال القانوني — تُحتفظ بها للمدة التي تستلزمها اللوائح السعودية المعمول بها.">
+        Legal compliance records — retained for the period required by applicable Saudi regulations.
+      </li>
+    </ul>
+
+    <p data-en="When data is no longer needed, we will destroy or anonymise it in a manner that prevents recovery."
+       data-ar="عند انتهاء الحاجة إلى البيانات، نقوم بإتلافها أو إخفاء هويتها بطريقة تمنع استردادها.">
+      When data is no longer needed, we will destroy or anonymise it in a manner that prevents recovery.
+    </p>
+  </section>
+
+
+  <!-- ── Section 7: Your Rights ─────────────────────────────── -->
+  <section class="policy-section" id="s7">
+    <p class="policy-section-num" aria-hidden="true">
+      <span data-en="07" data-ar="٠٧">07</span>
+    </p>
+    <h2 data-en="Your Rights" data-ar="حقوقك">Your Rights</h2>
+
+    <p data-en="Under the Saudi PDPL, you have the following rights regarding your personal data. You may exercise any of these rights by contacting us at the address in Section 12:"
+       data-ar="بموجب نظام حماية البيانات الشخصية السعودي، تتمتع بالحقوق التالية فيما يخص بياناتك الشخصية. يمكنك ممارسة أي من هذه الحقوق بالتواصل معنا على العنوان الوارد في القسم الثاني عشر:">
+      Under the Saudi PDPL, you have the following rights regarding your personal data. You may exercise any of these rights by contacting us at the address in Section 12:
+    </p>
+
+    <div class="policy-rights-grid">
+
+      <div class="rights-card">
+        <div class="rights-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3 data-en="Right to Access" data-ar="حق الوصول">Right to Access</h3>
+        <p data-en="Request a copy of the personal data we hold about you."
+           data-ar="طلب نسخة من البيانات الشخصية التي نحتفظ بها عنك.">
+          Request a copy of the personal data we hold about you.
+        </p>
+      </div>
+
+      <div class="rights-card">
+        <div class="rights-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <h3 data-en="Right to Rectification" data-ar="حق التصحيح">Right to Rectification</h3>
+        <p data-en="Request correction of inaccurate or incomplete data about you."
+           data-ar="طلب تصحيح البيانات غير الدقيقة أو غير المكتملة عنك.">
+          Request correction of inaccurate or incomplete data about you.
+        </p>
+      </div>
+
+      <div class="rights-card">
+        <div class="rights-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+        </div>
+        <h3 data-en="Right to Erasure" data-ar="حق الحذف">Right to Erasure</h3>
+        <p data-en="Request deletion of your personal data where there is no legitimate reason to continue processing it."
+           data-ar="طلب حذف بياناتك الشخصية حين لا يوجد مبرر مشروع لمواصلة معالجتها.">
+          Request deletion of your personal data where there is no legitimate reason to continue processing it.
+        </p>
+      </div>
+
+      <div class="rights-card">
+        <div class="rights-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+        </div>
+        <h3 data-en="Right to Object" data-ar="حق الاعتراض">Right to Object</h3>
+        <p data-en="Object to processing based on legitimate interests, including direct marketing."
+           data-ar="الاعتراض على المعالجة القائمة على المصالح المشروعة، بما في ذلك التسويق المباشر.">
+          Object to processing based on legitimate interests, including direct marketing.
+        </p>
+      </div>
+
+      <div class="rights-card">
+        <div class="rights-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <h3 data-en="Right to Withdraw Consent" data-ar="حق سحب الموافقة">Right to Withdraw Consent</h3>
+        <p data-en="Withdraw consent at any time where processing is based on your consent, without affecting prior processing."
+           data-ar="سحب موافقتك في أي وقت حيث تستند المعالجة إلى موافقتك، دون التأثير على المعالجة السابقة.">
+          Withdraw consent at any time where processing is based on your consent, without affecting prior processing.
+        </p>
+      </div>
+
+      <div class="rights-card">
+        <div class="rights-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3 data-en="Right to Lodge a Complaint" data-ar="حق تقديم شكوى">Right to Lodge a Complaint</h3>
+        <p data-en="Lodge a complaint with the Saudi Data &amp; AI Authority (SDAIA) if you believe your rights have been violated."
+           data-ar="تقديم شكوى إلى الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا) إذا اعتقدت أن حقوقك قد انتُهكت.">
+          Lodge a complaint with the Saudi Data &amp; AI Authority (SDAIA) if you believe your rights have been violated.
+        </p>
+      </div>
+
+    </div>
+
+    <p style="margin-top: 24px;"
+       data-en="We will respond to all valid requests within 30 days of receipt. In complex cases, we may extend this by a further 30 days, with notification."
+       data-ar="سنرد على جميع الطلبات الصحيحة في غضون 30 يوماً من استلامها. في الحالات المعقدة، قد نمدد هذه المدة بـ30 يوماً إضافياً مع الإخطار المسبق.">
+      We will respond to all valid requests within 30 days of receipt. In complex cases, we may extend this by a further 30 days, with notification.
+    </p>
+  </section>
+
+
+  <!-- ── Section 8: Cookies ──────────────────────────────────── -->
+  <section class="policy-section" id="s8">
+    <p class="policy-section-num" aria-hidden="true">
+      <span data-en="08" data-ar="٠٨">08</span>
+    </p>
+    <h2 data-en="Cookies &amp; Tracking" data-ar="ملفات تعريف الارتباط والتتبع">Cookies &amp; Tracking</h2>
+
+    <p data-en="Our website uses the following types of storage:"
+       data-ar="يستخدم موقعنا الأنواع التالية من التخزين:">
+      Our website uses the following types of storage:
+    </p>
+
+    <ul class="policy-list">
+      <li data-en="localStorage (language preference) — we store your language selection ('en' or 'ar') in your browser's local storage. This data stays on your device and is not transmitted to our servers."
+          data-ar="التخزين المحلي (تفضيل اللغة) — نحفظ اختيارك للغة ('en' أو 'ar') في التخزين المحلي لمتصفحك. تبقى هذه البيانات على جهازك ولا تُرسل إلى خوادمنا.">
+        <strong>localStorage (language preference)</strong> — we store your language selection ('en' or 'ar') in your browser's local storage. This data stays on your device and is not transmitted to our servers.
+      </li>
+      <li data-en="Google Fonts — our website loads Raleway and Cairo typefaces from Google Fonts CDN. Google may collect limited technical data in accordance with their Privacy Policy."
+          data-ar="خطوط جوجل — يحمّل موقعنا خطوط Raleway وCairo من شبكة جوجل CDN. قد تجمع جوجل بيانات تقنية محدودة وفقاً لسياسة الخصوصية الخاصة بها.">
+        <strong>Google Fonts</strong> — our website loads Raleway and Cairo typefaces from Google Fonts CDN. Google may collect limited technical data in accordance with their Privacy Policy.
+      </li>
+    </ul>
+
+    <p data-en="We do not currently use advertising cookies, third-party tracking pixels, or analytics platforms that track individual users. If this changes, this policy will be updated and you will be notified through a visible banner on the website."
+       data-ar="لا نستخدم حالياً ملفات تعريف الارتباط الإعلانية أو وحدات البكسل التتبعية من أطراف ثالثة أو منصات تحليلية تتتبع المستخدمين الأفراد. في حال تغيير ذلك، سيتم تحديث هذه السياسة وإخطارك عبر لافتة واضحة على الموقع.">
+      We do not currently use advertising cookies, third-party tracking pixels, or analytics platforms that track individual users. If this changes, this policy will be updated and you will be notified through a visible banner on the website.
+    </p>
+
+    <div class="highlight-box">
+      <p data-en="You can clear localStorage data at any time through your browser's settings (Settings → Privacy → Clear browsing data → Local storage)."
+         data-ar="يمكنك مسح بيانات التخزين المحلي في أي وقت من خلال إعدادات متصفحك (الإعدادات ← الخصوصية ← مسح بيانات التصفح ← التخزين المحلي).">
+        You can clear localStorage data at any time through your browser's settings (Settings → Privacy → Clear browsing data → Local storage).
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ── Section 9: Data Security ───────────────────────────── -->
+  <section class="policy-section" id="s9">
+    <p class="policy-section-num" aria-hidden="true">
+      <span data-en="09" data-ar="٠٩">09</span>
+    </p>
+    <h2 data-en="Data Security" data-ar="أمان البيانات">Data Security</h2>
+
+    <p data-en="We implement appropriate technical and organisational measures to protect personal data against unauthorised access, accidental loss, destruction, or damage. These measures include:"
+       data-ar="نطبّق تدابير تقنية وتنظيمية مناسبة لحماية البيانات الشخصية من الوصول غير المصرح به والفقدان العرضي أو الإتلاف. تشمل هذه التدابير:">
+      We implement appropriate technical and organisational measures to protect personal data against unauthorised access, accidental loss, destruction, or damage. These measures include:
+    </p>
+
+    <ul class="policy-list">
+      <li data-en="Secure HTTPS connection (TLS encryption) for all website traffic."
+          data-ar="اتصال HTTPS آمن (تشفير TLS) لجميع حركة مرور الموقع.">
+        Secure HTTPS connection (TLS encryption) for all website traffic.
+      </li>
+      <li data-en="Access controls limiting data access to authorised personnel only."
+          data-ar="ضوابط وصول تحصر الاطلاع على البيانات للأفراد المصرح لهم فقط.">
+        Access controls limiting data access to authorised personnel only.
+      </li>
+      <li data-en="Regular review of security practices and data handling procedures."
+          data-ar="المراجعة الدورية لممارسات الأمان وإجراءات التعامل مع البيانات.">
+        Regular review of security practices and data handling procedures.
+      </li>
+    </ul>
+
+    <p data-en="No method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your data, we cannot guarantee absolute security. In the event of a data breach affecting your rights, we will notify you as required by applicable law."
+       data-ar="لا توجد طريقة نقل عبر الإنترنت أو تخزين إلكتروني آمنة بنسبة 100%. ورغم سعينا لاستخدام الوسائل المقبولة تجارياً لحماية بياناتك، لا يمكننا ضمان الأمان المطلق. في حال وقوع اختراق للبيانات يؤثر على حقوقك، سنبلغك بذلك وفقاً للقانون المعمول به.">
+      No method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your data, we cannot guarantee absolute security. In the event of a data breach affecting your rights, we will notify you as required by applicable law.
+    </p>
+  </section>
+
+
+  <!-- ── Section 10: Children's Privacy ────────────────────── -->
+  <section class="policy-section" id="s10">
+    <p class="policy-section-num" aria-hidden="true">
+      <span data-en="10" data-ar="١٠">10</span>
+    </p>
+    <h2 data-en="Children's Privacy" data-ar="خصوصية الأطفال">Children's Privacy</h2>
+
+    <p data-en="This website is not directed at individuals under the age of 18. We do not knowingly collect personal data from minors. If we become aware that we have inadvertently collected personal data from a minor, we will promptly delete such data."
+       data-ar="هذا الموقع غير موجه للأفراد دون سن 18 عاماً. لا نجمع بيانات شخصية من القاصرين عن سابق علم وإصرار. إذا اكتشفنا أننا جمعنا بيانات شخصية من قاصر دون قصد، فسنحذف تلك البيانات فوراً.">
+      This website is not directed at individuals under the age of 18. We do not knowingly collect personal data from minors. If we become aware that we have inadvertently collected personal data from a minor, we will promptly delete such data.
+    </p>
+
+    <p data-en="If you are a parent or guardian and believe your child has provided us with personal data, please contact us immediately."
+       data-ar="إذا كنت ولياً للأمر وتعتقد أن طفلك قد زودنا ببياناته الشخصية، يُرجى التواصل معنا فوراً.">
+      If you are a parent or guardian and believe your child has provided us with personal data, please contact us immediately.
+    </p>
+  </section>
+
+
+  <!-- ── Section 11: Policy Updates ────────────────────────── -->
+  <section class="policy-section" id="s11">
+    <p class="policy-section-num" aria-hidden="true">
+      <span data-en="11" data-ar="١١">11</span>
+    </p>
+    <h2 data-en="Policy Updates" data-ar="تحديثات السياسة">Policy Updates</h2>
+
+    <p data-en="We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or operational procedures. When we make material changes, we will update the 'Last updated' date at the top of this page."
+       data-ar="قد نحدّث سياسة الخصوصية هذه من حين لآخر لتعكس التغييرات في ممارساتنا أو المتطلبات القانونية أو الإجراءات التشغيلية. عند إجراء تغييرات جوهرية، سنحدّث تاريخ 'آخر تحديث' في أعلى هذه الصفحة.">
+      We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or operational procedures. When we make material changes, we will update the "Last updated" date at the top of this page.
+    </p>
+
+    <p data-en="We encourage you to review this policy periodically. Your continued use of our website after any changes constitutes acceptance of the updated policy."
+       data-ar="نشجعك على مراجعة هذه السياسة بشكل دوري. استمرارك في استخدام موقعنا بعد أي تغييرات يُعدّ قبولاً للسياسة المحدّثة.">
+      We encourage you to review this policy periodically. Your continued use of our website after any changes constitutes acceptance of the updated policy.
+    </p>
+  </section>
+
+
+  <!-- ── Section 12: Contact Us ─────────────────────────────── -->
+  <section class="policy-section" id="s12">
+    <p class="policy-section-num" aria-hidden="true">
+      <span data-en="12" data-ar="١٢">12</span>
+    </p>
+    <h2 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h2>
+
+    <p data-en="If you have questions, concerns, or wish to exercise any of your rights under this Privacy Policy, please contact us:"
+       data-ar="إذا كانت لديك أسئلة أو مخاوف، أو ترغب في ممارسة أي من حقوقك بموجب سياسة الخصوصية هذه، يُرجى التواصل معنا:">
+      If you have questions, concerns, or wish to exercise any of your rights under this Privacy Policy, please contact us:
+    </p>
+
+    <div class="contact-block">
+      <p data-en="Alinaya Alrafia Medical Company" data-ar="شركة العناية الرفيعة الطبية">
+        <strong>Alinaya Alrafia Medical Company</strong>
+      </p>
+      <p data-en="Riyadh, Saudi Arabia" data-ar="الرياض، المملكة العربية السعودية">
+        Riyadh, Saudi Arabia
+      </p>
+      <p>
+        <span data-en="Privacy inquiries:" data-ar="استفسارات الخصوصية:">Privacy inquiries:</span>
+        <a href="mailto:info@alinayamedical.com">info@alinayamedical.com</a>
+      </p>
+      <p data-en="Working hours: Sunday – Thursday, 9:00 AM – 6:00 PM (AST)"
+         data-ar="أوقات العمل: الأحد – الخميس، 9:00 صباحاً – 6:00 مساءً (توقيت الرياض)">
+        Working hours: Sunday – Thursday, 9:00 AM – 6:00 PM (AST)
+      </p>
+      <p style="margin-top: 16px; font-size: 12px; color: rgba(255,255,255,0.4);"
+         data-en="Governing law: Kingdom of Saudi Arabia | Regulatory authority: Saudi Data &amp; AI Authority (SDAIA)"
+         data-ar="القانون الحاكم: المملكة العربية السعودية | الجهة التنظيمية: هيئة البيانات والذكاء الاصطناعي (سدايا)">
+        Governing law: Kingdom of Saudi Arabia | Regulatory authority: Saudi Data &amp; AI Authority (SDAIA)
+      </p>
+    </div>
+
+  </section>
+
+</div>
+</main>
+
+
+<!-- ════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="container" style="max-width: 1200px;">
+
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <svg viewBox="0 0 620 140" xmlns="http://www.w3.org/2000/svg" aria-label="Alinaya Alrafia Medical Company">
+          <title>Alinaya Alrafia Medical Company</title>
+          <defs><style>.fh{font-family:'Raleway','Arial',sans-serif;font-weight:700}.fs{font-family:'Raleway','Arial',sans-serif;font-weight:500}.fa{font-family:'Cairo','Arial',sans-serif;font-weight:600}</style></defs>
+          <path d="M10,70 L70,8 L70,70 Z" fill="#fff"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#fff" opacity=".45"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+          <line x1="70" y1="8" x2="70" y2="70" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".3"/>
+          <text x="152" y="48" class="fh" font-size="28" fill="#fff" letter-spacing="1.5">ALINAYA ALRAFIA</text>
+          <rect x="152" y="58" width="448" height="2" fill="#C9A84C"/>
+          <text x="152" y="76" class="fs" font-size="11" fill="rgba(255,255,255,.55)" letter-spacing="6">MEDICAL COMPANY</text>
+          <line x1="152" y1="92" x2="600" y2="92" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
+          <text x="600" y="114" class="fa" font-size="18" fill="rgba(255,255,255,.88)" text-anchor="start" direction="rtl">شركة العناية الرفيعة الطبية</text>
+        </svg>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html#about"   data-en="About"   data-ar="من نحن">About</a>
+        <a href="index.html#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+        <a href="privacy.html"       data-en="Privacy Policy" data-ar="سياسة الخصوصية" aria-current="page">Privacy Policy</a>
+        <a href="mailto:info@alinayamedical.com">info@alinayamedical.com</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy"
+            data-en="© 2026 Alinaya Alrafia Medical Company. All rights reserved."
+            data-ar="© 2026 شركة العناية الرفيعة الطبية. جميع الحقوق محفوظة.">
+        © 2026 Alinaya Alrafia Medical Company. All rights reserved.
+      </span>
+      <div class="footer-email">
+        <a href="https://alinayamedical.com">alinayamedical.com</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<div class="disclaimer">
+  <span
+    data-en="Alinaya Alrafia Medical Company is a healthcare holding group. This website is for informational purposes only and does not constitute medical advice. Please consult a qualified healthcare professional for medical guidance."
+    data-ar="شركة العناية الرفيعة الطبية مجموعة قابضة للرعاية الصحية. هذا الموقع لأغراض إعلامية فقط ولا يُعدّ نصيحة طبية. يُرجى استشارة مختص صحي مؤهل للحصول على إرشادات طبية.">
+    Alinaya Alrafia Medical Company is a healthcare holding group. This website is for informational purposes only and does not constitute medical advice. Please consult a qualified healthcare professional for medical guidance.
+  </span>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════════ -->
+<script>
+// ── Language system ───────────────────────────────────────────────────────────
+let currentLang = 'en';
+
+function setLang(lang) {
+  if (lang === currentLang) return;
+  currentLang = lang;
+
+  const html = document.documentElement;
+  html.lang = lang;
+  html.dir  = lang === 'ar' ? 'rtl' : 'ltr';
+
+  document.querySelectorAll('[data-en][data-ar]').forEach(el => {
+    el.textContent = el.dataset[lang];
+  });
+
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+  const mEn = document.getElementById('m-btn-en');
+  const mAr = document.getElementById('m-btn-ar');
+  if (mEn) mEn.classList.toggle('active', lang === 'en');
+  if (mAr) mAr.classList.toggle('active', lang === 'ar');
+
+  try { localStorage.setItem('alinaya-lang', lang); } catch(e){}
+}
+
+(function() {
+  try {
+    const saved = localStorage.getItem('alinaya-lang');
+    if (saved === 'ar') { currentLang = 'ar'; setLang('ar'); }
+  } catch(e){}
+})();
+
+(function() {
+  try {
+    if (!localStorage.getItem('alinaya-lang')) {
+      const nav = navigator.language || navigator.languages?.[0] || '';
+      if (nav.startsWith('ar')) { currentLang = 'ar'; setLang('ar'); }
+    }
+  } catch(e){}
+})();
+
+
+// ── Navbar scroll ─────────────────────────────────────────────────────────────
+const navEl = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  navEl.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+
+// ── Mobile hamburger ──────────────────────────────────────────────────────────
+const hamburger  = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+
+hamburger.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+});
+
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', false);
+  });
+});
+
+
+// ── Smooth scroll with nav offset ─────────────────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    const offset = navEl.offsetHeight + 16;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>

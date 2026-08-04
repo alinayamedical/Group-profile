@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alinaya — Ribbon Heart Exploration</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#F4F5F7; font-family:'Raleway',sans-serif; padding:56px 64px; }
+
+  h1  { font-size:13px; font-weight:700; letter-spacing:5px; color:#9CA3AF; text-transform:uppercase; margin-bottom:8px; }
+  h2  { font-size:26px; font-weight:700; color:#111827; margin-bottom:6px; }
+  p   { font-size:13px; color:#6B7280; margin-bottom:48px; line-height:1.6; max-width:580px; }
+
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:32px; }
+  .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:32px; }
+
+  .card-w  { background:#FFFFFF; border-radius:16px; padding:40px 24px; display:flex; flex-direction:column; align-items:center; gap:16px; box-shadow:0 2px 16px rgba(0,0,0,0.07); }
+  .card-g  { background:#1B4D3E; border-radius:16px; padding:40px 24px; display:flex; flex-direction:column; align-items:center; gap:16px; box-shadow:0 4px 24px rgba(27,77,62,0.3); }
+  .card-f  { background:#1B3A2D; border-radius:16px; padding:40px 24px; display:flex; flex-direction:column; align-items:center; gap:16px; box-shadow:0 4px 24px rgba(27,58,45,0.3); }
+  .card-k  { background:#0E1117; border-radius:16px; padding:40px 24px; display:flex; flex-direction:column; align-items:center; gap:16px; }
+
+  .lbl { font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#9CA3AF; }
+  .card-g .lbl, .card-f .lbl, .card-k .lbl { color:rgba(255,255,255,0.25); }
+
+  .row-label { font-size:10px; font-weight:700; color:#6B7280; letter-spacing:3px; text-transform:uppercase; margin:32px 0 12px; }
+  svg { max-width:100%; height:auto; overflow:visible; }
+</style>
+</head>
+<body>
+
+<h1>Ribbon Heart — Style Exploration</h1>
+<h2>3D Flowing Ribbon Mark</h2>
+<p>Inspired by the reference: two interlocking ribbon strands that form a heart through negative space — with gradient depth suggesting volume. Shown in Palette 2 (Emerald) and Palette 8 (Forest), on all backgrounds.</p>
+
+
+<!-- ══════════════════════════════════════ -->
+<!-- PALETTE 2 — EMERALD + GOLD -->
+<!-- ══════════════════════════════════════ -->
+<div class="row-label">Palette 2 — Emerald · #1B4D3E + #C9A84C</div>
+<div class="grid">
+
+  <!-- P2 on white -->
+  <div class="card-w">
+    <div class="lbl">On White</div>
+    <svg viewBox="0 0 500 540" width="220" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="p2-left" x1="90" y1="58" x2="255" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#62D4AA"/>
+          <stop offset="28%"  stop-color="#239E73"/>
+          <stop offset="65%"  stop-color="#126B4A"/>
+          <stop offset="100%" stop-color="#052D1C"/>
+        </linearGradient>
+        <linearGradient id="p2-right" x1="410" y1="58" x2="245" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#62D4AA"/>
+          <stop offset="28%"  stop-color="#239E73"/>
+          <stop offset="65%"  stop-color="#126B4A"/>
+          <stop offset="100%" stop-color="#052D1C"/>
+        </linearGradient>
+        <radialGradient id="p2-cross-shadow" cx="250" cy="108" r="28" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#020E08" stop-opacity="0.75"/>
+          <stop offset="100%" stop-color="#020E08" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <!-- RIGHT ribbon — behind at crossing -->
+      <path fill="url(#p2-right)"
+        d="M 244,94
+           C 268,64  322,46  358,70
+           C 402,96  420,155 412,202
+           C 404,258 358,306 250,356
+           C 302,318 346,272 356,230
+           C 364,192 348,146 316,122
+           C 294,107 265,106 255,118
+           Z"/>
+
+      <!-- LEFT ribbon — on top at crossing -->
+      <path fill="url(#p2-left)"
+        d="M 256,94
+           C 232,64  178,46  142,70
+           C 98,96  80,155  88,202
+           C 96,258 142,306 250,356
+           C 198,318 154,272 144,230
+           C 136,192 152,146 184,122
+           C 206,107 235,106 245,118
+           Z"/>
+
+      <!-- Shadow at crossing — depth between ribbons -->
+      <ellipse cx="250" cy="109" rx="20" ry="16" fill="url(#p2-cross-shadow)"/>
+
+      <!-- Subtle highlight on outer face of left ribbon -->
+      <path opacity="0.22" fill="#A4EDD4"
+        d="M 256,94 C 246,76 228,68 212,76 C 226,64 248,72 258,90 Z"/>
+      <!-- Subtle highlight on right ribbon -->
+      <path opacity="0.18" fill="#A4EDD4"
+        d="M 244,94 C 254,76 272,68 288,76 C 274,64 252,72 242,90 Z"/>
+
+      <!-- WORDMARK -->
+      <text x="250" y="408"
+            font-family="Raleway,sans-serif" font-weight="700" font-size="38"
+            fill="#C9A84C" text-anchor="middle" letter-spacing="0.5">Alinaya Alrafia</text>
+      <text x="250" y="446"
+            font-family="Raleway,sans-serif" font-weight="300" font-size="22"
+            fill="#4A7060" text-anchor="middle" letter-spacing="3">Medical Co.</text>
+    </svg>
+  </div>
+
+  <!-- P2 on dark emerald -->
+  <div class="card-g">
+    <div class="lbl">On Dark Emerald</div>
+    <svg viewBox="0 0 500 540" width="220" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="p2d-left" x1="90" y1="58" x2="255" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#7AEAD8"/>
+          <stop offset="28%"  stop-color="#3ABFA0"/>
+          <stop offset="65%"  stop-color="#1A7A5E"/>
+          <stop offset="100%" stop-color="#04200F"/>
+        </linearGradient>
+        <linearGradient id="p2d-right" x1="410" y1="58" x2="245" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#7AEAD8"/>
+          <stop offset="28%"  stop-color="#3ABFA0"/>
+          <stop offset="65%"  stop-color="#1A7A5E"/>
+          <stop offset="100%" stop-color="#04200F"/>
+        </linearGradient>
+        <radialGradient id="p2d-shadow" cx="250" cy="108" r="28" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#010806" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#010806" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <path fill="url(#p2d-right)"
+        d="M 244,94 C 268,64 322,46 358,70 C 402,96 420,155 412,202 C 404,258 358,306 250,356 C 302,318 346,272 356,230 C 364,192 348,146 316,122 C 294,107 265,106 255,118 Z"/>
+      <path fill="url(#p2d-left)"
+        d="M 256,94 C 232,64 178,46 142,70 C 98,96 80,155 88,202 C 96,258 142,306 250,356 C 198,318 154,272 144,230 C 136,192 152,146 184,122 C 206,107 235,106 245,118 Z"/>
+      <ellipse cx="250" cy="109" rx="20" ry="16" fill="url(#p2d-shadow)"/>
+      <path opacity="0.2" fill="#C0F5E8"
+        d="M 256,94 C 246,76 228,68 212,76 C 226,64 248,72 258,90 Z"/>
+      <text x="250" y="408" font-family="Raleway,sans-serif" font-weight="700" font-size="38" fill="#C9A84C" text-anchor="middle" letter-spacing="0.5">Alinaya Alrafia</text>
+      <text x="250" y="446" font-family="Raleway,sans-serif" font-weight="300" font-size="22" fill="rgba(255,255,255,0.5)" text-anchor="middle" letter-spacing="3">Medical Co.</text>
+    </svg>
+  </div>
+
+  <!-- P2 icon only on white -->
+  <div class="card-w">
+    <div class="lbl">Icon Only</div>
+    <svg viewBox="0 0 500 370" width="220" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="p2i-left" x1="90" y1="58" x2="255" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#62D4AA"/>
+          <stop offset="28%"  stop-color="#239E73"/>
+          <stop offset="65%"  stop-color="#126B4A"/>
+          <stop offset="100%" stop-color="#052D1C"/>
+        </linearGradient>
+        <linearGradient id="p2i-right" x1="410" y1="58" x2="245" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#62D4AA"/>
+          <stop offset="28%"  stop-color="#239E73"/>
+          <stop offset="65%"  stop-color="#126B4A"/>
+          <stop offset="100%" stop-color="#052D1C"/>
+        </linearGradient>
+        <radialGradient id="p2i-shadow" cx="250" cy="108" r="28" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#020E08" stop-opacity="0.75"/>
+          <stop offset="100%" stop-color="#020E08" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <path fill="url(#p2i-right)" d="M 244,94 C 268,64 322,46 358,70 C 402,96 420,155 412,202 C 404,258 358,306 250,356 C 302,318 346,272 356,230 C 364,192 348,146 316,122 C 294,107 265,106 255,118 Z"/>
+      <path fill="url(#p2i-left)"  d="M 256,94 C 232,64 178,46 142,70 C 98,96 80,155 88,202 C 96,258 142,306 250,356 C 198,318 154,272 144,230 C 136,192 152,146 184,122 C 206,107 235,106 245,118 Z"/>
+      <ellipse cx="250" cy="109" rx="20" ry="16" fill="url(#p2i-shadow)"/>
+      <path opacity="0.22" fill="#A4EDD4" d="M 256,94 C 246,76 228,68 212,76 C 226,64 248,72 258,90 Z"/>
+    </svg>
+  </div>
+
+</div>
+
+
+<!-- ══════════════════════════════════════ -->
+<!-- PALETTE 8 — FOREST + ROSE GOLD -->
+<!-- ══════════════════════════════════════ -->
+<div class="row-label">Palette 8 — Forest · #1B3A2D + #C4956A</div>
+<div class="grid">
+
+  <!-- P8 on white -->
+  <div class="card-w">
+    <div class="lbl">On White</div>
+    <svg viewBox="0 0 500 540" width="220" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="p8-left" x1="90" y1="58" x2="255" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#58C898"/>
+          <stop offset="28%"  stop-color="#1E8A5C"/>
+          <stop offset="65%"  stop-color="#0F5236"/>
+          <stop offset="100%" stop-color="#041D12"/>
+        </linearGradient>
+        <linearGradient id="p8-right" x1="410" y1="58" x2="245" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#58C898"/>
+          <stop offset="28%"  stop-color="#1E8A5C"/>
+          <stop offset="65%"  stop-color="#0F5236"/>
+          <stop offset="100%" stop-color="#041D12"/>
+        </linearGradient>
+        <radialGradient id="p8-shadow" cx="250" cy="108" r="28" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#010806" stop-opacity="0.75"/>
+          <stop offset="100%" stop-color="#010806" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <path fill="url(#p8-right)" d="M 244,94 C 268,64 322,46 358,70 C 402,96 420,155 412,202 C 404,258 358,306 250,356 C 302,318 346,272 356,230 C 364,192 348,146 316,122 C 294,107 265,106 255,118 Z"/>
+      <path fill="url(#p8-left)"  d="M 256,94 C 232,64 178,46 142,70 C 98,96 80,155 88,202 C 96,258 142,306 250,356 C 198,318 154,272 144,230 C 136,192 152,146 184,122 C 206,107 235,106 245,118 Z"/>
+      <ellipse cx="250" cy="109" rx="20" ry="16" fill="url(#p8-shadow)"/>
+      <path opacity="0.2" fill="#9CE8CA" d="M 256,94 C 246,76 228,68 212,76 C 226,64 248,72 258,90 Z"/>
+      <path opacity="0.16" fill="#9CE8CA" d="M 244,94 C 254,76 272,68 288,76 C 274,64 252,72 242,90 Z"/>
+      <text x="250" y="408" font-family="Raleway,sans-serif" font-weight="700" font-size="38" fill="#C4956A" text-anchor="middle" letter-spacing="0.5">Alinaya Alrafia</text>
+      <text x="250" y="446" font-family="Raleway,sans-serif" font-weight="300" font-size="22" fill="#4A6050" text-anchor="middle" letter-spacing="3">Medical Co.</text>
+    </svg>
+  </div>
+
+  <!-- P8 on dark forest -->
+  <div class="card-f">
+    <div class="lbl">On Dark Forest</div>
+    <svg viewBox="0 0 500 540" width="220" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="p8d-left" x1="90" y1="58" x2="255" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#70D8A4"/>
+          <stop offset="28%"  stop-color="#289B68"/>
+          <stop offset="65%"  stop-color="#126040"/>
+          <stop offset="100%" stop-color="#031608"/>
+        </linearGradient>
+        <linearGradient id="p8d-right" x1="410" y1="58" x2="245" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#70D8A4"/>
+          <stop offset="28%"  stop-color="#289B68"/>
+          <stop offset="65%"  stop-color="#126040"/>
+          <stop offset="100%" stop-color="#031608"/>
+        </linearGradient>
+        <radialGradient id="p8d-shadow" cx="250" cy="108" r="28" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#010806" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#010806" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <path fill="url(#p8d-right)" d="M 244,94 C 268,64 322,46 358,70 C 402,96 420,155 412,202 C 404,258 358,306 250,356 C 302,318 346,272 356,230 C 364,192 348,146 316,122 C 294,107 265,106 255,118 Z"/>
+      <path fill="url(#p8d-left)"  d="M 256,94 C 232,64 178,46 142,70 C 98,96 80,155 88,202 C 96,258 142,306 250,356 C 198,318 154,272 144,230 C 136,192 152,146 184,122 C 206,107 235,106 245,118 Z"/>
+      <ellipse cx="250" cy="109" rx="20" ry="16" fill="url(#p8d-shadow)"/>
+      <path opacity="0.2" fill="#C0F5E0" d="M 256,94 C 246,76 228,68 212,76 C 226,64 248,72 258,90 Z"/>
+      <text x="250" y="408" font-family="Raleway,sans-serif" font-weight="700" font-size="38" fill="#C4956A" text-anchor="middle" letter-spacing="0.5">Alinaya Alrafia</text>
+      <text x="250" y="446" font-family="Raleway,sans-serif" font-weight="300" font-size="22" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="3">Medical Co.</text>
+    </svg>
+  </div>
+
+  <!-- P8 icon only -->
+  <div class="card-w">
+    <div class="lbl">Icon Only</div>
+    <svg viewBox="0 0 500 370" width="220" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="p8i-left" x1="90" y1="58" x2="255" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#58C898"/>
+          <stop offset="28%"  stop-color="#1E8A5C"/>
+          <stop offset="65%"  stop-color="#0F5236"/>
+          <stop offset="100%" stop-color="#041D12"/>
+        </linearGradient>
+        <linearGradient id="p8i-right" x1="410" y1="58" x2="245" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#58C898"/>
+          <stop offset="28%"  stop-color="#1E8A5C"/>
+          <stop offset="65%"  stop-color="#0F5236"/>
+          <stop offset="100%" stop-color="#041D12"/>
+        </linearGradient>
+        <radialGradient id="p8i-shadow" cx="250" cy="108" r="28" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#010806" stop-opacity="0.75"/>
+          <stop offset="100%" stop-color="#010806" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <path fill="url(#p8i-right)" d="M 244,94 C 268,64 322,46 358,70 C 402,96 420,155 412,202 C 404,258 358,306 250,356 C 302,318 346,272 356,230 C 364,192 348,146 316,122 C 294,107 265,106 255,118 Z"/>
+      <path fill="url(#p8i-left)"  d="M 256,94 C 232,64 178,46 142,70 C 98,96 80,155 88,202 C 96,258 142,306 250,356 C 198,318 154,272 144,230 C 136,192 152,146 184,122 C 206,107 235,106 245,118 Z"/>
+      <ellipse cx="250" cy="109" rx="20" ry="16" fill="url(#p8i-shadow)"/>
+      <path opacity="0.2" fill="#9CE8CA" d="M 256,94 C 246,76 228,68 212,76 C 226,64 248,72 258,90 Z"/>
+    </svg>
+  </div>
+
+</div>
+
+
+<!-- ══════════════════════════════════════ -->
+<!-- LARGE SIDE BY SIDE — FINAL COMPARISON -->
+<!-- ══════════════════════════════════════ -->
+<div class="row-label">Full Wordmark — Large Preview</div>
+<div class="grid-2">
+
+  <!-- P2 large -->
+  <div class="card-k">
+    <div class="lbl">Palette 2 — Emerald + Gold</div>
+    <svg viewBox="0 0 500 540" width="320" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="big-p2-left" x1="90" y1="58" x2="255" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#62D4AA"/>
+          <stop offset="28%"  stop-color="#239E73"/>
+          <stop offset="65%"  stop-color="#126B4A"/>
+          <stop offset="100%" stop-color="#052D1C"/>
+        </linearGradient>
+        <linearGradient id="big-p2-right" x1="410" y1="58" x2="245" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#62D4AA"/>
+          <stop offset="28%"  stop-color="#239E73"/>
+          <stop offset="65%"  stop-color="#126B4A"/>
+          <stop offset="100%" stop-color="#052D1C"/>
+        </linearGradient>
+        <radialGradient id="big-p2-shadow" cx="250" cy="108" r="28" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#020E08" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#020E08" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <path fill="url(#big-p2-right)" d="M 244,94 C 268,64 322,46 358,70 C 402,96 420,155 412,202 C 404,258 358,306 250,356 C 302,318 346,272 356,230 C 364,192 348,146 316,122 C 294,107 265,106 255,118 Z"/>
+      <path fill="url(#big-p2-left)"  d="M 256,94 C 232,64 178,46 142,70 C 98,96 80,155 88,202 C 96,258 142,306 250,356 C 198,318 154,272 144,230 C 136,192 152,146 184,122 C 206,107 235,106 245,118 Z"/>
+      <ellipse cx="250" cy="109" rx="20" ry="16" fill="url(#big-p2-shadow)"/>
+      <path opacity="0.22" fill="#A4EDD4" d="M 256,94 C 246,76 228,68 212,76 C 226,64 248,72 258,90 Z"/>
+      <path opacity="0.18" fill="#A4EDD4" d="M 244,94 C 254,76 272,68 288,76 C 274,64 252,72 242,90 Z"/>
+      <text x="250" y="415" font-family="Raleway,sans-serif" font-weight="700" font-size="38" fill="#C9A84C" text-anchor="middle" letter-spacing="0.5">Alinaya Alrafia</text>
+      <text x="250" y="455" font-family="Raleway,sans-serif" font-weight="300" font-size="22" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="3">Medical Co.</text>
+    </svg>
+  </div>
+
+  <!-- P8 large -->
+  <div class="card-k">
+    <div class="lbl">Palette 8 — Forest + Rose Gold</div>
+    <svg viewBox="0 0 500 540" width="320" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="big-p8-left" x1="90" y1="58" x2="255" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#58C898"/>
+          <stop offset="28%"  stop-color="#1E8A5C"/>
+          <stop offset="65%"  stop-color="#0F5236"/>
+          <stop offset="100%" stop-color="#041D12"/>
+        </linearGradient>
+        <linearGradient id="big-p8-right" x1="410" y1="58" x2="245" y2="352" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#58C898"/>
+          <stop offset="28%"  stop-color="#1E8A5C"/>
+          <stop offset="65%"  stop-color="#0F5236"/>
+          <stop offset="100%" stop-color="#041D12"/>
+        </linearGradient>
+        <radialGradient id="big-p8-shadow" cx="250" cy="108" r="28" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#010806" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#010806" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <path fill="url(#big-p8-right)" d="M 244,94 C 268,64 322,46 358,70 C 402,96 420,155 412,202 C 404,258 358,306 250,356 C 302,318 346,272 356,230 C 364,192 348,146 316,122 C 294,107 265,106 255,118 Z"/>
+      <path fill="url(#big-p8-left)"  d="M 256,94 C 232,64 178,46 142,70 C 98,96 80,155 88,202 C 96,258 142,306 250,356 C 198,318 154,272 144,230 C 136,192 152,146 184,122 C 206,107 235,106 245,118 Z"/>
+      <ellipse cx="250" cy="109" rx="20" ry="16" fill="url(#big-p8-shadow)"/>
+      <path opacity="0.2" fill="#9CE8CA" d="M 256,94 C 246,76 228,68 212,76 C 226,64 248,72 258,90 Z"/>
+      <path opacity="0.16" fill="#9CE8CA" d="M 244,94 C 254,76 272,68 288,76 C 274,64 252,72 242,90 Z"/>
+      <text x="250" y="415" font-family="Raleway,sans-serif" font-weight="700" font-size="38" fill="#C4956A" text-anchor="middle" letter-spacing="0.5">Alinaya Alrafia</text>
+      <text x="250" y="455" font-family="Raleway,sans-serif" font-weight="300" font-size="22" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="3">Medical Co.</text>
+    </svg>
+  </div>
+
+</div>
+
+
+<!-- ══════════════════════════════════════ -->
+<!-- FAVICON SCALE TEST -->
+<!-- ══════════════════════════════════════ -->
+<div class="row-label">Scale Test — Favicon to Large</div>
+<div class="card-w" style="flex-direction:row;gap:32px;align-items:flex-end;justify-content:center;padding:32px 40px">
+  <!-- 24px -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+    <svg viewBox="80 60 340 310" width="24" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="fav-l" x1="90" y1="58" x2="255" y2="352" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#62D4AA"/><stop offset="40%" stop-color="#239E73"/><stop offset="100%" stop-color="#052D1C"/></linearGradient>
+        <linearGradient id="fav-r" x1="410" y1="58" x2="245" y2="352" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#62D4AA"/><stop offset="40%" stop-color="#239E73"/><stop offset="100%" stop-color="#052D1C"/></linearGradient>
+      </defs>
+      <path fill="url(#fav-r)" d="M 244,94 C 268,64 322,46 358,70 C 402,96 420,155 412,202 C 404,258 358,306 250,356 C 302,318 346,272 356,230 C 364,192 348,146 316,122 C 294,107 265,106 255,118 Z"/>
+      <path fill="url(#fav-l)" d="M 256,94 C 232,64 178,46 142,70 C 98,96 80,155 88,202 C 96,258 142,306 250,356 C 198,318 154,272 144,230 C 136,192 152,146 184,122 C 206,107 235,106 245,118 Z"/>
+    </svg>
+    <span style="font-size:10px;color:#9CA3AF;font-weight:600">24px</span>
+  </div>
+  <!-- 32px -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+    <svg viewBox="80 60 340 310" width="32" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#239E73" d="M 244,94 C 268,64 322,46 358,70 C 402,96 420,155 412,202 C 404,258 358,306 250,356 C 302,318 346,272 356,230 C 364,192 348,146 316,122 C 294,107 265,106 255,118 Z"/>
+      <path fill="#3AB88A" d="M 256,94 C 232,64 178,46 142,70 C 98,96 80,155 88,202 C 96,258 142,306 250,356 C 198,318 154,272 144,230 C 136,192 152,146 184,122 C 206,107 235,106 245,118 Z"/>
+    </svg>
+    <span style="font-size:10px;color:#9CA3AF;font-weight:600">32px</span>
+  </div>
+  <!-- 64px -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+    <svg viewBox="80 60 340 310" width="64" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="f64-l" x1="90" y1="58" x2="255" y2="352" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#62D4AA"/><stop offset="40%" stop-color="#239E73"/><stop offset="100%" stop-color="#052D1C"/></linearGradient>
+        <linearGradient id="f64-r" x1="410" y1="58" x2="245" y2="352" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#62D4AA"/><stop offset="40%" stop-color="#239E73"/><stop offset="100%" stop-color="#052D1C"/></linearGradient>
+        <radialGradient id="f64-s" cx="250" cy="108" r="28" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#020E08" stop-opacity="0.7"/><stop offset="100%" stop-color="#020E08" stop-opacity="0"/></radialGradient>
+      </defs>
+      <path fill="url(#f64-r)" d="M 244,94 C 268,64 322,46 358,70 C 402,96 420,155 412,202 C 404,258 358,306 250,356 C 302,318 346,272 356,230 C 364,192 348,146 316,122 C 294,107 265,106 255,118 Z"/>
+      <path fill="url(#f64-l)" d="M 256,94 C 232,64 178,46 142,70 C 98,96 80,155 88,202 C 96,258 142,306 250,356 C 198,318 154,272 144,230 C 136,192 152,146 184,122 C 206,107 235,106 245,118 Z"/>
+      <ellipse cx="250" cy="109" rx="20" ry="16" fill="url(#f64-s)"/>
+    </svg>
+    <span style="font-size:10px;color:#9CA3AF;font-weight:600">64px</span>
+  </div>
+  <!-- 120px -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+    <svg viewBox="80 60 340 310" width="120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="f120-l" x1="90" y1="58" x2="255" y2="352" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#62D4AA"/><stop offset="28%" stop-color="#239E73"/><stop offset="65%" stop-color="#126B4A"/><stop offset="100%" stop-color="#052D1C"/></linearGradient>
+        <linearGradient id="f120-r" x1="410" y1="58" x2="245" y2="352" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#62D4AA"/><stop offset="28%" stop-color="#239E73"/><stop offset="65%" stop-color="#126B4A"/><stop offset="100%" stop-color="#052D1C"/></linearGradient>
+        <radialGradient id="f120-s" cx="250" cy="108" r="28" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#020E08" stop-opacity="0.75"/><stop offset="100%" stop-color="#020E08" stop-opacity="0"/></radialGradient>
+      </defs>
+      <path fill="url(#f120-r)" d="M 244,94 C 268,64 322,46 358,70 C 402,96 420,155 412,202 C 404,258 358,306 250,356 C 302,318 346,272 356,230 C 364,192 348,146 316,122 C 294,107 265,106 255,118 Z"/>
+      <path fill="url(#f120-l)" d="M 256,94 C 232,64 178,46 142,70 C 98,96 80,155 88,202 C 96,258 142,306 250,356 C 198,318 154,272 144,230 C 136,192 152,146 184,122 C 206,107 235,106 245,118 Z"/>
+      <ellipse cx="250" cy="109" rx="20" ry="16" fill="url(#f120-s)"/>
+      <path opacity="0.22" fill="#A4EDD4" d="M 256,94 C 246,76 228,68 212,76 C 226,64 248,72 258,90 Z"/>
+    </svg>
+    <span style="font-size:10px;color:#9CA3AF;font-weight:600">120px</span>
+  </div>
+  <!-- 200px -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+    <svg viewBox="80 60 340 310" width="200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="f200-l" x1="90" y1="58" x2="255" y2="352" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#62D4AA"/><stop offset="28%" stop-color="#239E73"/><stop offset="65%" stop-color="#126B4A"/><stop offset="100%" stop-color="#052D1C"/></linearGradient>
+        <linearGradient id="f200-r" x1="410" y1="58" x2="245" y2="352" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#62D4AA"/><stop offset="28%" stop-color="#239E73"/><stop offset="65%" stop-color="#126B4A"/><stop offset="100%" stop-color="#052D1C"/></linearGradient>
+        <radialGradient id="f200-s" cx="250" cy="108" r="28" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#020E08" stop-opacity="0.75"/><stop offset="100%" stop-color="#020E08" stop-opacity="0"/></radialGradient>
+      </defs>
+      <path fill="url(#f200-r)" d="M 244,94 C 268,64 322,46 358,70 C 402,96 420,155 412,202 C 404,258 358,306 250,356 C 302,318 346,272 356,230 C 364,192 348,146 316,122 C 294,107 265,106 255,118 Z"/>
+      <path fill="url(#f200-l)" d="M 256,94 C 232,64 178,46 142,70 C 98,96 80,155 88,202 C 96,258 142,306 250,356 C 198,318 154,272 144,230 C 136,192 152,146 184,122 C 206,107 235,106 245,118 Z"/>
+      <ellipse cx="250" cy="109" rx="20" ry="16" fill="url(#f200-s)"/>
+      <path opacity="0.22" fill="#A4EDD4" d="M 256,94 C 246,76 228,68 212,76 C 226,64 248,72 258,90 Z"/>
+      <path opacity="0.18" fill="#A4EDD4" d="M 244,94 C 254,76 272,68 288,76 C 274,64 252,72 242,90 Z"/>
+    </svg>
+    <span style="font-size:10px;color:#9CA3AF;font-weight:600">200px</span>
+  </div>
+</div>
+
+
+<div style="border-top:1px solid #E5E7EB;margin-top:48px;padding-top:28px;text-align:center;color:#9CA3AF;font-size:12px;line-height:2">
+  Alinaya Alrafia Medical Company · Ribbon Heart Style Exploration · July 2026<br>
+  <strong style="color:#374151">
+    Reply "yes ribbon" to lock this style, then choose P2 or P8 →<br>
+    Or say "adjust" and describe what to change (tighter curves, wider ribbon, different crossing, etc.)
+  </strong>
+</div>
+
+</body>
+</html>

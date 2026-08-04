@@ -1,0 +1,2175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alinaya Alrafia — Brand Identity Guide 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --emerald: #1B4D3E;
+  --emerald-dark: #0F2E24;
+  --emerald-light: #2A6B56;
+  --gold: #C9A84C;
+  --gold-light: #E0C070;
+  --white: #FFFFFF;
+  --offwhite: #F8F9FC;
+  --charcoal: #1A1A2E;
+  --grey: #6B7280;
+  --border: #E5E7EB;
+  --page-bg: #0C1410;
+  --card-radius: 16px;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: var(--page-bg);
+  font-family: 'Raleway', sans-serif;
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+/* ── LAYOUT ── */
+.page { max-width: 1100px; margin: 0 auto; padding: 0 40px 120px; }
+
+.section {
+  background: var(--white);
+  border-radius: var(--card-radius);
+  padding: 64px 72px;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-number {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--emerald);
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+.section-title-ar {
+  font-family: 'Cairo', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--grey);
+  direction: rtl;
+  display: block;
+  margin-bottom: 40px;
+}
+
+.gold-rule {
+  width: 48px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+
+/* ── COVER ── */
+.cover {
+  min-height: 100vh;
+  background: #0A1A14;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 20% 100%, rgba(27,77,62,0.4) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 80% 100%, rgba(27,77,62,0.3) 0%, transparent 60%);
+}
+
+.cover-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.cover-content { position: relative; z-index: 1; }
+
+.cover-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-bottom: 60px;
+}
+
+.cover-logo-mark {
+  margin-bottom: 56px;
+  display: flex;
+  justify-content: center;
+}
+
+.cover-company-en {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+}
+
+.cover-company-ar {
+  font-family: 'Cairo', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--white);
+  direction: rtl;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.cover-company-main {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
+
+.cover-divider {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto 32px;
+}
+
+.cover-tagline-en {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.cover-tagline-ar {
+  font-family: 'Cairo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(201,168,76,0.8);
+  direction: rtl;
+  margin-bottom: 80px;
+}
+
+.cover-meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+}
+
+.cover-meta-dot { color: var(--gold); opacity: 0.4; }
+
+/* ── TOC ── */
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.toc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 10px;
+  background: var(--offwhite);
+  transition: background 0.2s;
+}
+
+.toc-num {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 2px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.toc-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--emerald);
+  line-height: 1.4;
+}
+
+/* ── BRAND OVERVIEW ── */
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.overview-card {
+  background: var(--offwhite);
+  border-radius: 12px;
+  padding: 32px;
+  border-left: 4px solid var(--emerald);
+}
+
+.overview-card-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.overview-card-text {
+  font-size: 15px;
+  color: var(--charcoal);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.overview-card-ar {
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+  color: var(--grey);
+  direction: rtl;
+  line-height: 1.8;
+}
+
+.personality-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.personality-card {
+  text-align: center;
+  padding: 32px 24px;
+  border-radius: 12px;
+  background: var(--emerald);
+  color: var(--white);
+}
+
+.personality-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.personality-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.personality-desc {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+}
+
+/* ── LOGO SYSTEM ── */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.logo-card {
+  border-radius: 12px;
+  padding: 40px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-card-white { background: #FFFFFF; border: 1px solid var(--border); }
+.logo-card-emerald { background: var(--emerald); }
+.logo-card-dark { background: #0A1A14; }
+
+.logo-card-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--grey);
+  text-align: center;
+}
+
+.logo-card-emerald .logo-card-label,
+.logo-card-dark .logo-card-label { color: rgba(255,255,255,0.3); }
+
+.logo-card-usage {
+  font-size: 11px;
+  color: var(--grey);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.logo-card-emerald .logo-card-usage,
+.logo-card-dark .logo-card-usage { color: rgba(255,255,255,0.45); }
+
+.logo-note {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: #FFF8E7;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  font-size: 12px;
+  color: #8B6914;
+  line-height: 1.6;
+}
+
+/* ── CLEARSPACE ── */
+.clearspace-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.clearspace-diagram {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clearspace-outer {
+  border: 2px dashed var(--gold);
+  border-radius: 4px;
+  padding: 28px;
+  position: relative;
+}
+
+.clearspace-label {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.clearspace-label.top { top: -22px; left: 50%; transform: translateX(-50%); }
+.clearspace-label.bottom { bottom: -22px; left: 50%; transform: translateX(-50%); }
+.clearspace-label.left { left: -48px; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+.clearspace-label.right { right: -48px; top: 50%; transform: translateY(-50%) rotate(90deg); }
+
+.clearspace-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.clearspace-rule {
+  background: var(--offwhite);
+  border-radius: 12px;
+  padding: 28px 32px;
+}
+
+.clearspace-rule-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--emerald);
+  margin-bottom: 12px;
+}
+
+.clearspace-rule-desc {
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.7;
+  max-width: 280px;
+}
+
+/* ── MIN SIZE ── */
+.size-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 48px;
+  padding: 40px;
+  background: var(--offwhite);
+  border-radius: 12px;
+}
+
+.size-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.size-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 3px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.size-badge-min { background: #FEE2E2; color: #DC2626; }
+.size-badge-ok { background: #E7F3EF; color: var(--emerald); }
+.size-badge-rec { background: #1B4D3E; color: var(--gold); }
+
+.size-label { font-size: 11px; color: var(--grey); letter-spacing: 1px; }
+
+/* ── LOGO ON BACKGROUNDS ── */
+.bg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.bg-sample {
+  border-radius: 12px;
+  padding: 32px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.bg-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bg-badge-ok { background: #16A34A; color: white; }
+.bg-badge-no { background: #DC2626; color: white; }
+
+.bg-sample-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.bg-white { background: #FFFFFF; border: 1px solid var(--border); }
+.bg-white .bg-sample-label { color: var(--grey); }
+.bg-emerald-bg { background: var(--emerald); }
+.bg-emerald-bg .bg-sample-label { color: rgba(255,255,255,0.4); }
+.bg-dark-bg { background: #0A1A14; }
+.bg-dark-bg .bg-sample-label { color: rgba(255,255,255,0.4); }
+.bg-offwhite-bg { background: #F8F9FC; border: 1px solid var(--border); }
+.bg-offwhite-bg .bg-sample-label { color: var(--grey); }
+.bg-grey-bg { background: #D1D5DB; }
+.bg-grey-bg .bg-sample-label { color: #6B7280; }
+.bg-photo-bg {
+  background: linear-gradient(135deg, #4A7856 0%, #2D5A3D 30%, #8B5E3C 60%, #C4956A 100%);
+}
+.bg-photo-bg .bg-sample-label { color: rgba(255,255,255,0.5); }
+
+/* ── DON'TS ── */
+.donts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.dont-card {
+  border-radius: 12px;
+  padding: 28px 20px;
+  background: var(--offwhite);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.dont-preview {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.dont-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #DC2626;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.dont-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: #DC2626;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ── COLOR PALETTE ── */
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.swatch-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.swatch-color {
+  height: 120px;
+  position: relative;
+}
+
+.swatch-role {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.swatch-info {
+  padding: 18px;
+  background: white;
+  border: 1px solid var(--border);
+  border-top: none;
+}
+
+.swatch-hex {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--charcoal);
+  font-family: 'Courier New', monospace;
+  margin-bottom: 6px;
+}
+
+.swatch-specs {
+  font-size: 11px;
+  color: var(--grey);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.swatch-use {
+  font-size: 11px;
+  color: var(--emerald);
+  font-weight: 600;
+  line-height: 1.5;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── TYPOGRAPHY ── */
+.type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.type-col-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border);
+}
+
+.type-col-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--emerald);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.type-col-info { }
+.type-col-name { font-size: 16px; font-weight: 700; color: var(--charcoal); }
+.type-col-sub { font-size: 12px; color: var(--grey); }
+
+.type-specimen { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+.type-specimen:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.type-meta {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+/* ── SLOGAN ── */
+.slogan-display {
+  text-align: center;
+  padding: 60px 40px;
+  background: var(--offwhite);
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+
+.slogan-en {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--emerald);
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.slogan-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 20px auto;
+}
+
+.slogan-ar {
+  font-family: 'Cairo', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--charcoal);
+  direction: rtl;
+}
+
+.slogan-rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.slogan-rule-card {
+  padding: 24px;
+  border-radius: 10px;
+}
+
+.slogan-rule-do { background: #ECFDF5; border-left: 3px solid #16A34A; }
+.slogan-rule-dont { background: #FEF2F2; border-left: 3px solid #DC2626; }
+
+.slogan-rule-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.slogan-rule-do .slogan-rule-label { color: #16A34A; }
+.slogan-rule-dont .slogan-rule-label { color: #DC2626; }
+
+.slogan-rule-item {
+  font-size: 13px;
+  color: var(--charcoal);
+  padding: 4px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* ── BUSINESS CARD ── */
+.card-mockup-wrap {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.biz-card {
+  width: 340px;
+  height: 216px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 4px 16px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+}
+
+.biz-card-front {
+  background: var(--emerald);
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.biz-card-front::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(201,168,76,0.08);
+}
+
+.biz-card-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.3px;
+}
+
+.biz-card-title {
+  font-size: 10px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.biz-card-gold-line {
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+  margin: 12px 0;
+}
+
+.biz-card-contact {
+  font-size: 10px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.8;
+}
+
+.biz-card-back {
+  background: white;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-radius: 10px;
+  gap: 16px;
+}
+
+.biz-card-back-contact {
+  font-size: 10px;
+  color: var(--grey);
+  text-align: center;
+  line-height: 1.8;
+}
+
+.card-caption {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* ── LETTERHEAD ── */
+.letterhead-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.letterhead {
+  width: 480px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.lh-header {
+  padding: 32px 40px 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.lh-address {
+  text-align: right;
+  font-size: 9px;
+  color: var(--grey);
+  line-height: 1.8;
+  direction: rtl;
+}
+
+.lh-gold-rule {
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), rgba(201,168,76,0.2));
+}
+
+.lh-body {
+  padding: 36px 40px;
+}
+
+.lh-date { font-size: 10px; color: var(--grey); margin-bottom: 24px; }
+
+.lh-body-line {
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.lh-body-line.short { width: 60%; }
+.lh-body-line.medium { width: 80%; }
+
+.lh-footer {
+  margin-top: 40px;
+  border-top: 1px solid var(--border);
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lh-footer-web { font-size: 9px; color: var(--grey); letter-spacing: 1px; }
+.lh-footer-gold { width: 40px; height: 2px; background: var(--gold); border-radius: 1px; }
+
+/* ── SOCIAL MEDIA ── */
+.social-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.profile-col { }
+
+.profile-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.profile-sizes {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 8px;
+}
+
+.profile-pic {
+  background: var(--emerald);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(27,77,62,0.3);
+}
+
+.profile-size-label {
+  font-size: 10px;
+  color: var(--grey);
+  text-align: center;
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+
+.cover-col { }
+
+.cover-preview {
+  width: 100%;
+  height: 140px;
+  background: var(--emerald);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 4px 20px rgba(27,77,62,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-preview::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 100% at 80% 50%, rgba(201,168,76,0.1) 0%, transparent 60%);
+}
+
+.cover-tagline-preview {
+  font-size: 9px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* ── BRAND VOICE ── */
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.voice-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.voice-header {
+  background: var(--emerald);
+  padding: 24px 24px 20px;
+}
+
+.voice-num {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: rgba(201,168,76,0.6);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.voice-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.3px;
+  margin-bottom: 8px;
+}
+
+.voice-desc {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
+
+.voice-body {
+  background: var(--offwhite);
+  padding: 20px 24px;
+}
+
+.voice-do-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #16A34A;
+  margin-bottom: 8px;
+}
+
+.voice-dont-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #DC2626;
+  margin: 12px 0 8px;
+}
+
+.voice-word {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 3px 3px 3px 0;
+}
+
+.voice-word-do { background: #DCFCE7; color: #16A34A; }
+.voice-word-dont { background: #FEE2E2; color: #DC2626; }
+
+/* ── PAGE SEPARATOR ── */
+.page-sep {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.15);
+}
+
+/* ── FOOTER ── */
+.guide-footer {
+  text-align: center;
+  padding: 60px 40px;
+  color: rgba(255,255,255,0.2);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 2;
+}
+
+.guide-footer span { color: var(--gold); opacity: 0.5; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 00 · COVER -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-grid"></div>
+  <div class="cover-content">
+    <div class="cover-label">Brand Identity Guide · 2026</div>
+
+    <div class="cover-logo-mark">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="100" height="100">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#FFFFFF"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#FFFFFF" opacity="0.45"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+        <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+      </svg>
+    </div>
+
+    <div class="cover-company-en">Alinaya Alrafia Medical Company</div>
+    <div class="cover-company-ar">شركة العناية الرفيعة الطبية</div>
+
+    <div class="cover-divider"></div>
+
+    <div class="cover-tagline-en">"Diagnostic Precision. Professional Integrity."</div>
+    <div class="cover-tagline-ar">"دقة التشخيص وأمانة المهنة."</div>
+
+    <div class="cover-meta">
+      <span>Riyadh</span>
+      <span class="cover-meta-dot">·</span>
+      <span>Saudi Arabia</span>
+      <span class="cover-meta-dot">·</span>
+      <span>Est. 2023</span>
+      <span class="cover-meta-dot">·</span>
+      <span>alinayamedical.com</span>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- TOC -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-number">Contents</span>
+  <div class="section-title">Table of Contents</div>
+  <div class="gold-rule"></div>
+  <div class="toc-grid">
+    <div class="toc-item"><span class="toc-num">01</span><span class="toc-label">Brand Overview</span></div>
+    <div class="toc-item"><span class="toc-num">02</span><span class="toc-label">Logo System</span></div>
+    <div class="toc-item"><span class="toc-num">03</span><span class="toc-label">Logo Clearspace</span></div>
+    <div class="toc-item"><span class="toc-num">04</span><span class="toc-label">Minimum Size</span></div>
+    <div class="toc-item"><span class="toc-num">05</span><span class="toc-label">Logo on Backgrounds</span></div>
+    <div class="toc-item"><span class="toc-num">06</span><span class="toc-label">Logo Don'ts</span></div>
+    <div class="toc-item"><span class="toc-num">07</span><span class="toc-label">Color Palette</span></div>
+    <div class="toc-item"><span class="toc-num">08</span><span class="toc-label">Typography</span></div>
+    <div class="toc-item"><span class="toc-num">09</span><span class="toc-label">Tagline / Slogan</span></div>
+    <div class="toc-item"><span class="toc-num">10</span><span class="toc-label">Business Card</span></div>
+    <div class="toc-item"><span class="toc-num">11</span><span class="toc-label">Letterhead</span></div>
+    <div class="toc-item"><span class="toc-num">12</span><span class="toc-label">Social Media</span></div>
+    <div class="toc-item"><span class="toc-num">13</span><span class="toc-label">Brand Voice</span></div>
+    <div class="toc-item"><span class="toc-num">14</span><span class="toc-label">Contact & Files</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 01 · BRAND OVERVIEW -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-number">Section 01</span>
+  <div class="section-title">Brand Overview</div>
+  <span class="section-title-ar">نظرة عامة على العلامة التجارية</span>
+  <div class="gold-rule"></div>
+
+  <div class="overview-grid">
+    <div class="overview-card">
+      <div class="overview-card-label">Mission · الرسالة</div>
+      <p class="overview-card-text">To deliver comprehensive, integrated healthcare services that improve lives, support communities, and raise the standard of medical care across Saudi Arabia.</p>
+      <p class="overview-card-ar">تقديم خدمات رعاية صحية شاملة ومتكاملة تحسّن الحياة، وتدعم المجتمعات، وترفع مستوى الرعاية الطبية في المملكة العربية السعودية.</p>
+    </div>
+    <div class="overview-card">
+      <div class="overview-card-label">Vision · الرؤية</div>
+      <p class="overview-card-text">To be the most trusted healthcare group in Saudi Arabia — recognized for excellence, compassion, and the lasting impact we create in the communities we serve.</p>
+      <p class="overview-card-ar">أن نكون المجموعة الصحية الأكثر ثقةً في المملكة العربية السعودية — بما نحققه من تميز وإنسانية وأثر دائم في المجتمعات التي نخدمها.</p>
+    </div>
+  </div>
+
+  <div style="margin-bottom:20px;">
+    <div class="section-number" style="margin-bottom:16px;">Brand Personality · شخصية العلامة</div>
+    <div class="personality-grid">
+      <div class="personality-card">
+        <div class="personality-icon">⚕</div>
+        <div class="personality-title">Professional</div>
+        <div class="personality-desc">Clinical excellence, precision, and accountability in every interaction.</div>
+      </div>
+      <div class="personality-card">
+        <div class="personality-icon">🤝</div>
+        <div class="personality-title">Trustworthy</div>
+        <div class="personality-desc">Transparent, consistent, and deeply committed to patient wellbeing.</div>
+      </div>
+      <div class="personality-card">
+        <div class="personality-icon">📈</div>
+        <div class="personality-title">Progressive</div>
+        <div class="personality-desc">Forward-thinking, aligned with Vision 2030, continuously advancing.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 02 · LOGO SYSTEM -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-number">Section 02</span>
+  <div class="section-title">Logo System</div>
+  <span class="section-title-ar">نظام الشعار</span>
+  <div class="gold-rule"></div>
+
+  <div class="logo-grid">
+
+    <!-- Full Color -->
+    <div class="logo-card logo-card-white" style="grid-column: span 2;">
+      <div class="logo-card-label">Primary — Full Color Wordmark</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 140" style="width:100%;max-width:520px;height:auto;">
+        <defs><style>.en-head{font-family:'Raleway','Arial',sans-serif;font-weight:700;}.en-sub{font-family:'Raleway','Arial',sans-serif;font-weight:500;}.ar-name{font-family:'Cairo','Arial',sans-serif;font-weight:600;}</style></defs>
+        <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+        <text x="152" y="48" class="en-head" font-size="28" fill="#1B4D3E" letter-spacing="1.5">ALINAYA ALRAFIA</text>
+        <rect x="152" y="58" width="448" height="2" fill="#C9A84C"/>
+        <text x="152" y="76" class="en-sub" font-size="11" fill="#6B7280" letter-spacing="6">MEDICAL COMPANY</text>
+        <line x1="152" y1="92" x2="600" y2="92" stroke="#E5E7EB" stroke-width="1"/>
+        <text x="600" y="114" class="ar-name" font-size="18" fill="#1B4D3E" text-anchor="start" direction="rtl">شركة العناية الرفيعة الطبية</text>
+      </svg>
+      <div class="logo-card-usage">Use on white or light backgrounds. Primary digital and print version.</div>
+    </div>
+
+    <!-- Icon Only -->
+    <div class="logo-card logo-card-white">
+      <div class="logo-card-label">Icon Mark Only</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="120" height="120">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+              </svg>
+      <div class="logo-card-usage">Favicon, app icon, social media profile, embroidery, small spaces.</div>
+    </div>
+
+    <!-- White reversed -->
+    <div class="logo-card logo-card-emerald">
+      <div class="logo-card-label">Reversed — White Version</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="100" height="100">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#FFFFFF"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#FFFFFF" opacity="0.45"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+        <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+      </svg>
+      <div class="logo-card-usage">Use on Emerald, dark, or photo backgrounds only.</div>
+    </div>
+
+  </div>
+
+  <!-- Monochrome row -->
+  <div style="margin-top:20px;">
+    <div class="section-number" style="margin-bottom:12px;">Monochrome Variants · أحادي اللون</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+
+      <!-- Mono Dark — icon -->
+      <div class="logo-card logo-card-white" style="padding:32px 20px 20px;">
+        <div class="logo-card-label">Monochrome Dark — Icon</div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="100" height="100">
+          <path d="M10,70 L70,8 L70,70 Z" fill="#1A1A2E"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#1A1A2E" opacity="0.62"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#1A1A2E"/>
+        </svg>
+        <div class="logo-card-usage">Single-colour print, embossing, laser engraving, stamps.</div>
+      </div>
+
+      <!-- Mono Dark — wordmark -->
+      <div class="logo-card logo-card-white" style="padding:32px 20px 20px;grid-column:span 2;">
+        <div class="logo-card-label">Monochrome Dark — Wordmark</div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 140" style="width:100%;max-width:460px;height:auto;">
+          <path d="M10,70 L70,8 L70,70 Z" fill="#1A1A2E"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#1A1A2E" opacity="0.62"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#1A1A2E"/>
+          <text x="152" y="48" font-family="Raleway,Arial,sans-serif" font-weight="700" font-size="28" fill="#1A1A2E" letter-spacing="1.5">ALINAYA ALRAFIA</text>
+          <rect x="152" y="58" width="448" height="2" fill="#1A1A2E" opacity="0.4"/>
+          <text x="152" y="76" font-family="Raleway,Arial,sans-serif" font-weight="500" font-size="11" fill="#1A1A2E" opacity="0.55" letter-spacing="6">MEDICAL COMPANY</text>
+          <line x1="152" y1="92" x2="600" y2="92" stroke="#1A1A2E" stroke-width="1" opacity="0.15"/>
+          <text x="600" y="114" font-family="Cairo,Arial,sans-serif" font-weight="600" font-size="18" fill="#1A1A2E" opacity="0.75" text-anchor="start" direction="rtl">شركة العناية الرفيعة الطبية</text>
+        </svg>
+        <div class="logo-card-usage">Use on white or light backgrounds only. No colour printing available.</div>
+      </div>
+
+      <!-- Mono White — wordmark -->
+      <div class="logo-card logo-card-dark" style="padding:32px 20px 20px;grid-column:span 2;">
+        <div class="logo-card-label">Monochrome White — Wordmark</div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 140" style="width:100%;max-width:460px;height:auto;">
+          <path d="M10,70 L70,8 L70,70 Z" fill="#FFFFFF"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#FFFFFF" opacity="0.62"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#FFFFFF"/>
+          <text x="152" y="48" font-family="Raleway,Arial,sans-serif" font-weight="700" font-size="28" fill="#FFFFFF" letter-spacing="1.5">ALINAYA ALRAFIA</text>
+          <rect x="152" y="58" width="448" height="2" fill="#FFFFFF" opacity="0.4"/>
+          <text x="152" y="76" font-family="Raleway,Arial,sans-serif" font-weight="500" font-size="11" fill="#FFFFFF" opacity="0.55" letter-spacing="6">MEDICAL COMPANY</text>
+          <line x1="152" y1="92" x2="600" y2="92" stroke="#FFFFFF" stroke-width="1" opacity="0.15"/>
+          <text x="600" y="114" font-family="Cairo,Arial,sans-serif" font-weight="600" font-size="18" fill="#FFFFFF" opacity="0.75" text-anchor="start" direction="rtl">شركة العناية الرفيعة الطبية</text>
+        </svg>
+        <div class="logo-card-usage">Use on dark or Emerald backgrounds only.</div>
+      </div>
+
+      <!-- Mono White — icon -->
+      <div class="logo-card logo-card-dark" style="padding:32px 20px 20px;">
+        <div class="logo-card-label">Monochrome White — Icon</div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="100" height="100">
+          <path d="M10,70 L70,8 L70,70 Z" fill="#FFFFFF"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#FFFFFF" opacity="0.62"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#FFFFFF"/>
+        </svg>
+        <div class="logo-card-usage">Reversed single-colour — dark backgrounds only.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="logo-note">
+    ⚠️ <strong>Note:</strong> Logo mark approved July 2026 — Abstract Wedge (Shape H). Production SVG files updated.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 03 · CLEARSPACE -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-number">Section 03</span>
+  <div class="section-title">Logo Clearspace</div>
+  <span class="section-title-ar">المنطقة المحمية للشعار</span>
+  <div class="gold-rule"></div>
+
+  <div class="clearspace-wrap">
+    <div>
+      <div class="clearspace-diagram">
+        <div class="clearspace-outer">
+          <span class="clearspace-label top">× clearspace</span>
+          <span class="clearspace-label bottom">× clearspace</span>
+          <span class="clearspace-label left">× clearspace</span>
+          <span class="clearspace-label right">× clearspace</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="110" height="110">
+            <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+            <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+            <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+                      </svg>
+        </div>
+      </div>
+    </div>
+    <div class="clearspace-rule" style="flex:1;max-width:360px;">
+      <div class="clearspace-rule-title">The Rule</div>
+      <p class="clearspace-rule-desc">
+        Always maintain a minimum clearspace equal to one-sixth of the logo mark's height (approx. 22px at the 140px reference size, ~16% of icon height) on all four sides of the logo mark. Scale this value proportionally at all other sizes.<br><br>
+        This zone must remain free of all other text, graphics, and design elements — including page edges, other logos, and decorative elements.<br><br>
+        For the full wordmark, apply the same proportional clearspace on all four sides.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 04 · MINIMUM SIZE -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-number">Section 04</span>
+  <div class="section-title">Minimum Size</div>
+  <span class="section-title-ar">الحجم الأدنى للشعار</span>
+  <div class="gold-rule"></div>
+
+  <div class="size-row">
+    <div class="size-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="16" height="16">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+              </svg>
+      <div class="size-badge size-badge-min">16px Min</div>
+      <div class="size-label">Favicon only</div>
+    </div>
+
+    <div class="size-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="24" height="24">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+              </svg>
+      <div class="size-badge size-badge-ok">24px</div>
+      <div class="size-label">App / Nav</div>
+    </div>
+
+    <div class="size-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="32" height="32">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+              </svg>
+      <div class="size-badge size-badge-rec">32px ★ Rec.</div>
+      <div class="size-label">Recommended min</div>
+    </div>
+
+    <div class="size-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="48" height="48">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+              </svg>
+      <div class="size-badge size-badge-ok">48px</div>
+      <div class="size-label">Standard</div>
+    </div>
+
+    <div class="size-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="80" height="80">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+              </svg>
+      <div class="size-badge size-badge-ok">80px</div>
+      <div class="size-label">Hero / Header</div>
+    </div>
+
+    <div style="margin-left:auto;background:var(--offwhite);padding:24px;border-radius:12px;max-width:220px;">
+      <div class="clearspace-rule-title" style="margin-bottom:12px;">Print Sizes</div>
+      <div style="font-size:12px;color:var(--grey);line-height:2;">
+        Min. wordmark: <strong style="color:var(--charcoal)">55mm wide</strong><br>
+        Min. icon only: <strong style="color:var(--charcoal)">8mm wide</strong><br>
+        Recommended: <strong style="color:var(--charcoal)">15mm+</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 05 · LOGO ON BACKGROUNDS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-number">Section 05</span>
+  <div class="section-title">Logo on Backgrounds</div>
+  <span class="section-title-ar">الشعار على الخلفيات المختلفة</span>
+  <div class="gold-rule"></div>
+
+  <div class="bg-grid">
+
+    <div class="bg-sample bg-white">
+      <div class="bg-badge bg-badge-ok">✓</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="70" height="70">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+              </svg>
+      <div class="bg-sample-label">On White</div>
+    </div>
+
+    <div class="bg-sample bg-emerald-bg">
+      <div class="bg-badge bg-badge-ok">✓</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="70" height="70">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#FFFFFF"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#FFFFFF" opacity="0.45"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+        <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+      </svg>
+      <div class="bg-sample-label">On Emerald</div>
+    </div>
+
+    <div class="bg-sample bg-dark-bg">
+      <div class="bg-badge bg-badge-ok">✓</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="70" height="70">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#FFFFFF"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#FFFFFF" opacity="0.45"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+        <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+      </svg>
+      <div class="bg-sample-label">On Dark</div>
+    </div>
+
+    <div class="bg-sample bg-offwhite-bg">
+      <div class="bg-badge bg-badge-ok">✓</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="70" height="70">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+              </svg>
+      <div class="bg-sample-label">On Off-White</div>
+    </div>
+
+    <div class="bg-sample bg-grey-bg">
+      <div class="bg-badge bg-badge-no">✕</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="70" height="70" style="opacity:0.5;">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+              </svg>
+      <div class="bg-sample-label" style="color:#888;">On Grey — Low Contrast</div>
+    </div>
+
+    <div class="bg-sample bg-photo-bg">
+      <div class="bg-badge bg-badge-no">✕</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="70" height="70" style="opacity:0.6;">
+        <path d="M10,70 L70,8 L70,70 Z" fill="#FFFFFF"/>
+        <path d="M130,70 L70,8 L70,70 Z" fill="#FFFFFF" opacity="0.45"/>
+        <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+        <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+      </svg>
+      <div class="bg-sample-label">On Busy Photo</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 06 · LOGO DON'TS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-number">Section 06</span>
+  <div class="section-title">Logo Don'ts</div>
+  <span class="section-title-ar">ما يجب تجنبه</span>
+  <div class="gold-rule"></div>
+
+  <div class="donts-grid">
+
+    <div class="dont-card">
+      <div class="dont-overlay">✕</div>
+      <div class="dont-preview">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="70" height="50" style="transform:scaleX(1.6);">
+          <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+                  </svg>
+      </div>
+      <div class="dont-label">Don't stretch or distort</div>
+    </div>
+
+    <div class="dont-card">
+      <div class="dont-overlay">✕</div>
+      <div class="dont-preview">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="70" height="70">
+          <path d="M10,70 L70,8 L70,70 Z" fill="#1E40AF"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#1E40AF" opacity="0.62"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#EF4444"/>
+                  </svg>
+      </div>
+      <div class="dont-label">Don't recolor the logo</div>
+    </div>
+
+    <div class="dont-card">
+      <div class="dont-overlay">✕</div>
+      <div class="dont-preview">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="70" height="70" style="transform:rotate(25deg);">
+          <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+                  </svg>
+      </div>
+      <div class="dont-label">Don't rotate the logo</div>
+    </div>
+
+    <div class="dont-card">
+      <div class="dont-overlay">✕</div>
+      <div class="dont-preview" style="background:#F9F9F9;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="70" height="70" style="filter:drop-shadow(4px 4px 8px rgba(0,0,0,0.5));">
+          <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+                  </svg>
+      </div>
+      <div class="dont-label">Don't add drop shadows</div>
+    </div>
+
+    <div class="dont-card">
+      <div class="dont-overlay">✕</div>
+      <div class="dont-preview" style="background:#E5E7EB;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="70" height="70">
+          <path d="M10,70 L70,8 L70,70 Z" fill="#4B5563"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#4B5563" opacity="0.62"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#9CA3AF"/>
+                  </svg>
+      </div>
+      <div class="dont-label">Don't use on low-contrast bg</div>
+    </div>
+
+    <div class="dont-card">
+      <div class="dont-overlay">✕</div>
+      <div class="dont-preview">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="70" height="70" style="transform:scaleX(-1);">
+          <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+                  </svg>
+      </div>
+      <div class="dont-label">Don't mirror or flip</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 07 · COLOR PALETTE -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-number">Section 07</span>
+  <div class="section-title">Color Palette</div>
+  <span class="section-title-ar">لوحة الألوان</span>
+  <div class="gold-rule"></div>
+
+  <div class="palette-grid">
+
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#1B4D3E;">
+        <div class="swatch-role" style="color:rgba(255,255,255,0.6);letter-spacing:3px;font-size:9px;font-weight:700;text-transform:uppercase;">Primary</div>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-hex">#1B4D3E</div>
+        <div class="swatch-specs">RGB 27, 77, 62<br>CMYK 65, 0, 19, 70<br>Pantone 7728 C (approx.)</div>
+        <div class="swatch-use">Emerald Green — Navbar, Hero, Footer, CTAs, Headings</div>
+      </div>
+    </div>
+
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#C9A84C;">
+        <div class="swatch-role" style="color:rgba(255,255,255,0.7);letter-spacing:3px;font-size:9px;font-weight:700;text-transform:uppercase;">Accent</div>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-hex">#C9A84C</div>
+        <div class="swatch-specs">RGB 201, 168, 76<br>CMYK 0, 16, 62, 21<br>Pantone 7752 C (approx.)</div>
+        <div class="swatch-use">Gold — Dividers, Highlights, Icons, Hover States</div>
+      </div>
+    </div>
+
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#F8F9FC;border-bottom:1px solid #E5E7EB;">
+        <div class="swatch-role" style="color:#9CA3AF;letter-spacing:3px;font-size:9px;font-weight:700;text-transform:uppercase;">Background</div>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-hex">#F8F9FC</div>
+        <div class="swatch-specs">RGB 248, 249, 252<br>CMYK 3, 1, 0, 1</div>
+        <div class="swatch-use">Off-White — Page Background, Alternating Sections</div>
+      </div>
+    </div>
+
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#FFFFFF;border-bottom:1px solid #E5E7EB;">
+        <div class="swatch-role" style="color:#9CA3AF;letter-spacing:3px;font-size:9px;font-weight:700;text-transform:uppercase;">White</div>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-hex">#FFFFFF</div>
+        <div class="swatch-specs">RGB 255, 255, 255<br>CMYK 0, 0, 0, 0</div>
+        <div class="swatch-use">White — Text on Dark, Cards, Section Backgrounds</div>
+      </div>
+    </div>
+
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#1A1A2E;">
+        <div class="swatch-role" style="color:rgba(255,255,255,0.4);letter-spacing:3px;font-size:9px;font-weight:700;text-transform:uppercase;">Text</div>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-hex">#1A1A2E</div>
+        <div class="swatch-specs">RGB 26, 26, 46<br>CMYK 43, 43, 0, 82</div>
+        <div class="swatch-use">Dark Charcoal — Body Text on Light Backgrounds</div>
+      </div>
+    </div>
+
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#6B7280;">
+        <div class="swatch-role" style="color:rgba(255,255,255,0.6);letter-spacing:3px;font-size:9px;font-weight:700;text-transform:uppercase;">Secondary</div>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-hex">#6B7280</div>
+        <div class="swatch-specs">RGB 107, 114, 128<br>CMYK 16, 11, 0, 50</div>
+        <div class="swatch-use">Medium Grey — Subheadings, Captions, Labels</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 08 · TYPOGRAPHY -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-number">Section 08</span>
+  <div class="section-title">Typography</div>
+  <span class="section-title-ar">الخطوط والطباعة</span>
+  <div class="gold-rule"></div>
+
+  <div class="type-grid">
+
+    <!-- English -->
+    <div>
+      <div class="type-col-header">
+        <div class="type-col-icon">R</div>
+        <div class="type-col-info">
+          <div class="type-col-name">Raleway</div>
+          <div class="type-col-sub">English · Google Fonts · Weights 300–800</div>
+        </div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">Display / H1 · Bold 700 · 48px</div>
+        <div style="font:700 48px/1.1 'Raleway';color:var(--charcoal);letter-spacing:-1px;">Healthcare Excellence</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">H2 · SemiBold 600 · 32px</div>
+        <div style="font:600 32px/1.2 'Raleway';color:var(--charcoal);">Our Medical Services</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">H3 · SemiBold 600 · 22px</div>
+        <div style="font:600 22px/1.3 'Raleway';color:var(--charcoal);">Diagnostic Precision</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">Body · Regular 400 · 16px · Line-height 1.7</div>
+        <div style="font:400 16px/1.7 'Raleway';color:var(--grey);">Alinaya Alrafia Medical Company is committed to delivering integrated, high-quality healthcare services across the Kingdom of Saudi Arabia.</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">Caption · Medium 500 · 13px</div>
+        <div style="font:500 13px/1.5 'Raleway';color:var(--grey);letter-spacing:1px;">Established in Riyadh, 2023</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">Button · SemiBold 600 · 14px · Uppercase</div>
+        <div style="display:inline-block;padding:12px 28px;background:var(--emerald);color:white;font:600 14px/1 'Raleway';letter-spacing:2px;text-transform:uppercase;border-radius:4px;">Learn More</div>
+      </div>
+    </div>
+
+    <!-- Arabic -->
+    <div>
+      <div class="type-col-header">
+        <div class="type-col-icon" style="font-family:'Cairo',sans-serif;">ع</div>
+        <div class="type-col-info">
+          <div class="type-col-name">Cairo</div>
+          <div class="type-col-sub">Arabic · Google Fonts · Weights 400–700</div>
+        </div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">Display / H1 · Bold 700 · 44px</div>
+        <div style="font:700 44px/1.2 'Cairo';color:var(--charcoal);direction:rtl;letter-spacing:0;">التميز في الرعاية الصحية</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">H2 · SemiBold 600 · 30px</div>
+        <div style="font:600 30px/1.3 'Cairo';color:var(--charcoal);direction:rtl;">خدماتنا الطبية</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">H3 · SemiBold 600 · 22px</div>
+        <div style="font:600 22px/1.4 'Cairo';color:var(--charcoal);direction:rtl;">دقة التشخيص</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">Body · Regular 400 · 16px · Line-height 1.8</div>
+        <div style="font:400 16px/1.8 'Cairo';color:var(--grey);direction:rtl;">تلتزم شركة العناية الرفيعة الطبية بتقديم خدمات رعاية صحية متكاملة وعالية الجودة في جميع أنحاء المملكة العربية السعودية.</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">Caption · Medium 500 · 13px</div>
+        <div style="font:500 13px/1.6 'Cairo';color:var(--grey);direction:rtl;">تأسست في الرياض، 2023</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">Button · SemiBold 600 · 14px</div>
+        <div style="display:inline-block;padding:12px 28px;background:var(--emerald);color:white;font:600 14px/1 'Cairo';border-radius:4px;direction:rtl;">اعرف المزيد</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 09 · TAGLINE / SLOGAN -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-number">Section 09</span>
+  <div class="section-title">Tagline & Slogan</div>
+  <span class="section-title-ar">الشعار والعبارة الترويجية</span>
+  <div class="gold-rule"></div>
+
+  <div class="slogan-display">
+    <div class="slogan-en">"Diagnostic Precision. Professional Integrity."</div>
+    <div class="slogan-divider"></div>
+    <div class="slogan-ar">"دقة التشخيص وأمانة المهنة."</div>
+  </div>
+
+  <div class="slogan-rules">
+    <div class="slogan-rule-card slogan-rule-do">
+      <div class="slogan-rule-label">✓ Use When</div>
+      <div class="slogan-rule-item">✓ Hero section of website</div>
+      <div class="slogan-rule-item">✓ Email signature footer</div>
+      <div class="slogan-rule-item">✓ Print brochures and letterheads</div>
+      <div class="slogan-rule-item">✓ Social media cover photos</div>
+      <div class="slogan-rule-item">✓ Presentation title slides</div>
+    </div>
+    <div class="slogan-rule-card slogan-rule-dont">
+      <div class="slogan-rule-label">✕ Never</div>
+      <div class="slogan-rule-item">✕ Alter, shorten, or paraphrase</div>
+      <div class="slogan-rule-item">✕ Use only the English without Arabic</div>
+      <div class="slogan-rule-item">✕ Place on low-contrast backgrounds</div>
+      <div class="slogan-rule-item">✕ Use a different font</div>
+      <div class="slogan-rule-item">✕ Remove the quotation marks in display</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 10 · BUSINESS CARD -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-number">Section 10</span>
+  <div class="section-title">Business Card</div>
+  <span class="section-title-ar">بطاقة العمل</span>
+  <div class="gold-rule"></div>
+
+  <div class="card-mockup-wrap">
+
+    <!-- Front -->
+    <div>
+      <div class="biz-card">
+        <div class="biz-card-front">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="36" height="36">
+              <path d="M10,70 L70,8 L70,70 Z" fill="#FFFFFF"/>
+              <path d="M130,70 L70,8 L70,70 Z" fill="#FFFFFF" opacity="0.45"/>
+              <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+              <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+            </svg>
+          </div>
+          <div>
+            <div class="biz-card-name">Dr. Ahmed Al-Rashidi</div>
+            <div class="biz-card-title">General Manager · المدير العام</div>
+            <div class="biz-card-gold-line"></div>
+            <div class="biz-card-contact">
+              +966 11 000 0000<br>
+              ahmed@alinayamedical.com<br>
+              alinayamedical.com
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-caption">Front · Emerald Background</div>
+    </div>
+
+    <!-- Back -->
+    <div>
+      <div class="biz-card">
+        <div class="biz-card-back">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 140" style="width:240px;height:auto;">
+            <defs><style>.bc-eh{font-family:'Raleway','Arial',sans-serif;font-weight:700;}.bc-es{font-family:'Raleway','Arial',sans-serif;font-weight:500;}.bc-ar{font-family:'Cairo','Arial',sans-serif;font-weight:600;}</style></defs>
+            <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+            <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+            <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+            <text x="152" y="48" class="bc-eh" font-size="28" fill="#1B4D3E" letter-spacing="1.5">ALINAYA ALRAFIA</text>
+            <rect x="152" y="58" width="448" height="2" fill="#C9A84C"/>
+            <text x="152" y="76" class="bc-es" font-size="11" fill="#6B7280" letter-spacing="6">MEDICAL COMPANY</text>
+            <line x1="152" y1="92" x2="600" y2="92" stroke="#E5E7EB" stroke-width="1"/>
+            <text x="600" y="114" class="bc-ar" font-size="18" fill="#1B4D3E" text-anchor="start" direction="rtl">شركة العناية الرفيعة الطبية</text>
+          </svg>
+          <div style="height:1px;background:var(--gold);opacity:0.3;width:80%;"></div>
+          <div class="biz-card-back-contact">
+            Riyadh, Saudi Arabia<br>
+            info@alinayamedical.com<br>
+            alinayamedical.com
+          </div>
+        </div>
+      </div>
+      <div class="card-caption">Back · White Background</div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:24px;padding:16px 24px;background:var(--offwhite);border-radius:10px;font-size:12px;color:var(--grey);">
+    <strong style="color:var(--charcoal);">Specifications:</strong> &nbsp; 85mm × 54mm (standard) &nbsp;·&nbsp; 350gsm silk/matte stock &nbsp;·&nbsp; Spot UV on logo mark (optional) &nbsp;·&nbsp; Rounded corners 3mm (optional)
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 11 · LETTERHEAD -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-number">Section 11</span>
+  <div class="section-title">Letterhead</div>
+  <span class="section-title-ar">ورقة الرأسية</span>
+  <div class="gold-rule"></div>
+
+  <div class="letterhead-wrap">
+    <div class="letterhead">
+
+      <div class="lh-header">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 140" style="width:220px;height:auto;">
+          <defs><style>.lh-eh{font-family:'Raleway','Arial',sans-serif;font-weight:700;}.lh-es{font-family:'Raleway','Arial',sans-serif;font-weight:500;}.lh-ar{font-family:'Cairo','Arial',sans-serif;font-weight:600;}</style></defs>
+          <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+          <text x="152" y="48" class="lh-eh" font-size="28" fill="#1B4D3E" letter-spacing="1.5">ALINAYA ALRAFIA</text>
+          <rect x="152" y="58" width="448" height="2" fill="#C9A84C"/>
+          <text x="152" y="76" class="lh-es" font-size="11" fill="#6B7280" letter-spacing="6">MEDICAL COMPANY</text>
+          <line x1="152" y1="92" x2="600" y2="92" stroke="#E5E7EB" stroke-width="1"/>
+          <text x="600" y="114" class="lh-ar" font-size="18" fill="#1B4D3E" text-anchor="start" direction="rtl">شركة العناية الرفيعة الطبية</text>
+        </svg>
+        <div class="lh-address">
+          <div style="font-family:'Cairo',sans-serif;font-size:10px;color:var(--grey);line-height:1.8;direction:rtl;text-align:right;">
+            الرياض، المملكة العربية السعودية<br>
+            info@alinayamedical.com<br>
+            alinayamedical.com
+          </div>
+        </div>
+      </div>
+
+      <div class="lh-gold-rule"></div>
+
+      <div class="lh-body">
+        <div class="lh-date">26 July 2026</div>
+        <div class="lh-body-line"></div>
+        <div class="lh-body-line medium"></div>
+        <div class="lh-body-line"></div>
+        <div class="lh-body-line short"></div>
+        <div style="height:20px;"></div>
+        <div class="lh-body-line"></div>
+        <div class="lh-body-line medium"></div>
+        <div class="lh-body-line"></div>
+        <div class="lh-body-line"></div>
+        <div class="lh-body-line short"></div>
+        <div style="height:20px;"></div>
+        <div class="lh-body-line medium"></div>
+        <div class="lh-body-line short"></div>
+
+        <div class="lh-footer">
+          <div class="lh-footer-web">alinayamedical.com</div>
+          <div class="lh-footer-gold"></div>
+          <div class="lh-footer-web">info@alinayamedical.com</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="margin-top:24px;text-align:center;padding:16px;background:var(--offwhite);border-radius:10px;font-size:12px;color:var(--grey);">
+    A4 (210mm × 297mm) · Body font: Raleway Regular 11pt · Margins: 25mm all sides · Footer: Emerald 0.5pt rule + contact line
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 12 · SOCIAL MEDIA -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-number">Section 12</span>
+  <div class="section-title">Social Media Assets</div>
+  <span class="section-title-ar">أصول التواصل الاجتماعي</span>
+  <div class="gold-rule"></div>
+
+  <div class="social-grid">
+
+    <div class="profile-col">
+      <div class="profile-label">Profile Picture</div>
+      <div class="profile-sizes">
+        <!-- Large 80px -->
+        <div>
+          <div class="profile-pic" style="width:80px;height:80px;border-radius:16px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="50" height="50">
+              <path d="M10,70 L70,8 L70,70 Z" fill="#FFFFFF"/>
+              <path d="M130,70 L70,8 L70,70 Z" fill="#FFFFFF" opacity="0.45"/>
+              <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+              <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="profile-size-label">400px</div>
+        </div>
+        <!-- Medium 48px -->
+        <div>
+          <div class="profile-pic" style="width:48px;height:48px;border-radius:10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="30" height="30">
+              <path d="M10,70 L70,8 L70,70 Z" fill="#FFFFFF"/>
+              <path d="M130,70 L70,8 L70,70 Z" fill="#FFFFFF" opacity="0.45"/>
+              <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+              <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="profile-size-label">96px</div>
+        </div>
+        <!-- Small 32px -->
+        <div>
+          <div class="profile-pic" style="width:32px;height:32px;border-radius:6px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="20" height="20">
+              <path d="M10,70 L70,8 L70,70 Z" fill="#FFFFFF"/>
+              <path d="M130,70 L70,8 L70,70 Z" fill="#FFFFFF" opacity="0.45"/>
+              <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+              <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="profile-size-label">32px</div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:var(--grey);line-height:1.8;margin-top:12px;">
+        Export as PNG with transparent bg.<br>
+        Use icon mark only (not full wordmark).<br>
+        Recommended: 400×400px minimum.
+      </div>
+    </div>
+
+    <div class="cover-col">
+      <div class="profile-label">Cover Photo — 1500 × 500px</div>
+      <div class="cover-preview">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 140" style="width:340px;height:auto;position:relative;z-index:1;">
+          <defs><style>.cv-eh{font-family:'Raleway','Arial',sans-serif;font-weight:700;}.cv-es{font-family:'Raleway','Arial',sans-serif;font-weight:500;}.cv-ar{font-family:'Cairo','Arial',sans-serif;font-weight:600;}</style></defs>
+          <path d="M10,70 L70,8 L70,70 Z" fill="#FFFFFF"/>
+          <path d="M130,70 L70,8 L70,70 Z" fill="#FFFFFF" opacity="0.45"/>
+          <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+          <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+          <text x="152" y="48" class="cv-eh" font-size="28" fill="#FFFFFF" letter-spacing="1.5">ALINAYA ALRAFIA</text>
+          <rect x="152" y="58" width="448" height="2" fill="#C9A84C"/>
+          <text x="152" y="76" class="cv-es" font-size="11" fill="rgba(255,255,255,0.55)" letter-spacing="6">MEDICAL COMPANY</text>
+          <line x1="152" y1="92" x2="600" y2="92" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <text x="600" y="114" class="cv-ar" font-size="18" fill="rgba(255,255,255,0.88)" text-anchor="start" direction="rtl">شركة العناية الرفيعة الطبية</text>
+        </svg>
+        <div class="cover-tagline-preview">Diagnostic Precision. Professional Integrity.</div>
+      </div>
+      <div style="font-size:11px;color:var(--grey);line-height:1.8;margin-top:12px;">
+        Background: Emerald #1B4D3E · White reversed wordmark centered.<br>
+        Tagline below in Raleway 300, white 50% opacity.<br>
+        Export as JPEG 90% quality, 1500×500px.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 13 · BRAND VOICE -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-number">Section 13</span>
+  <div class="section-title">Brand Voice & Tone</div>
+  <span class="section-title-ar">صوت العلامة التجارية ونبرتها</span>
+  <div class="gold-rule"></div>
+
+  <div class="voice-grid">
+
+    <div class="voice-card">
+      <div class="voice-header">
+        <div class="voice-num">01 · الدقة</div>
+        <div class="voice-title">Precise</div>
+        <div class="voice-desc">Clinical, accurate, and evidence-based. Every word earns its place.</div>
+      </div>
+      <div class="voice-body">
+        <div class="voice-do-label">✓ Do use</div>
+        <span class="voice-word voice-word-do">Clinically validated</span>
+        <span class="voice-word voice-word-do">Evidence-based</span>
+        <span class="voice-word voice-word-do">Confirmed</span>
+        <span class="voice-word voice-word-do">Measured</span>
+        <div class="voice-dont-label">✕ Avoid</div>
+        <span class="voice-word voice-word-dont">We think</span>
+        <span class="voice-word voice-word-dont">Maybe</span>
+        <span class="voice-word voice-word-dont">Probably</span>
+        <span class="voice-word voice-word-dont">Kind of</span>
+      </div>
+    </div>
+
+    <div class="voice-card">
+      <div class="voice-header">
+        <div class="voice-num">02 · الأمانة</div>
+        <div class="voice-title">Trustworthy</div>
+        <div class="voice-desc">Reliable, transparent, and consistent in every patient and partner interaction.</div>
+      </div>
+      <div class="voice-body">
+        <div class="voice-do-label">✓ Do use</div>
+        <span class="voice-word voice-word-do">Committed to</span>
+        <span class="voice-word voice-word-do">Verified</span>
+        <span class="voice-word voice-word-do">Transparent</span>
+        <span class="voice-word voice-word-do">Accountable</span>
+        <div class="voice-dont-label">✕ Avoid</div>
+        <span class="voice-word voice-word-dont">We try</span>
+        <span class="voice-word voice-word-dont">Hopefully</span>
+        <span class="voice-word voice-word-dont">Should be</span>
+        <span class="voice-word voice-word-dont">We aim</span>
+      </div>
+    </div>
+
+    <div class="voice-card">
+      <div class="voice-header">
+        <div class="voice-num">03 · التقدم</div>
+        <div class="voice-title">Progressive</div>
+        <div class="voice-desc">Forward-thinking, Vision 2030-aligned, and continuously advancing the standard of care.</div>
+      </div>
+      <div class="voice-body">
+        <div class="voice-do-label">✓ Do use</div>
+        <span class="voice-word voice-word-do">Advancing</span>
+        <span class="voice-word voice-word-do">Leading</span>
+        <span class="voice-word voice-word-do">Innovative</span>
+        <span class="voice-word voice-word-do">Future-ready</span>
+        <div class="voice-dont-label">✕ Avoid</div>
+        <span class="voice-word voice-word-dont">Old</span>
+        <span class="voice-word voice-word-dont">Traditional</span>
+        <span class="voice-word voice-word-dont">Conventional</span>
+        <span class="voice-word voice-word-dont">Outdated</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 14 · CONTACT & FILES -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="section" style="background:var(--emerald);color:white;">
+  <span class="section-number" style="color:var(--gold);">Section 14</span>
+  <div class="section-title" style="color:white;">Brand Files & Contact</div>
+  <span class="section-title-ar" style="color:rgba(255,255,255,0.45);">ملفات العلامة التجارية والتواصل</span>
+  <div class="gold-rule"></div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Source Files</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(255,255,255,0.8);">
+          📁 Assets/Logo_Icon_Only.svg
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(255,255,255,0.8);">
+          📁 Assets/Logo_Full_Color.svg
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(255,255,255,0.8);">
+          📁 Assets/Logo_White.svg
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(255,255,255,0.8);">
+          📁 Assets/Logo_Mono_Black.svg
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(255,255,255,0.8);">
+          📁 Assets/Logo_Mono_White.svg
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(255,255,255,0.8);">
+          📁 Assets/Logo_Icon_Mono_Black.svg
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(255,255,255,0.8);">
+          📁 Assets/Logo_Master_Source.svg
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(255,255,255,0.8);">
+          📁 Assets/Logo_Icon_Source.eps
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(255,255,255,0.8);">
+          📁 Design/Alinaya_Design_Spec.txt
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(255,255,255,0.8);">
+          📁 Corporate_Identity/Alinaya_Brand_Guide.html
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Still Needed</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:rgba(201,168,76,0.12);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(201,168,76,0.9);border:1px solid rgba(201,168,76,0.25);">
+          ✅ Logo mark approved — Abstract Wedge Shape H · July 2026
+        </div>
+        <div style="background:rgba(201,168,76,0.12);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(201,168,76,0.9);border:1px solid rgba(201,168,76,0.25);">
+          ✅ PNG exports — Full Color 2×/3×, White 2×/3×, Icon 280px/400px · July 2026
+        </div>
+        <div style="background:rgba(201,168,76,0.12);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(201,168,76,0.9);border:1px solid rgba(201,168,76,0.25);">
+          ✅ Favicon 32×32px PNG · July 2026
+        </div>
+        <div style="background:rgba(201,168,76,0.12);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(201,168,76,0.9);border:1px solid rgba(201,168,76,0.25);">
+          ✅ Monochrome logo — Dark &amp; White wordmark + icon · July 2026
+        </div>
+        <div style="background:rgba(201,168,76,0.12);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(201,168,76,0.9);border:1px solid rgba(201,168,76,0.25);">
+          ✅ EPS source — Icon mark (print-ready, flat color) · July 2026
+        </div>
+        <div style="background:rgba(201,168,76,0.12);border-radius:8px;padding:12px 16px;font-size:13px;color:rgba(201,168,76,0.9);border:1px solid rgba(201,168,76,0.25);">
+          ✅ Master SVG — All variants, named layers, Illustrator/Inkscape/Figma compatible · July 2026
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:40px;padding:24px;background:rgba(0,0,0,0.2);border-radius:12px;display:flex;align-items:center;justify-content:space-between;">
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Brand Enquiries</div>
+      <div style="font-size:15px;color:rgba(255,255,255,0.85);">info@alinayamedical.com</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Version</div>
+      <div style="font-size:15px;color:rgba(255,255,255,0.85);">1.0 · July 2026</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /page -->
+
+<div class="guide-footer">
+  <span>ALINAYA ALRAFIA MEDICAL COMPANY</span><br>
+  Brand Identity Guide · Version 1.0 · July 2026<br>
+  Riyadh, Saudi Arabia · alinayamedical.com<br><br>
+  <span>شركة العناية الرفيعة الطبية</span>
+</div>
+
+</body>
+</html>

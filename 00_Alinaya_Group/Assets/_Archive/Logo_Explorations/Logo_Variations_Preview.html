@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alinaya — Logo Variations</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #F0F2F7; font-family: 'Raleway', sans-serif; padding: 40px; }
+  h1 { color: #1B2E5E; font-size: 24px; margin-bottom: 6px; font-weight: 700; }
+  p.meta { color: #6B7280; font-size: 13px; margin-bottom: 16px; }
+  .divider { height: 3px; background: linear-gradient(to right, #1B2E5E, #C9A84C, #F0F2F7); margin-bottom: 48px; border-radius: 2px; }
+
+  /* Palette key */
+  .palette-bar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
+  .swatch { display: flex; align-items: center; gap: 8px; background: white; border-radius: 8px; padding: 10px 16px; box-shadow: 0 1px 6px rgba(0,0,0,0.07); }
+  .swatch-dot { width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.08); }
+  .swatch-label { font-size: 12px; font-weight: 600; color: #374151; }
+  .swatch-hex { font-size: 11px; color: #9CA3AF; }
+
+  .chapter { margin-bottom: 72px; }
+  .chapter-title { font-size: 11px; font-weight: 700; color: #9CA3AF; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 6px; }
+  .chapter-name { font-size: 20px; font-weight: 700; color: #1B2E5E; margin-bottom: 24px; }
+
+  .section { margin-bottom: 56px; }
+  .section-title {
+    font-size: 12px; font-weight: 600; color: #6B7280;
+    letter-spacing: 4px; text-transform: uppercase;
+    margin-bottom: 20px; border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 10px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .var-badge {
+    display: inline-block; background: #1B2E5E; color: white;
+    font-size: 11px; font-weight: 700; padding: 2px 8px;
+    border-radius: 4px; letter-spacing: 1px;
+  }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+  .card {
+    background: white; border-radius: 12px; padding: 36px 28px;
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
+    box-shadow: 0 2px 12px rgba(27,46,94,0.07);
+  }
+  .card.dark-navy  { background: #1B2E5E; }
+  .card.dark-emerald { background: #1B4D3E; }
+  .card.dark-burgundy { background: #5C1A1A; }
+  .card.dark-teal  { background: #0A4D68; }
+  .card.dark-purple { background: #2D1B5E; }
+  .card.dark-slate  { background: #2D3A4A; }
+
+  .card-label { font-size: 11px; font-weight: 600; color: #9CA3AF; letter-spacing: 3px; text-transform: uppercase; }
+  .card.dark-navy .card-label,
+  .card.dark-emerald .card-label,
+  .card.dark-burgundy .card-label,
+  .card.dark-teal .card-label,
+  .card.dark-purple .card-label,
+  .card.dark-slate .card-label { color: rgba(255,255,255,0.35); }
+
+  .pal-tag {
+    font-size: 10px; font-weight: 700; letter-spacing: 2px;
+    padding: 3px 10px; border-radius: 20px; text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  svg { max-width: 100%; height: auto; overflow: visible; }
+
+  /* color swatch strips per palette */
+  .pal-strip { display: flex; gap: 6px; margin-bottom: 20px; align-items: center; }
+  .pal-dot { width: 18px; height: 18px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); }
+  .pal-name { font-size: 12px; font-weight: 600; color: #374151; margin-left: 4px; }
+</style>
+</head>
+<body>
+
+<h1>Alinaya Alrafia Medical Company — Logo Variations</h1>
+<p class="meta">All shapes × all color palettes &nbsp;|&nbsp; Raleway (EN) + Cairo (AR) &nbsp;|&nbsp; Alinaya Alrafia Medical Company</p>
+<div class="divider"></div>
+
+<!-- ═══════════════ COLOR PALETTES KEY ═══════════════ -->
+<div class="palette-bar">
+  <div class="swatch">
+    <div class="swatch-dot" style="background:#1B2E5E"></div>
+    <div>
+      <div class="swatch-label">Navy + Gold</div>
+      <div class="swatch-hex">#1B2E5E + #C9A84C</div>
+    </div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-dot" style="background:#1B4D3E"></div>
+    <div>
+      <div class="swatch-label">Emerald + Gold</div>
+      <div class="swatch-hex">#1B4D3E + #C9A84C</div>
+    </div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-dot" style="background:#0A4D68"></div>
+    <div>
+      <div class="swatch-label">Teal + Gold</div>
+      <div class="swatch-hex">#0A4D68 + #C9A84C</div>
+    </div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-dot" style="background:#5C1A1A"></div>
+    <div>
+      <div class="swatch-label">Burgundy + Gold</div>
+      <div class="swatch-hex">#5C1A1A + #C9A84C</div>
+    </div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-dot" style="background:#2D1B5E"></div>
+    <div>
+      <div class="swatch-label">Royal Purple + Gold</div>
+      <div class="swatch-hex">#2D1B5E + #C9A84C</div>
+    </div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-dot" style="background:#2D3A4A"></div>
+    <div>
+      <div class="swatch-label">Slate + Copper</div>
+      <div class="swatch-hex">#2D3A4A + #C4844A</div>
+    </div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-dot" style="background:#1B2E5E; border: 2px solid #A8A9AD"></div>
+    <div>
+      <div class="swatch-label">Navy + Platinum</div>
+      <div class="swatch-hex">#1B2E5E + #A8A9AD</div>
+    </div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-dot" style="background:#1B3A2D"></div>
+    <div>
+      <div class="swatch-label">Forest + Rose Gold</div>
+      <div class="swatch-hex">#1B3A2D + #C4956A</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- CHAPTER 1 — SHAPES -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div class="chapter">
+<div class="chapter-title">Chapter 1</div>
+<div class="chapter-name">Shape Explorations — Navy + Gold (Brand Colors)</div>
+
+<!-- ── VAR A ── -->
+<div class="section">
+  <div class="section-title"><span class="var-badge">A</span> Circle Lettermark — Geometric "A"</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#1B2E5E"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#1B2E5E"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#1B2E5E" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="#6B7280" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#1B2E5E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card dark-navy">
+      <div class="card-label">On Dark</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#C9A84C" stroke-width="2"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#1B2E5E"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#FFF" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#FFF" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Icon Only</div>
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#1B2E5E"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#1B2E5E"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── VAR B ── -->
+<div class="section">
+  <div class="section-title"><span class="var-badge">B</span> Diamond / Rhombus — Split Geometry</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,4 96,50 50,96 4,50" fill="#1B2E5E"/>
+        <polygon points="50,50 96,50 50,96 4,50" fill="#C9A84C"/>
+        <circle cx="50" cy="50" r="6" fill="white"/>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#1B2E5E" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="#6B7280" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#1B2E5E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card dark-navy">
+      <div class="card-label">On Dark</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,4 96,50 50,96 4,50" fill="white"/>
+        <polygon points="50,50 96,50 50,96 4,50" fill="#C9A84C"/>
+        <circle cx="50" cy="50" r="6" fill="#1B2E5E"/>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#FFF" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#FFF" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Icon Only</div>
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,4 96,50 50,96 4,50" fill="#1B2E5E"/>
+        <polygon points="50,50 96,50 50,96 4,50" fill="#C9A84C"/>
+        <circle cx="50" cy="50" r="6" fill="white"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── VAR C ── -->
+<div class="section">
+  <div class="section-title"><span class="var-badge">C</span> Shield / Crest</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,4 L92,20 L92,58 Q92,84 50,98 Q8,84 8,58 L8,20 Z" fill="#1B2E5E"/>
+        <path d="M50,62 L92,58 Q92,84 50,98 Q8,84 8,58 L8,62 Z" fill="#C9A84C"/>
+        <text x="50" y="54" font-family="Raleway,sans-serif" font-weight="800" font-size="34" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#1B2E5E" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="#6B7280" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#1B2E5E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card dark-navy">
+      <div class="card-label">On Dark</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,4 L92,20 L92,58 Q92,84 50,98 Q8,84 8,58 L8,20 Z" fill="white"/>
+        <path d="M50,62 L92,58 Q92,84 50,98 Q8,84 8,58 L8,62 Z" fill="#C9A84C"/>
+        <text x="50" y="54" font-family="Raleway,sans-serif" font-weight="800" font-size="34" fill="#1B2E5E" text-anchor="middle" dominant-baseline="middle">A</text>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#FFF" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#FFF" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Icon Only</div>
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,4 L92,20 L92,58 Q92,84 50,98 Q8,84 8,58 L8,20 Z" fill="#1B2E5E"/>
+        <path d="M50,62 L92,58 Q92,84 50,98 Q8,84 8,58 L8,62 Z" fill="#C9A84C"/>
+        <text x="50" y="54" font-family="Raleway,sans-serif" font-weight="800" font-size="34" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── VAR D ── -->
+<div class="section">
+  <div class="section-title"><span class="var-badge">D</span> Hexagon Mark — Modern / Premium</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Hexagon -->
+        <polygon points="50,4 92,26 92,74 50,96 8,74 8,26" fill="#1B2E5E"/>
+        <!-- Gold lower half -->
+        <polygon points="50,50 92,50 92,74 50,96 8,74 8,50" fill="#C9A84C"/>
+        <!-- White A -->
+        <text x="50" y="58" font-family="Raleway,sans-serif" font-weight="800" font-size="38" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#1B2E5E" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="#6B7280" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#1B2E5E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card dark-navy">
+      <div class="card-label">On Dark</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,4 92,26 92,74 50,96 8,74 8,26" fill="white"/>
+        <polygon points="50,50 92,50 92,74 50,96 8,74 8,50" fill="#C9A84C"/>
+        <text x="50" y="58" font-family="Raleway,sans-serif" font-weight="800" font-size="38" fill="#1B2E5E" text-anchor="middle" dominant-baseline="middle">A</text>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#FFF" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#FFF" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Icon Only</div>
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,4 92,26 92,74 50,96 8,74 8,26" fill="#1B2E5E"/>
+        <polygon points="50,50 92,50 92,74 50,96 8,74 8,50" fill="#C9A84C"/>
+        <text x="50" y="58" font-family="Raleway,sans-serif" font-weight="800" font-size="38" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── VAR E ── -->
+<div class="section">
+  <div class="section-title"><span class="var-badge">E</span> Crescent Arc — A with care curve (Saudi + Medical)</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer circle navy -->
+        <circle cx="50" cy="50" r="46" fill="#1B2E5E"/>
+        <!-- Inner crescent: cover right portion -->
+        <circle cx="62" cy="44" r="36" fill="#C9A84C"/>
+        <!-- Inner circle restore -->
+        <circle cx="50" cy="50" r="33" fill="#1B2E5E"/>
+        <!-- A lettermark -->
+        <polygon points="50,18 32,80 42,80 50,44 58,80 68,80 50,18" fill="#FFF"/>
+        <polygon points="50,30 41,58 59,58" fill="#1B2E5E"/>
+        <rect x="34" y="54" width="32" height="6" rx="1.5" fill="#C9A84C"/>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#1B2E5E" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="#6B7280" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#1B2E5E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card dark-navy">
+      <div class="card-label">On Dark</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+        <circle cx="62" cy="44" r="36" fill="#C9A84C" opacity="0.9"/>
+        <circle cx="50" cy="50" r="33" fill="#1B2E5E"/>
+        <polygon points="50,18 32,80 42,80 50,44 58,80 68,80 50,18" fill="#FFF"/>
+        <polygon points="50,30 41,58 59,58" fill="#1B2E5E"/>
+        <rect x="34" y="54" width="32" height="6" rx="1.5" fill="#C9A84C"/>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#FFF" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#FFF" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Icon Only</div>
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" fill="#1B2E5E"/>
+        <circle cx="62" cy="44" r="36" fill="#C9A84C"/>
+        <circle cx="50" cy="50" r="33" fill="#1B2E5E"/>
+        <polygon points="50,18 32,80 42,80 50,44 58,80 68,80 50,18" fill="#FFF"/>
+        <polygon points="50,30 41,58 59,58" fill="#1B2E5E"/>
+        <rect x="34" y="54" width="32" height="6" rx="1.5" fill="#C9A84C"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── VAR F ── -->
+<div class="section">
+  <div class="section-title"><span class="var-badge">F</span> Arabic "ع" Monogram — Cultural Identity</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" fill="#1B2E5E"/>
+        <path d="M 6,50 A 44,44 0 0,0 94,50" fill="#C9A84C"/>
+        <text x="50" y="60" font-family="Cairo,sans-serif" font-weight="700" font-size="44" fill="white" text-anchor="middle">ع</text>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#1B2E5E" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="#6B7280" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#1B2E5E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card dark-navy">
+      <div class="card-label">On Dark</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="white" stroke-width="2"/>
+        <path d="M 6,50 A 44,44 0 0,0 94,50" fill="#C9A84C"/>
+        <text x="50" y="60" font-family="Cairo,sans-serif" font-weight="700" font-size="44" fill="white" text-anchor="middle">ع</text>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#FFF" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#FFF" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Icon Only</div>
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" fill="#1B2E5E"/>
+        <path d="M 6,50 A 44,44 0 0,0 94,50" fill="#C9A84C"/>
+        <text x="50" y="60" font-family="Cairo,sans-serif" font-weight="700" font-size="44" fill="white" text-anchor="middle">ع</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── VAR G ── -->
+<div class="section">
+  <div class="section-title"><span class="var-badge">G</span> Stacked Monogram — "A" over "ع" (Bilingual Mark)</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Square rounded -->
+        <rect x="4" y="4" width="92" height="92" rx="16" fill="#1B2E5E"/>
+        <!-- Gold bottom band -->
+        <rect x="4" y="68" width="92" height="28" rx="0" fill="#C9A84C"/>
+        <rect x="4" y="80" width="92" height="16" rx="16" fill="#C9A84C"/>
+        <!-- A top half -->
+        <text x="50" y="46" font-family="Raleway,sans-serif" font-weight="800" font-size="30" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+        <!-- ع bottom half -->
+        <text x="50" y="76" font-family="Cairo,sans-serif" font-weight="700" font-size="20" fill="#1B2E5E" text-anchor="middle" dominant-baseline="middle">ع</text>
+        <!-- Divider line -->
+        <rect x="16" y="62" width="68" height="1.5" fill="rgba(255,255,255,0.3)"/>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#1B2E5E" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="#6B7280" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#1B2E5E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card dark-navy">
+      <div class="card-label">On Dark</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="92" height="92" rx="16" fill="rgba(255,255,255,0.15)"/>
+        <rect x="4" y="68" width="92" height="28" rx="0" fill="#C9A84C"/>
+        <rect x="4" y="80" width="92" height="16" rx="16" fill="#C9A84C"/>
+        <text x="50" y="46" font-family="Raleway,sans-serif" font-weight="800" font-size="30" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+        <text x="50" y="76" font-family="Cairo,sans-serif" font-weight="700" font-size="20" fill="#1B2E5E" text-anchor="middle" dominant-baseline="middle">ع</text>
+        <rect x="16" y="62" width="68" height="1.5" fill="rgba(255,255,255,0.2)"/>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#FFF" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#FFF" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Icon Only</div>
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="92" height="92" rx="16" fill="#1B2E5E"/>
+        <rect x="4" y="68" width="92" height="28" rx="0" fill="#C9A84C"/>
+        <rect x="4" y="80" width="92" height="16" rx="16" fill="#C9A84C"/>
+        <text x="50" y="46" font-family="Raleway,sans-serif" font-weight="800" font-size="30" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+        <text x="50" y="76" font-family="Cairo,sans-serif" font-weight="700" font-size="20" fill="#1B2E5E" text-anchor="middle" dominant-baseline="middle">ع</text>
+        <rect x="16" y="62" width="68" height="1.5" fill="rgba(255,255,255,0.3)"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── VAR H ── -->
+<div class="section">
+  <div class="section-title"><span class="var-badge">H</span> Abstract Wedge — Clean Minimalist</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Left wedge navy -->
+        <path d="M4,50 L50,6 L50,50 Z" fill="#1B2E5E"/>
+        <!-- Right wedge navy -->
+        <path d="M96,50 L50,6 L50,50 Z" fill="#1B2E5E" opacity="0.6"/>
+        <!-- Bottom gold wedge -->
+        <path d="M4,50 L50,94 L96,50 L50,50 Z" fill="#C9A84C"/>
+        <!-- Thin white line at apex -->
+        <line x1="50" y1="6" x2="50" y2="50" stroke="white" stroke-width="2"/>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#1B2E5E" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="#6B7280" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#1B2E5E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card dark-navy">
+      <div class="card-label">On Dark</div>
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4,50 L50,6 L50,50 Z" fill="white"/>
+        <path d="M96,50 L50,6 L50,50 Z" fill="rgba(255,255,255,0.5)"/>
+        <path d="M4,50 L50,94 L96,50 L50,50 Z" fill="#C9A84C"/>
+        <line x1="50" y1="6" x2="50" y2="50" stroke="#1B2E5E" stroke-width="2"/>
+        <text x="112" y="34" font-family="Raleway,sans-serif" font-weight="700" font-size="22" fill="#FFF" letter-spacing="1">ALINAYA ALRAFIA</text>
+        <rect x="112" y="42" width="290" height="2" fill="#C9A84C"/>
+        <text x="112" y="60" font-family="Raleway,sans-serif" font-weight="500" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="5">MEDICAL COMPANY</text>
+        <text x="402" y="84" font-family="Cairo,sans-serif" font-weight="600" font-size="14" fill="#FFF" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Icon Only</div>
+      <svg viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4,50 L50,6 L50,50 Z" fill="#1B2E5E"/>
+        <path d="M96,50 L50,6 L50,50 Z" fill="#1B2E5E" opacity="0.6"/>
+        <path d="M4,50 L50,94 L96,50 L50,50 Z" fill="#C9A84C"/>
+        <line x1="50" y1="6" x2="50" y2="50" stroke="white" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+</div><!-- end chapter 1 -->
+
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- CHAPTER 2 — COLOR PALETTE VARIATIONS -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div class="chapter">
+<div class="chapter-title">Chapter 2</div>
+<div class="chapter-name">Color Palette Explorations — Same Shape (Circle Mark / Var A) in 7 Palettes</div>
+<p style="color:#6B7280;font-size:13px;margin-bottom:32px;">Each row shows the circle "A" mark in a different palette — Full Color left, On Dark right, Icon center.</p>
+
+<!-- ── PALETTE 1: Original Navy + Gold ── -->
+<div class="section">
+  <div class="section-title">Palette 1 — Navy + Gold (Original)</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color — on White</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#1B2E5E"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#1B2E5E"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+      </svg>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <div style="width:20px;height:20px;background:#1B2E5E;border-radius:4px"></div>
+        <div style="width:20px;height:20px;background:#C9A84C;border-radius:4px"></div>
+      </div>
+      <div style="font-size:11px;color:#9CA3AF;font-weight:600">#1B2E5E + #C9A84C</div>
+    </div>
+    <div class="card dark-navy">
+      <div class="card-label">On Navy Dark</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#C9A84C" stroke-width="2.5"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#1B2E5E"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+      </svg>
+      <div style="font-size:11px;color:rgba(255,255,255,0.4);font-weight:600">Original brand colors</div>
+    </div>
+    <div class="card" style="background:#1B2E5E">
+      <div class="card-label" style="color:rgba(255,255,255,0.4)">On Dark — Gold Stroke</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#C9A84C" stroke-width="3"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#1B2E5E"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── PALETTE 2: Emerald + Gold ── -->
+<div class="section">
+  <div class="section-title">Palette 2 — Emerald Green + Gold &nbsp;<span style="font-size:11px;color:#1B4D3E;background:#C9A84C22;padding:2px 8px;border-radius:4px">#1B4D3E + #C9A84C</span></div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color — on White</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#1B4D3E"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#1B4D3E"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+      </svg>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <div style="width:20px;height:20px;background:#1B4D3E;border-radius:4px"></div>
+        <div style="width:20px;height:20px;background:#C9A84C;border-radius:4px"></div>
+      </div>
+    </div>
+    <div class="card dark-emerald">
+      <div class="card-label">On Emerald Dark</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#C9A84C" stroke-width="2.5"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#1B4D3E"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Wordmark Preview</div>
+      <svg viewBox="0 0 340 60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="28" fill="#1B4D3E"/>
+        <polygon points="30,8 14,52 21,52 30,24 39,52 46,52 30,8" fill="#FFF"/>
+        <polygon points="30,16 23,40 37,40" fill="#1B4D3E"/>
+        <rect x="18" y="37" width="24" height="5" rx="1.5" fill="#C9A84C"/>
+        <text x="70" y="22" font-family="Raleway,sans-serif" font-weight="700" font-size="14" fill="#1B4D3E" letter-spacing="0.5">ALINAYA ALRAFIA</text>
+        <rect x="70" y="27" width="265" height="1.5" fill="#C9A84C"/>
+        <text x="70" y="39" font-family="Raleway,sans-serif" font-weight="500" font-size="8" fill="#6B7280" letter-spacing="4">MEDICAL COMPANY</text>
+        <text x="334" y="54" font-family="Cairo,sans-serif" font-weight="600" font-size="10" fill="#1B4D3E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── PALETTE 3: Teal + Gold ── -->
+<div class="section">
+  <div class="section-title">Palette 3 — Deep Teal + Gold &nbsp;<span style="font-size:11px;color:#0A4D68;background:#C9A84C22;padding:2px 8px;border-radius:4px">#0A4D68 + #C9A84C</span></div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color — on White</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#0A4D68"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#0A4D68"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+      </svg>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <div style="width:20px;height:20px;background:#0A4D68;border-radius:4px"></div>
+        <div style="width:20px;height:20px;background:#C9A84C;border-radius:4px"></div>
+      </div>
+    </div>
+    <div class="card dark-teal">
+      <div class="card-label">On Teal Dark</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#C9A84C" stroke-width="2.5"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#0A4D68"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Wordmark Preview</div>
+      <svg viewBox="0 0 340 60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="28" fill="#0A4D68"/>
+        <polygon points="30,8 14,52 21,52 30,24 39,52 46,52 30,8" fill="#FFF"/>
+        <polygon points="30,16 23,40 37,40" fill="#0A4D68"/>
+        <rect x="18" y="37" width="24" height="5" rx="1.5" fill="#C9A84C"/>
+        <text x="70" y="22" font-family="Raleway,sans-serif" font-weight="700" font-size="14" fill="#0A4D68" letter-spacing="0.5">ALINAYA ALRAFIA</text>
+        <rect x="70" y="27" width="265" height="1.5" fill="#C9A84C"/>
+        <text x="70" y="39" font-family="Raleway,sans-serif" font-weight="500" font-size="8" fill="#6B7280" letter-spacing="4">MEDICAL COMPANY</text>
+        <text x="334" y="54" font-family="Cairo,sans-serif" font-weight="600" font-size="10" fill="#0A4D68" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── PALETTE 4: Burgundy + Gold ── -->
+<div class="section">
+  <div class="section-title">Palette 4 — Burgundy + Gold &nbsp;<span style="font-size:11px;color:#5C1A1A;background:#C9A84C22;padding:2px 8px;border-radius:4px">#5C1A1A + #C9A84C</span></div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color — on White</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#5C1A1A"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#5C1A1A"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+      </svg>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <div style="width:20px;height:20px;background:#5C1A1A;border-radius:4px"></div>
+        <div style="width:20px;height:20px;background:#C9A84C;border-radius:4px"></div>
+      </div>
+    </div>
+    <div class="card dark-burgundy">
+      <div class="card-label">On Burgundy Dark</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#C9A84C" stroke-width="2.5"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#5C1A1A"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Wordmark Preview</div>
+      <svg viewBox="0 0 340 60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="28" fill="#5C1A1A"/>
+        <polygon points="30,8 14,52 21,52 30,24 39,52 46,52 30,8" fill="#FFF"/>
+        <polygon points="30,16 23,40 37,40" fill="#5C1A1A"/>
+        <rect x="18" y="37" width="24" height="5" rx="1.5" fill="#C9A84C"/>
+        <text x="70" y="22" font-family="Raleway,sans-serif" font-weight="700" font-size="14" fill="#5C1A1A" letter-spacing="0.5">ALINAYA ALRAFIA</text>
+        <rect x="70" y="27" width="265" height="1.5" fill="#C9A84C"/>
+        <text x="70" y="39" font-family="Raleway,sans-serif" font-weight="500" font-size="8" fill="#6B7280" letter-spacing="4">MEDICAL COMPANY</text>
+        <text x="334" y="54" font-family="Cairo,sans-serif" font-weight="600" font-size="10" fill="#5C1A1A" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── PALETTE 5: Royal Purple + Gold ── -->
+<div class="section">
+  <div class="section-title">Palette 5 — Royal Purple + Gold &nbsp;<span style="font-size:11px;color:#2D1B5E;background:#C9A84C22;padding:2px 8px;border-radius:4px">#2D1B5E + #C9A84C</span></div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color — on White</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#2D1B5E"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#2D1B5E"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+      </svg>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <div style="width:20px;height:20px;background:#2D1B5E;border-radius:4px"></div>
+        <div style="width:20px;height:20px;background:#C9A84C;border-radius:4px"></div>
+      </div>
+    </div>
+    <div class="card dark-purple">
+      <div class="card-label">On Purple Dark</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#C9A84C" stroke-width="2.5"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#2D1B5E"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Wordmark Preview</div>
+      <svg viewBox="0 0 340 60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="28" fill="#2D1B5E"/>
+        <polygon points="30,8 14,52 21,52 30,24 39,52 46,52 30,8" fill="#FFF"/>
+        <polygon points="30,16 23,40 37,40" fill="#2D1B5E"/>
+        <rect x="18" y="37" width="24" height="5" rx="1.5" fill="#C9A84C"/>
+        <text x="70" y="22" font-family="Raleway,sans-serif" font-weight="700" font-size="14" fill="#2D1B5E" letter-spacing="0.5">ALINAYA ALRAFIA</text>
+        <rect x="70" y="27" width="265" height="1.5" fill="#C9A84C"/>
+        <text x="70" y="39" font-family="Raleway,sans-serif" font-weight="500" font-size="8" fill="#6B7280" letter-spacing="4">MEDICAL COMPANY</text>
+        <text x="334" y="54" font-family="Cairo,sans-serif" font-weight="600" font-size="10" fill="#2D1B5E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── PALETTE 6: Slate + Copper ── -->
+<div class="section">
+  <div class="section-title">Palette 6 — Dark Slate + Copper &nbsp;<span style="font-size:11px;color:#2D3A4A;background:#C4844A22;padding:2px 8px;border-radius:4px">#2D3A4A + #C4844A</span></div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color — on White</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#2D3A4A"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#2D3A4A"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C4844A"/>
+      </svg>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <div style="width:20px;height:20px;background:#2D3A4A;border-radius:4px"></div>
+        <div style="width:20px;height:20px;background:#C4844A;border-radius:4px"></div>
+      </div>
+    </div>
+    <div class="card dark-slate">
+      <div class="card-label">On Slate Dark</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#C4844A" stroke-width="2.5"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#2D3A4A"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C4844A"/>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Wordmark Preview</div>
+      <svg viewBox="0 0 340 60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="28" fill="#2D3A4A"/>
+        <polygon points="30,8 14,52 21,52 30,24 39,52 46,52 30,8" fill="#FFF"/>
+        <polygon points="30,16 23,40 37,40" fill="#2D3A4A"/>
+        <rect x="18" y="37" width="24" height="5" rx="1.5" fill="#C4844A"/>
+        <text x="70" y="22" font-family="Raleway,sans-serif" font-weight="700" font-size="14" fill="#2D3A4A" letter-spacing="0.5">ALINAYA ALRAFIA</text>
+        <rect x="70" y="27" width="265" height="1.5" fill="#C4844A"/>
+        <text x="70" y="39" font-family="Raleway,sans-serif" font-weight="500" font-size="8" fill="#6B7280" letter-spacing="4">MEDICAL COMPANY</text>
+        <text x="334" y="54" font-family="Cairo,sans-serif" font-weight="600" font-size="10" fill="#2D3A4A" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── PALETTE 7: Navy + Platinum/Silver ── -->
+<div class="section">
+  <div class="section-title">Palette 7 — Navy + Platinum Silver &nbsp;<span style="font-size:11px;color:#1B2E5E;background:#A8A9AD22;padding:2px 8px;border-radius:4px">#1B2E5E + #A8A9AD</span></div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color — on White</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#1B2E5E"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#1B2E5E"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#A8A9AD"/>
+      </svg>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <div style="width:20px;height:20px;background:#1B2E5E;border-radius:4px"></div>
+        <div style="width:20px;height:20px;background:#A8A9AD;border-radius:4px;border:1px solid #E5E7EB"></div>
+      </div>
+    </div>
+    <div class="card dark-navy">
+      <div class="card-label">On Navy Dark</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#A8A9AD" stroke-width="2.5"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#1B2E5E"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#A8A9AD"/>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Wordmark Preview</div>
+      <svg viewBox="0 0 340 60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="28" fill="#1B2E5E"/>
+        <polygon points="30,8 14,52 21,52 30,24 39,52 46,52 30,8" fill="#FFF"/>
+        <polygon points="30,16 23,40 37,40" fill="#1B2E5E"/>
+        <rect x="18" y="37" width="24" height="5" rx="1.5" fill="#A8A9AD"/>
+        <text x="70" y="22" font-family="Raleway,sans-serif" font-weight="700" font-size="14" fill="#1B2E5E" letter-spacing="0.5">ALINAYA ALRAFIA</text>
+        <rect x="70" y="27" width="265" height="1.5" fill="#A8A9AD"/>
+        <text x="70" y="39" font-family="Raleway,sans-serif" font-weight="500" font-size="8" fill="#6B7280" letter-spacing="4">MEDICAL COMPANY</text>
+        <text x="334" y="54" font-family="Cairo,sans-serif" font-weight="600" font-size="10" fill="#1B2E5E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── PALETTE 8: Forest + Rose Gold ── -->
+<div class="section">
+  <div class="section-title">Palette 8 — Forest Green + Rose Gold &nbsp;<span style="font-size:11px;color:#1B3A2D;background:#C4956A22;padding:2px 8px;border-radius:4px">#1B3A2D + #C4956A</span></div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Full Color — on White</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#1B3A2D"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#1B3A2D"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C4956A"/>
+      </svg>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <div style="width:20px;height:20px;background:#1B3A2D;border-radius:4px"></div>
+        <div style="width:20px;height:20px;background:#C4956A;border-radius:4px"></div>
+      </div>
+    </div>
+    <div class="card" style="background:#1B3A2D">
+      <div class="card-label" style="color:rgba(255,255,255,0.35)">On Forest Dark</div>
+      <svg viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#C4956A" stroke-width="2.5"/>
+        <polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/>
+        <polygon points="50,26 37,65 63,65" fill="#1B3A2D"/>
+        <rect x="28" y="60" width="44" height="7" rx="2" fill="#C4956A"/>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-label">Wordmark Preview</div>
+      <svg viewBox="0 0 340 60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="28" fill="#1B3A2D"/>
+        <polygon points="30,8 14,52 21,52 30,24 39,52 46,52 30,8" fill="#FFF"/>
+        <polygon points="30,16 23,40 37,40" fill="#1B3A2D"/>
+        <rect x="18" y="37" width="24" height="5" rx="1.5" fill="#C4956A"/>
+        <text x="70" y="22" font-family="Raleway,sans-serif" font-weight="700" font-size="14" fill="#1B3A2D" letter-spacing="0.5">ALINAYA ALRAFIA</text>
+        <rect x="70" y="27" width="265" height="1.5" fill="#C4956A"/>
+        <text x="70" y="39" font-family="Raleway,sans-serif" font-weight="500" font-size="8" fill="#6B7280" letter-spacing="4">MEDICAL COMPANY</text>
+        <text x="334" y="54" font-family="Cairo,sans-serif" font-weight="600" font-size="10" fill="#1B3A2D" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+</div><!-- end chapter 2 -->
+
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- CHAPTER 3 — COMBINATION MATRIX -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div class="chapter">
+<div class="chapter-title">Chapter 3</div>
+<div class="chapter-name">Best Combinations — Top Shapes × Top Palettes</div>
+<p style="color:#6B7280;font-size:13px;margin-bottom:32px;">Quick-compare: 4 strongest shapes shown side-by-side across the top 4 color palettes.</p>
+
+<div style="display:grid;grid-template-columns:120px repeat(4,1fr);gap:16px;align-items:center;margin-bottom:12px">
+  <div></div>
+  <div style="text-align:center;font-size:11px;font-weight:700;color:#6B7280;letter-spacing:2px">CIRCLE (A)</div>
+  <div style="text-align:center;font-size:11px;font-weight:700;color:#6B7280;letter-spacing:2px">HEXAGON (D)</div>
+  <div style="text-align:center;font-size:11px;font-weight:700;color:#6B7280;letter-spacing:2px">SHIELD (C)</div>
+  <div style="text-align:center;font-size:11px;font-weight:700;color:#6B7280;letter-spacing:2px">BILINGUAL (G)</div>
+</div>
+
+<!-- Row: Navy + Gold -->
+<div style="display:grid;grid-template-columns:120px repeat(4,1fr);gap:16px;align-items:center;margin-bottom:16px">
+  <div style="font-size:12px;font-weight:700;color:#1B2E5E;background:white;padding:12px;border-radius:8px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.07)">Navy<br>+ Gold</div>
+  <!-- Circle -->
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" fill="#1B2E5E"/><polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/><polygon points="50,26 37,65 63,65" fill="#1B2E5E"/><rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+    </svg>
+  </div>
+  <!-- Hexagon -->
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 92,26 92,74 50,96 8,74 8,26" fill="#1B2E5E"/><polygon points="50,50 92,50 92,74 50,96 8,74 8,50" fill="#C9A84C"/><text x="50" y="58" font-family="Raleway,sans-serif" font-weight="800" font-size="38" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+    </svg>
+  </div>
+  <!-- Shield -->
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50,4 L92,20 L92,58 Q92,84 50,98 Q8,84 8,58 L8,20 Z" fill="#1B2E5E"/><path d="M50,62 L92,58 Q92,84 50,98 Q8,84 8,58 L8,62 Z" fill="#C9A84C"/><text x="50" y="54" font-family="Raleway,sans-serif" font-weight="800" font-size="34" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+    </svg>
+  </div>
+  <!-- Bilingual -->
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="4" width="92" height="92" rx="16" fill="#1B2E5E"/><rect x="4" y="68" width="92" height="28" rx="0" fill="#C9A84C"/><rect x="4" y="80" width="92" height="16" rx="16" fill="#C9A84C"/><text x="50" y="46" font-family="Raleway,sans-serif" font-weight="800" font-size="30" fill="white" text-anchor="middle" dominant-baseline="middle">A</text><text x="50" y="76" font-family="Cairo,sans-serif" font-weight="700" font-size="20" fill="#1B2E5E" text-anchor="middle" dominant-baseline="middle">ع</text><rect x="16" y="62" width="68" height="1.5" fill="rgba(255,255,255,0.3)"/>
+    </svg>
+  </div>
+</div>
+
+<!-- Row: Emerald + Gold -->
+<div style="display:grid;grid-template-columns:120px repeat(4,1fr);gap:16px;align-items:center;margin-bottom:16px">
+  <div style="font-size:12px;font-weight:700;color:#1B4D3E;background:white;padding:12px;border-radius:8px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.07)">Emerald<br>+ Gold</div>
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" fill="#1B4D3E"/><polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/><polygon points="50,26 37,65 63,65" fill="#1B4D3E"/><rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+    </svg>
+  </div>
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 92,26 92,74 50,96 8,74 8,26" fill="#1B4D3E"/><polygon points="50,50 92,50 92,74 50,96 8,74 8,50" fill="#C9A84C"/><text x="50" y="58" font-family="Raleway,sans-serif" font-weight="800" font-size="38" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+    </svg>
+  </div>
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50,4 L92,20 L92,58 Q92,84 50,98 Q8,84 8,58 L8,20 Z" fill="#1B4D3E"/><path d="M50,62 L92,58 Q92,84 50,98 Q8,84 8,58 L8,62 Z" fill="#C9A84C"/><text x="50" y="54" font-family="Raleway,sans-serif" font-weight="800" font-size="34" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+    </svg>
+  </div>
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="4" width="92" height="92" rx="16" fill="#1B4D3E"/><rect x="4" y="68" width="92" height="28" rx="0" fill="#C9A84C"/><rect x="4" y="80" width="92" height="16" rx="16" fill="#C9A84C"/><text x="50" y="46" font-family="Raleway,sans-serif" font-weight="800" font-size="30" fill="white" text-anchor="middle" dominant-baseline="middle">A</text><text x="50" y="76" font-family="Cairo,sans-serif" font-weight="700" font-size="20" fill="#1B4D3E" text-anchor="middle" dominant-baseline="middle">ع</text><rect x="16" y="62" width="68" height="1.5" fill="rgba(255,255,255,0.3)"/>
+    </svg>
+  </div>
+</div>
+
+<!-- Row: Teal + Gold -->
+<div style="display:grid;grid-template-columns:120px repeat(4,1fr);gap:16px;align-items:center;margin-bottom:16px">
+  <div style="font-size:12px;font-weight:700;color:#0A4D68;background:white;padding:12px;border-radius:8px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.07)">Teal<br>+ Gold</div>
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" fill="#0A4D68"/><polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/><polygon points="50,26 37,65 63,65" fill="#0A4D68"/><rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+    </svg>
+  </div>
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 92,26 92,74 50,96 8,74 8,26" fill="#0A4D68"/><polygon points="50,50 92,50 92,74 50,96 8,74 8,50" fill="#C9A84C"/><text x="50" y="58" font-family="Raleway,sans-serif" font-weight="800" font-size="38" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+    </svg>
+  </div>
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50,4 L92,20 L92,58 Q92,84 50,98 Q8,84 8,58 L8,20 Z" fill="#0A4D68"/><path d="M50,62 L92,58 Q92,84 50,98 Q8,84 8,58 L8,62 Z" fill="#C9A84C"/><text x="50" y="54" font-family="Raleway,sans-serif" font-weight="800" font-size="34" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+    </svg>
+  </div>
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="4" width="92" height="92" rx="16" fill="#0A4D68"/><rect x="4" y="68" width="92" height="28" rx="0" fill="#C9A84C"/><rect x="4" y="80" width="92" height="16" rx="16" fill="#C9A84C"/><text x="50" y="46" font-family="Raleway,sans-serif" font-weight="800" font-size="30" fill="white" text-anchor="middle" dominant-baseline="middle">A</text><text x="50" y="76" font-family="Cairo,sans-serif" font-weight="700" font-size="20" fill="#0A4D68" text-anchor="middle" dominant-baseline="middle">ع</text><rect x="16" y="62" width="68" height="1.5" fill="rgba(255,255,255,0.3)"/>
+    </svg>
+  </div>
+</div>
+
+<!-- Row: Burgundy + Gold -->
+<div style="display:grid;grid-template-columns:120px repeat(4,1fr);gap:16px;align-items:center;margin-bottom:16px">
+  <div style="font-size:12px;font-weight:700;color:#5C1A1A;background:white;padding:12px;border-radius:8px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.07)">Burgundy<br>+ Gold</div>
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" fill="#5C1A1A"/><polygon points="50,10 20,88 33,88 50,38 67,88 80,88 50,10" fill="#FFF"/><polygon points="50,26 37,65 63,65" fill="#5C1A1A"/><rect x="28" y="60" width="44" height="7" rx="2" fill="#C9A84C"/>
+    </svg>
+  </div>
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 92,26 92,74 50,96 8,74 8,26" fill="#5C1A1A"/><polygon points="50,50 92,50 92,74 50,96 8,74 8,50" fill="#C9A84C"/><text x="50" y="58" font-family="Raleway,sans-serif" font-weight="800" font-size="38" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+    </svg>
+  </div>
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50,4 L92,20 L92,58 Q92,84 50,98 Q8,84 8,58 L8,20 Z" fill="#5C1A1A"/><path d="M50,62 L92,58 Q92,84 50,98 Q8,84 8,58 L8,62 Z" fill="#C9A84C"/><text x="50" y="54" font-family="Raleway,sans-serif" font-weight="800" font-size="34" fill="white" text-anchor="middle" dominant-baseline="middle">A</text>
+    </svg>
+  </div>
+  <div class="card" style="padding:16px">
+    <svg viewBox="0 0 100 100" width="70" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="4" width="92" height="92" rx="16" fill="#5C1A1A"/><rect x="4" y="68" width="92" height="28" rx="0" fill="#C9A84C"/><rect x="4" y="80" width="92" height="16" rx="16" fill="#C9A84C"/><text x="50" y="46" font-family="Raleway,sans-serif" font-weight="800" font-size="30" fill="white" text-anchor="middle" dominant-baseline="middle">A</text><text x="50" y="76" font-family="Cairo,sans-serif" font-weight="700" font-size="20" fill="#5C1A1A" text-anchor="middle" dominant-baseline="middle">ع</text><rect x="16" y="62" width="68" height="1.5" fill="rgba(255,255,255,0.3)"/>
+    </svg>
+  </div>
+</div>
+
+</div><!-- end chapter 3 -->
+
+
+<!-- Footer note -->
+<div style="border-top:1px solid #E5E7EB;padding-top:32px;margin-top:16px;color:#9CA3AF;font-size:12px;text-align:center">
+  Alinaya Alrafia Medical Company &nbsp;|&nbsp; alinayamedical.com &nbsp;|&nbsp; Logo Exploration — July 2026<br>
+  <strong style="color:#6B7280">Reply with: Shape letter (A–H) + Palette number (1–8) — e.g. "A2" for Circle + Emerald</strong>
+</div>
+
+</body>
+</html>

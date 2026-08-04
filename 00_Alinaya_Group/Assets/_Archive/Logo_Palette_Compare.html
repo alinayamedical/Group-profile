@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alinaya — Palette Comparison</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #F0F2F7; font-family: 'Raleway', sans-serif; padding: 48px; }
+  h1 { color: #1A1A2E; font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  p.meta { color: #6B7280; font-size: 13px; margin-bottom: 40px; }
+
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 48px; }
+
+  .palette-block { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+  .palette-header { padding: 24px 28px 20px; border-bottom: 1px solid #F3F4F6; }
+  .palette-tag { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 6px; }
+  .palette-name { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+  .swatches { display: flex; gap: 10px; }
+  .swatch { display: flex; align-items: center; gap: 8px; }
+  .dot { width: 28px; height: 28px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.08); }
+  .hex { font-size: 12px; font-weight: 600; color: #6B7280; }
+
+  .preview-section { padding: 28px; border-bottom: 1px solid #F3F4F6; }
+  .preview-label { font-size: 10px; font-weight: 700; color: #9CA3AF; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+
+  .dark-section { padding: 28px; }
+
+  svg { max-width: 100%; height: auto; }
+
+  /* Favicon row */
+  .favicon-row { display: flex; gap: 16px; align-items: center; margin-top: 12px; }
+  .fav { border-radius: 8px; overflow: hidden; }
+
+  /* Side-by-side icon comparison */
+  .icon-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .icon-col { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 28px; }
+  .icon-col:first-child { border-right: 1px solid #F3F4F6; }
+  .icon-label { font-size: 10px; font-weight: 700; color: #9CA3AF; letter-spacing: 3px; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<h1>Shape H — Abstract Wedge: Palette Comparison</h1>
+<p class="meta">Palette 2 (Emerald + Gold) vs Palette 8 (Forest + Rose Gold) — all views side by side</p>
+
+<!-- ═══ FULL WORDMARK COMPARISON ═══ -->
+<div style="margin-bottom:12px;font-size:11px;font-weight:700;color:#9CA3AF;letter-spacing:3px;text-transform:uppercase">Full Wordmark — On White</div>
+<div class="compare">
+
+  <!-- PALETTE 2 -->
+  <div class="palette-block">
+    <div class="palette-header">
+      <div class="palette-tag" style="color:#1B4D3E">Palette 2</div>
+      <div class="palette-name" style="color:#1B4D3E">Emerald Green + Gold</div>
+      <div class="swatches">
+        <div class="swatch"><div class="dot" style="background:#1B4D3E"></div><div class="hex">#1B4D3E</div></div>
+        <div class="swatch"><div class="dot" style="background:#C9A84C"></div><div class="hex">#C9A84C</div></div>
+      </div>
+    </div>
+    <div class="preview-section">
+      <div class="preview-label">On White</div>
+      <svg viewBox="0 0 560 120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8,62 L60,8 L60,62 Z" fill="#1B4D3E"/>
+        <path d="M112,62 L60,8 L60,62 Z" fill="#1B4D3E" opacity="0.62"/>
+        <path d="M8,62 L60,116 L112,62 L60,62 Z" fill="#C9A84C"/>
+        <line x1="60" y1="8" x2="60" y2="62" stroke="#FFF" stroke-width="2" stroke-linecap="round"/>
+        <text x="132" y="42" font-family="Raleway,sans-serif" font-weight="700" font-size="26" fill="#1B4D3E" letter-spacing="1.2">ALINAYA ALRAFIA</text>
+        <rect x="132" y="52" width="400" height="2" fill="#C9A84C"/>
+        <text x="132" y="70" font-family="Raleway,sans-serif" font-weight="500" font-size="11" fill="#6B7280" letter-spacing="6">MEDICAL COMPANY</text>
+        <line x1="132" y1="85" x2="532" y2="85" stroke="#E5E7EB" stroke-width="1"/>
+        <text x="532" y="106" font-family="Cairo,sans-serif" font-weight="600" font-size="17" fill="#1B4D3E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="dark-section" style="background:#1B4D3E; border-radius:0 0 16px 16px">
+      <div class="preview-label" style="color:rgba(255,255,255,0.35)">On Dark (Emerald)</div>
+      <svg viewBox="0 0 560 120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8,62 L60,8 L60,62 Z" fill="#FFF"/>
+        <path d="M112,62 L60,8 L60,62 Z" fill="#FFF" opacity="0.45"/>
+        <path d="M8,62 L60,116 L112,62 L60,62 Z" fill="#C9A84C"/>
+        <line x1="60" y1="8" x2="60" y2="62" stroke="#1B4D3E" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+        <text x="132" y="42" font-family="Raleway,sans-serif" font-weight="700" font-size="26" fill="#FFF" letter-spacing="1.2">ALINAYA ALRAFIA</text>
+        <rect x="132" y="52" width="400" height="2" fill="#C9A84C"/>
+        <text x="132" y="70" font-family="Raleway,sans-serif" font-weight="500" font-size="11" fill="rgba(255,255,255,0.55)" letter-spacing="6">MEDICAL COMPANY</text>
+        <line x1="132" y1="85" x2="532" y2="85" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <text x="532" y="106" font-family="Cairo,sans-serif" font-weight="600" font-size="17" fill="#FFF" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- PALETTE 8 -->
+  <div class="palette-block">
+    <div class="palette-header">
+      <div class="palette-tag" style="color:#1B3A2D">Palette 8</div>
+      <div class="palette-name" style="color:#1B3A2D">Forest Green + Rose Gold</div>
+      <div class="swatches">
+        <div class="swatch"><div class="dot" style="background:#1B3A2D"></div><div class="hex">#1B3A2D</div></div>
+        <div class="swatch"><div class="dot" style="background:#C4956A"></div><div class="hex">#C4956A</div></div>
+      </div>
+    </div>
+    <div class="preview-section">
+      <div class="preview-label">On White</div>
+      <svg viewBox="0 0 560 120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8,62 L60,8 L60,62 Z" fill="#1B3A2D"/>
+        <path d="M112,62 L60,8 L60,62 Z" fill="#1B3A2D" opacity="0.62"/>
+        <path d="M8,62 L60,116 L112,62 L60,62 Z" fill="#C4956A"/>
+        <line x1="60" y1="8" x2="60" y2="62" stroke="#FFF" stroke-width="2" stroke-linecap="round"/>
+        <text x="132" y="42" font-family="Raleway,sans-serif" font-weight="700" font-size="26" fill="#1B3A2D" letter-spacing="1.2">ALINAYA ALRAFIA</text>
+        <rect x="132" y="52" width="400" height="2" fill="#C4956A"/>
+        <text x="132" y="70" font-family="Raleway,sans-serif" font-weight="500" font-size="11" fill="#6B7280" letter-spacing="6">MEDICAL COMPANY</text>
+        <line x1="132" y1="85" x2="532" y2="85" stroke="#E5E7EB" stroke-width="1"/>
+        <text x="532" y="106" font-family="Cairo,sans-serif" font-weight="600" font-size="17" fill="#1B3A2D" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+    <div class="dark-section" style="background:#1B3A2D; border-radius:0 0 16px 16px">
+      <div class="preview-label" style="color:rgba(255,255,255,0.35)">On Dark (Forest)</div>
+      <svg viewBox="0 0 560 120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8,62 L60,8 L60,62 Z" fill="#FFF"/>
+        <path d="M112,62 L60,8 L60,62 Z" fill="#FFF" opacity="0.45"/>
+        <path d="M8,62 L60,116 L112,62 L60,62 Z" fill="#C4956A"/>
+        <line x1="60" y1="8" x2="60" y2="62" stroke="#1B3A2D" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+        <text x="132" y="42" font-family="Raleway,sans-serif" font-weight="700" font-size="26" fill="#FFF" letter-spacing="1.2">ALINAYA ALRAFIA</text>
+        <rect x="132" y="52" width="400" height="2" fill="#C4956A"/>
+        <text x="132" y="70" font-family="Raleway,sans-serif" font-weight="500" font-size="11" fill="rgba(255,255,255,0.55)" letter-spacing="6">MEDICAL COMPANY</text>
+        <line x1="132" y1="85" x2="532" y2="85" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <text x="532" y="106" font-family="Cairo,sans-serif" font-weight="600" font-size="17" fill="#FFF" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══ ICON MARK COMPARISON ═══ -->
+<div style="margin-bottom:12px;font-size:11px;font-weight:700;color:#9CA3AF;letter-spacing:3px;text-transform:uppercase">Icon Mark — All Sizes & Contexts</div>
+<div class="compare">
+
+  <!-- P2 Icons -->
+  <div class="palette-block">
+    <div class="palette-header">
+      <div class="palette-tag" style="color:#1B4D3E">Palette 2 — Icon</div>
+      <div class="palette-name" style="color:#1B4D3E">Emerald + Gold</div>
+    </div>
+    <div class="icon-compare">
+      <div class="icon-col">
+        <div class="icon-label">On White</div>
+        <svg viewBox="0 0 140 140" width="120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8,72 L70,8 L70,72 Z" fill="#1B4D3E"/>
+          <path d="M132,72 L70,8 L70,72 Z" fill="#1B4D3E" opacity="0.62"/>
+          <path d="M8,72 L70,132 L132,72 L70,72 Z" fill="#C9A84C"/>
+          <line x1="70" y1="8" x2="70" y2="72" stroke="#FFF" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <svg viewBox="0 0 140 140" width="64" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8,72 L70,8 L70,72 Z" fill="#1B4D3E"/>
+          <path d="M132,72 L70,8 L70,72 Z" fill="#1B4D3E" opacity="0.62"/>
+          <path d="M8,72 L70,132 L132,72 L70,72 Z" fill="#C9A84C"/>
+          <line x1="70" y1="8" x2="70" y2="72" stroke="#FFF" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <!-- Favicon -->
+        <div style="display:flex;gap:8px;align-items:center">
+          <svg viewBox="0 0 140 140" width="32" style="border-radius:4px" xmlns="http://www.w3.org/2000/svg">
+            <rect width="140" height="140" fill="white"/>
+            <path d="M8,72 L70,8 L70,72 Z" fill="#1B4D3E"/>
+            <path d="M132,72 L70,8 L70,72 Z" fill="#1B4D3E" opacity="0.62"/>
+            <path d="M8,72 L70,132 L132,72 L70,72 Z" fill="#C9A84C"/>
+            <line x1="70" y1="8" x2="70" y2="72" stroke="#FFF" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <span style="font-size:11px;color:#9CA3AF">32px favicon</span>
+        </div>
+      </div>
+      <div class="icon-col" style="background:#1B4D3E">
+        <div class="icon-label" style="color:rgba(255,255,255,0.35)">On Dark</div>
+        <svg viewBox="0 0 140 140" width="120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8,72 L70,8 L70,72 Z" fill="#FFF"/>
+          <path d="M132,72 L70,8 L70,72 Z" fill="#FFF" opacity="0.45"/>
+          <path d="M8,72 L70,132 L132,72 L70,72 Z" fill="#C9A84C"/>
+          <line x1="70" y1="8" x2="70" y2="72" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+        </svg>
+        <svg viewBox="0 0 140 140" width="64" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8,72 L70,8 L70,72 Z" fill="#FFF"/>
+          <path d="M132,72 L70,8 L70,72 Z" fill="#FFF" opacity="0.45"/>
+          <path d="M8,72 L70,132 L132,72 L70,72 Z" fill="#C9A84C"/>
+          <line x1="70" y1="8" x2="70" y2="72" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+        </svg>
+        <!-- Favicon on dark -->
+        <div style="display:flex;gap:8px;align-items:center">
+          <svg viewBox="0 0 140 140" width="32" style="border-radius:4px" xmlns="http://www.w3.org/2000/svg">
+            <rect width="140" height="140" fill="#1B4D3E"/>
+            <path d="M8,72 L70,8 L70,72 Z" fill="#FFF"/>
+            <path d="M132,72 L70,8 L70,72 Z" fill="#FFF" opacity="0.45"/>
+            <path d="M8,72 L70,132 L132,72 L70,72 Z" fill="#C9A84C"/>
+          </svg>
+          <span style="font-size:11px;color:rgba(255,255,255,0.35)">32px favicon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P8 Icons -->
+  <div class="palette-block">
+    <div class="palette-header">
+      <div class="palette-tag" style="color:#1B3A2D">Palette 8 — Icon</div>
+      <div class="palette-name" style="color:#1B3A2D">Forest + Rose Gold</div>
+    </div>
+    <div class="icon-compare">
+      <div class="icon-col">
+        <div class="icon-label">On White</div>
+        <svg viewBox="0 0 140 140" width="120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8,72 L70,8 L70,72 Z" fill="#1B3A2D"/>
+          <path d="M132,72 L70,8 L70,72 Z" fill="#1B3A2D" opacity="0.62"/>
+          <path d="M8,72 L70,132 L132,72 L70,72 Z" fill="#C4956A"/>
+          <line x1="70" y1="8" x2="70" y2="72" stroke="#FFF" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <svg viewBox="0 0 140 140" width="64" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8,72 L70,8 L70,72 Z" fill="#1B3A2D"/>
+          <path d="M132,72 L70,8 L70,72 Z" fill="#1B3A2D" opacity="0.62"/>
+          <path d="M8,72 L70,132 L132,72 L70,72 Z" fill="#C4956A"/>
+          <line x1="70" y1="8" x2="70" y2="72" stroke="#FFF" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <div style="display:flex;gap:8px;align-items:center">
+          <svg viewBox="0 0 140 140" width="32" style="border-radius:4px" xmlns="http://www.w3.org/2000/svg">
+            <rect width="140" height="140" fill="white"/>
+            <path d="M8,72 L70,8 L70,72 Z" fill="#1B3A2D"/>
+            <path d="M132,72 L70,8 L70,72 Z" fill="#1B3A2D" opacity="0.62"/>
+            <path d="M8,72 L70,132 L132,72 L70,72 Z" fill="#C4956A"/>
+            <line x1="70" y1="8" x2="70" y2="72" stroke="#FFF" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <span style="font-size:11px;color:#9CA3AF">32px favicon</span>
+        </div>
+      </div>
+      <div class="icon-col" style="background:#1B3A2D">
+        <div class="icon-label" style="color:rgba(255,255,255,0.35)">On Dark</div>
+        <svg viewBox="0 0 140 140" width="120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8,72 L70,8 L70,72 Z" fill="#FFF"/>
+          <path d="M132,72 L70,8 L70,72 Z" fill="#FFF" opacity="0.45"/>
+          <path d="M8,72 L70,132 L132,72 L70,72 Z" fill="#C4956A"/>
+          <line x1="70" y1="8" x2="70" y2="72" stroke="#1B3A2D" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+        </svg>
+        <svg viewBox="0 0 140 140" width="64" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8,72 L70,8 L70,72 Z" fill="#FFF"/>
+          <path d="M132,72 L70,8 L70,72 Z" fill="#FFF" opacity="0.45"/>
+          <path d="M8,72 L70,132 L132,72 L70,72 Z" fill="#C4956A"/>
+          <line x1="70" y1="8" x2="70" y2="72" stroke="#1B3A2D" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+        </svg>
+        <div style="display:flex;gap:8px;align-items:center">
+          <svg viewBox="0 0 140 140" width="32" style="border-radius:4px" xmlns="http://www.w3.org/2000/svg">
+            <rect width="140" height="140" fill="#1B3A2D"/>
+            <path d="M8,72 L70,8 L70,72 Z" fill="#FFF"/>
+            <path d="M132,72 L70,8 L70,72 Z" fill="#FFF" opacity="0.45"/>
+            <path d="M8,72 L70,132 L132,72 L70,72 Z" fill="#C4956A"/>
+          </svg>
+          <span style="font-size:11px;color:rgba(255,255,255,0.35)">32px favicon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══ NAVBAR SIMULATION ═══ -->
+<div style="margin-bottom:12px;font-size:11px;font-weight:700;color:#9CA3AF;letter-spacing:3px;text-transform:uppercase">Navbar Simulation</div>
+<div style="display:flex;flex-direction:column;gap:16px;margin-bottom:48px">
+
+  <!-- P2 navbar -->
+  <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07)">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 32px;border-bottom:3px solid #C9A84C">
+      <svg viewBox="0 0 280 52" width="220" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4,28 L28,4 L28,28 Z" fill="#1B4D3E"/>
+        <path d="M52,28 L28,4 L28,28 Z" fill="#1B4D3E" opacity="0.62"/>
+        <path d="M4,28 L28,52 L52,28 L28,28 Z" fill="#C9A84C"/>
+        <line x1="28" y1="4" x2="28" y2="28" stroke="#FFF" stroke-width="1.5" stroke-linecap="round"/>
+        <text x="64" y="20" font-family="Raleway,sans-serif" font-weight="700" font-size="13" fill="#1B4D3E" letter-spacing="0.8">ALINAYA ALRAFIA</text>
+        <rect x="64" y="25" width="210" height="1.2" fill="#C9A84C"/>
+        <text x="64" y="37" font-family="Raleway,sans-serif" font-weight="500" font-size="7" fill="#6B7280" letter-spacing="3.5">MEDICAL COMPANY</text>
+        <text x="274" y="48" font-family="Cairo,sans-serif" font-weight="600" font-size="9" fill="#1B4D3E" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+      <div style="display:flex;gap:28px;align-items:center">
+        <span style="font-size:13px;font-weight:600;color:#1B4D3E">About</span>
+        <span style="font-size:13px;font-weight:600;color:#1B4D3E">Contact</span>
+        <div style="display:flex;gap:2px;font-size:12px;font-weight:600">
+          <span style="color:#1B4D3E">EN</span><span style="color:#9CA3AF;margin:0 4px">|</span><span style="color:#9CA3AF">AR</span>
+        </div>
+      </div>
+    </div>
+    <div style="padding:6px 32px;background:#F8FAF9"><span style="font-size:10px;font-weight:700;color:#1B4D3E;letter-spacing:2px">PALETTE 2 — EMERALD + GOLD</span></div>
+  </div>
+
+  <!-- P8 navbar -->
+  <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07)">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 32px;border-bottom:3px solid #C4956A">
+      <svg viewBox="0 0 280 52" width="220" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4,28 L28,4 L28,28 Z" fill="#1B3A2D"/>
+        <path d="M52,28 L28,4 L28,28 Z" fill="#1B3A2D" opacity="0.62"/>
+        <path d="M4,28 L28,52 L52,28 L28,28 Z" fill="#C4956A"/>
+        <line x1="28" y1="4" x2="28" y2="28" stroke="#FFF" stroke-width="1.5" stroke-linecap="round"/>
+        <text x="64" y="20" font-family="Raleway,sans-serif" font-weight="700" font-size="13" fill="#1B3A2D" letter-spacing="0.8">ALINAYA ALRAFIA</text>
+        <rect x="64" y="25" width="210" height="1.2" fill="#C4956A"/>
+        <text x="64" y="37" font-family="Raleway,sans-serif" font-weight="500" font-size="7" fill="#6B7280" letter-spacing="3.5">MEDICAL COMPANY</text>
+        <text x="274" y="48" font-family="Cairo,sans-serif" font-weight="600" font-size="9" fill="#1B3A2D" text-anchor="end">شركة العناية الرفيعة الطبية</text>
+      </svg>
+      <div style="display:flex;gap:28px;align-items:center">
+        <span style="font-size:13px;font-weight:600;color:#1B3A2D">About</span>
+        <span style="font-size:13px;font-weight:600;color:#1B3A2D">Contact</span>
+        <div style="display:flex;gap:2px;font-size:12px;font-weight:600">
+          <span style="color:#1B3A2D">EN</span><span style="color:#9CA3AF;margin:0 4px">|</span><span style="color:#9CA3AF">AR</span>
+        </div>
+      </div>
+    </div>
+    <div style="padding:6px 32px;background:#F8F9F8"><span style="font-size:10px;font-weight:700;color:#1B3A2D;letter-spacing:2px">PALETTE 8 — FOREST + ROSE GOLD</span></div>
+  </div>
+
+</div>
+
+<!-- ═══ HERO SECTION SIMULATION ═══ -->
+<div style="margin-bottom:12px;font-size:11px;font-weight:700;color:#9CA3AF;letter-spacing:3px;text-transform:uppercase">Hero Section — Dark Background</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:48px">
+
+  <!-- P2 hero -->
+  <div style="background:#1B4D3E;border-radius:16px;padding:40px;box-shadow:0 4px 20px rgba(27,77,62,0.3)">
+    <div style="width:3px;height:36px;background:#C9A84C;border-radius:2px;margin-bottom:20px"></div>
+    <div style="font-family:Raleway,sans-serif;font-size:28px;font-weight:700;color:white;line-height:1.25;margin-bottom:12px">
+      Your Health,<br>Our Commitment.
+    </div>
+    <div style="font-family:Raleway,sans-serif;font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;margin-bottom:24px">
+      Alinaya Alrafia Medical Company — delivering trusted healthcare solutions across Saudi Arabia.
+    </div>
+    <div style="display:inline-block;background:#C9A84C;color:#1B4D3E;font-family:Raleway,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;padding:11px 24px;border-radius:4px;text-transform:uppercase">
+      Learn More
+    </div>
+  </div>
+
+  <!-- P8 hero -->
+  <div style="background:#1B3A2D;border-radius:16px;padding:40px;box-shadow:0 4px 20px rgba(27,58,45,0.3)">
+    <div style="width:3px;height:36px;background:#C4956A;border-radius:2px;margin-bottom:20px"></div>
+    <div style="font-family:Raleway,sans-serif;font-size:28px;font-weight:700;color:white;line-height:1.25;margin-bottom:12px">
+      Your Health,<br>Our Commitment.
+    </div>
+    <div style="font-family:Raleway,sans-serif;font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;margin-bottom:24px">
+      Alinaya Alrafia Medical Company — delivering trusted healthcare solutions across Saudi Arabia.
+    </div>
+    <div style="display:inline-block;background:#C4956A;color:#1B3A2D;font-family:Raleway,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;padding:11px 24px;border-radius:4px;text-transform:uppercase">
+      Learn More
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══ BUTTON & ACCENT COMPARISON ═══ -->
+<div style="margin-bottom:12px;font-size:11px;font-weight:700;color:#9CA3AF;letter-spacing:3px;text-transform:uppercase">Buttons & Accents</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:48px">
+
+  <div style="background:white;border-radius:16px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.07)">
+    <div style="font-size:11px;font-weight:700;color:#1B4D3E;letter-spacing:3px;margin-bottom:20px">PALETTE 2 — EMERALD</div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+      <div style="background:#1B4D3E;color:white;font-family:Raleway,sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;padding:10px 22px;border-radius:4px">Primary Button</div>
+      <div style="border:2px solid #1B4D3E;color:#1B4D3E;font-family:Raleway,sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;padding:8px 22px;border-radius:4px">Outline Button</div>
+      <div style="color:#C9A84C;font-family:Raleway,sans-serif;font-size:13px;font-weight:600;text-decoration:underline">Text Link →</div>
+    </div>
+    <div style="margin-top:16px;height:3px;background:linear-gradient(to right,#1B4D3E,#C9A84C);border-radius:2px"></div>
+  </div>
+
+  <div style="background:white;border-radius:16px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.07)">
+    <div style="font-size:11px;font-weight:700;color:#1B3A2D;letter-spacing:3px;margin-bottom:20px">PALETTE 8 — FOREST</div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+      <div style="background:#1B3A2D;color:white;font-family:Raleway,sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;padding:10px 22px;border-radius:4px">Primary Button</div>
+      <div style="border:2px solid #1B3A2D;color:#1B3A2D;font-family:Raleway,sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;padding:8px 22px;border-radius:4px">Outline Button</div>
+      <div style="color:#C4956A;font-family:Raleway,sans-serif;font-size:13px;font-weight:600;text-decoration:underline">Text Link →</div>
+    </div>
+    <div style="margin-top:16px;height:3px;background:linear-gradient(to right,#1B3A2D,#C4956A);border-radius:2px"></div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div style="border-top:1px solid #E5E7EB;padding-top:24px;color:#9CA3AF;font-size:12px;text-align:center">
+  Alinaya Alrafia Medical Company &nbsp;|&nbsp; Palette Comparison — July 2026<br>
+  <strong style="color:#6B7280">Pick one: "Palette 2" (Emerald + Gold) or "Palette 8" (Forest + Rose Gold)</strong>
+</div>
+
+</body>
+</html>

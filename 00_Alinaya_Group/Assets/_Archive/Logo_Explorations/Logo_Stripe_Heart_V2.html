@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alinaya — Stripe Heart V2</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&family=Cairo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#E8ECF1; font-family:'Raleway',sans-serif; padding:60px 80px; }
+h1 { font-size:11px; font-weight:700; letter-spacing:5px; color:#9CA3AF; text-transform:uppercase; margin-bottom:8px; }
+h2 { font-size:22px; font-weight:700; color:#111827; margin-bottom:6px; }
+p  { font-size:13px; color:#6B7280; margin-bottom:52px; line-height:1.8; max-width:560px; }
+.sec { font-size:10px; font-weight:700; letter-spacing:4px; color:#6B7280; text-transform:uppercase; margin:52px 0 18px; }
+.row { display:flex; gap:24px; flex-wrap:wrap; margin-bottom:24px; }
+.card { border-radius:20px; padding:56px 44px; display:flex; flex-direction:column; align-items:center; gap:24px; position:relative; }
+.w  { background:#FFFFFF; box-shadow:0 2px 28px rgba(0,0,0,0.07); }
+.dk { background:#0C1813; box-shadow:0 8px 40px rgba(0,0,0,0.55); }
+.em { background:#1B4D3E; box-shadow:0 8px 32px rgba(27,77,62,0.50); }
+.lbl { font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#9CA3AF; }
+.dk .lbl, .em .lbl { color:rgba(255,255,255,0.18); }
+svg { display:block; }
+</style>
+</head>
+<body>
+
+<h1>Stripe Heart — V2 · Refined</h1>
+<h2>Heart Ring + V-Chevron Stripes</h2>
+<p>Symmetric V-chevron stripes fan outward from the inner notch — matching the heart's natural V geometry. Stripes visible inside the negative space and extending outside the ring at the lower corners. Three colour variants.</p>
+
+<!--
+  GEOMETRY NOTES
+  ─────────────────────────────────────────────────────────────
+  ViewBox: 0 0 500 570
+  Outer heart:  notch (250,130) · tip (250,472) · width 440px
+  Inner heart:  notch (250,188) · tip (250,448) · width 316px
+  Ring width ≈ 62px (consistent outer−inner at all points)
+
+  3 V-chevron stripes, apex spacing = 70px:
+    V1 apex (250,210)  arms end at (84,376) and (416,376)
+    V2 apex (250,280)  arms end at (68,448) and (432,448)
+    V3 apex (250,350)  arms end at (52,518) and (448,518)  ← extends outside
+
+  Mask: stripes shown ONLY inside inner white area + outside outer heart
+  ─────────────────────────────────────────────────────────────
+-->
+
+<!-- Shared path data as JS constants for reuse -->
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- VARIANT A — Solid Emerald  (like reference) -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="sec">Variant A — Solid Emerald</div>
+<div class="row">
+
+  <!-- ── On White ── -->
+  <div class="card w">
+    <span class="lbl">On White</span>
+    <svg viewBox="0 0 500 570" width="230" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="A-w">
+          <rect width="500" height="570" fill="white"/>
+          <!-- Hide outer heart region (includes the ring + inner area) -->
+          <path fill="black"
+            d="M 250,130
+               C 220,88 175,68 148,68
+               C 70,68 30,140 30,210
+               C 30,308 128,388 250,472
+               C 372,388 470,308 470,210
+               C 470,140 430,68 352,68
+               C 325,68 280,88 250,130 Z"/>
+          <!-- Re-show inner white area -->
+          <path fill="white"
+            d="M 250,188
+               C 228,153 204,134 180,134
+               C 120,134 90,181 90,232
+               C 90,316 162,372 250,448
+               C 338,372 410,316 410,232
+               C 410,181 380,134 320,134
+               C 296,134 272,153 250,188 Z"/>
+        </mask>
+      </defs>
+
+      <!-- Heart ring (evenodd = outer filled, inner cut out) -->
+      <path fill="#1B4D3E" fill-rule="evenodd"
+        d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z
+           M 250,188 C 272,153 296,134 320,134 C 380,134 410,181 410,232 C 410,316 338,372 250,448 C 162,372 90,316 90,232 C 90,181 120,134 180,134 C 204,134 228,153 250,188 Z"/>
+
+      <!-- V-chevron stripes — masked -->
+      <g mask="url(#A-w)" stroke="#1B4D3E" stroke-width="26" stroke-linejoin="miter" stroke-linecap="butt" fill="none">
+        <polyline points="84,376  250,210  416,376"/>
+        <polyline points="68,448  250,280  432,448"/>
+        <polyline points="52,518  250,350  448,518"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ── On Dark ── -->
+  <div class="card dk">
+    <span class="lbl">On Dark</span>
+    <svg viewBox="0 0 500 570" width="230" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="A-dk">
+          <rect width="500" height="570" fill="white"/>
+          <path fill="black" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z"/>
+          <path fill="white" d="M 250,188 C 228,153 204,134 180,134 C 120,134 90,181 90,232 C 90,316 162,372 250,448 C 338,372 410,316 410,232 C 410,181 380,134 320,134 C 296,134 272,153 250,188 Z"/>
+        </mask>
+      </defs>
+      <path fill="#FFFFFF" fill-rule="evenodd"
+        d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z
+           M 250,188 C 272,153 296,134 320,134 C 380,134 410,181 410,232 C 410,316 338,372 250,448 C 162,372 90,316 90,232 C 90,181 120,134 180,134 C 204,134 228,153 250,188 Z"/>
+      <g mask="url(#A-dk)" stroke="#FFFFFF" stroke-width="26" stroke-linejoin="miter" stroke-linecap="butt" fill="none">
+        <polyline points="84,376  250,210  416,376"/>
+        <polyline points="68,448  250,280  432,448"/>
+        <polyline points="52,518  250,350  448,518"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ── On Emerald ── -->
+  <div class="card em">
+    <span class="lbl">On Emerald</span>
+    <svg viewBox="0 0 500 570" width="230" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="A-em">
+          <rect width="500" height="570" fill="white"/>
+          <path fill="black" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z"/>
+          <path fill="white" d="M 250,188 C 228,153 204,134 180,134 C 120,134 90,181 90,232 C 90,316 162,372 250,448 C 338,372 410,316 410,232 C 410,181 380,134 320,134 C 296,134 272,153 250,188 Z"/>
+        </mask>
+      </defs>
+      <path fill="rgba(255,255,255,0.92)" fill-rule="evenodd"
+        d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z
+           M 250,188 C 272,153 296,134 320,134 C 380,134 410,181 410,232 C 410,316 338,372 250,448 C 162,372 90,316 90,232 C 90,181 120,134 180,134 C 204,134 228,153 250,188 Z"/>
+      <g mask="url(#A-em)" stroke="rgba(255,255,255,0.92)" stroke-width="26" stroke-linejoin="miter" stroke-linecap="butt" fill="none">
+        <polyline points="84,376  250,210  416,376"/>
+        <polyline points="68,448  250,280  432,448"/>
+        <polyline points="52,518  250,350  448,518"/>
+      </g>
+    </svg>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- VARIANT B — Emerald Ring + Gold Chevrons -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="sec">Variant B — Emerald Ring + Gold Stripes</div>
+<div class="row">
+
+  <div class="card w">
+    <span class="lbl">On White</span>
+    <svg viewBox="0 0 500 570" width="230" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="B-w">
+          <rect width="500" height="570" fill="white"/>
+          <path fill="black" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z"/>
+          <path fill="white" d="M 250,188 C 228,153 204,134 180,134 C 120,134 90,181 90,232 C 90,316 162,372 250,448 C 338,372 410,316 410,232 C 410,181 380,134 320,134 C 296,134 272,153 250,188 Z"/>
+        </mask>
+      </defs>
+      <path fill="#1B4D3E" fill-rule="evenodd"
+        d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z
+           M 250,188 C 272,153 296,134 320,134 C 380,134 410,181 410,232 C 410,316 338,372 250,448 C 162,372 90,316 90,232 C 90,181 120,134 180,134 C 204,134 228,153 250,188 Z"/>
+      <g mask="url(#B-w)" stroke="#C9A84C" stroke-width="26" stroke-linejoin="miter" stroke-linecap="butt" fill="none">
+        <polyline points="84,376  250,210  416,376"/>
+        <polyline points="68,448  250,280  432,448"/>
+        <polyline points="52,518  250,350  448,518"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="card dk">
+    <span class="lbl">On Dark</span>
+    <svg viewBox="0 0 500 570" width="230" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="B-dk">
+          <rect width="500" height="570" fill="white"/>
+          <path fill="black" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z"/>
+          <path fill="white" d="M 250,188 C 228,153 204,134 180,134 C 120,134 90,181 90,232 C 90,316 162,372 250,448 C 338,372 410,316 410,232 C 410,181 380,134 320,134 C 296,134 272,153 250,188 Z"/>
+        </mask>
+      </defs>
+      <path fill="#1B4D3E" fill-rule="evenodd"
+        d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z
+           M 250,188 C 272,153 296,134 320,134 C 380,134 410,181 410,232 C 410,316 338,372 250,448 C 162,372 90,316 90,232 C 90,181 120,134 180,134 C 204,134 228,153 250,188 Z"/>
+      <g mask="url(#B-dk)" stroke="#C9A84C" stroke-width="26" stroke-linejoin="miter" stroke-linecap="butt" fill="none">
+        <polyline points="84,376  250,210  416,376"/>
+        <polyline points="68,448  250,280  432,448"/>
+        <polyline points="52,518  250,350  448,518"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="card em">
+    <span class="lbl">On Emerald</span>
+    <svg viewBox="0 0 500 570" width="230" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="B-em">
+          <rect width="500" height="570" fill="white"/>
+          <path fill="black" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z"/>
+          <path fill="white" d="M 250,188 C 228,153 204,134 180,134 C 120,134 90,181 90,232 C 90,316 162,372 250,448 C 338,372 410,316 410,232 C 410,181 380,134 320,134 C 296,134 272,153 250,188 Z"/>
+        </mask>
+      </defs>
+      <path fill="rgba(255,255,255,0.15)" fill-rule="evenodd"
+        d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z
+           M 250,188 C 272,153 296,134 320,134 C 380,134 410,181 410,232 C 410,316 338,372 250,448 C 162,372 90,316 90,232 C 90,181 120,134 180,134 C 204,134 228,153 250,188 Z"/>
+      <g mask="url(#B-em)" stroke="#C9A84C" stroke-width="26" stroke-linejoin="miter" stroke-linecap="butt" fill="none">
+        <polyline points="84,376  250,210  416,376"/>
+        <polyline points="68,448  250,280  432,448"/>
+        <polyline points="52,518  250,350  448,518"/>
+      </g>
+    </svg>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- FULL WORDMARK — Horizontal -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="sec">Full Wordmark</div>
+<div class="row">
+
+  <!-- A on White -->
+  <div class="card w" style="flex-direction:row; padding:40px 56px; flex:1; min-width:480px; align-items:center; gap:28px;">
+    <span class="lbl" style="position:absolute;top:18px;left:24px;">A · On White</span>
+    <svg viewBox="0 0 500 570" width="64" style="flex-shrink:0;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="WM-A-w">
+          <rect width="500" height="570" fill="white"/>
+          <path fill="black" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z"/>
+          <path fill="white" d="M 250,188 C 228,153 204,134 180,134 C 120,134 90,181 90,232 C 90,316 162,372 250,448 C 338,372 410,316 410,232 C 410,181 380,134 320,134 C 296,134 272,153 250,188 Z"/>
+        </mask>
+      </defs>
+      <path fill="#1B4D3E" fill-rule="evenodd"
+        d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z M 250,188 C 272,153 296,134 320,134 C 380,134 410,181 410,232 C 410,316 338,372 250,448 C 162,372 90,316 90,232 C 90,181 120,134 180,134 C 204,134 228,153 250,188 Z"/>
+      <g mask="url(#WM-A-w)" stroke="#1B4D3E" stroke-width="26" stroke-linejoin="miter" stroke-linecap="butt" fill="none">
+        <polyline points="84,376  250,210  416,376"/>
+        <polyline points="68,448  250,280  432,448"/>
+        <polyline points="52,518  250,350  448,518"/>
+      </g>
+    </svg>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="font:700 26px/1 'Raleway';color:#1B4D3E;letter-spacing:1px;">ALINAYA ALRAFIA</div>
+      <div style="height:1.5px;background:#1B4D3E;opacity:0.25;margin:2px 0;"></div>
+      <div style="font:400 10.5px/1 'Raleway';color:#6B8C7E;letter-spacing:5px;text-transform:uppercase;">Medical Company</div>
+      <div style="font:500 13.5px/1 'Cairo';color:#1B4D3E;direction:rtl;margin-top:3px;">شركة العناية الرفيعة الطبية</div>
+    </div>
+  </div>
+
+  <!-- B on White -->
+  <div class="card w" style="flex-direction:row; padding:40px 56px; flex:1; min-width:480px; align-items:center; gap:28px;">
+    <span class="lbl" style="position:absolute;top:18px;left:24px;">B · On White</span>
+    <svg viewBox="0 0 500 570" width="64" style="flex-shrink:0;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="WM-B-w">
+          <rect width="500" height="570" fill="white"/>
+          <path fill="black" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z"/>
+          <path fill="white" d="M 250,188 C 228,153 204,134 180,134 C 120,134 90,181 90,232 C 90,316 162,372 250,448 C 338,372 410,316 410,232 C 410,181 380,134 320,134 C 296,134 272,153 250,188 Z"/>
+        </mask>
+      </defs>
+      <path fill="#1B4D3E" fill-rule="evenodd"
+        d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z M 250,188 C 272,153 296,134 320,134 C 380,134 410,181 410,232 C 410,316 338,372 250,448 C 162,372 90,316 90,232 C 90,181 120,134 180,134 C 204,134 228,153 250,188 Z"/>
+      <g mask="url(#WM-B-w)" stroke="#C9A84C" stroke-width="26" stroke-linejoin="miter" stroke-linecap="butt" fill="none">
+        <polyline points="84,376  250,210  416,376"/>
+        <polyline points="68,448  250,280  432,448"/>
+        <polyline points="52,518  250,350  448,518"/>
+      </g>
+    </svg>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="font:700 26px/1 'Raleway';color:#1B4D3E;letter-spacing:1px;">ALINAYA ALRAFIA</div>
+      <div style="height:1.5px;background:#C9A84C;opacity:0.55;margin:2px 0;"></div>
+      <div style="font:400 10.5px/1 'Raleway';color:#6B8C7E;letter-spacing:5px;text-transform:uppercase;">Medical Company</div>
+      <div style="font:500 13.5px/1 'Cairo';color:#1B4D3E;direction:rtl;margin-top:3px;">شركة العناية الرفيعة الطبية</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- On Dark wordmark -->
+<div class="row">
+  <div class="card dk" style="flex-direction:row; padding:40px 56px; flex:1; min-width:480px; align-items:center; gap:28px;">
+    <span class="lbl" style="position:absolute;top:18px;left:24px;">B · On Dark</span>
+    <svg viewBox="0 0 500 570" width="64" style="flex-shrink:0;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="WM-B-dk">
+          <rect width="500" height="570" fill="white"/>
+          <path fill="black" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z"/>
+          <path fill="white" d="M 250,188 C 228,153 204,134 180,134 C 120,134 90,181 90,232 C 90,316 162,372 250,448 C 338,372 410,316 410,232 C 410,181 380,134 320,134 C 296,134 272,153 250,188 Z"/>
+        </mask>
+      </defs>
+      <path fill="#1B4D3E" fill-rule="evenodd"
+        d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z M 250,188 C 272,153 296,134 320,134 C 380,134 410,181 410,232 C 410,316 338,372 250,448 C 162,372 90,316 90,232 C 90,181 120,134 180,134 C 204,134 228,153 250,188 Z"/>
+      <g mask="url(#WM-B-dk)" stroke="#C9A84C" stroke-width="26" stroke-linejoin="miter" stroke-linecap="butt" fill="none">
+        <polyline points="84,376  250,210  416,376"/>
+        <polyline points="68,448  250,280  432,448"/>
+        <polyline points="52,518  250,350  448,518"/>
+      </g>
+    </svg>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="font:700 26px/1 'Raleway';color:#C9A84C;letter-spacing:1px;">ALINAYA ALRAFIA</div>
+      <div style="height:1.5px;background:#C9A84C;opacity:0.35;margin:2px 0;"></div>
+      <div style="font:400 10.5px/1 'Raleway';color:rgba(255,255,255,0.42);letter-spacing:5px;text-transform:uppercase;">Medical Company</div>
+      <div style="font:500 13.5px/1 'Cairo';color:rgba(255,255,255,0.82);direction:rtl;margin-top:3px;">شركة العناية الرفيعة الطبية</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SCALE TEST -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="sec">Scale Test — Variant A</div>
+<div class="card w" style="display:inline-flex;flex-direction:row;align-items:flex-end;gap:40px;padding:40px 52px;">
+
+  <!-- 20px — ring only (no stripes at this size) -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+    <svg viewBox="0 0 500 570" width="20" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#1B4D3E" fill-rule="evenodd"
+        d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z
+           M 250,188 C 272,153 296,134 320,134 C 380,134 410,181 410,232 C 410,316 338,372 250,448 C 162,372 90,316 90,232 C 90,181 120,134 180,134 C 204,134 228,153 250,188 Z"/>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">20</span>
+  </div>
+
+  <!-- 32px -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+    <svg viewBox="0 0 500 570" width="32" xmlns="http://www.w3.org/2000/svg">
+      <defs><mask id="sc32"><rect width="500" height="570" fill="white"/><path fill="black" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z"/><path fill="white" d="M 250,188 C 228,153 204,134 180,134 C 120,134 90,181 90,232 C 90,316 162,372 250,448 C 338,372 410,316 410,232 C 410,181 380,134 320,134 C 296,134 272,153 250,188 Z"/></mask></defs>
+      <path fill="#1B4D3E" fill-rule="evenodd" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z M 250,188 C 272,153 296,134 320,134 C 380,134 410,181 410,232 C 410,316 338,372 250,448 C 162,372 90,316 90,232 C 90,181 120,134 180,134 C 204,134 228,153 250,188 Z"/>
+      <g mask="url(#sc32)" stroke="#1B4D3E" stroke-width="26" stroke-linejoin="miter" stroke-linecap="butt" fill="none"><polyline points="84,376 250,210 416,376"/><polyline points="68,448 250,280 432,448"/><polyline points="52,518 250,350 448,518"/></g>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">32</span>
+  </div>
+
+  <!-- 56px -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+    <svg viewBox="0 0 500 570" width="56" xmlns="http://www.w3.org/2000/svg">
+      <defs><mask id="sc56"><rect width="500" height="570" fill="white"/><path fill="black" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z"/><path fill="white" d="M 250,188 C 228,153 204,134 180,134 C 120,134 90,181 90,232 C 90,316 162,372 250,448 C 338,372 410,316 410,232 C 410,181 380,134 320,134 C 296,134 272,153 250,188 Z"/></mask></defs>
+      <path fill="#1B4D3E" fill-rule="evenodd" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z M 250,188 C 272,153 296,134 320,134 C 380,134 410,181 410,232 C 410,316 338,372 250,448 C 162,372 90,316 90,232 C 90,181 120,134 180,134 C 204,134 228,153 250,188 Z"/>
+      <g mask="url(#sc56)" stroke="#1B4D3E" stroke-width="26" stroke-linejoin="miter" stroke-linecap="butt" fill="none"><polyline points="84,376 250,210 416,376"/><polyline points="68,448 250,280 432,448"/><polyline points="52,518 250,350 448,518"/></g>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">56</span>
+  </div>
+
+  <!-- 100px -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+    <svg viewBox="0 0 500 570" width="100" xmlns="http://www.w3.org/2000/svg">
+      <defs><mask id="sc100"><rect width="500" height="570" fill="white"/><path fill="black" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z"/><path fill="white" d="M 250,188 C 228,153 204,134 180,134 C 120,134 90,181 90,232 C 90,316 162,372 250,448 C 338,372 410,316 410,232 C 410,181 380,134 320,134 C 296,134 272,153 250,188 Z"/></mask></defs>
+      <path fill="#1B4D3E" fill-rule="evenodd" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z M 250,188 C 272,153 296,134 320,134 C 380,134 410,181 410,232 C 410,316 338,372 250,448 C 162,372 90,316 90,232 C 90,181 120,134 180,134 C 204,134 228,153 250,188 Z"/>
+      <g mask="url(#sc100)" stroke="#1B4D3E" stroke-width="26" stroke-linejoin="miter" stroke-linecap="butt" fill="none"><polyline points="84,376 250,210 416,376"/><polyline points="68,448 250,280 432,448"/><polyline points="52,518 250,350 448,518"/></g>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">100</span>
+  </div>
+
+  <!-- 180px -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+    <svg viewBox="0 0 500 570" width="180" xmlns="http://www.w3.org/2000/svg">
+      <defs><mask id="sc180"><rect width="500" height="570" fill="white"/><path fill="black" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z"/><path fill="white" d="M 250,188 C 228,153 204,134 180,134 C 120,134 90,181 90,232 C 90,316 162,372 250,448 C 338,372 410,316 410,232 C 410,181 380,134 320,134 C 296,134 272,153 250,188 Z"/></mask></defs>
+      <path fill="#1B4D3E" fill-rule="evenodd" d="M 250,130 C 220,88 175,68 148,68 C 70,68 30,140 30,210 C 30,308 128,388 250,472 C 372,388 470,308 470,210 C 470,140 430,68 352,68 C 325,68 280,88 250,130 Z M 250,188 C 272,153 296,134 320,134 C 380,134 410,181 410,232 C 410,316 338,372 250,448 C 162,372 90,316 90,232 C 90,181 120,134 180,134 C 204,134 228,153 250,188 Z"/>
+      <g mask="url(#sc180)" stroke="#1B4D3E" stroke-width="26" stroke-linejoin="miter" stroke-linecap="butt" fill="none"><polyline points="84,376 250,210 416,376"/><polyline points="68,448 250,280 432,448"/><polyline points="52,518 250,350 448,518"/></g>
+    </svg>
+    <span style="font-size:9px;color:#9CA3AF;letter-spacing:1px;">180</span>
+  </div>
+
+</div>
+
+<div style="margin-top:56px;font-size:12px;color:#9CA3AF;letter-spacing:2px;text-transform:uppercase;line-height:2.4;">
+  <strong style="color:#1B4D3E;">A</strong> — Solid Emerald &nbsp;·&nbsp;
+  <strong style="color:#1B4D3E;">B</strong> — Emerald + Gold stripes &nbsp;·&nbsp;
+  <strong style="color:#1B4D3E;">adjust [what]</strong> — ring thicker/thinner · more/fewer stripes · angle change
+</div>
+
+</body>
+</html>

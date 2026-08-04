@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="140" height="140">
+  <title>Alinaya Alrafia Medical Company</title>
+  <!-- Abstract Wedge mark — left upper triangle (solid) -->
+  <path d="M10,70 L70,8 L70,70 Z" fill="#1B4D3E"/>
+  <!-- Right upper triangle (62% opacity) -->
+  <path d="M130,70 L70,8 L70,70 Z" fill="#1B4D3E" opacity="0.62"/>
+  <!-- Gold diamond (lower half) -->
+  <path d="M10,70 L70,132 L130,70 L70,70 Z" fill="#C9A84C"/>
+  <!-- Center vertical line at apex -->
+  <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.45"/>
+</svg>

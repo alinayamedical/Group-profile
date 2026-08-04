@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  viewBox="0 0 700 900" width="700" height="900">
+  <title>Alinaya Alrafia — Logo Master Source File</title>
+  <desc>All logo variants. Approved July 2026. Abstract Wedge Shape H.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&amp;family=Cairo:wght@600&amp;display=swap');
+      text { font-synthesis: none; }
+    </style>
+
+    <!-- Reusable mark paths at 140×140 -->
+    <g id="mark-color">
+      <path d="M10,70 L70,8 L70,70 Z"              fill="#1B4D3E"/>
+      <path d="M130,70 L70,8 L70,70 Z"             fill="#1B4D3E" opacity="0.62"/>
+      <path d="M10,70 L70,132 L130,70 L70,70 Z"    fill="#C9A84C"/>
+    </g>
+    <g id="mark-white">
+      <path d="M10,70 L70,8 L70,70 Z"              fill="#FFFFFF"/>
+      <path d="M130,70 L70,8 L70,70 Z"             fill="#FFFFFF" opacity="0.62"/>
+      <path d="M10,70 L70,132 L130,70 L70,70 Z"    fill="#C9A84C"/>
+      <line x1="70" y1="8" x2="70" y2="70" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+    </g>
+    <g id="mark-mono-dark">
+      <path d="M10,70 L70,8 L70,70 Z"              fill="#1A1A2E"/>
+      <path d="M130,70 L70,8 L70,70 Z"             fill="#1A1A2E" opacity="0.62"/>
+      <path d="M10,70 L70,132 L130,70 L70,70 Z"    fill="#1A1A2E"/>
+    </g>
+    <g id="mark-mono-white">
+      <path d="M10,70 L70,8 L70,70 Z"              fill="#FFFFFF"/>
+      <path d="M130,70 L70,8 L70,70 Z"             fill="#FFFFFF" opacity="0.62"/>
+      <path d="M10,70 L70,132 L130,70 L70,70 Z"    fill="#FFFFFF"/>
+    </g>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- LAYER 1 · Full Color Wordmark (light backgrounds)         -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g id="layer-full-color" inkscape:label="Full Color — Light BG" inkscape:groupmode="layer">
+    <rect x="0" y="0" width="700" height="160" fill="#F8F9FC"/>
+    <text x="20" y="15" font-family="Arial,sans-serif" font-size="9" fill="#6B7280" letter-spacing="2">01 · FULL COLOR WORDMARK</text>
+    <svg x="20" y="20" viewBox="0 0 620 140" width="660" height="132">
+      <use href="#mark-color"/>
+      <text x="152" y="48" font-family="Raleway,Arial,sans-serif" font-weight="700" font-size="28" fill="#1B4D3E" letter-spacing="1.5">ALINAYA ALRAFIA</text>
+      <rect x="152" y="58" width="448" height="2" fill="#C9A84C"/>
+      <text x="152" y="76" font-family="Raleway,Arial,sans-serif" font-weight="500" font-size="11" fill="#6B7280" letter-spacing="6">MEDICAL COMPANY</text>
+      <line x1="152" y1="92" x2="600" y2="92" stroke="#E5E7EB" stroke-width="1"/>
+      <text x="600" y="114" font-family="Cairo,Arial,sans-serif" font-weight="600" font-size="18" fill="#1B4D3E" text-anchor="start" direction="rtl">شركة العناية الرفيعة الطبية</text>
+    </svg>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- LAYER 2 · White Reversed Wordmark (dark backgrounds)      -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g id="layer-white" inkscape:label="White Reversed — Dark BG" inkscape:groupmode="layer">
+    <rect x="0" y="170" width="700" height="160" fill="#0C1410"/>
+    <text x="20" y="185" font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)" letter-spacing="2">02 · WHITE REVERSED WORDMARK</text>
+    <svg x="20" y="188" viewBox="0 0 620 140" width="660" height="132">
+      <use href="#mark-white"/>
+      <text x="152" y="48" font-family="Raleway,Arial,sans-serif" font-weight="700" font-size="28" fill="#FFFFFF" letter-spacing="1.5">ALINAYA ALRAFIA</text>
+      <rect x="152" y="58" width="448" height="2" fill="#C9A84C"/>
+      <text x="152" y="76" font-family="Raleway,Arial,sans-serif" font-weight="500" font-size="11" fill="rgba(255,255,255,0.55)" letter-spacing="6">MEDICAL COMPANY</text>
+      <line x1="152" y1="92" x2="600" y2="92" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      <text x="600" y="114" font-family="Cairo,Arial,sans-serif" font-weight="600" font-size="18" fill="rgba(255,255,255,0.88)" text-anchor="start" direction="rtl">شركة العناية الرفيعة الطبية</text>
+    </svg>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- LAYER 3 · Monochrome Dark Wordmark                        -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g id="layer-mono-dark" inkscape:label="Monochrome Dark" inkscape:groupmode="layer">
+    <rect x="0" y="340" width="700" height="160" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="20" y="355" font-family="Arial,sans-serif" font-size="9" fill="#6B7280" letter-spacing="2">03 · MONOCHROME DARK</text>
+    <svg x="20" y="358" viewBox="0 0 620 140" width="660" height="132">
+      <use href="#mark-mono-dark"/>
+      <text x="152" y="48" font-family="Raleway,Arial,sans-serif" font-weight="700" font-size="28" fill="#1A1A2E" letter-spacing="1.5">ALINAYA ALRAFIA</text>
+      <rect x="152" y="58" width="448" height="2" fill="#1A1A2E" opacity="0.4"/>
+      <text x="152" y="76" font-family="Raleway,Arial,sans-serif" font-weight="500" font-size="11" fill="#1A1A2E" opacity="0.55" letter-spacing="6">MEDICAL COMPANY</text>
+      <line x1="152" y1="92" x2="600" y2="92" stroke="#1A1A2E" stroke-width="1" opacity="0.15"/>
+      <text x="600" y="114" font-family="Cairo,Arial,sans-serif" font-weight="600" font-size="18" fill="#1A1A2E" opacity="0.75" text-anchor="start" direction="rtl">شركة العناية الرفيعة الطبية</text>
+    </svg>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- LAYER 4 · Monochrome White Wordmark                       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g id="layer-mono-white" inkscape:label="Monochrome White" inkscape:groupmode="layer">
+    <rect x="0" y="510" width="700" height="160" fill="#1A1A2E"/>
+    <text x="20" y="525" font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)" letter-spacing="2">04 · MONOCHROME WHITE</text>
+    <svg x="20" y="528" viewBox="0 0 620 140" width="660" height="132">
+      <use href="#mark-mono-white"/>
+      <text x="152" y="48" font-family="Raleway,Arial,sans-serif" font-weight="700" font-size="28" fill="#FFFFFF" letter-spacing="1.5">ALINAYA ALRAFIA</text>
+      <rect x="152" y="58" width="448" height="2" fill="#FFFFFF" opacity="0.4"/>
+      <text x="152" y="76" font-family="Raleway,Arial,sans-serif" font-weight="500" font-size="11" fill="#FFFFFF" opacity="0.55" letter-spacing="6">MEDICAL COMPANY</text>
+      <line x1="152" y1="92" x2="600" y2="92" stroke="#FFFFFF" stroke-width="1" opacity="0.15"/>
+      <text x="600" y="114" font-family="Cairo,Arial,sans-serif" font-weight="600" font-size="18" fill="#FFFFFF" opacity="0.75" text-anchor="start" direction="rtl">شركة العناية الرفيعة الطبية</text>
+    </svg>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- LAYER 5 · Icon Marks (all four variants)                  -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g id="layer-icons" inkscape:label="Icon Mark — All Variants" inkscape:groupmode="layer">
+    <rect x="0" y="680" width="700" height="210" fill="#F8F9FC" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="20" y="695" font-family="Arial,sans-serif" font-size="9" fill="#6B7280" letter-spacing="2">05 · ICON MARK — ALL VARIANTS</text>
+
+    <!-- Color icon -->
+    <g id="icon-color">
+      <rect x="10" y="700" width="150" height="150" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" rx="8"/>
+      <svg x="15" y="705" viewBox="0 0 140 140" width="140" height="140">
+        <use href="#mark-color"/>
+      </svg>
+      <text x="85" y="862" font-family="Arial,sans-serif" font-size="8" fill="#6B7280" text-anchor="middle">Full Color</text>
+    </g>
+
+    <!-- White icon -->
+    <g id="icon-white">
+      <rect x="180" y="700" width="150" height="150" fill="#1B4D3E" rx="8"/>
+      <svg x="185" y="705" viewBox="0 0 140 140" width="140" height="140">
+        <use href="#mark-white"/>
+      </svg>
+      <text x="255" y="862" font-family="Arial,sans-serif" font-size="8" fill="#6B7280" text-anchor="middle">White Reversed</text>
+    </g>
+
+    <!-- Mono dark icon -->
+    <g id="icon-mono-dark">
+      <rect x="350" y="700" width="150" height="150" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" rx="8"/>
+      <svg x="355" y="705" viewBox="0 0 140 140" width="140" height="140">
+        <use href="#mark-mono-dark"/>
+      </svg>
+      <text x="425" y="862" font-family="Arial,sans-serif" font-size="8" fill="#6B7280" text-anchor="middle">Mono Dark</text>
+    </g>
+
+    <!-- Mono white icon -->
+    <g id="icon-mono-white">
+      <rect x="520" y="700" width="150" height="150" fill="#1A1A2E" rx="8"/>
+      <svg x="525" y="705" viewBox="0 0 140 140" width="140" height="140">
+        <use href="#mark-mono-white"/>
+      </svg>
+      <text x="595" y="862" font-family="Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.4)" text-anchor="middle">Mono White</text>
+    </g>
+  </g>
+
+</svg>
