@@ -3,49 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>medoor — Medical to Door | Company Profile 2026</title>
+<title>medoor — Corporate Partnership Profile 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* Medoor palette — provisional; awaiting official Medoor brand guide */
 :root {
-  --navy: #0D1B3E;
-  --navy-mid: #121E40;
-  --teal: #27B899;
-  --white: #FFFFFF;
-  --offwhite: #F5F6FA;
-  --charcoal: #1E293B;
-  --grey: #6B7280;
+  --navy:    #0D1B3E;
+  --navy-mid:#121E40;
+  --teal:    #27B899;
+  --white:   #FFFFFF;
+  --offwhite:#F5F6FA;
+  --charcoal:#1E293B;
+  --grey:    #6B7280;
   --grey-lt: #9CA3AF;
-  --border: #E5E7EB;
-  --gold: #C9A84C;
+  --border:  #E5E7EB;
+  --gold:    #C9A84C;
 }
 
-/* ---------- Reset / base ---------- */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html, body {
   background: #e6e8ef;
-  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Raleway', -apple-system, sans-serif;
   color: var(--charcoal);
   -webkit-font-smoothing: antialiased;
 }
 body { padding: 20px 0; }
-
 @page { size: A4; margin: 0; }
 
-/* ---------- Language toggle default: EN ---------- */
+/* ---------- Language switching ---------- */
 .en, .en-i { display: inline; }
 .ar, .ar-i { display: none; }
-html[lang="en"] .en { display: block; }
+html[lang="en"] .en  { display: block; }
 html[lang="en"] .en-i { display: inline; }
-html[lang="en"] .ar,
-html[lang="en"] .ar-i { display: none; }
+html[lang="en"] .ar, html[lang="en"] .ar-i { display: none; }
 
 html[lang="ar"] { direction: rtl; font-family: 'Cairo', sans-serif; }
-html[lang="ar"] .en,
-html[lang="ar"] .en-i { display: none; }
-html[lang="ar"] .ar { display: block; }
+html[lang="ar"] .en, html[lang="ar"] .en-i { display: none; }
+html[lang="ar"] .ar  { display: block; }
 html[lang="ar"] .ar-i { display: inline; }
 html[lang="ar"] body { font-family: 'Cairo', sans-serif; }
 
@@ -60,610 +56,524 @@ html[lang="ar"] body { font-family: 'Cairo', sans-serif; }
   box-shadow: 0 2px 10px rgba(0,0,0,.08);
 }
 .page:last-child { page-break-after: auto; }
-
 .inner-page {
-  padding: 16mm 18mm;
+  padding: 14mm 18mm;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-/* ---------- Lang switcher (screen only) ---------- */
+/* ---------- Language switcher (screen only) ---------- */
 .lang-switch {
   position: absolute;
-  top: 10mm;
-  right: 10mm;
-  display: flex;
-  gap: 4px;
-  z-index: 10;
+  top: 8mm; right: 8mm;
+  display: flex; gap: 4px; z-index: 10;
 }
+html[dir="rtl"] .lang-switch { right: auto; left: 8mm; }
 .lang-switch button {
   font-family: 'Raleway', sans-serif;
-  font-size: 9pt;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 8.5pt; font-weight: 600; letter-spacing: 1px;
   padding: 4px 10px;
   border: 1px solid rgba(255,255,255,.4);
-  background: transparent;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 3px;
+  background: transparent; color: #fff;
+  cursor: pointer; border-radius: 3px;
 }
 .lang-switch button.active { background: var(--teal); border-color: var(--teal); }
 .lang-switch.dark button { color: var(--navy); border-color: var(--border); }
 .lang-switch.dark button.active { color: #fff; }
 @media print { .lang-switch { display: none !important; } }
 
-/* ---------- Draft chip ---------- */
-.draft-chip {
-  display: inline-block;
-  background: #FEF3C7;
-  border: 1px solid #D97706;
-  color: #92400E;
-  font-size: 8pt;
-  font-weight: 600;
-  padding: 3px 8px;
-  border-radius: 4px;
-  letter-spacing: .2px;
-}
-.draft-chip.cover-draft {
-  position: absolute;
-  bottom: 10mm;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* ---------- Page header (standard interior pages) ---------- */
+/* ---------- Page header ---------- */
 .page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 10pt;
+  padding-bottom: 9pt;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 16pt;
+  margin-bottom: 14pt;
 }
+html[lang="ar"] .page-header { flex-direction: row-reverse; }
 .ph-logo { display: flex; align-items: center; gap: 8px; }
-.ph-logo-img { height: 22px; width: auto; display: block; }
+.ph-logo-img { height: 20px; width: auto; display: block; }
 .ph-section-label {
-  font-size: 8pt;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-size: 7.5pt; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
   color: var(--teal);
 }
 html[lang="ar"] .ph-section-label { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
 
 /* ---------- Page content ---------- */
-.page-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
+.page-content { flex: 1; display: flex; flex-direction: column; }
 
 /* ---------- Section headings ---------- */
 .section-eyebrow {
-  font-size: 8pt;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 6pt;
+  font-size: 7.5pt; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 5pt;
 }
-html[lang="ar"] .section-eyebrow { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
+html[lang="ar"] .section-eyebrow { font-family: 'Cairo', sans-serif; letter-spacing: 0; text-align: right; }
 
 .section-title {
-  font-size: 20pt;
-  font-weight: 700;
-  color: var(--navy);
-  line-height: 1.2;
+  font-size: 20pt; font-weight: 700;
+  color: var(--navy); line-height: 1.2;
   margin-bottom: 8pt;
 }
 html[lang="ar"] .section-title { font-family: 'Cairo', sans-serif; text-align: right; }
 
 .teal-rule {
-  width: 48px;
-  height: 2px;
+  width: 44px; height: 2px;
   background: var(--teal);
-  margin-bottom: 14pt;
+  margin-bottom: 13pt;
 }
-html[lang="ar"] .teal-rule { margin-right: 0; }
+html[lang="ar"] .teal-rule { margin-right: 0; margin-left: auto; }
 
 /* ---------- Body text ---------- */
 .body-text {
-  font-size: 11pt;
-  line-height: 1.65;
-  color: var(--charcoal);
-  margin-bottom: 10pt;
+  font-size: 11pt; line-height: 1.65;
+  color: var(--charcoal); margin-bottom: 9pt;
 }
 html[lang="ar"] .body-text {
   font-family: 'Cairo', sans-serif;
-  font-size: 12pt;
-  line-height: 1.8;
-  text-align: right;
+  font-size: 12pt; line-height: 1.8; text-align: right;
 }
 
 /* ---------- Page footer ---------- */
 .page-footer {
   margin-top: auto;
-  padding-top: 10pt;
+  padding-top: 9pt;
   border-top: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 8pt;
-  color: var(--grey);
+  display: flex; align-items: center; gap: 10px;
 }
-.pf-text { font-size: 8pt; color: var(--grey); }
+html[lang="ar"] .page-footer { flex-direction: row-reverse; }
+.pf-text { font-size: 7.5pt; color: var(--grey); }
 html[lang="ar"] .pf-text { font-family: 'Cairo', sans-serif; }
-.pf-dot {
-  width: 4px; height: 4px;
-  background: var(--teal);
-  border-radius: 50%;
-}
-.page-footer .draft-chip { margin-left: auto; }
-html[lang="ar"] .page-footer .draft-chip { margin-left: 0; margin-right: auto; }
+.pf-dot { width: 4px; height: 4px; background: var(--teal); border-radius: 50%; }
+.pf-page-num { font-size: 7.5pt; color: var(--grey); margin-left: auto; }
+html[lang="ar"] .pf-page-num { margin-left: 0; margin-right: auto; }
 
-/* ---------- COVER PAGE ---------- */
-.cover-page {
-  background: var(--navy);
-  color: #fff;
-  position: relative;
-}
+/* ══════════════════════════
+   COVER PAGE (page 1)
+══════════════════════════ */
+.cover-page { background: var(--navy); color: #fff; position: relative; }
 .cover-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.28;
-  z-index: 0;
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 30%;
+  opacity: 0.50; z-index: 0;
 }
 .cover-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(13,27,62,.55) 0%, rgba(13,27,62,.85) 100%);
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    rgba(13,27,62,.38) 0%,
+    rgba(13,27,62,.62) 50%,
+    rgba(13,27,62,.90) 100%);
   z-index: 1;
 }
 .cover-inner {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  padding: 18mm 20mm;
-  display: flex;
-  flex-direction: column;
+  position: relative; z-index: 2;
+  height: 100%; padding: 18mm 20mm;
+  display: flex; flex-direction: column;
   justify-content: space-between;
 }
 .cover-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.cover-logo { height: 46px; width: auto; filter: brightness(0) invert(1); }
 .cover-center {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10pt;
+  display: flex; flex-direction: column;
+  align-items: flex-start; gap: 10pt;
 }
-.cover-logo { height: 48px; width: auto; filter: brightness(0) invert(1); }
-.cover-gold-rule {
-  width: 60px;
-  height: 2px;
-  background: var(--gold);
-  margin: 6pt 0;
-}
+html[lang="ar"] .cover-center { align-items: flex-end; }
+.cover-gold-rule { width: 60px; height: 2px; background: var(--gold); margin: 4pt 0; }
 .cover-eyebrow {
-  font-size: 8pt;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--teal);
+  font-size: 9pt; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(255,255,255,.92);
 }
 html[lang="ar"] .cover-eyebrow { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
 .cover-tagline {
-  font-size: 28pt;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.15;
-  margin-top: 4pt;
+  font-size: 30pt; font-weight: 700;
+  color: #fff; line-height: 1.15; margin-top: 2pt;
 }
 html[lang="ar"] .cover-tagline { font-family: 'Cairo', sans-serif; }
 .cover-desc {
-  font-size: 13pt;
-  color: rgba(255,255,255,.75);
-  font-weight: 400;
-  line-height: 1.5;
+  font-size: 13pt; color: rgba(255,255,255,.80);
+  font-weight: 400; line-height: 1.5;
 }
 html[lang="ar"] .cover-desc { font-family: 'Cairo', sans-serif; }
+.cover-bottom { display: flex; flex-direction: column; gap: 8pt; align-items: flex-start; }
+html[lang="ar"] .cover-bottom { align-items: flex-end; }
+.cover-parent { font-size: 9pt; color: rgba(255,255,255,.62); }
+html[lang="ar"] .cover-parent { font-family: 'Cairo', sans-serif; }
 
-.cover-bottom {
-  display: flex;
-  flex-direction: column;
-  gap: 10pt;
-  align-items: flex-start;
-}
-.cover-parent {
-  font-size: 9pt;
-  color: rgba(255,255,255,.5);
-  font-style: italic;
-}
-html[lang="ar"] .cover-parent { font-family: 'Cairo', sans-serif; font-style: normal; }
-
-/* ---------- ABOUT PAGE (page 2) ---------- */
+/* ══════════════════════════
+   ABOUT PAGE (page 2)
+══════════════════════════ */
 .about-split {
-  display: grid;
-  grid-template-columns: 42% 1fr;
-  gap: 18pt;
-  flex: 1;
+  display: grid; grid-template-columns: 42% 1fr;
+  gap: 16pt; flex: 1;
 }
+html[lang="ar"] .about-split { direction: rtl; }
 .about-photo {
-  width: 100%;
-  height: 100%;
-  min-height: 320px;
-  overflow: hidden;
-  border-radius: 8px;
+  width: 100%; height: 100%;
+  min-height: 260px;
+  overflow: hidden; border-radius: 8px;
   background: var(--offwhite);
 }
 .about-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 40%;
   display: block;
 }
-.about-highlights {
-  display: flex;
-  gap: 10pt;
-  margin-top: 16pt;
-}
+.about-highlights { display: flex; gap: 10pt; margin-top: 14pt; }
 .about-highlight-box {
-  flex: 1;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 8pt 10pt;
-  text-align: center;
+  flex: 1; border: 1px solid var(--border);
+  border-radius: 6px; padding: 8pt 10pt; text-align: center;
 }
 .ahb-num {
-  font-size: 18pt;
-  font-weight: 700;
-  color: var(--teal);
-  line-height: 1.1;
-  margin-bottom: 2pt;
+  font-size: 18pt; font-weight: 700;
+  color: var(--teal); line-height: 1.1; margin-bottom: 2pt;
 }
-.ahb-label {
-  font-size: 8pt;
-  color: var(--grey);
-  letter-spacing: .3px;
-}
+.ahb-label { font-size: 8pt; color: var(--grey); letter-spacing: .3px; }
 html[lang="ar"] .ahb-label { font-family: 'Cairo', sans-serif; }
 
-/* ---------- SERVICES PAGE (page 3) ---------- */
+/* ══════════════════════════
+   SERVICES PAGE (page 3)
+══════════════════════════ */
 .svc-band {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 14pt;
-  display: block;
+  width: 100%; height: 150px;
+  object-fit: cover; object-position: center 35%;
+  border-radius: 8px; margin-bottom: 13pt; display: block;
 }
 .svc-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: grid; grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 12pt;
-  flex: 1;
+  gap: 11pt; flex: 1;
 }
 .svc-card {
   background: var(--offwhite);
   border: 1px solid var(--border);
   border-top: 3px solid var(--teal);
-  border-radius: 8px;
-  padding: 14pt;
-  display: flex;
-  flex-direction: column;
+  border-radius: 8px; padding: 11pt 13pt;
+  display: flex; flex-direction: column;
 }
 .svc-card-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(39,184,153,.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8pt;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(39,184,153,.10);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 7pt;
 }
 .svc-card-print-name {
-  font-size: 12pt;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 4pt;
+  font-size: 11.5pt; font-weight: 700;
+  color: var(--navy); margin-bottom: 3pt;
 }
-html[lang="ar"] .svc-card-print-name { font-family: 'Cairo', sans-serif; }
+html[lang="ar"] .svc-card-print-name { font-family: 'Cairo', sans-serif; text-align: right; }
 .svc-card-print-desc {
-  font-size: 9pt;
-  color: var(--grey);
-  line-height: 1.55;
-  margin-bottom: 8pt;
+  font-size: 9.5pt; color: var(--grey);
+  line-height: 1.55; margin-bottom: 7pt;
 }
-html[lang="ar"] .svc-card-print-desc { font-family: 'Cairo', sans-serif; font-size: 10pt; }
+html[lang="ar"] .svc-card-print-desc { font-family: 'Cairo', sans-serif; font-size: 10.5pt; text-align: right; }
 .svc-card-items {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 3pt;
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 3pt;
 }
 .svc-card-items li {
-  font-size: 9pt;
-  color: var(--charcoal);
-  padding-left: 10px;
-  position: relative;
-  line-height: 1.5;
+  font-size: 9.5pt; color: var(--charcoal);
+  padding-left: 11px; position: relative; line-height: 1.5;
 }
 .svc-card-items li::before {
-  content: "·";
-  position: absolute;
-  left: 0;
-  color: var(--teal);
-  font-weight: 700;
+  content: "·"; position: absolute; left: 0;
+  color: var(--teal); font-weight: 700;
 }
 html[lang="ar"] .svc-card-items li {
-  font-family: 'Cairo', sans-serif;
-  font-size: 10pt;
-  padding-left: 0;
-  padding-right: 10px;
+  font-family: 'Cairo', sans-serif; font-size: 10.5pt;
+  padding-left: 0; padding-right: 11px; text-align: right;
 }
 html[lang="ar"] .svc-card-items li::before { left: auto; right: 0; }
 
-/* ---------- SPECIALISED SERVICES (page 4) ---------- */
+/* ══════════════════════════
+   SPECIALISED SERVICES (page 4)
+══════════════════════════ */
 .spec-photos {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 12pt;
-  margin-bottom: 14pt;
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 11pt; margin-bottom: 11pt;
 }
 .spec-photo-card {
-  background: var(--navy);
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  background: var(--navy); border-radius: 8px;
+  overflow: hidden; display: flex; flex-direction: column;
 }
 .spec-photo-card img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
+  width: 100%; height: 155px;
+  object-fit: cover; display: block;
 }
-.spec-caption { padding: 10pt 12pt; }
-.spec-caption .svc-card-print-name { color: #fff; margin-bottom: 3pt; }
-.spec-caption .svc-card-print-desc { color: rgba(255,255,255,.7); margin-bottom: 0; }
-
-.spec-bottom {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12pt;
+.spec-icon-area {
+  height: 155px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(39,184,153,.08);
+  flex-shrink: 0;
 }
+.spec-caption { padding: 9pt 11pt; }
+.spec-caption .svc-card-print-name { color: #fff; margin-bottom: 3pt; font-size: 11pt; }
+html[lang="ar"] .spec-caption .svc-card-print-name { text-align: right; }
+.spec-caption .svc-card-print-desc { color: rgba(255,255,255,.75); margin-bottom: 0; }
+html[lang="ar"] .spec-caption .svc-card-print-desc { text-align: right; }
+.spec-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 11pt; }
 .spec-bottom-card {
   background: var(--offwhite);
   border: 1px solid var(--border);
   border-left: 3px solid var(--teal);
-  border-radius: 8px;
-  padding: 12pt 14pt;
+  border-radius: 8px; padding: 11pt 13pt;
 }
 html[lang="ar"] .spec-bottom-card { border-left: 1px solid var(--border); border-right: 3px solid var(--teal); }
-.spec-bottom-card .svc-card-icon { margin-bottom: 8pt; }
+.spec-bottom-card .svc-card-icon { margin-bottom: 7pt; }
 
-/* ---------- MISSION / VISION / WHY (page 7) ---------- */
+/* ══════════════════════════
+   COVERAGE PAGE (page 5)
+══════════════════════════ */
+
+.coverage-regions {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 11pt; margin-bottom: 11pt;
+}
+.coverage-region-card {
+  background: var(--offwhite);
+  border: 1px solid var(--border);
+  border-radius: 8px; padding: 12pt 12pt;
+}
+.coverage-hq-badge {
+  display: inline-block; font-size: 7pt; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 2pt;
+  border-top: 2px solid var(--gold); padding-top: 2pt;
+}
+html[lang="ar"] .coverage-hq-badge { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
+.coverage-region-label {
+  display: block; font-size: 8pt; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--navy); margin-bottom: 7pt;
+}
+html[lang="ar"] .coverage-region-label { font-family: 'Cairo', sans-serif; letter-spacing: 0; text-align: right; }
+.coverage-city-list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 3pt;
+}
+.coverage-city-list li {
+  font-size: 10pt; color: var(--grey);
+  padding-left: 11px; position: relative; line-height: 1.5;
+}
+.coverage-city-list li::before { content: "·"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+html[lang="ar"] .coverage-city-list li {
+  font-family: 'Cairo', sans-serif; font-size: 10.5pt;
+  padding-left: 0; padding-right: 11px; text-align: right;
+}
+html[lang="ar"] .coverage-city-list li::before { left: auto; right: 0; }
+
+.coverage-note {
+  background: var(--navy-mid); border-radius: 8px;
+  padding: 14px 18px; display: flex; align-items: center; gap: 13px;
+}
+html[lang="ar"] .coverage-note { flex-direction: row-reverse; }
+.coverage-note-icon {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(39,184,153,.15);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.coverage-note-text {
+  font-size: 10.5pt; color: rgba(255,255,255,.85); line-height: 1.65; margin: 0;
+}
+html[lang="ar"] .coverage-note-text { font-family: 'Cairo', sans-serif; font-size: 11pt; text-align: right; }
+
+/* ══════════════════════════
+   TEAM PAGE (page 6)
+══════════════════════════ */
+.team-photo-banner {
+  width: 100%; height: 185px;
+  object-fit: cover; object-position: center 18%;
+  border-radius: 8px; display: block; margin-bottom: 5pt;
+}
+.team-photo-caption {
+  font-size: 7.5pt; color: var(--grey-lt); font-style: italic;
+  margin-bottom: 11pt;
+}
+html[lang="ar"] .team-photo-caption { font-family: 'Cairo', sans-serif; font-style: normal; text-align: right; }
+.team-groups-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 10pt; flex: 1;
+}
+.team-group-card {
+  background: var(--offwhite);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--teal);
+  border-radius: 8px; padding: 11pt 13pt;
+}
+.team-group-eyebrow {
+  font-size: 7.5pt; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 9pt;
+}
+html[lang="ar"] .team-group-eyebrow { font-family: 'Cairo', sans-serif; letter-spacing: 0; text-align: right; }
+.team-group-role {
+  font-size: 11pt; font-weight: 700;
+  color: var(--navy); line-height: 1.2; margin-bottom: 2pt;
+}
+html[lang="ar"] .team-group-role { font-family: 'Cairo', sans-serif; text-align: right; }
+.team-group-desc {
+  font-size: 10pt; color: var(--grey);
+  line-height: 1.55; margin-bottom: 8pt;
+}
+html[lang="ar"] .team-group-desc { font-family: 'Cairo', sans-serif; font-size: 10.5pt; text-align: right; }
+.team-group-desc:last-child { margin-bottom: 0; }
+
+/* ══════════════════════════
+   MISSION / VISION / PARTNERSHIP VALUE (page 7)
+══════════════════════════ */
 .mission-print-split {
-  display: grid;
-  grid-template-columns: 190px 1fr;
-  gap: 16pt;
-  margin-bottom: 14pt;
+  display: grid; grid-template-columns: 185px 1fr;
+  gap: 15pt; margin-bottom: 13pt;
 }
-.mission-print-photo {
-  border-radius: 8px;
-  overflow: hidden;
-  min-height: 220px;
-}
+html[lang="ar"] .mission-print-split { direction: rtl; }
+.mission-print-photo { border-radius: 8px; overflow: hidden; min-height: 210px; }
 .mission-print-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 40%; display: block;
 }
 .mission-print-content { display: flex; flex-direction: column; justify-content: center; }
-.mv-print-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 12pt;
-}
+.mv-print-grid { display: flex; flex-direction: column; gap: 11pt; }
 .mv-print-card {
   background: var(--offwhite);
   border: 1px solid var(--border);
   border-left: 3px solid var(--teal);
-  border-radius: 8px;
-  padding: 12pt 14pt;
+  border-radius: 8px; padding: 11pt 13pt;
 }
 html[lang="ar"] .mv-print-card { border-left: 1px solid var(--border); border-right: 3px solid var(--teal); }
 .mv-print-label {
-  font-size: 8pt;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 4pt;
+  font-size: 7.5pt; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 3pt;
 }
-html[lang="ar"] .mv-print-label { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
+html[lang="ar"] .mv-print-label { font-family: 'Cairo', sans-serif; letter-spacing: 0; text-align: right; }
 .mv-print-heading {
-  font-size: 13pt;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 4pt;
+  font-size: 12.5pt; font-weight: 700;
+  color: var(--navy); margin-bottom: 4pt;
 }
-html[lang="ar"] .mv-print-heading { font-family: 'Cairo', sans-serif; }
+html[lang="ar"] .mv-print-heading { font-family: 'Cairo', sans-serif; text-align: right; }
 .mv-print-text {
-  font-size: 10pt;
-  color: var(--charcoal);
-  line-height: 1.6;
+  font-size: 10.5pt; color: var(--charcoal); line-height: 1.6;
 }
-html[lang="ar"] .mv-print-text { font-family: 'Cairo', sans-serif; font-size: 11pt; line-height: 1.75; text-align: right; }
-
-.why-print-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10pt;
+html[lang="ar"] .mv-print-text {
+  font-family: 'Cairo', sans-serif;
+  font-size: 11.5pt; line-height: 1.75; text-align: right;
 }
+.why-print-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; }
 .why-print-card {
   background: var(--offwhite);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 10pt 12pt;
-  display: flex;
-  flex-direction: column;
-  gap: 2pt;
+  border-radius: 8px; padding: 10pt 12pt;
+  display: flex; flex-direction: column; gap: 2pt;
 }
 .why-print-num {
-  font-size: 9pt;
-  font-weight: 700;
-  color: var(--gold);
-  letter-spacing: 1px;
-  margin-bottom: 2pt;
+  font-size: 8.5pt; font-weight: 700;
+  color: var(--gold); letter-spacing: 1px; margin-bottom: 2pt;
 }
 .why-print-name {
-  font-size: 11pt;
-  font-weight: 700;
-  color: var(--navy);
+  font-size: 11pt; font-weight: 700; color: var(--navy);
 }
-html[lang="ar"] .why-print-name { font-family: 'Cairo', sans-serif; }
+html[lang="ar"] .why-print-name { font-family: 'Cairo', sans-serif; text-align: right; }
 .why-print-desc {
-  font-size: 9pt;
-  color: var(--grey);
-  line-height: 1.55;
+  font-size: 10pt; color: var(--grey); line-height: 1.55;
 }
-html[lang="ar"] .why-print-desc { font-family: 'Cairo', sans-serif; font-size: 10pt; }
+html[lang="ar"] .why-print-desc { font-family: 'Cairo', sans-serif; font-size: 10.5pt; text-align: right; }
 
-/* ---------- CONTACT (page 8) ---------- */
-.contact-print-grid {
-  display: grid;
-  grid-template-columns: 1fr 240px;
-  gap: 16pt;
-  flex: 1;
+/* ══════════════════════════
+   CONTACT / PARTNERSHIP ENQUIRIES (page 8)
+══════════════════════════ */
+.contact-intro {
+  font-size: 11pt; color: var(--charcoal);
+  line-height: 1.65; margin-bottom: 13pt;
 }
+html[lang="ar"] .contact-intro { font-family: 'Cairo', sans-serif; font-size: 12pt; text-align: right; }
+
+.contact-print-grid {
+  display: grid; grid-template-columns: 1fr 200px;
+  gap: 15pt; flex: 1;
+}
+html[lang="ar"] .contact-print-grid { direction: rtl; }
 .contact-print-item {
-  display: flex;
-  gap: 10pt;
-  padding: 10pt 0;
-  border-bottom: 1px solid var(--border);
+  display: flex; gap: 10pt;
+  padding: 9pt 0; border-bottom: 1px solid var(--border);
 }
 .contact-print-item:last-child { border-bottom: none; }
-.cp-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--teal);
-  border-radius: 50%;
-  margin-top: 5pt;
-  flex-shrink: 0;
-}
 html[lang="ar"] .contact-print-item { direction: rtl; }
+.cp-dot {
+  width: 7px; height: 7px;
+  background: var(--teal); border-radius: 50%;
+  margin-top: 4pt; flex-shrink: 0;
+}
 .cp-label {
-  font-size: 8pt;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 2pt;
+  font-size: 7.5pt; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 2pt;
 }
-html[lang="ar"] .cp-label { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
+html[lang="ar"] .cp-label { font-family: 'Cairo', sans-serif; letter-spacing: 0; text-align: right; }
 .cp-value {
-  font-size: 10pt;
-  font-weight: 600;
-  color: var(--charcoal);
-  line-height: 1.5;
+  font-size: 10.5pt; font-weight: 600;
+  color: var(--charcoal); line-height: 1.5;
 }
-html[lang="ar"] .cp-value { font-family: 'Cairo', sans-serif; font-size: 11pt; }
-.cp-sub {
-  font-size: 9pt;
-  color: var(--grey);
-  margin-top: 1pt;
-}
-html[lang="ar"] .cp-sub { font-family: 'Cairo', sans-serif; font-size: 10pt; }
+html[lang="ar"] .cp-value { font-family: 'Cairo', sans-serif; font-size: 11.5pt; }
+.cp-sub { font-size: 9pt; color: var(--grey); margin-top: 1pt; }
+html[lang="ar"] .cp-sub { font-family: 'Cairo', sans-serif; font-size: 10pt; text-align: right; }
 
 .contact-print-right {
-  background: var(--navy);
-  color: #fff;
-  border-radius: 8px;
-  padding: 18pt 16pt;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 8pt;
+  background: var(--navy); color: #fff;
+  border-radius: 8px; padding: 16pt 14pt;
+  display: flex; flex-direction: column;
+  align-items: center; text-align: center; gap: 8pt;
 }
-.cpr-logo { height: 36px; width: auto; filter: brightness(0) invert(1); }
-.cpr-title {
-  font-size: 11pt;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.3;
-}
+.cpr-logo { height: 30px; width: auto; filter: brightness(0) invert(1); }
+.cpr-title { font-size: 11pt; font-weight: 700; color: #fff; line-height: 1.3; }
 html[lang="ar"] .cpr-title { font-family: 'Cairo', sans-serif; font-size: 12pt; }
-.cpr-sub {
-  font-size: 9pt;
-  color: rgba(255,255,255,.75);
-  line-height: 1.6;
+.cpr-divider { width: 40px; height: 1px; background: rgba(255,255,255,.2); }
+.cpr-offer-label {
+  font-size: 7.5pt; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--teal);
+  align-self: flex-start;
 }
-html[lang="ar"] .cpr-sub { font-family: 'Cairo', sans-serif; font-size: 10pt; }
+html[lang="ar"] .cpr-offer-label { font-family: 'Cairo', sans-serif; letter-spacing: 0; align-self: flex-end; }
+.cpr-offer-list {
+  list-style: none; padding: 0; margin: 0;
+  width: 100%; display: flex; flex-direction: column; gap: 5pt;
+  text-align: left;
+}
+html[lang="ar"] .cpr-offer-list { text-align: right; }
+.cpr-offer-list li {
+  font-size: 8.5pt; color: rgba(255,255,255,.82);
+  line-height: 1.5; padding-left: 11px; position: relative;
+}
+.cpr-offer-list li::before { content: "·"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+html[lang="ar"] .cpr-offer-list li { font-family: 'Cairo', sans-serif; font-size: 9pt; padding-left: 0; padding-right: 11px; }
+html[lang="ar"] .cpr-offer-list li::before { left: auto; right: 0; }
 .cpr-badge {
-  margin-top: 8pt;
-  padding: 5pt 10pt;
-  background: rgba(39,184,153,.15);
-  color: var(--teal);
-  font-size: 8pt;
-  font-weight: 700;
-  letter-spacing: 1px;
-  border-radius: 3px;
+  margin-top: auto; padding: 4pt 8pt;
+  background: rgba(39,184,153,.15); color: var(--teal);
+  font-size: 7.5pt; font-weight: 700; letter-spacing: 1px;
+  border-radius: 3px; text-align: center;
 }
 html[lang="ar"] .cpr-badge { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
 
 .disclaimer-print {
-  margin-top: 14pt;
-  padding: 10pt 12pt;
+  margin-top: 11pt; padding: 9pt 11pt;
   background: var(--offwhite);
   border-left: 2px solid var(--grey-lt);
   border-radius: 4px;
 }
 html[lang="ar"] .disclaimer-print { border-left: none; border-right: 2px solid var(--grey-lt); }
-.disclaimer-print p {
-  font-size: 7.5pt;
-  color: var(--grey);
-  line-height: 1.55;
-}
+.disclaimer-print p { font-size: 7.5pt; color: var(--grey); line-height: 1.55; }
 html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-size: 8.5pt; text-align: right; }
 
 /* ---------- Print overrides ---------- */
 @media print {
   body { background: #fff; padding: 0; }
-  .page {
-    width: 210mm;
-    height: 297mm;
-    margin: 0;
-    box-shadow: none;
-    page-break-after: always;
-  }
+  .page { width: 210mm; height: 297mm; margin: 0; box-shadow: none; page-break-after: always; }
   .page:last-child { page-break-after: auto; }
-  .body-text { font-size: 11pt; line-height: 1.65; }
-  html[lang="ar"] .body-text { font-size: 12pt; }
-  .svc-card-print-name { font-size: 12pt; }
-  .svc-card-print-desc { font-size: 9pt; }
-  html[lang="ar"] .svc-card-print-desc { font-size: 10pt; }
-  .mv-print-heading { font-size: 13pt; }
-  .mv-print-text { font-size: 10pt; }
-  html[lang="ar"] .mv-print-text { font-size: 11pt; }
-  .why-print-name { font-size: 11pt; }
-  .why-print-desc { font-size: 9pt; }
-  html[lang="ar"] .why-print-desc { font-size: 10pt; }
-  .cp-label { font-size: 8pt; }
-  .cp-value { font-size: 10pt; }
-  html[lang="ar"] .cp-value { font-size: 11pt; }
-  .cp-sub { font-size: 9pt; }
-  html[lang="ar"] .cp-sub { font-size: 10pt; }
 }
 </style>
 </head>
@@ -675,35 +585,29 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
 <div class="page cover-page">
   <img src="../Assets/Compassionate Home Blood Pressure Check.png" class="cover-bg" alt="">
   <div class="cover-overlay"></div>
-
   <div class="lang-switch">
     <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
     <button id="btn-ar" onclick="setLang('ar')">AR</button>
   </div>
-
   <div class="cover-inner">
     <div class="cover-top">
-      <div></div>
-
-    </div>
-
-    <div class="cover-center">
       <img src="../Assets/Medoor_Logo.png" alt="medoor" class="cover-logo">
+    </div>
+    <div class="cover-center">
       <div class="cover-gold-rule"></div>
       <div class="cover-eyebrow">
-        <span class="en-i">Company Profile · 2026</span>
-        <span class="ar-i">ملف الشركة · 2026</span>
+        <span class="en-i">Corporate Partnership Profile · 2026</span>
+        <span class="ar-i">ملف الشراكة المؤسسية · 2026</span>
       </div>
       <div class="cover-tagline">
         <span class="en">Medical to Door</span>
-        <span class="ar">ناتيك بالرعاية</span>
+        <span class="ar">نأتيك بالرعاية</span>
       </div>
       <div class="cover-desc">
-        <span class="en">Home Healthcare Services</span>
-        <span class="ar">خدمات الرعاية الصحية المنزلية</span>
+        <span class="en">Professional Home Healthcare Services</span>
+        <span class="ar">خدمات الرعاية الصحية المنزلية المتخصصة</span>
       </div>
     </div>
-
     <div class="cover-bottom">
       <div class="cover-parent">
         <span class="en">A subsidiary of Alinaya Alrafia Medical Company</span>
@@ -714,20 +618,17 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
 </div>
 
 <!-- ══════════════════════════════════════════════════════
-     PAGE 2 — ABOUT MEDOOR
+     PAGE 2 — COMPANY OVERVIEW
 ══════════════════════════════════════════════════════ -->
 <div class="page">
   <div class="inner-page">
     <div class="page-header">
-      <div class="ph-logo">
-        <img src="../Assets/Medoor_Logo.png" alt="medoor" class="ph-logo-img">
-      </div>
+      <div class="ph-logo"><img src="../Assets/Medoor_Logo.png" alt="medoor" class="ph-logo-img"></div>
       <span class="ph-section-label">
-        <span class="en-i">About</span>
-        <span class="ar-i">عن ميدور</span>
+        <span class="en-i">Company Overview</span>
+        <span class="ar-i">نظرة عامة</span>
       </span>
     </div>
-
     <div class="page-content">
       <div class="section-eyebrow">
         <span class="en-i">Who We Are</span>
@@ -738,63 +639,56 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
         <span class="ar">عن ميدور</span>
       </div>
       <div class="teal-rule"></div>
-
       <div class="about-split">
         <div class="about-photo">
           <img src="../Assets/Warm Arabic Living Room Consultation.png" alt="Home consultation">
         </div>
         <div style="display:flex; flex-direction:column;">
           <p class="body-text">
-            <span class="en">Medoor is a home healthcare company delivering professional medical services directly to patients across Saudi Arabia. Founded under the Alinaya Alrafia Medical Company group, we bring licensed physicians, nurses, and specialist clinicians to your door — enabling recovery and comfort without hospital visits.</span>
-            <span class="ar">ميدور شركة رعاية صحية منزلية تُقدِّم الخدمات الطبية المتخصصة للمرضى في منازلهم على امتداد المملكة. تأسست تحت مظلة مجموعة شركة العناية الرفيعة الطبية، وتضم أطباءً وممرضين وأخصائيين مرخصين يصلون إليك مباشرة.</span>
+            <span class="en">Medoor is a home healthcare company delivering professional clinical services to patients across Saudi Arabia. Operating as a subsidiary of Alinaya Alrafia Medical Company, Medoor coordinates a multidisciplinary care team — bringing licensed physicians, nurses, and specialist clinicians directly to the patient at home.</span>
+            <span class="ar">ميدور شركة رعاية صحية منزلية تُقدِّم الخدمات الطبية المتخصصة للمرضى في منازلهم على امتداد المملكة العربية السعودية. تعمل كشركة تابعة لشركة العناية الرفيعة الطبية، وتُنسِّق فريقاً متعدد التخصصات يضم أطباءً وممرضين ومتخصصين مرخصين يصلون إلى المريض في منزله.</span>
           </p>
           <p class="body-text">
-            <span class="en">Our model coordinates a professional care team operating in your home — maintaining clinical standards while reducing the burden on families and healthcare facilities.</span>
-            <span class="ar">يُنسِّق نموذجنا فريق رعاية متخصص يعمل في منزلك، محافظاً على المعايير الطبية مع تخفيف العبء عن الأسر والمنشآت الصحية.</span>
+            <span class="en">For institutional partners — hospitals, insurers, and corporate clients — Medoor provides a coordinated care pathway supporting discharge follow-up, post-acute recovery, and ongoing chronic disease management, while maintaining professional clinical documentation throughout.</span>
+            <span class="ar">للشركاء المؤسسيين — من مستشفيات وشركات تأمين وعملاء مؤسسيين — يوفر ميدور مسار رعاية منسقاً يدعم متابعة التصريح من المستشفى والتعافي والإدارة المستمرة للأمراض المزمنة، مع الحفاظ على التوثيق الطبي المهني طوال فترة الرعاية.</span>
           </p>
-
           <div class="about-highlights">
             <div class="about-highlight-box">
               <div class="ahb-num"><span class="en-i">3</span><span class="ar-i">٣</span></div>
               <div class="ahb-label"><span class="en-i">Coverage Regions</span><span class="ar-i">مناطق تغطية</span></div>
             </div>
             <div class="about-highlight-box">
-              <div class="ahb-num"><span class="en-i">8</span><span class="ar-i">٨</span></div>
-              <div class="ahb-label"><span class="en-i">Specialist Roles</span><span class="ar-i">تخصصات طبية</span></div>
+              <div class="ahb-num" style="font-size:13pt; line-height:1.2;"><span class="en">Multi-<br>disciplinary</span><span class="ar">متعدد<br>التخصصات</span></div>
+              <div class="ahb-label"><span class="en-i">Clinical Team</span><span class="ar-i">الفريق الطبي</span></div>
             </div>
             <div class="about-highlight-box">
-              <div class="ahb-num">24/7</div>
-              <div class="ahb-label"><span class="en-i">Emergency Support</span><span class="ar-i">دعم الطوارئ</span></div>
+              <div class="ahb-num" style="font-size:15pt;"><span class="en-i">KSA</span><span class="ar-i">المملكة</span></div>
+              <div class="ahb-label"><span class="en-i">Operating Base</span><span class="ar-i">نطاق التشغيل</span></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="page-footer">
       <span class="pf-text"><span class="en-i">medoor Home Healthcare · Alinaya Alrafia Medical Company · 2026</span><span class="ar-i">ميدور للرعاية الصحية المنزلية · شركة العناية الرفيعة الطبية · 2026</span></span>
       <div class="pf-dot"></div>
-      <span class="pf-text">2</span>
-
+      <span class="pf-page-num">2</span>
     </div>
   </div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════
-     PAGE 3 — OUR SERVICES
+     PAGE 3 — SERVICE CAPABILITIES
 ══════════════════════════════════════════════════════ -->
 <div class="page">
   <div class="inner-page">
     <div class="page-header">
-      <div class="ph-logo">
-        <img src="../Assets/Medoor_Logo.png" alt="medoor" class="ph-logo-img">
-      </div>
+      <div class="ph-logo"><img src="../Assets/Medoor_Logo.png" alt="medoor" class="ph-logo-img"></div>
       <span class="ph-section-label">
-        <span class="en-i">Our Services</span>
-        <span class="ar-i">خدماتنا</span>
+        <span class="en-i">Service Capabilities</span>
+        <span class="ar-i">القدرات الخدمية</span>
       </span>
     </div>
-
     <div class="page-content">
       <div class="section-eyebrow">
         <span class="en-i">What We Offer</span>
@@ -805,18 +699,12 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
         <span class="ar">خدماتنا</span>
       </div>
       <div class="teal-rule"></div>
-
       <img src="../Assets/Healthcare Team in Riyadh at Sunset.png" alt="Medoor healthcare team" class="svc-band">
-
       <div class="svc-grid">
         <!-- Card 1 — Primary Home Care -->
         <div class="svc-card">
           <div class="svc-card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
-              <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/>
-              <circle cx="20" cy="10" r="2"/>
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </div>
           <div class="svc-card-print-name"><span class="en-i">Primary Home Care</span><span class="ar-i">الرعاية الأولية المنزلية</span></div>
           <div class="svc-card-print-desc">
@@ -830,96 +718,78 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
             <li><span class="en-i">Elderly care</span><span class="ar-i">رعاية كبار السن</span></li>
           </ul>
         </div>
-
-        <!-- Card 2 — Specialty Care -->
+        <!-- Card 2 — Specialist Care -->
         <div class="svc-card">
           <div class="svc-card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="12" y1="8" x2="12" y2="16"/>
-              <line x1="8" y1="12" x2="16" y2="12"/>
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
           </div>
-          <div class="svc-card-print-name"><span class="en-i">Specialty Care</span><span class="ar-i">الرعاية التخصصية</span></div>
+          <div class="svc-card-print-name"><span class="en-i">Specialist Care</span><span class="ar-i">الرعاية التخصصية</span></div>
           <div class="svc-card-print-desc">
-            <span class="en">Specialist visits across multiple clinical disciplines.</span>
-            <span class="ar">زيارات متخصصة تغطي تخصصات طبية متعددة.</span>
+            <span class="en">Home visits across multiple clinical disciplines.</span>
+            <span class="ar">زيارات تخصصية تغطي تخصصات سريرية متعددة.</span>
           </div>
           <ul class="svc-card-items">
-            <li><span class="en-i">Pediatrics</span><span class="ar-i">طب الأطفال</span></li>
+            <li><span class="en-i">Paediatrics</span><span class="ar-i">طب الأطفال</span></li>
             <li><span class="en-i">Obstetrics &amp; Postnatal</span><span class="ar-i">التوليد وما بعد الولادة</span></li>
             <li><span class="en-i">Physical therapy</span><span class="ar-i">العلاج الطبيعي</span></li>
             <li><span class="en-i">Psychological support</span><span class="ar-i">الدعم النفسي</span></li>
           </ul>
         </div>
-
         <!-- Card 3 — Diagnostic Services -->
         <div class="svc-card">
           <div class="svc-card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <div class="svc-card-print-name"><span class="en-i">Diagnostic Services</span><span class="ar-i">الخدمات التشخيصية</span></div>
           <div class="svc-card-print-desc">
-            <span class="en">In-home laboratory and imaging services for accurate clinical assessment.</span>
-            <span class="ar">خدمات مختبرية وتصويرية في المنزل لتقييم سريري دقيق.</span>
+            <span class="en">In-home laboratory and monitoring for clinical assessment.</span>
+            <span class="ar">خدمات مختبرية ومراقبة في المنزل للتقييم السريري.</span>
           </div>
           <ul class="svc-card-items">
             <li><span class="en-i">Blood &amp; lab tests</span><span class="ar-i">تحاليل الدم والمختبر</span></li>
-            <li><span class="en-i">ECG &amp; monitoring</span><span class="ar-i">تخطيط القلب والمراقبة</span></li>
-            <li><span class="en-i">Portable imaging</span><span class="ar-i">التصوير المحمول</span></li>
+            <li><span class="en-i">ECG &amp; vital monitoring</span><span class="ar-i">تخطيط القلب ومراقبة العلامات</span></li>
             <li><span class="en-i">Health screenings</span><span class="ar-i">الفحوصات الصحية</span></li>
           </ul>
         </div>
-
-        <!-- Card 4 — Corporate Health -->
+        <!-- Card 4 — Corporate & Occupational Health -->
         <div class="svc-card">
           <div class="svc-card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
           </div>
-          <div class="svc-card-print-name"><span class="en-i">Corporate Health</span><span class="ar-i">الصحة المؤسسية</span></div>
+          <div class="svc-card-print-name"><span class="en-i">Corporate &amp; Occupational Health</span><span class="ar-i">الصحة المؤسسية والمهنية</span></div>
           <div class="svc-card-print-desc">
-            <span class="en">Occupational health programs and event medical coverage for organisations.</span>
-            <span class="ar">برامج الصحة المهنية والتغطية الطبية للفعاليات.</span>
+            <span class="en">Occupational health programmes and event medical coverage.</span>
+            <span class="ar">برامج الصحة المهنية والتغطية الطبية للفعاليات والمواقع.</span>
           </div>
           <ul class="svc-card-items">
             <li><span class="en-i">Executive medical check-ups</span><span class="ar-i">الفحوصات الطبية للمديرين</span></li>
-            <li><span class="en-i">Event &amp; site medical cover</span><span class="ar-i">تغطية الفعاليات والمواقع</span></li>
-            <li><span class="en-i">Employee wellness programs</span><span class="ar-i">برامج رفاه الموظفين</span></li>
+            <li><span class="en-i">Event &amp; site medical cover</span><span class="ar-i">التغطية الطبية للفعاليات والمواقع</span></li>
+            <li><span class="en-i">Employee health &amp; wellbeing programmes</span><span class="ar-i">برامج صحة الموظفين وعافيتهم</span></li>
             <li><span class="en-i">Occupational health assessments</span><span class="ar-i">التقييمات الصحية المهنية</span></li>
           </ul>
         </div>
       </div>
     </div>
-
     <div class="page-footer">
       <span class="pf-text"><span class="en-i">medoor Home Healthcare · Alinaya Alrafia Medical Company · 2026</span><span class="ar-i">ميدور للرعاية الصحية المنزلية · شركة العناية الرفيعة الطبية · 2026</span></span>
       <div class="pf-dot"></div>
-      <span class="pf-text">3</span>
-
+      <span class="pf-page-num">3</span>
     </div>
   </div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════
-     PAGE 4 — SPECIALISED SERVICES
+     PAGE 4 — SPECIALISED HOME CARE
 ══════════════════════════════════════════════════════ -->
 <div class="page">
   <div class="inner-page">
     <div class="page-header">
-      <div class="ph-logo">
-        <img src="../Assets/Medoor_Logo.png" alt="medoor" class="ph-logo-img">
-      </div>
+      <div class="ph-logo"><img src="../Assets/Medoor_Logo.png" alt="medoor" class="ph-logo-img"></div>
       <span class="ph-section-label">
         <span class="en-i">Specialised Services</span>
         <span class="ar-i">الخدمات التخصصية</span>
       </span>
     </div>
-
     <div class="page-content">
       <div class="section-eyebrow">
         <span class="en-i">Clinical Expertise</span>
@@ -930,38 +800,36 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
         <span class="ar">الخدمات المنزلية التخصصية</span>
       </div>
       <div class="teal-rule"></div>
-
-      <p class="body-text" style="margin-bottom:14pt;">
-        <span class="en">Beyond routine visits, Medoor provides specialist-level care at home — including postnatal nursing, therapeutic infusions, and comprehensive clinical assessments.</span>
-        <span class="ar">يتخطى ميدور الزيارات الروتينية، إذ يقدم رعاية متخصصة في المنزل تشمل التمريض بعد الولادة والتسريب العلاجي والتقييمات السريرية الشاملة.</span>
+      <p class="body-text" style="margin-bottom:12pt;">
+        <span class="en">Beyond routine visits, Medoor provides specialist-level care at home — including postnatal nursing, clinical infusion therapy, and comprehensive paediatric assessments.</span>
+        <span class="ar">يتخطى ميدور الزيارات الروتينية، إذ يقدم رعاية متخصصة في المنزل تشمل التمريض بعد الولادة والعلاج الوريدي والتقييمات الشاملة للأطفال.</span>
       </p>
-
       <div class="spec-photos">
-        <!-- Postnatal -->
+        <!-- Postnatal Care -->
         <div class="spec-photo-card">
-          <img src="../Assets/Tender Caregiver and Newborn Moment.png" alt="Postnatal care">
+          <img src="../Assets/Tender Caregiver and Newborn Moment.png" alt="Postnatal care" style="object-position: center 20%;">
           <div class="spec-caption">
             <div class="svc-card-print-name"><span class="en-i">Postnatal Care</span><span class="ar-i">رعاية ما بعد الولادة</span></div>
             <div class="svc-card-print-desc">
               <span class="en">Specialist nursing visits for mother and newborn in the critical first weeks.</span>
-              <span class="ar">زيارات تمريضية متخصصة للأم والمولود في الأسابيع الأولى.</span>
+              <span class="ar">زيارات تمريضية متخصصة للأم والمولود في الأسابيع الأولى الحرجة.</span>
             </div>
           </div>
         </div>
         <!-- IV Therapy -->
         <div class="spec-photo-card">
-          <img src="../Assets/Luxury Citrus IV Wellness Infusion.png" alt="IV therapy">
+          <img src="../Assets/Luxury IV Therapy Lounge.png" alt="IV therapy" style="object-position: center 25%;">
           <div class="spec-caption">
-            <div class="svc-card-print-name"><span class="en-i">IV Therapy &amp; Vitamins</span><span class="ar-i">التسريب الوريدي والفيتامينات</span></div>
+            <div class="svc-card-print-name"><span class="en-i">IV Therapy &amp; Clinical Infusions</span><span class="ar-i">العلاج الوريدي والتسريب الطبي</span></div>
             <div class="svc-card-print-desc">
-              <span class="en">In-home intravenous infusions, vitamin drips, and hydration therapy.</span>
-              <span class="ar">تسريب وريدي وقطارات فيتامينات ومعالجة إماهة في المنزل.</span>
+              <span class="en">In-home intravenous therapy, vitamin infusions, and hydration treatment administered by qualified nursing staff.</span>
+              <span class="ar">محاليل الفيتامينات الوريدية والعلاج التعويضي في المنزل على يد ممرضين مؤهلين.</span>
             </div>
           </div>
         </div>
-        <!-- Paediatric -->
+        <!-- Paediatric Assessment -->
         <div class="spec-photo-card">
-          <img src="../Assets/Caring Nurse Checks Young Boy’s Heart.png" alt="Paediatric assessment">
+          <img src="../Assets/Paediatric_Assessment.png" alt="Paediatric assessment" style="object-position: center center;">
           <div class="spec-caption">
             <div class="svc-card-print-name"><span class="en-i">Paediatric Assessment</span><span class="ar-i">تقييم الأطفال</span></div>
             <div class="svc-card-print-desc">
@@ -971,48 +839,35 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
           </div>
         </div>
       </div>
-
       <div class="spec-bottom">
         <!-- Post-Surgical Recovery -->
         <div class="spec-bottom-card">
           <div class="svc-card-icon">
-            <!-- Bandage icon -->
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="9" width="20" height="6" rx="3"/>
-              <rect x="9" y="2" width="6" height="20" rx="3"/>
-              <line x1="12" y1="10.5" x2="12" y2="13.5"/>
-              <line x1="10.5" y1="12" x2="13.5" y2="12"/>
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="20" height="6" rx="3"/><rect x="9" y="2" width="6" height="20" rx="3"/></svg>
           </div>
           <div class="svc-card-print-name"><span class="en-i">Post-Surgical Recovery</span><span class="ar-i">التعافي بعد الجراحة</span></div>
           <div class="svc-card-print-desc">
-            <span class="en">Supervised wound care, medication management, and rehabilitation visits after discharge.</span>
-            <span class="ar">رعاية الجروح الخاضعة للإشراف وإدارة الأدوية وزيارات إعادة التأهيل بعد الخروج من المستشفى.</span>
+            <span class="en">Supervised wound care, medication management, and rehabilitation visits after hospital discharge.</span>
+            <span class="ar">رعاية الجروح وإدارة الأدوية وزيارات إعادة التأهيل بعد الخروج من المستشفى تحت إشراف متخصص.</span>
           </div>
         </div>
         <!-- Chronic Disease Management -->
         <div class="spec-bottom-card">
           <div class="svc-card-icon">
-            <!-- Heart pulse / activity -->
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-              <polyline points="3.5 12 8 12 10 9 14 15 16 12 20.5 12" stroke="#fff" stroke-width="1.2"/>
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </div>
           <div class="svc-card-print-name"><span class="en-i">Chronic Disease Management</span><span class="ar-i">إدارة الأمراض المزمنة</span></div>
           <div class="svc-card-print-desc">
-            <span class="en">Ongoing care for diabetes, hypertension, and other long-term conditions — monitored from home.</span>
-            <span class="ar">رعاية مستمرة لمرضى السكري وضغط الدم والحالات المزمنة الأخرى — من المنزل.</span>
+            <span class="en">Ongoing care for diabetes, hypertension, and other long-term conditions — monitored and coordinated from home.</span>
+            <span class="ar">رعاية مستمرة لمرضى السكري وضغط الدم والحالات المزمنة الأخرى — يُراقَب تطورها وتُنسَّق من المنزل.</span>
           </div>
         </div>
       </div>
     </div>
-
     <div class="page-footer">
       <span class="pf-text"><span class="en-i">medoor Home Healthcare · Alinaya Alrafia Medical Company · 2026</span><span class="ar-i">ميدور للرعاية الصحية المنزلية · شركة العناية الرفيعة الطبية · 2026</span></span>
       <div class="pf-dot"></div>
-      <span class="pf-text">4</span>
-
+      <span class="pf-page-num">4</span>
     </div>
   </div>
 </div>
@@ -1023,15 +878,12 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
 <div class="page">
   <div class="inner-page">
     <div class="page-header">
-      <div class="ph-logo">
-        <img src="../Assets/Medoor_Logo.png" alt="medoor" class="ph-logo-img">
-      </div>
+      <div class="ph-logo"><img src="../Assets/Medoor_Logo.png" alt="medoor" class="ph-logo-img"></div>
       <span class="ph-section-label">
-        <span class="en-i">Coverage</span>
-        <span class="ar-i">التغطية</span>
+        <span class="en-i">Geographic Coverage</span>
+        <span class="ar-i">التغطية الجغرافية</span>
       </span>
     </div>
-
     <div class="page-content">
       <div class="section-eyebrow">
         <span class="en-i">Service Areas</span>
@@ -1042,168 +894,186 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
         <span class="ar">نطاق خدمتنا</span>
       </div>
       <div class="teal-rule"></div>
-
-      <p class="body-text" style="margin-bottom:14pt;">
-        <span class="en">Medoor serves patients across three primary regions in Saudi Arabia — operating from a Riyadh hub with active service in the Western and Eastern regions. Our clinical teams coordinate from each region to ensure fast, local response.</span>
-        <span class="ar">يخدم ميدور المرضى في ثلاث مناطق رئيسية في المملكة العربية السعودية — بمقر رئيسي في الرياض وعمليات نشطة في المنطقتين الغربية والشرقية. تنسق فرقنا الطبية من كل منطقة لضمان الاستجابة السريعة والمحلية.</span>
+      <p class="body-text" style="margin-bottom:12pt;">
+        <span class="en">Medoor serves patients across three primary regions in Saudi Arabia, coordinating from a Riyadh base with service presence in the Western and Eastern regions.</span>
+        <span class="ar">يخدم ميدور المرضى في ثلاث مناطق رئيسية في المملكة العربية السعودية، بتنسيق من مقر الرياض وحضور خدمي في المنطقتين الغربية والشرقية.</span>
       </p>
 
-      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:18pt;">
+      <!-- Coverage photo banner — Riyadh as geographic anchor -->
+      <div style="position:relative; border-radius:8px; overflow:hidden; margin-bottom:13pt;">
+        <img src="../Assets/Healthcare Team in Riyadh at Sunset.png" alt="Medoor team, Riyadh" style="width:100%; height:130px; object-fit:cover; object-position:center 40%; display:block;">
+        <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(13,27,62,.72) 0%, rgba(13,27,62,.18) 60%);"></div>
+        <div style="position:absolute; top:0; left:0; bottom:0; padding:14pt 18pt; display:flex; flex-direction:column; justify-content:center; gap:4pt;">
+          <div style="font-size:7.5pt; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--teal);"><span class="en-i">Headquarters</span><span class="ar-i" style="font-family:'Cairo',sans-serif; letter-spacing:0;">المقر الرئيسي</span></div>
+          <div style="font-size:15pt; font-weight:700; color:#fff; line-height:1.2;"><span class="en-i">Riyadh, Saudi Arabia</span><span class="ar-i" style="font-family:'Cairo',sans-serif;">الرياض، المملكة العربية السعودية</span></div>
+          <div style="font-size:9pt; color:rgba(255,255,255,.75);"><span class="en-i">Serving patients across three regions</span><span class="ar-i" style="font-family:'Cairo',sans-serif;">نخدم المرضى في ثلاث مناطق</span></div>
+        </div>
+      </div>
+
+      <div class="coverage-regions">
         <!-- Central (HQ) -->
-        <div style="background:#f7f9fb; border:1px solid #e5e7eb; border-top:3px solid #C9A84C; border-radius:8px; padding:18px 16px;">
-          <div style="font-size:7pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#C9A84C;margin-bottom:4px;"><span class="en-i">HQ</span><span class="ar-i">المقر الرئيسي</span></div>
-          <div style="font-size:8pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#121E40;margin-bottom:8px;"><span class="en-i">Central Region</span><span class="ar-i">المنطقة الوسطى</span></div>
-          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;">
-            <li style="font-size:10px;color:#6B7280;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#27B899;">·</span><span class="en-i">Riyadh</span><span class="ar-i">الرياض</span></li>
-            <li style="font-size:10px;color:#6B7280;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#27B899;">·</span><span class="en-i">Al-Kharj</span><span class="ar-i">الخرج</span></li>
-            <li style="font-size:10px;color:#6B7280;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#27B899;">·</span><span class="en-i">Qassim</span><span class="ar-i">القصيم</span></li>
+        <div class="coverage-region-card">
+          <span class="coverage-hq-badge"><span class="en-i">HQ</span><span class="ar-i">المقر</span></span>
+          <span class="coverage-region-label"><span class="en-i">Central Region</span><span class="ar-i">المنطقة الوسطى</span></span>
+          <ul class="coverage-city-list">
+            <li><span class="en-i">Riyadh</span><span class="ar-i">الرياض</span></li>
+            <li><span class="en-i">Al-Kharj</span><span class="ar-i">الخرج</span></li>
+            <li><span class="en-i">Qassim</span><span class="ar-i">القصيم</span></li>
           </ul>
         </div>
         <!-- Western -->
-        <div style="background:#f7f9fb; border:1px solid #e5e7eb; border-top:3px solid #27B899; border-radius:8px; padding:18px 16px;">
-          <div style="font-size:8pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#27B899;margin-bottom:6px;"><span class="en-i">Western Region</span><span class="ar-i">المنطقة الغربية</span></div>
-          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;">
-            <li style="font-size:10px;color:#6B7280;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#27B899;">·</span><span class="en-i">Jeddah</span><span class="ar-i">جدة</span></li>
-            <li style="font-size:10px;color:#6B7280;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#27B899;">·</span><span class="en-i">Makkah</span><span class="ar-i">مكة المكرمة</span></li>
-            <li style="font-size:10px;color:#6B7280;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#27B899;">·</span><span class="en-i">Taif</span><span class="ar-i">الطائف</span></li>
-            <li style="font-size:10px;color:#6B7280;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#27B899;">·</span><span class="en-i">Madinah</span><span class="ar-i">المدينة المنورة</span></li>
-            <li style="font-size:10px;color:#6B7280;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#27B899;">·</span><span class="en-i">Yanbu</span><span class="ar-i">ينبع</span></li>
-            <li style="font-size:10px;color:#6B7280;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#27B899;">·</span><span class="en-i">Rabigh</span><span class="ar-i">رابغ</span></li>
+        <div class="coverage-region-card">
+          <span class="coverage-region-label"><span class="en-i">Western Region</span><span class="ar-i">المنطقة الغربية</span></span>
+          <ul class="coverage-city-list">
+            <li><span class="en-i">Jeddah</span><span class="ar-i">جدة</span></li>
+            <li><span class="en-i">Makkah</span><span class="ar-i">مكة المكرمة</span></li>
+            <li><span class="en-i">Madinah</span><span class="ar-i">المدينة المنورة</span></li>
+            <li><span class="en-i">Taif</span><span class="ar-i">الطائف</span></li>
+            <li><span class="en-i">Yanbu</span><span class="ar-i">ينبع</span></li>
+            <li><span class="en-i">Rabigh</span><span class="ar-i">رابغ</span></li>
           </ul>
         </div>
         <!-- Eastern -->
-        <div style="background:#f7f9fb; border:1px solid #e5e7eb; border-top:3px solid #27B899; border-radius:8px; padding:18px 16px;">
-          <div style="font-size:8pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#27B899;margin-bottom:6px;"><span class="en-i">Eastern Region</span><span class="ar-i">المنطقة الشرقية</span></div>
-          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;">
-            <li style="font-size:10px;color:#6B7280;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#27B899;">·</span><span class="en-i">Khobar</span><span class="ar-i">الخبر</span></li>
-            <li style="font-size:10px;color:#6B7280;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#27B899;">·</span><span class="en-i">Dammam</span><span class="ar-i">الدمام</span></li>
-            <li style="font-size:10px;color:#6B7280;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#27B899;">·</span><span class="en-i">Jubail</span><span class="ar-i">الجبيل</span></li>
-            <li style="font-size:10px;color:#6B7280;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#27B899;">·</span><span class="en-i">Al-Hafouf</span><span class="ar-i">الأحساء / الهفوف</span></li>
-            <li style="font-size:10px;color:#6B7280;padding-left:12px;position:relative;"><span style="position:absolute;left:0;color:#27B899;">·</span><span class="en-i">Qatif</span><span class="ar-i">القطيف</span></li>
+        <div class="coverage-region-card">
+          <span class="coverage-region-label"><span class="en-i">Eastern Region</span><span class="ar-i">المنطقة الشرقية</span></span>
+          <ul class="coverage-city-list">
+            <li><span class="en-i">Dammam</span><span class="ar-i">الدمام</span></li>
+            <li><span class="en-i">Khobar</span><span class="ar-i">الخبر</span></li>
+            <li><span class="en-i">Jubail</span><span class="ar-i">الجبيل</span></li>
+            <li><span class="en-i">Al-Ahsa</span><span class="ar-i">الأحساء</span></li>
+            <li><span class="en-i">Qatif</span><span class="ar-i">القطيف</span></li>
           </ul>
         </div>
       </div>
 
-      <!-- Service scope note -->
-      <div style="background:#121E40;border-radius:8px;padding:20px 24px;display:flex;align-items:center;gap:16px;">
-        <div style="width:40px;height:40px;border-radius:50%;background:rgba(39,184,153,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div class="coverage-note">
+        <div class="coverage-note-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
-        <p style="font-size:10px;color:rgba(255,255,255,.8);line-height:1.7;margin:0;">
-          <span class="en">Coverage is actively expanding. If your city is not listed, please contact us — we may already be serving or planning coverage in your area.</span>
-          <span class="ar">تتوسع تغطيتنا باستمرار. إذا لم تجد مدينتك، تواصل معنا — قد نكون نخدمها بالفعل أو نخطط لتوسيع التغطية إليها.</span>
+        <p class="coverage-note-text">
+          <span class="en">Coverage is expanding. If your city is not listed, please contact us — service availability can be discussed with our partnership team.</span>
+          <span class="ar">تتوسع تغطيتنا باستمرار. إذا لم تجد مدينتك مدرجة، تواصل معنا — يمكن مناقشة توافر الخدمة مع فريق الشراكة.</span>
         </p>
       </div>
     </div>
-
     <div class="page-footer">
       <span class="pf-text"><span class="en-i">medoor Home Healthcare · Alinaya Alrafia Medical Company · 2026</span><span class="ar-i">ميدور للرعاية الصحية المنزلية · شركة العناية الرفيعة الطبية · 2026</span></span>
       <div class="pf-dot"></div>
-      <span class="pf-text">5</span>
-
+      <span class="pf-page-num">5</span>
     </div>
   </div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════
-     PAGE 6 — OUR TEAM
+     PAGE 6 — TEAM & CARE COORDINATION
 ══════════════════════════════════════════════════════ -->
 <div class="page">
   <div class="inner-page">
     <div class="page-header">
-      <div class="ph-logo">
-        <img src="../Assets/Medoor_Logo.png" alt="medoor" class="ph-logo-img">
-      </div>
+      <div class="ph-logo"><img src="../Assets/Medoor_Logo.png" alt="medoor" class="ph-logo-img"></div>
       <span class="ph-section-label">
-        <span class="en-i">Our Team</span>
-        <span class="ar-i">فريقنا</span>
+        <span class="en-i">Clinical Team</span>
+        <span class="ar-i">الفريق الطبي</span>
       </span>
     </div>
-
     <div class="page-content">
       <div class="section-eyebrow">
         <span class="en-i">Our People</span>
         <span class="ar-i">كادرنا المتخصص</span>
       </div>
       <div class="section-title">
-        <span class="en">The Team Behind Your Care</span>
-        <span class="ar">الفريق الذي يرعاك</span>
+        <span class="en">Multidisciplinary Team</span>
+        <span class="ar">فريق متعدد التخصصات</span>
       </div>
       <div class="teal-rule"></div>
-
-      <p class="body-text" style="margin-bottom:14pt;">
-        <span class="en">Our multidisciplinary team includes licensed physicians, specialist nurses, and qualified medical specialists — delivering coordinated home care across Saudi Arabia.</span>
-        <span class="ar">يضم فريقنا متعدد التخصصات أطباءً مرخصين وممرضين متخصصين ومتخصصين طبيين مؤهلين — يقدمون رعاية منزلية متكاملة في جميع أنحاء المملكة.</span>
+      <p class="body-text" style="margin-bottom:10pt;">
+        <span class="en">Medoor's clinical team spans multiple disciplines — coordinating care delivery from a single point of contact across home visits, follow-up, and discharge support for institutional partners.</span>
+        <span class="ar">يضم الفريق الطبي لميدور تخصصات متعددة — يُنسِّق تقديم الرعاية عبر نقطة اتصال واحدة تشمل الزيارات المنزلية والمتابعة ودعم التصريح للشركاء المؤسسيين.</span>
       </p>
-
-      <div class="team-grid-print" style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px;">
-        <div class="team-card-print" style="background:#f7f9fb;border:1px solid #e5e7eb;border-radius:8px;padding:16px 14px;text-align:center;">
-          <div style="width:44px;height:44px;border-radius:50%;background:rgba(39,184,153,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-          <div class="team-role-name" style="font-size:12px;font-weight:700;color:#121E40;margin-bottom:6px;"><span class="en-i">Physicians</span><span class="ar-i">الأطباء</span></div>
-          <p class="team-role-desc" style="font-size:9px;color:#6B7280;line-height:1.6;margin:0;"><span class="en">Highly skilled and board-certified doctors dedicated to providing exceptional care.</span><span class="ar">أطباء متخصصون ومعتمدون ملتزمون بتقديم رعاية استثنائية.</span></p>
+      <img src="../Assets/Smiling Medical Team in Modern Clinic.png" alt="Healthcare team" class="team-photo-banner">
+      <p class="team-photo-caption">
+        <span class="en-i">Illustrative team photography — not Medoor staff</span>
+        <span class="ar-i">صور توضيحية للفريق — لا تمثل موظفي ميدور</span>
+      </p>
+      <div class="team-groups-grid">
+        <!-- Group 1: Clinical Care -->
+        <div class="team-group-card">
+          <div class="team-group-eyebrow"><span class="en-i">Clinical Care</span><span class="ar-i">الرعاية السريرية</span></div>
+          <div class="team-group-role"><span class="en-i">Physicians</span><span class="ar-i">الأطباء</span></div>
+          <div class="team-group-desc">
+            <span class="en">Licensed physicians providing diagnosis, assessment, and home medical visits.</span>
+            <span class="ar">أطباء مرخصون يقدمون التشخيص والتقييم والزيارات الطبية المنزلية.</span>
+          </div>
+          <div class="team-group-role"><span class="en-i">Nurses</span><span class="ar-i">الممرضون والممرضات</span></div>
+          <div class="team-group-desc">
+            <span class="en">Clinical nurses delivering hands-on patient care and post-procedure monitoring.</span>
+            <span class="ar">كوادر تمريضية تقدم الرعاية المباشرة للمريض ومراقبة ما بعد الإجراءات.</span>
+          </div>
         </div>
-        <div class="team-card-print" style="background:#f7f9fb;border:1px solid #e5e7eb;border-radius:8px;padding:16px 14px;text-align:center;">
-          <div style="width:44px;height:44px;border-radius:50%;background:rgba(39,184,153,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-          <div class="team-role-name" style="font-size:12px;font-weight:700;color:#121E40;margin-bottom:6px;"><span class="en-i">Nurses</span><span class="ar-i">الممرضون والممرضات</span></div>
-          <p class="team-role-desc" style="font-size:9px;color:#6B7280;line-height:1.6;margin:0;"><span class="en">Compassionate and experienced nursing professionals committed to patient-centered care.</span><span class="ar">كوادر تمريضية رحيمة وذات خبرة، ملتزمة بالرعاية المتمحورة حول المريض.</span></p>
+        <!-- Group 2: Allied Health -->
+        <div class="team-group-card">
+          <div class="team-group-eyebrow"><span class="en-i">Allied Health</span><span class="ar-i">المهن الصحية المساندة</span></div>
+          <div class="team-group-role"><span class="en-i">Physiotherapists</span><span class="ar-i">المعالجون الطبيعيون</span></div>
+          <div class="team-group-desc">
+            <span class="en">Qualified therapists delivering rehabilitation and mobility support at home.</span>
+            <span class="ar">معالجون مؤهلون يقدمون إعادة التأهيل ودعم الحركة في المنزل.</span>
+          </div>
+          <div class="team-group-role"><span class="en-i">Caregivers</span><span class="ar-i">مقدمو الرعاية</span></div>
+          <div class="team-group-desc">
+            <span class="en">Support professionals providing personal care and daily living assistance.</span>
+            <span class="ar">متخصصو دعم يقدمون الرعاية الشخصية والمساعدة في الأنشطة اليومية.</span>
+          </div>
         </div>
-        <div class="team-card-print" style="background:#f7f9fb;border:1px solid #e5e7eb;border-radius:8px;padding:16px 14px;text-align:center;">
-          <div style="width:44px;height:44px;border-radius:50%;background:rgba(39,184,153,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v6m-4 4h8M8 17l4 4 4-4"/></svg></div>
-          <div class="team-role-name" style="font-size:12px;font-weight:700;color:#121E40;margin-bottom:6px;"><span class="en-i">Physiotherapists</span><span class="ar-i">المعالجون الطبيعيون</span></div>
-          <p class="team-role-desc" style="font-size:9px;color:#6B7280;line-height:1.6;margin:0;"><span class="en">Expert Saudi therapists skilled in rehabilitation, ensuring improved patient mobility and recovery.</span><span class="ar">معالجون سعوديون خبراء في إعادة التأهيل، يضمنون تحسين حركة المريض وتعافيه.</span></p>
+        <!-- Group 3: Diagnostics -->
+        <div class="team-group-card">
+          <div class="team-group-eyebrow"><span class="en-i">Diagnostics</span><span class="ar-i">التشخيص الطبي</span></div>
+          <div class="team-group-role"><span class="en-i">Radiology Technicians</span><span class="ar-i">فنيو الأشعة</span></div>
+          <div class="team-group-desc">
+            <span class="en">Trained imaging and diagnostic support professionals.</span>
+            <span class="ar">متخصصون مدربون في التصوير الطبي والدعم التشخيصي.</span>
+          </div>
+          <div class="team-group-role"><span class="en-i">Laboratory Support</span><span class="ar-i">دعم المختبر</span></div>
+          <div class="team-group-desc">
+            <span class="en">Facilitating in-home specimen collection and test coordination.</span>
+            <span class="ar">تسهيل أخذ العينات في المنزل وتنسيق الفحوصات المختبرية.</span>
+          </div>
         </div>
-        <div class="team-card-print" style="background:#f7f9fb;border:1px solid #e5e7eb;border-radius:8px;padding:16px 14px;text-align:center;">
-          <div style="width:44px;height:44px;border-radius:50%;background:rgba(39,184,153,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-          <div class="team-role-name" style="font-size:12px;font-weight:700;color:#121E40;margin-bottom:6px;"><span class="en-i">Radiology Techs</span><span class="ar-i">فنيو الأشعة</span></div>
-          <p class="team-role-desc" style="font-size:9px;color:#6B7280;line-height:1.6;margin:0;"><span class="en">Highly trained imaging specialists essential for accurate diagnosis and treatment planning.</span><span class="ar">متخصصون مدربون في التصوير الطبي، أساسيون للتشخيص الدقيق وتخطيط العلاج.</span></p>
-        </div>
-        <div class="team-card-print" style="background:#f7f9fb;border:1px solid #e5e7eb;border-radius:8px;padding:16px 14px;text-align:center;">
-          <div style="width:44px;height:44px;border-radius:50%;background:rgba(39,184,153,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87m-4-12a4 4 0 0 1 0 7.75"/></svg></div>
-          <div class="team-role-name" style="font-size:12px;font-weight:700;color:#121E40;margin-bottom:6px;"><span class="en-i">Caregivers</span><span class="ar-i">مقدمو الرعاية</span></div>
-          <p class="team-role-desc" style="font-size:9px;color:#6B7280;line-height:1.6;margin:0;"><span class="en">Dedicated professionals providing support and personal care to patients at home.</span><span class="ar">مختصون متفانون يقدمون الدعم والرعاية الشخصية للمرضى في منازلهم.</span></p>
-        </div>
-        <div class="team-card-print" style="background:#f7f9fb;border:1px solid #e5e7eb;border-radius:8px;padding:16px 14px;text-align:center;">
-          <div style="width:44px;height:44px;border-radius:50%;background:rgba(39,184,153,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-          <div class="team-role-name" style="font-size:12px;font-weight:700;color:#121E40;margin-bottom:6px;"><span class="en-i">Ambulance Team</span><span class="ar-i">فريق الإسعاف</span></div>
-          <p class="team-role-desc" style="font-size:9px;color:#6B7280;line-height:1.6;margin:0;"><span class="en">Highly responsive emergency personnel ready for events and site coverage.</span><span class="ar">كوادر طوارئ سريعة الاستجابة جاهزة للفعاليات والمواقع.</span></p>
-        </div>
-        <div class="team-card-print" style="background:#f7f9fb;border:1px solid #e5e7eb;border-radius:8px;padding:16px 14px;text-align:center;">
-          <div style="width:44px;height:44px;border-radius:50%;background:rgba(39,184,153,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div class="team-role-name" style="font-size:12px;font-weight:700;color:#121E40;margin-bottom:6px;"><span class="en-i">Health Educators</span><span class="ar-i">المثقفون الصحيون</span></div>
-          <p class="team-role-desc" style="font-size:9px;color:#6B7280;line-height:1.6;margin:0;"><span class="en">Professionals teaching patients and communities about health and disease prevention.</span><span class="ar">متخصصون يُعلِّمون المرضى والمجتمعات صيانة الصحة والوقاية من الأمراض.</span></p>
-        </div>
-        <div class="team-card-print" style="background:#f7f9fb;border:1px solid #e5e7eb;border-radius:8px;padding:16px 14px;text-align:center;">
-          <div style="width:44px;height:44px;border-radius:50%;background:rgba(39,184,153,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27B899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          <div class="team-role-name" style="font-size:12px;font-weight:700;color:#121E40;margin-bottom:6px;"><span class="en-i">Support Staff</span><span class="ar-i">الطاقم الداعم</span></div>
-          <p class="team-role-desc" style="font-size:9px;color:#6B7280;line-height:1.6;margin:0;"><span class="en">Operations 24/7 — insurance, finance, IT developers and more.</span><span class="ar">عمليات على مدار الساعة — التأمين والمالية وتقنية المعلومات وما هو أكثر.</span></p>
+        <!-- Group 4: Health Coordination -->
+        <div class="team-group-card">
+          <div class="team-group-eyebrow"><span class="en-i">Health Coordination</span><span class="ar-i">التنسيق الصحي</span></div>
+          <div class="team-group-role"><span class="en-i">Health Educators</span><span class="ar-i">المثقفون الصحيون</span></div>
+          <div class="team-group-desc">
+            <span class="en">Supporting patient and family understanding of care plans and health promotion.</span>
+            <span class="ar">دعم فهم المرضى وأسرهم لخطط الرعاية وتعزيز الصحة والوقاية.</span>
+          </div>
+          <div class="team-group-role"><span class="en-i">Operations &amp; Support</span><span class="ar-i">الدعم والعمليات</span></div>
+          <div class="team-group-desc">
+            <span class="en">Coordinating scheduling, clinical records, and administrative continuity.</span>
+            <span class="ar">تنسيق الجداول والسجلات الطبية والاستمرارية الإدارية.</span>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="page-footer">
       <span class="pf-text"><span class="en-i">medoor Home Healthcare · Alinaya Alrafia Medical Company · 2026</span><span class="ar-i">ميدور للرعاية الصحية المنزلية · شركة العناية الرفيعة الطبية · 2026</span></span>
       <div class="pf-dot"></div>
-      <span class="pf-text">6</span>
-
+      <span class="pf-page-num">6</span>
     </div>
   </div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════
-     PAGE 7 — MISSION, VISION & WHY MEDOOR
+     PAGE 7 — PURPOSE & PARTNERSHIP VALUE
 ══════════════════════════════════════════════════════ -->
 <div class="page">
   <div class="inner-page">
     <div class="page-header">
-      <div class="ph-logo">
-        <img src="../Assets/Medoor_Logo.png" alt="medoor" class="ph-logo-img">
-      </div>
+      <div class="ph-logo"><img src="../Assets/Medoor_Logo.png" alt="medoor" class="ph-logo-img"></div>
       <span class="ph-section-label">
         <span class="en-i">Purpose &amp; Values</span>
         <span class="ar-i">الغاية والقيم</span>
       </span>
     </div>
-
     <div class="page-content">
       <div class="section-eyebrow">
         <span class="en-i">Mission &amp; Vision</span>
@@ -1214,10 +1084,9 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
         <span class="ar">رسالتنا ورؤيتنا</span>
       </div>
       <div class="teal-rule"></div>
-
       <div class="mission-print-split">
         <div class="mission-print-photo">
-          <img src="../Assets/Compassionate Assistance in a Luxurious Living Room.png" alt="Saudi home care assistance — illustrative">
+          <img src="../Assets/Compassionate Assistance in a Luxurious Living Room.png" alt="Home care — illustrative">
         </div>
         <div class="mission-print-content">
           <div class="mv-print-grid">
@@ -1225,8 +1094,8 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
               <div class="mv-print-label"><span class="en-i">Our Mission</span><span class="ar-i">رسالتنا</span></div>
               <div class="mv-print-heading"><span class="en">What We Do</span><span class="ar">ما نقوم به</span></div>
               <div class="mv-print-text">
-                <span class="en">To deliver professional, compassionate home healthcare services that bring clinical excellence to patients across Saudi Arabia — enabling recovery, independence, and a better quality of life within the comfort of home.</span>
-                <span class="ar">تقديم خدمات رعاية صحية منزلية متخصصة ورحيمة تحقق التميز الطبي للمرضى في المملكة — لتعزيز الشفاء والاستقلالية وجودة الحياة في راحة المنزل.</span>
+                <span class="en">To deliver professional, compassionate home healthcare services that bring clinical excellence to patients across Saudi Arabia — enabling recovery, independence, and quality of life within the comfort of home.</span>
+                <span class="ar">تقديم خدمات رعاية صحية منزلية متخصصة تحقق التميز الطبي للمرضى في المملكة — لتعزيز الشفاء والاستقلالية وجودة الحياة في راحة المنزل.</span>
               </div>
             </div>
             <div class="mv-print-card">
@@ -1241,16 +1110,16 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
         </div>
       </div>
 
-      <div style="margin-top: 10pt;">
+      <div style="margin-top:10pt;">
         <div class="section-eyebrow">
-          <span class="en-i">Why Choose Medoor</span>
-          <span class="ar-i">لماذا تختار ميدور</span>
+          <span class="en-i">Partnership Relevance</span>
+          <span class="ar-i">أهميتنا لشركائنا</span>
         </div>
-        <div class="section-title" style="font-size:18pt; margin-bottom:6pt;">
-          <span class="en">The Medoor Difference</span>
-          <span class="ar">ما يميز ميدور</span>
+        <div class="section-title" style="font-size:17pt; margin-bottom:6pt;">
+          <span class="en">Value for Institutional Partners</span>
+          <span class="ar">قيمة مضافة للشركاء المؤسسيين</span>
         </div>
-        <div class="teal-rule" style="margin-bottom:12pt;"></div>
+        <div class="teal-rule" style="margin-bottom:10pt;"></div>
       </div>
 
       <div class="why-print-grid">
@@ -1258,74 +1127,70 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
           <div class="why-print-num">01</div>
           <div class="why-print-name"><span class="en-i">Licensed Professionals</span><span class="ar-i">متخصصون مرخصون</span></div>
           <div class="why-print-desc">
-            <span class="en">All care providers are licensed and credentialed under Saudi health authority standards.</span>
-            <span class="ar">جميع مقدمي الرعاية مرخصون ومعتمدون وفق معايير الصحة السعودية.</span>
+            <span class="en">All care providers are licensed under Saudi health authority standards.</span>
+            <span class="ar">جميع مقدمي الرعاية مرخصون وفق معايير الجهات الصحية السعودية.</span>
           </div>
         </div>
         <div class="why-print-card">
           <div class="why-print-num">02</div>
-          <div class="why-print-name"><span class="en-i">Patient-Centered Care</span><span class="ar-i">رعاية تتمحور حول المريض</span></div>
+          <div class="why-print-name"><span class="en-i">Multidisciplinary Coordination</span><span class="ar-i">تنسيق متعدد التخصصات</span></div>
           <div class="why-print-desc">
-            <span class="en">Individualized plans designed around each patient's unique clinical and personal needs.</span>
-            <span class="ar">خطط فردية مصممة حول الاحتياجات الخاصة لكل مريض.</span>
+            <span class="en">Coordinated care delivery from a single clinical contact — simplifying discharge pathways.</span>
+            <span class="ar">تسليم رعاية منسق عبر جهة تواصل طبية واحدة — تبسيط مسارات التصريح.</span>
           </div>
         </div>
         <div class="why-print-card">
           <div class="why-print-num">03</div>
-          <div class="why-print-name"><span class="en-i">Flexible Scheduling</span><span class="ar-i">جدولة مرنة</span></div>
+          <div class="why-print-name"><span class="en-i">Patient-Centred Care Plans</span><span class="ar-i">خطط رعاية تتمحور حول المريض</span></div>
           <div class="why-print-desc">
-            <span class="en">Visit scheduling that fits the patient's routine, including evenings and weekends.</span>
-            <span class="ar">جدولة الزيارات وفق روتين المريض بما يشمل المساء وعطل نهاية الأسبوع.</span>
+            <span class="en">Individualised plans designed around each patient's clinical and personal needs.</span>
+            <span class="ar">خطط فردية مصممة حول الاحتياجات السريرية والشخصية لكل مريض.</span>
           </div>
         </div>
         <div class="why-print-card">
           <div class="why-print-num">04</div>
           <div class="why-print-name"><span class="en-i">Vision 2030 Aligned</span><span class="ar-i">متوافق مع رؤية 2030</span></div>
           <div class="why-print-desc">
-            <span class="en">Contributing to Saudi healthcare transformation — expanding access and raising standards.</span>
-            <span class="ar">نسهم في تحول القطاع الصحي الوطني وتوسيع نطاق الوصول ورفع المعايير.</span>
+            <span class="en">Contributing to national healthcare transformation — expanding home-based care access across regions.</span>
+            <span class="ar">نسهم في تحول القطاع الصحي الوطني وتوسيع الوصول للرعاية المنزلية في مختلف المناطق.</span>
           </div>
         </div>
       </div>
     </div>
-
     <div class="page-footer">
       <span class="pf-text"><span class="en-i">medoor Home Healthcare · Alinaya Alrafia Medical Company · 2026</span><span class="ar-i">ميدور للرعاية الصحية المنزلية · شركة العناية الرفيعة الطبية · 2026</span></span>
       <div class="pf-dot"></div>
-      <span class="pf-text">7</span>
-
+      <span class="pf-page-num">7</span>
     </div>
   </div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════
-     PAGE 8 — CONTACT
+     PAGE 8 — PARTNERSHIP ENQUIRIES
 ══════════════════════════════════════════════════════ -->
 <div class="page">
   <div class="inner-page">
     <div class="page-header">
-      <div class="ph-logo">
-        <img src="../Assets/Medoor_Logo.png" alt="medoor" class="ph-logo-img">
-      </div>
+      <div class="ph-logo"><img src="../Assets/Medoor_Logo.png" alt="medoor" class="ph-logo-img"></div>
       <span class="ph-section-label">
-        <span class="en-i">Contact</span>
-        <span class="ar-i">التواصل</span>
+        <span class="en-i">Partnership Enquiries</span>
+        <span class="ar-i">للتواصل بشأن الشراكات</span>
       </span>
     </div>
-
     <div class="page-content">
       <div class="section-eyebrow">
-        <span class="en-i">Get in Touch</span>
-        <span class="ar-i">تواصل معنا</span>
+        <span class="en-i">Work With Us</span>
+        <span class="ar-i">الشراكة معنا</span>
       </div>
       <div class="section-title">
-        <span class="en">Contact Medoor</span>
-        <span class="ar">تواصل مع ميدور</span>
+        <span class="en">Discuss a Partnership</span>
+        <span class="ar">ابدأ حوار الشراكة</span>
       </div>
       <div class="teal-rule"></div>
-
-      
-
+      <p class="contact-intro">
+        <span class="en">To discuss referral arrangements, institutional service agreements, or corporate health programmes, please contact our team using the details below.</span>
+        <span class="ar">للتحدث عن ترتيبات الإحالة أو اتفاقيات الخدمة المؤسسية أو برامج صحة الموظفين، يُرجى التواصل مع فريقنا عبر بيانات الاتصال أدناه.</span>
+      </p>
       <div class="contact-print-grid">
         <div>
           <div class="contact-print-item">
@@ -1360,9 +1225,8 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
           <div class="contact-print-item">
             <div class="cp-dot"></div>
             <div>
-              <div class="cp-label"><span class="en-i">Working Hours</span><span class="ar-i">أوقات العمل</span></div>
+              <div class="cp-label"><span class="en-i">Office Hours</span><span class="ar-i">أوقات الدوام</span></div>
               <div class="cp-value"><span class="en">Sunday – Thursday, 9:00 AM – 5:00 PM</span><span class="ar">الأحد – الخميس، 9:00 ص – 5:00 م</span></div>
-              <div class="cp-sub"><span class="en">Emergency support available 24/7</span><span class="ar">دعم الطوارئ متاح على مدار الساعة</span></div>
             </div>
           </div>
           <div class="contact-print-item">
@@ -1377,55 +1241,56 @@ html[lang="ar"] .disclaimer-print p { font-family: 'Cairo', sans-serif; font-siz
             <div class="cp-dot"></div>
             <div>
               <div class="cp-label"><span class="en-i">CR Number</span><span class="ar-i">السجل التجاري</span></div>
-              <div class="cp-value" style="color:var(--grey-lt);"><span class="en">7037150146</span><span class="ar">7037150146</span></div>
+              <div class="cp-value"><bdi dir="ltr">7037150146</bdi></div>
             </div>
           </div>
         </div>
 
         <div class="contact-print-right">
-          <img src="../Assets/Medoor_Logo.png" alt="medoor" class="cpr-logo" style="height:36px;width:auto;filter:brightness(0) invert(1);">
+          <img src="../Assets/Medoor_Logo.png" alt="medoor" class="cpr-logo">
           <div class="cpr-title">
             <span class="en">Home Healthcare Services</span>
             <span class="ar">خدمات الرعاية الصحية المنزلية</span>
           </div>
-          <div class="cpr-sub">
-            <span class="en">Bringing professional medical care to your doorstep — across Saudi Arabia.<br><br>Medical to Door.</span>
-            <span class="ar">نحضر الرعاية الطبية المتخصصة إلى عتبة داركم في جميع أنحاء المملكة.<br><br>ناتيك بالرعاية.</span>
-          </div>
+          <div class="cpr-divider"></div>
+          <div class="cpr-offer-label"><span class="en-i">Partnership opportunities</span><span class="ar-i">فرص الشراكة</span></div>
+          <ul class="cpr-offer-list">
+            <li><span class="en-i">Hospital discharge &amp; follow-up pathways</span><span class="ar-i">مسارات التصريح والمتابعة المستشفوية</span></li>
+            <li><span class="en-i">Corporate health programme delivery</span><span class="ar-i">تقديم برامج الصحة المؤسسية</span></li>
+            <li><span class="en-i">Insurance referral arrangements</span><span class="ar-i">ترتيبات إحالة شركات التأمين</span></li>
+          </ul>
           <div class="cpr-badge">
-            <span class="en-i">Alinaya Alrafia Medical Group</span>
-            <span class="ar-i">مجموعة العناية الرفيعة الطبية</span>
+            <span class="en-i">Alinaya Alrafia Medical Company</span>
+            <span class="ar-i">شركة العناية الرفيعة الطبية</span>
           </div>
         </div>
       </div>
 
       <div class="disclaimer-print">
         <p>
-          <span class="en">Medical Disclaimer: This document is for general informational purposes only and does not constitute medical advice, diagnosis, or treatment. Home healthcare services are provided by licensed professionals under clinical supervision. Always consult a qualified healthcare professional for any medical concerns. This profile is intended for business and partnership communications only.</span>
-          <span class="ar">إخلاء المسؤولية الطبية: هذه الوثيقة لأغراض معلوماتية عامة فقط ولا تُشكّل نصيحة طبية أو تشخيصاً أو علاجاً. تُقدَّم خدمات الرعاية الصحية المنزلية من قِبل متخصصين مرخصين تحت الإشراف الطبي. استشر دائماً مختصاً طبياً مؤهلاً. هذا الملف مخصص للتواصل التجاري والشراكات فحسب.</span>
+          <span class="en">Medical Disclaimer: This document is for business and partnership communications only. It does not constitute medical advice, diagnosis, or treatment. Home healthcare services are provided by licensed professionals under clinical supervision. Always consult a qualified healthcare professional for any medical concerns.</span>
+          <span class="ar">إخلاء المسؤولية الطبية: هذه الوثيقة مخصصة للتواصل التجاري والشراكات فحسب ولا تُشكّل نصيحة طبية أو تشخيصاً أو علاجاً. تُقدَّم خدمات الرعاية الصحية المنزلية من قِبل متخصصين مرخصين تحت الإشراف الطبي. استشر دائماً مختصاً طبياً مؤهلاً لأي استفسار طبي.</span>
         </p>
       </div>
     </div>
-
     <div class="page-footer">
       <span class="pf-text"><span class="en-i">medoor Home Healthcare · Alinaya Alrafia Medical Company · 2026</span><span class="ar-i">ميدور للرعاية الصحية المنزلية · شركة العناية الرفيعة الطبية · 2026</span></span>
       <div class="pf-dot"></div>
-      <span class="pf-text">8</span>
-
+      <span class="pf-page-num">8</span>
     </div>
   </div>
 </div>
 
 <script>
-  function setLang(lang) {
-    const html = document.documentElement;
-    html.lang = lang;
-    html.dir  = lang === 'ar' ? 'rtl' : 'ltr';
-    ['btn-en','btn-ar'].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.classList.toggle('active', id.includes(lang));
-    });
-  }
+function setLang(lang) {
+  const html = document.documentElement;
+  html.lang = lang;
+  html.dir  = lang === 'ar' ? 'rtl' : 'ltr';
+  ['btn-en','btn-ar'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('active', id.includes(lang));
+  });
+}
 </script>
 </body>
 </html>
