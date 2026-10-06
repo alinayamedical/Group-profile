@@ -26,7 +26,7 @@ async function exportPdf(lang) {
   }
 
   const suffix = lang === 'ar' ? '_AR' : '';
-  const outFile = path.resolve(__dirname, `Medoor_Profile_2026${suffix}_v7.pdf`);
+  const outFile = path.resolve(__dirname, `Medoor_Profile_2026${suffix}_Final.pdf`);
 
   await page.pdf({
     path: outFile,
