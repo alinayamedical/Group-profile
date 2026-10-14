@@ -100,12 +100,6 @@
     .portfolio-matrix td { padding: 12px 16px; border-bottom: 1px solid var(--border); vertical-align: middle; }
     .portfolio-matrix tr:last-child td { border-bottom: none; }
     .portfolio-matrix tr:nth-child(even) td { background: #f9fafb; }
-    .status-badge { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 100px; font-size: 12px; font-weight: 600; white-space: nowrap; }
-    .status--operating    { background: rgba(16,185,129,0.1);  color: #065f46; border: 1px solid rgba(16,185,129,0.3); }
-    .status--development  { background: rgba(245,158,11,0.1);  color: #92400e; border: 1px solid rgba(245,158,11,0.3); }
-    .status--planned      { background: rgba(99,102,241,0.1);  color: #3730a3; border: 1px solid rgba(99,102,241,0.3); }
-    .status--unconfirmed  { background: rgba(107,114,128,0.1); color: #374151; border: 1px solid rgba(107,114,128,0.3); }
-    .matrix-note { font-size: 13px; color: var(--muted); margin-top: 16px; font-style: italic; }
 
     /* BUSINESS PROFILES */
     .biz-profile { border-top: 2px solid var(--border); padding: 48px 0; }
@@ -126,7 +120,22 @@
     .biz-brand-card { background: var(--offwhite); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; padding: 16px 20px; }
     .biz-brand-card h4 { font-size: 15px; font-weight: 700; color: var(--navy); }
     .biz-brand-card p { font-size: 13px; color: var(--muted); margin-top: 4px; }
-    .profile-disclaimer { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 20px; padding: 12px 16px; background: var(--offwhite); border-radius: 4px; border-left: 3px solid rgba(245,158,11,0.4); }
+    /* SUBSIDIARIES */
+    .sub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .sub-card { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--gold); border-radius: 4px; padding: 32px; }
+    .sub-card h3 { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .sub-subtitle { font-size: 13px; font-weight: 600; color: var(--gold-on-light); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px; display: block; }
+    .sub-desc { font-size: 15px; color: var(--text); line-height: 1.7; margin-bottom: 20px; }
+    .sub-specs { list-style: none; margin: 12px 0 20px; display: flex; flex-direction: column; gap: 6px; }
+    .sub-specs li { font-size: 14px; color: var(--muted); padding-left: 16px; position: relative; }
+    .sub-specs li::before { content: '—'; position: absolute; left: 0; color: var(--gold-on-light); }
+    .sub-supporting { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
+    .sub-link { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--gold-on-light); border-bottom: 1px solid currentColor; transition: color 0.2s; }
+    .sub-link:hover { color: var(--navy); }
+    .img-disclaimer { font-size: 12px; color: var(--muted); font-style: italic; margin-top: 8px; text-align: center; }
+    .enquiry-email-link { display: inline-block; color: rgba(255,255,255,0.85); font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.4); margin-top: 16px; transition: color 0.2s; }
+    .enquiry-email-link:hover { color: var(--gold); border-bottom-color: var(--gold); }
+    @media (max-width: 960px) { .sub-grid { grid-template-columns: 1fr; } }
 
     /* GROWTH */
     .growth-list { list-style: none; display: flex; flex-direction: column; gap: 40px; }
@@ -393,8 +402,8 @@
     <div class="gold-rule"></div>
     <div class="about-grid">
       <div class="about-text fade-in">
-        <p>TAG Holding Group is a Saudi holding company based in Riyadh, with a diversified portfolio of operating companies and development-stage ventures founded on a legacy of healthcare and entrepreneurship.</p>
-        <p>The Group's activities span healthcare services, dialysis, medical and scientific services, wellness and beauty, events management, professional development, and technology — with all businesses aligned to the opportunities presented by Saudi Vision 2030 and the Kingdom's expanding private sector.</p>
+        <p>TAG Holding Group is a Saudi holding company based in Riyadh, with a diversified portfolio of businesses founded on a legacy of healthcare and entrepreneurship.</p>
+        <p>The Group's activities span healthcare services, ambulance manufacturing, medical equipment supply, dialysis, medical and scientific services, wellness and beauty, events management, hospitality training, and professional development — with all businesses aligned to the opportunities presented by Saudi Vision 2030 and the Kingdom's expanding private sector.</p>
         <dl class="group-facts">
           <div class="gf-row">
             <dt>Headquarters</dt>
@@ -410,7 +419,7 @@
           </div>
           <div class="gf-row">
             <dt>Operating Businesses</dt>
-            <dd>6 confirmed healthcare and medical entities, plus wellness, beauty, and events companies</dd>
+            <dd>A diversified group of healthcare, wellness, beauty, events, and professional development businesses</dd>
           </div>
           <div class="gf-row">
             <dt>Strategic Alignment</dt>
@@ -431,168 +440,128 @@
     <p class="eyebrow">Portfolio</p>
     <h2 class="sec-title" id="portfolio-heading">TAG Holding Group — Business Portfolio</h2>
     <div class="gold-rule"></div>
-    <p class="section-intro">The Group operates or is developing twelve distinct businesses across five sectors.</p>
     <div class="table-wrapper fade-in" role="region" aria-label="Portfolio matrix" tabindex="0">
       <table class="portfolio-matrix">
-        <caption class="sr-only">TAG Holding Group — full portfolio of businesses by sector, relationship, status, and location</caption>
+        <caption class="sr-only">TAG Holding Group — full portfolio of businesses and their focus areas</caption>
         <thead>
           <tr>
             <th scope="col">Business</th>
-            <th scope="col">Sector</th>
-            <th scope="col">Relationship</th>
-            <th scope="col">Status</th>
-            <th scope="col">Location</th>
+            <th scope="col">Focus</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Alinaya Alrafia Medical Company</td>
-            <td>Healthcare</td>
-            <td>Subsidiary</td>
-            <td><span class="status-badge status--operating">Operating</span></td>
-            <td>Riyadh</td>
+            <td>Healthcare subsidiary of TAG Holding</td>
           </tr>
           <tr>
-            <td>Al Warood Medical Center</td>
-            <td>Healthcare</td>
-            <td>Portfolio</td>
-            <td><span class="status-badge status--operating">Operating</span></td>
-            <td>Riyadh</td>
+            <td>Al Jood Medical</td>
+            <td>Ambulance manufacturing &amp; emergency vehicle conversion</td>
           </tr>
           <tr>
-            <td>Al Jood Medical Center</td>
-            <td>Healthcare</td>
-            <td>Portfolio</td>
-            <td><span class="status-badge status--operating">Operating</span></td>
-            <td>Riyadh</td>
+            <td>SATECH</td>
+            <td>Medical, scientific &amp; industrial equipment import and supply</td>
           </tr>
           <tr>
-            <td>Alkhawalid Dialysis Center</td>
-            <td>Healthcare — Dialysis</td>
-            <td>Portfolio</td>
-            <td><span class="status-badge status--operating">Operating</span></td>
-            <td>Riyadh</td>
+            <td>Alwarood Medical Center</td>
+            <td>Multi-specialty outpatient clinical care</td>
+          </tr>
+          <tr>
+            <td>Alkhawaled Dialysis Center</td>
+            <td>Kidney dialysis &amp; renal care</td>
           </tr>
           <tr>
             <td>Almajorh</td>
-            <td>Healthcare</td>
-            <td>Portfolio</td>
-            <td><span class="status-badge status--operating">Operating</span></td>
-            <td>Riyadh</td>
+            <td>Medical &amp; scientific services; hospital development; medical supplies</td>
           </tr>
           <tr>
             <td>MEDOOR</td>
             <td>Healthcare</td>
-            <td>Portfolio</td>
-            <td><span class="status-badge status--operating">Operating</span></td>
-            <td>Riyadh</td>
           </tr>
           <tr>
             <td>Gennaro Dell'Aquila (GA)</td>
-            <td>Wellness &amp; Beauty</td>
-            <td>Portfolio</td>
-            <td><span class="status-badge status--operating">Operating</span></td>
-            <td>Riyadh</td>
+            <td>Premium beauty &amp; lifestyle</td>
           </tr>
           <tr>
             <td>Bechara Iskandar Haddad (BA)</td>
-            <td>Wellness &amp; Beauty</td>
-            <td>Portfolio</td>
-            <td><span class="status-badge status--operating">Operating</span></td>
-            <td>Riyadh</td>
+            <td>Luxury beauty services</td>
           </tr>
           <tr>
             <td>WAW Event Management</td>
-            <td>Events &amp; Protocol</td>
-            <td>Portfolio</td>
-            <td><span class="status-badge status--unconfirmed">Status Unconfirmed</span></td>
-            <td>Riyadh</td>
+            <td>Events &amp; protocol</td>
           </tr>
           <tr>
             <td>Elite Hospitality Protocol (EHP)</td>
-            <td>Hospitality Training</td>
-            <td>Portfolio</td>
-            <td><span class="status-badge status--unconfirmed">Status Unconfirmed</span></td>
-            <td>Riyadh</td>
-          </tr>
-          <tr>
-            <td>SATEC</td>
-            <td>Healthcare</td>
-            <td>Portfolio</td>
-            <td><span class="status-badge status--unconfirmed">Status Unconfirmed</span></td>
-            <td>Riyadh</td>
+            <td>Hospitality training</td>
           </tr>
           <tr>
             <td>Royal Academy</td>
-            <td>Professional Development</td>
-            <td>Planned</td>
-            <td><span class="status-badge status--planned">Planned</span></td>
-            <td>Riyadh</td>
+            <td>Professional development</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="matrix-note">Note: Operating status for WAW Event Management, Elite Hospitality Protocol, SATEC, and Royal Academy is unconfirmed at time of publication and is subject to change.</p>
   </div>
 </section>
 
 <!-- SECTION 4: BUSINESS PROFILES -->
 <section id="businesses" class="section bg-white" aria-labelledby="businesses-heading">
   <div class="container">
-    <p class="eyebrow">Business Profiles</p>
-    <h2 class="sec-title" id="businesses-heading">Our Operating Companies and Ventures</h2>
+    <p class="eyebrow">Our Businesses</p>
+    <h2 class="sec-title" id="businesses-heading">Group Structure — Our Subsidiaries</h2>
     <div class="gold-rule"></div>
+    <p class="section-intro">TAG brings together specialized businesses addressing distinct segments of the Saudi healthcare ecosystem.</p>
 
-    <article class="biz-profile fade-in">
-      <div class="biz-header">
-        <h3>Healthcare Services</h3>
-        <span class="status-badge status--operating">Operating</span>
+    <div class="sub-grid fade-in">
+
+      <div class="sub-card">
+        <h3>Al Jood Medical</h3>
+        <span class="sub-subtitle">Ambulance Manufacturing &amp; Emergency Vehicle Conversion</span>
+        <p class="sub-desc">Al Jood Medical specializes in the manufacture and conversion of ambulances and emergency response vehicles, supporting the Kingdom's emergency healthcare infrastructure through purpose-built vehicle solutions.</p>
+        <a href="#" class="sub-link">Visit Al Jood Medical ↗</a>
       </div>
-      <p class="biz-desc">The healthcare portfolio forms the core of TAG Holding's operations. Alinaya Alrafia Medical Company serves as the Group's primary healthcare entity, with Al Warood, Al Jood, Alkhawalid Dialysis Center, MEDOOR, Almajorh, and SATEC operating across Riyadh.</p>
-      <div class="biz-profile__entities">
-        <div class="entity-card">
-          <h4>Alinaya Alrafia Medical Company</h4>
-          <p>Primary Healthcare Entity &middot; Riyadh</p>
-        </div>
-        <div class="entity-card">
-          <h4>Al Warood Medical Center</h4>
-          <p>Medical Center &middot; Riyadh</p>
-        </div>
-        <div class="entity-card">
-          <h4>Al Jood Medical Center</h4>
-          <p>Medical Center &middot; Riyadh</p>
-        </div>
-        <div class="entity-card">
-          <h4>Alkhawalid Dialysis Center</h4>
-          <p>Dialysis Services &middot; Riyadh</p>
-        </div>
-        <div class="entity-card">
-          <h4>MEDOOR</h4>
-          <p>Healthcare &middot; Riyadh</p>
-        </div>
-        <div class="entity-card">
-          <h4>Almajorh</h4>
-          <p>Medical Services &amp; Supplies &middot; Riyadh</p>
-        </div>
-        <div class="entity-card">
-          <h4>SATEC</h4>
-          <p>Healthcare &middot; Riyadh</p>
-        </div>
+
+      <div class="sub-card">
+        <h3>SATECH</h3>
+        <span class="sub-subtitle">Saudi Technology &amp; Equipment Co. — Medical, Scientific &amp; Industrial Equipment</span>
+        <p class="sub-desc">SATECH imports and supplies specialized equipment and products for healthcare, scientific, security, and industrial applications across the Kingdom.</p>
+        <ul class="sub-specs">
+          <li>Security &amp; Forensic Equipment</li>
+          <li>Medical Laboratory Equipment</li>
+          <li>Scientific Laboratory Equipment</li>
+          <li>Material Testing, Industrial Equipment &amp; Accessories</li>
+          <li>Specialty Contact Lenses</li>
+        </ul>
+        <p class="sub-supporting">SATECH serves hospitals, diagnostic laboratories, government agencies, academic institutions, and industrial clients, connecting global technology with local demand.</p>
+        <a href="#" class="sub-link">Visit SATECH ↗</a>
       </div>
-      <div class="biz-images">
-        <figure>
-          <img src="Assets/Home nurse checks elderly patient's blood pressure-2.png" alt="Home nurse checking elderly patient's blood pressure" loading="lazy" decoding="async" width="560" height="220">
+
+      <div class="sub-card">
+        <h3>Alwarood Medical Center</h3>
+        <span class="sub-subtitle">Multi-Specialty Outpatient Clinical Care</span>
+        <p class="sub-desc">Alwarood Medical Center is a multi-specialty outpatient clinic providing primary and specialist care with a patient-centered approach to community healthcare.</p>
+        <figure style="margin-top: 20px; border-radius: 4px; overflow: hidden;">
+          <img src="Assets/Clinician Consulting with a Saudi Patient-3.png" alt="Clinician with a patient in an outpatient clinic" loading="lazy" decoding="async" width="560" height="220" style="width:100%;height:220px;object-fit:cover;">
+          <p class="img-disclaimer">Illustrative imagery; does not depict TAG Holding's actual facilities, employees, or projects.</p>
         </figure>
-        <figure>
-          <img src="Assets/Clinician Consulting with a Saudi Patient-3.png" alt="Clinician consulting with a Saudi patient" loading="lazy" decoding="async" width="560" height="220">
-        </figure>
+        <a href="#" class="sub-link">Visit Alwarood Medical Center ↗</a>
       </div>
-    </article>
+
+      <div class="sub-card">
+        <h3>Alkhawaled Dialysis Center</h3>
+        <span class="sub-subtitle">Specialized Kidney &amp; Renal Care</span>
+        <p class="sub-desc">Alkhawaled Dialysis Center focuses on kidney dialysis and ongoing renal care, with an emphasis on patient comfort, clinical safety, and continuity of treatment.</p>
+        <figure style="margin-top: 20px; border-radius: 4px; overflow: hidden;">
+          <img src="Assets/Quiet consultation in a calm clinic-5.png" alt="Calm clinical setting" loading="lazy" decoding="async" width="560" height="220" style="width:100%;height:220px;object-fit:cover;object-position:center top;">
+        </figure>
+        <a href="#" class="sub-link">Visit Alkhawaled Dialysis Center ↗</a>
+      </div>
+
+    </div>
 
     <article class="biz-profile fade-in">
       <div class="biz-header">
         <h3>Wellness &amp; Luxury Beauty</h3>
-        <span class="status-badge status--operating">Operating</span>
       </div>
       <p class="biz-desc">Gennaro Dell'Aquila (GA) and Bechara Iskandar Haddad (BA) are two distinct premium beauty and wellness salons operating under the TAG Holding platform, positioned in Riyadh's growing luxury personal care market.</p>
       <div class="biz-brand-cards">
@@ -615,9 +584,8 @@
     <article class="biz-profile fade-in">
       <div class="biz-header">
         <h3>Events &amp; Hospitality Protocol</h3>
-        <span class="status-badge status--unconfirmed">Status Unconfirmed</span>
       </div>
-      <p class="biz-desc">WAW Event Management and Elite Hospitality Protocol (EHP) are two ventures within the TAG Holding development portfolio. Both are at an early stage; their operating status has not been formally confirmed.</p>
+      <p class="biz-desc">WAW Event Management and Elite Hospitality Protocol (EHP) are two ventures within the TAG Holding portfolio, focused on events management and hospitality training respectively.</p>
       <div class="biz-brand-cards">
         <div class="biz-brand-card">
           <h4>WAW Event Management</h4>
@@ -636,27 +604,23 @@
           <img src="Assets/Formal Dining Etiquette Workshop-6.png" alt="Formal dining etiquette workshop" loading="lazy" decoding="async" width="560" height="220">
         </figure>
       </div>
-      <p class="profile-disclaimer">WAW Event and EHP are development-stage ventures. Inclusion here reflects strategic intent and does not confirm current operational activity.</p>
     </article>
 
     <article class="biz-profile fade-in">
       <div class="biz-header">
         <h3>Royal Academy</h3>
-        <span class="status-badge status--planned">Planned</span>
       </div>
-      <p class="biz-desc">The Royal Academy is a planned professional development institution under the TAG Holding umbrella. It is in the conceptual stage and is not yet operational.</p>
+      <p class="biz-desc">Royal Academy is a professional development institution under the TAG Holding umbrella, focused on training and certification programs.</p>
       <div class="biz-image">
         <figure>
           <img src="Assets/Hospitality workshop with refined table setting-9.png" alt="Hospitality workshop with refined table setting" loading="lazy" decoding="async" width="1120" height="260" style="object-position: center top;">
         </figure>
       </div>
-      <p class="profile-disclaimer">Royal Academy is a planned venture. No operational activity has commenced.</p>
     </article>
 
     <article class="biz-profile fade-in">
       <div class="biz-header">
         <h3>Almajorh</h3>
-        <span class="status-badge status--operating">Operating</span>
       </div>
       <p class="biz-desc">Almajorh provides medical and scientific services under the TAG Holding platform, with activities spanning hospital and medical center development, and medical supplies distribution. The company supports the Kingdom's growing healthcare infrastructure in alignment with Vision 2030 targets.</p>
       <div class="biz-profile__entities">
@@ -674,20 +638,8 @@
     <article class="biz-profile fade-in">
       <div class="biz-header">
         <h3>MEDOOR</h3>
-        <span class="status-badge status--operating">Operating</span>
       </div>
       <p class="biz-desc">MEDOOR is a healthcare entity within the TAG Holding portfolio, operating in Riyadh as part of the Group's integrated medical services network.</p>
-      <!-- TODO: add MEDOOR description, service lines, and approved photography -->
-    </article>
-
-    <article class="biz-profile fade-in">
-      <div class="biz-header">
-        <h3>SATEC</h3>
-        <span class="status-badge status--unconfirmed">Status Unconfirmed</span>
-      </div>
-      <p class="biz-desc">SATEC is a technology and services entity within the TAG Holding portfolio. Full operational details are pending confirmation.</p>
-      <!-- TODO: add SATEC description, sector, and service details -->
-      <p class="profile-disclaimer">SATEC operating status and service scope are pending formal confirmation.</p>
     </article>
 
   </div>
@@ -705,7 +657,7 @@
         <div>
           <h3>Expand the Healthcare Network</h3>
           <p class="growth-item__meta">
-            Businesses: Alinaya Alrafia Medical Company, Al Warood, Al Jood, Alkhawalid Dialysis Center, MEDOOR, Almajorh, SATEC<br>
+            Businesses: Alinaya Alrafia Medical Company, Alwarood Medical Center, Alkhawaled Dialysis Center<br>
             Next milestone: Increase patient capacity and geographic reach across Riyadh
           </p>
         </div>
@@ -775,8 +727,9 @@
     <p class="eyebrow">Investment Enquiries</p>
     <h2 class="sec-title" id="enquiry-heading">Explore Partnership Opportunities with TAG Holding</h2>
     <div class="gold-rule"></div>
-    <p class="enquiry-intro">TAG Holding Group welcomes enquiries from investors, strategic partners, and healthcare professionals. Please contact the Group directly to discuss opportunities.</p>
-    <!-- TODO: confirm TAG Holding contact email before publication -->
+    <p class="enquiry-intro">Investment and partnership enquiries can be directed to the Alinaya Medical contact address below. TAG Holding Group welcomes enquiries from investors, strategic partners, and healthcare professionals.</p>
+    <a href="mailto:info@alinayamedical.com?subject=TAG%20Holding%20Partnership%20Enquiry" class="btn-primary">Email Your Enquiry</a>
+    <a href="mailto:info@alinayamedical.com" class="enquiry-email-link">info@alinayamedical.com</a>
     <p class="enquiry-disclaimer">This document is prepared for informational purposes only and does not constitute a solicitation for investment. All figures and business descriptions are subject to verification. TAG Holding Group reserves the right to update, revise, or withdraw this information at any time.</p>
   </div>
 </section>
@@ -835,7 +788,7 @@
       </nav>
       <div class="footer-col">
         <h4>Contact</h4>
-        <!-- TODO: confirm TAG Holding contact email before publication -->
+        <a href="mailto:info@alinayamedical.com">info@alinayamedical.com</a>
         <span style="color: rgba(255,255,255,0.65); font-size: 14px;">Riyadh, Saudi Arabia</span>
       </div>
     </div>
@@ -914,23 +867,24 @@
 === DELIVERY CHECKLIST — NOT FOR PUBLICATION ===
 
 PENDING APPROVAL / CONFIRMATION:
-[ ] Contact email for TAG Holding — required before Enquire section can include a button or link
 [ ] Exact wording of Dr. Al Gilani's attributed quotation — removed until approved
 [ ] Verified founding/incorporation year for TAG Holding — "Founded" fact row removed until confirmed
-[ ] Confirm operating status of WAW Event Management — currently "Status Unconfirmed"
-[ ] Confirm operating status of Elite Hospitality Protocol (EHP) — currently "Status Unconfirmed"
+[ ] Confirm operating status of WAW Event Management — description kept neutral pending confirmation
+[ ] Confirm operating status of Elite Hospitality Protocol (EHP) — description kept neutral pending confirmation
 [ ] Confirm full legal registered name for Gennaro Dell'Aquila (GA) salon
 [ ] Confirm full legal registered name for Bechara Iskandar Haddad (BA) salon
 [ ] Add MEDOOR description, service lines, and approved photography
-[ ] Confirm SATEC sector, service description, and operating status
-[ ] Confirm Alkhawalid Dialysis Center legal name and full service scope
-[ ] Confirm legal entity name: "Elite Hospitality Protocol (EHP)" — preserved as-is pending confirmation
-[ ] Confirmed relationship type for Al Warood, Al Jood (currently "Portfolio" — unverified)
 [ ] Portrait photograph of Dr. Abdulkader Al Gilani (founder, historical)
 [ ] Portrait photograph of Talal Al Gilani (current chairman, min 400×400px)
 [ ] TAG Holding CR (Commercial Registration) number — for legal footer
 [ ] TAG Holding registered address — for contact section
-[ ] Website or social media URLs for Glamour Affairs (GA) and Beauty Affairs (BA)
+
+EXTERNAL LINKS — PENDING:
+[ ] External URL for Al Jood Medical — placeholder href="#" used
+[ ] External URL for SATECH — placeholder href="#" used
+[ ] External URL for Alwarood Medical Center — placeholder href="#" used
+[ ] External URL for Alkhawaled Dialysis Center — placeholder href="#" used
+[ ] Website or social media URLs for Gennaro Dell'Aquila (GA) and Bechara Iskandar Haddad (BA)
 
 ASSETS OUTSTANDING:
 [ ] Optimised WebP/AVIF image derivatives — requires cwebp or ImageMagick on build machine
