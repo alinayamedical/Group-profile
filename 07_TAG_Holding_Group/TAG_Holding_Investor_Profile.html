@@ -1,1127 +1,736 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TAG Holding — Investor Profile 2026</title>
-<meta name="description" content="TAG Holding — A diversified investment platform across Healthcare, Medical Technology, Wellness, Hospitality, Education, and Global Events. Riyadh, Saudi Arabia.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --navy:      #0D1B2A;
-  --navy-md:   #142030;
-  --navy-lt:   #1C2D40;
-  --gold:      #C9A84C;
-  --gold-lt:   #DFC070;
-  --gold-dk:   #A88830;
-  --white:     #FFFFFF;
-  --offwhite:  #F5F6F8;
-  --grey:      #6B7280;
-  --grey-lt:   #9CA3AF;
-  --border:    #E5E7EB;
-  --charcoal:  #1A1A2E;
-  --max-w:     1160px;
-  --pad-x:     64px;
-  --r:         8px;
-  --ease:      cubic-bezier(0.22, 0.61, 0.36, 1);
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAG Holding Group — Investor Profile 2026</title>
+  <meta name="description" content="TAG Holding Group is a Saudi holding company with operations spanning healthcare, wellness, beauty, events, and professional development.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0D1B2A;
+      --navy-mid: #122233;
+      --gold: #C9A84C;
+      --white: #FFFFFF;
+      --offwhite: #F5F6F8;
+      --text: #1A2332;
+      --muted: #5A6A7A;
+      --border: #DDE2E8;
+      --max-w: 1160px;
+      --section-pad: 72px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--offwhite); color: var(--text); line-height: 1.7; }
+    [id] { scroll-margin-top: 80px; }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+    a:focus:not(:focus-visible) { outline: none; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+      html { scroll-behavior: auto; }
+    }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 16px; }
-body {
-  font-family: 'Raleway', Arial, sans-serif;
-  color: var(--charcoal);
-  background: var(--white);
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
-img, svg { display: block; }
-a { color: inherit; text-decoration: none; }
-button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    /* NAVIGATION */
+    #nav { position: fixed; top: 0; left: 0; right: 0; height: 64px; background: var(--navy); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; z-index: 100; }
+    .nav-logo-wrap { display: flex; align-items: center; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .nav-cta { background: var(--gold); color: var(--navy); padding: 8px 20px; border-radius: 4px; font-size: 13px; font-weight: 600; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+    .mobile-menu-btn { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+    .mobile-menu-btn span { width: 22px; height: 2px; background: var(--white); display: block; border-radius: 1px; transition: transform 0.2s; }
+    .mobile-nav { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--navy); z-index: 99; padding: 16px 24px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .mobile-nav.is-open { display: block; }
+    .mobile-nav a { display: block; color: rgba(255,255,255,0.85); font-size: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .mobile-nav a:last-child { border-bottom: none; }
 
-.container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad-x); }
-@media (max-width: 1024px) { :root { --pad-x: 40px; } }
-@media (max-width: 767px)  { :root { --pad-x: 24px; } }
+    /* HERO */
+    #hero { display: grid; grid-template-columns: 55fr 45fr; min-height: clamp(650px, 55vw, 750px); margin-top: 64px; }
+    .hero-content { background: var(--navy); padding: 64px 56px; display: flex; flex-direction: column; justify-content: center; gap: 24px; }
+    .hero-photo-panel { overflow: hidden; }
+    .hero-photo-panel img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-eyebrow { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(201,168,76,0.9); font-weight: 600; }
+    #hero h1 { font-size: clamp(38px, 4vw, 54px); font-weight: 700; color: var(--white); line-height: 1.2; }
+    .hero-sub { color: rgba(255,255,255,0.75); font-size: 17px; max-width: 520px; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+    .btn-primary { background: var(--gold); color: var(--navy); padding: 12px 28px; border-radius: 4px; font-weight: 600; font-size: 14px; display: inline-block; transition: opacity 0.2s; }
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-secondary { border: 1.5px solid rgba(255,255,255,0.5); color: var(--white); padding: 12px 28px; border-radius: 4px; font-weight: 500; font-size: 14px; display: inline-block; transition: border-color 0.2s; }
+    .btn-secondary:hover { border-color: var(--white); }
 
-/* ── NAVBAR ── */
-#nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  height: 72px;
-  background: rgba(13,27,42,0.97);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(201,168,76,0.15);
-  transition: box-shadow 0.3s;
-}
-#nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.4); }
-.nav-inner {
-  height: 100%; display: flex; align-items: center;
-  justify-content: space-between; gap: 32px;
-  padding: 0 var(--pad-x); max-width: var(--max-w); margin: 0 auto;
-}
-.nav-logo { display: flex; align-items: center; gap: 0; flex-shrink: 0; }
-.nav-logo svg { height: 36px; width: auto; }
-.nav-links { display: flex; align-items: center; gap: 36px; }
-.nav-links a {
-  font-size: 11px; font-weight: 600; letter-spacing: 2px;
-  text-transform: uppercase; color: rgba(255,255,255,0.5);
-  transition: color 0.2s; white-space: nowrap;
-}
-.nav-links a:hover { color: var(--gold); }
-.nav-cta {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--gold); color: var(--navy);
-  font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
-  text-transform: uppercase; padding: 10px 22px; border-radius: var(--r);
-  transition: background 0.2s, transform 0.2s;
-  flex-shrink: 0;
-}
-.nav-cta:hover { background: var(--gold-lt); transform: translateY(-1px); }
-@media (max-width: 960px) { .nav-links { display: none; } }
+    /* SECTIONS */
+    .section { padding: var(--section-pad) 0; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; }
+    .bg-white { background: var(--white); }
+    .bg-offwhite { background: var(--offwhite); }
+    .bg-navy { background: var(--navy); }
+    .eyebrow { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--gold); margin-bottom: 12px; }
+    .sec-title { font-size: clamp(28px, 3vw, 38px); font-weight: 700; color: var(--navy); line-height: 1.25; }
+    .bg-navy .sec-title { color: var(--white); }
+    .gold-rule { width: 32px; height: 2px; background: var(--gold); margin: 16px 0 32px; }
+    .section-intro { font-size: 16px; color: var(--muted); max-width: 680px; margin-bottom: 40px; }
 
-/* ── HERO ── */
-#hero {
-  background: var(--navy);
-  min-height: 100vh;
-  display: flex; align-items: center; justify-content: center;
-  text-align: center;
-  padding: 120px var(--pad-x) 80px;
-  position: relative; overflow: hidden;
-}
-#hero::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-  background:
-    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(201,168,76,0.10) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 30% at 20% 80%, rgba(201,168,76,0.05) 0%, transparent 60%);
-  pointer-events: none;
-}
-#hero::after {
-  content: '';
-  position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(to right, transparent, rgba(201,168,76,0.4), transparent);
-}
-.hero-inner { position: relative; z-index: 1; max-width: 860px; }
-.hero-logo-wrap {
-  display: inline-block;
-  background: var(--white);
-  border-radius: 12px;
-  padding: 18px 36px;
-  margin-bottom: 52px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
-}
-.hero-logo-wrap svg { height: 56px; width: auto; }
-.hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 12px;
-  font-size: 10px; font-weight: 700; letter-spacing: 4px;
-  text-transform: uppercase; color: var(--gold);
-  margin-bottom: 28px;
-}
-.hero-eyebrow::before, .hero-eyebrow::after {
-  content: ''; width: 32px; height: 1px; background: rgba(201,168,76,0.4);
-}
-h1.hero-title {
-  font-size: clamp(40px, 5vw, 60px);
-  font-weight: 800; color: var(--white);
-  line-height: 1.1; margin-bottom: 28px;
-  letter-spacing: -0.5px;
-}
-h1.hero-title em { color: var(--gold); font-style: normal; }
-.hero-sub {
-  font-size: 18px; font-weight: 400;
-  color: rgba(255,255,255,0.55);
-  max-width: 620px; margin: 0 auto 52px; line-height: 1.85;
-}
-.hero-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: var(--gold); color: var(--navy);
-  font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
-  text-transform: uppercase; padding: 16px 36px; border-radius: var(--r);
-  box-shadow: 0 4px 24px rgba(201,168,76,0.4);
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-}
-.btn-primary:hover { background: var(--gold-lt); transform: translateY(-3px); box-shadow: 0 8px 32px rgba(201,168,76,0.5); }
-.btn-outline {
-  display: inline-flex; align-items: center; gap: 10px;
-  border: 1.5px solid rgba(201,168,76,0.4); color: rgba(255,255,255,0.7);
-  font-size: 12px; font-weight: 600; letter-spacing: 1.5px;
-  text-transform: uppercase; padding: 16px 36px; border-radius: var(--r);
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
-}
-.btn-outline:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.06); }
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 56px; align-items: start; }
+    .about-text p + p { margin-top: 20px; }
+    .about-image { border-radius: 4px; overflow: hidden; }
+    .about-image img { width: 100%; height: 320px; object-fit: cover; }
+    .group-facts { margin-top: 32px; border-top: 1px solid var(--border); }
+    .gf-row { display: grid; grid-template-columns: 180px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .gf-row dt { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .gf-row dd { font-size: 15px; color: var(--text); }
+    blockquote.pull-quote { border-left: 3px solid var(--gold); padding: 16px 24px; margin: 32px 0 0; background: var(--offwhite); border-radius: 0 4px 4px 0; }
+    blockquote.pull-quote p { font-style: italic; color: var(--text); font-size: 16px; line-height: 1.7; }
+    blockquote.pull-quote cite { display: block; margin-top: 12px; font-size: 13px; color: var(--muted); font-style: normal; font-weight: 600; }
 
-/* ── STATS BAR ── */
-.stats-bar { background: var(--navy-md); border-top: 1px solid rgba(201,168,76,0.12); border-bottom: 1px solid rgba(201,168,76,0.12); }
-.stats-row { display: grid; grid-template-columns: repeat(4,1fr); }
-.stat-item {
-  padding: 44px 24px; text-align: center;
-  border-right: 1px solid rgba(255,255,255,0.06);
-}
-.stat-item:last-child { border-right: none; }
-.stat-num {
-  font-size: clamp(36px, 4vw, 52px); font-weight: 800;
-  color: var(--gold); line-height: 1; margin-bottom: 10px;
-  letter-spacing: -1px;
-}
-.stat-lbl { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.5); letter-spacing: 0.5px; }
-@media (max-width: 767px) { .stats-row { grid-template-columns: repeat(2,1fr); } .stat-item:nth-child(2) { border-right: none; } .stat-item:nth-child(1), .stat-item:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.06); } }
+    /* PORTFOLIO TABLE */
+    .table-wrapper { overflow-x: auto; border: 1px solid var(--border); border-radius: 4px; }
+    .portfolio-matrix { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .portfolio-matrix th { background: var(--navy); color: var(--white); padding: 12px 16px; text-align: left; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
+    .portfolio-matrix td { padding: 12px 16px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    .portfolio-matrix tr:last-child td { border-bottom: none; }
+    .portfolio-matrix tr:nth-child(even) td { background: #f9fafb; }
+    .status-badge { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 100px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+    .status--operating   { background: rgba(16,185,129,0.1); color: #065f46; border: 1px solid rgba(16,185,129,0.3); }
+    .status--development { background: rgba(245,158,11,0.1);  color: #92400e; border: 1px solid rgba(245,158,11,0.3); }
+    .status--planned     { background: rgba(99,102,241,0.1);  color: #3730a3; border: 1px solid rgba(99,102,241,0.3); }
+    .matrix-note { font-size: 13px; color: var(--muted); margin-top: 16px; font-style: italic; }
 
-/* ── SECTION SHARED ── */
-.section     { padding: 100px 0; }
-.section-sm  { padding: 72px 0; }
-.bg-white    { background: var(--white); }
-.bg-off      { background: var(--offwhite); }
-.bg-navy     { background: var(--navy); }
-.bg-navy-md  { background: var(--navy-md); }
+    /* BUSINESS PROFILES */
+    .biz-profile { border-top: 2px solid var(--border); padding: 48px 0; }
+    .biz-profile:first-of-type { border-top: none; }
+    .biz-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+    .biz-profile h3 { font-size: 24px; font-weight: 700; color: var(--navy); }
+    .biz-desc { max-width: 680px; color: var(--muted); margin-bottom: 28px; }
+    .biz-profile__entities { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 32px; }
+    .entity-card { background: var(--offwhite); border: 1px solid var(--border); border-radius: 4px; padding: 16px 20px; }
+    .entity-card h4 { font-size: 14px; font-weight: 700; color: var(--navy); }
+    .entity-card p { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    .biz-images { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+    .biz-images figure { overflow: hidden; border-radius: 4px; }
+    .biz-images img { width: 100%; height: 220px; object-fit: cover; }
+    .biz-image figure { overflow: hidden; border-radius: 4px; margin-top: 24px; }
+    .biz-image img { width: 100%; height: 260px; object-fit: cover; }
+    .biz-brand-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+    .biz-brand-card { background: var(--offwhite); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; padding: 16px 20px; }
+    .biz-brand-card h4 { font-size: 15px; font-weight: 700; color: var(--navy); }
+    .biz-brand-card p { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    .profile-disclaimer { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 20px; padding: 12px 16px; background: var(--offwhite); border-radius: 4px; border-left: 3px solid rgba(245,158,11,0.4); }
 
-.eyebrow {
-  font-size: 10px; font-weight: 700; letter-spacing: 4px;
-  text-transform: uppercase; color: var(--gold);
-  margin-bottom: 14px;
-  display: flex; align-items: center; gap: 10px;
-}
-.eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--gold); border-radius: 2px; flex-shrink: 0; }
-.bg-navy .eyebrow, .bg-navy-md .eyebrow { color: rgba(201,168,76,0.8); }
+    /* GROWTH */
+    .growth-list { list-style: none; display: flex; flex-direction: column; gap: 40px; }
+    .growth-item { display: grid; grid-template-columns: 64px 1fr; gap: 24px; align-items: start; }
+    .growth-item__number { font-size: 32px; font-weight: 700; color: var(--gold); line-height: 1; padding-top: 4px; }
+    .growth-item h3 { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .growth-item__meta { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .growth-image-strip { position: relative; height: 300px; overflow: hidden; border-radius: 4px; margin-top: 56px; }
+    .growth-image-strip img { width: 100%; height: 100%; object-fit: cover; }
+    .growth-image-strip::after { content: ''; position: absolute; inset: 0; background: rgba(13,27,42,0.55); }
 
-h2.sec-title {
-  font-size: clamp(32px, 3.5vw, 42px); font-weight: 700;
-  color: var(--navy); line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.3px;
-}
-.bg-navy h2.sec-title, .bg-navy-md h2.sec-title { color: var(--white); }
-.gold-rule { width: 52px; height: 3px; background: linear-gradient(to right, var(--gold), var(--gold-lt)); border-radius: 3px; margin-bottom: 40px; }
+    /* LEADERSHIP */
+    .leadership-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .leader-card { text-align: center; padding: 40px; background: var(--offwhite); border: 1px solid var(--border); border-radius: 4px; }
+    .leader-initials { width: 80px; height: 80px; border-radius: 50%; background: var(--navy); color: var(--gold); font-size: 24px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+    .leader-card h3 { font-size: 20px; font-weight: 700; color: var(--navy); }
+    .leader-card .leader-title { font-size: 14px; color: var(--gold); font-weight: 600; margin: 4px 0 16px; }
+    .leader-card .leader-bio { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .portrait-note { font-size: 12px; color: var(--muted); font-style: italic; text-align: center; margin-top: 12px; }
+    .leadership-image { overflow: hidden; border-radius: 4px; }
+    .leadership-image img { width: 100%; height: 400px; object-fit: cover; }
 
-/* ── INTRO SPLIT ── */
-.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-.intro-body p { font-size: 16px; color: var(--grey); line-height: 1.9; margin-bottom: 20px; }
-.intro-body p:last-child { margin-bottom: 0; }
-.intro-quote {
-  border-left: 3px solid var(--gold);
-  padding: 20px 24px; margin-top: 32px;
-  background: rgba(201,168,76,0.05);
-  border-radius: 0 var(--r) var(--r) 0;
-}
-.intro-quote p { font-size: 15px; font-weight: 600; color: var(--navy); font-style: italic; margin: 0; line-height: 1.6; }
-.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.why-item {
-  display: flex; gap: 14px; align-items: flex-start;
-  padding: 20px; border: 1px solid var(--border);
-  border-radius: var(--r); background: var(--white);
-  transition: box-shadow 0.25s, transform 0.25s;
-}
-.why-item:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
-.why-icon {
-  width: 40px; height: 40px; flex-shrink: 0;
-  background: rgba(201,168,76,0.1); border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-}
-.why-icon svg { width: 18px; height: 18px; color: var(--gold); }
-.why-title { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 4px; letter-spacing: 0.2px; }
-.why-desc { font-size: 12.5px; color: var(--grey); line-height: 1.65; }
-@media (max-width: 960px) { .intro-grid { grid-template-columns: 1fr; gap: 48px; } }
+    /* ENQUIRY */
+    #enquiry .eyebrow { color: rgba(201,168,76,0.9); }
+    #enquiry .gold-rule { background: var(--gold); }
+    #enquiry .enquiry-intro { color: rgba(255,255,255,0.75); max-width: 560px; margin-bottom: 32px; }
+    .enquiry-disclaimer { font-size: 12px; color: rgba(255,255,255,0.45); font-style: italic; max-width: 640px; margin-top: 32px; line-height: 1.6; }
 
-/* ── SECTORS GRID ── */
-.sectors-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 16px; margin-top: 48px; }
-.sector-card {
-  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
-  border-bottom: 2px solid rgba(201,168,76,0.2);
-  border-radius: 10px; padding: 28px 16px; text-align: center;
-  transition: background 0.25s, border-color 0.25s, transform 0.25s; cursor: default;
-}
-.sector-card:hover { background: rgba(255,255,255,0.1); border-bottom-color: var(--gold); transform: translateY(-4px); }
-.sector-icon { font-size: 28px; margin-bottom: 14px; }
-.sector-icon svg { width: 28px; height: 28px; color: var(--gold); margin: 0 auto; }
-.sector-name { font-size: 11px; font-weight: 700; color: var(--gold); letter-spacing: 0.5px; line-height: 1.4; margin-bottom: 6px; }
-.sector-sub { font-size: 10.5px; color: rgba(255,255,255,0.35); line-height: 1.5; }
-@media (max-width: 960px) { .sectors-grid { grid-template-columns: repeat(4,1fr); } }
-@media (max-width: 560px) { .sectors-grid { grid-template-columns: repeat(2,1fr); } }
+    /* FOOTER */
+    #footer { background: var(--navy); padding: 56px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; padding-bottom: 40px; }
+    .footer-tagline { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 12px; }
+    .footer-col h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); font-weight: 600; margin-bottom: 16px; }
+    .footer-col a { display: block; color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-legal { border-top: 1px solid rgba(255,255,255,0.1); padding: 16px 0; }
+    .footer-legal p { font-size: 12px; color: rgba(255,255,255,0.4); text-align: center; }
 
-/* ── PORTFOLIO CARDS ── */
-.portfolio-intro { max-width: 680px; margin-bottom: 48px; }
-.portfolio-intro p { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.85; }
-.portfolio-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
-.portfolio-card {
-  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-  border-top: 3px solid var(--gold);
-  border-radius: var(--r); padding: 32px 24px;
-  transition: background 0.25s, transform 0.25s;
-}
-.portfolio-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-3px); }
-.pc-icon {
-  width: 44px; height: 44px; border-radius: 10px;
-  background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.2);
-  display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
-}
-.pc-icon svg { width: 22px; height: 22px; color: var(--gold); }
-.pc-name { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 8px; line-height: 1.3; }
-.pc-desc { font-size: 12.5px; color: rgba(255,255,255,0.45); line-height: 1.65; }
-@media (max-width: 960px) { .portfolio-grid { grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 560px) { .portfolio-grid { grid-template-columns: 1fr; } }
+    /* FADE-IN */
+    .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .fade-in.is-visible { opacity: 1; transform: none; }
 
-/* ── INVEST HIGHLIGHTS ── */
-.highlights-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-.hl-body { }
-.hl-body p { font-size: 16px; color: var(--grey); line-height: 1.9; margin-bottom: 20px; }
-.hl-badges { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-.hl-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2);
-  border-radius: 100px; padding: 8px 18px;
-  font-size: 11.5px; font-weight: 600; color: var(--gold-dk);
-}
-.hl-badge svg { width: 14px; height: 14px; }
-.hl-ring {
-  width: 320px; height: 320px; border-radius: 50%;
-  border: 2px solid rgba(201,168,76,0.15);
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto; position: relative;
-}
-.hl-ring::before {
-  content: '';
-  position: absolute; width: 240px; height: 240px; border-radius: 50%;
-  border: 2px solid rgba(201,168,76,0.1);
-}
-.hl-ring-inner {
-  width: 160px; height: 160px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--navy-lt), var(--navy));
-  border: 2px solid rgba(201,168,76,0.3);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  text-align: center; z-index: 1;
-}
-.hl-ring-num { font-size: 44px; font-weight: 800; color: var(--gold); line-height: 1; letter-spacing: -2px; }
-.hl-ring-lbl { font-size: 9px; font-weight: 700; letter-spacing: 2px; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-top: 4px; }
-@media (max-width: 960px) { .highlights-grid { grid-template-columns: 1fr; } .hl-ring { display: none; } }
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .mobile-menu-btn { display: flex; }
+      .nav-links, .nav-cta { display: none; }
+      #nav { padding: 0 24px; }
+      #hero { grid-template-columns: 1fr; }
+      .hero-photo-panel { height: 280px; }
+      .hero-content { padding: 48px 24px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-image { order: -1; }
+      .about-image img { height: 240px; }
+      .leadership-inner { grid-template-columns: 1fr; }
+      .leadership-image { display: none; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .container { padding: 0 24px; }
+      .section { padding: 48px 0; }
+    }
+    @media (max-width: 640px) {
+      .biz-profile__entities { grid-template-columns: 1fr; }
+      .biz-brand-cards { grid-template-columns: 1fr; }
+      .biz-images { grid-template-columns: 1fr; }
+      .growth-item { grid-template-columns: 48px 1fr; gap: 16px; }
+      .growth-item__number { font-size: 24px; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions a { text-align: center; }
+      .gf-row { grid-template-columns: 1fr; gap: 4px; }
+    }
 
-/* ── BRANDS (Wellness) ── */
-.brands-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-.brand-card {
-  background: var(--white); border: 1px solid var(--border);
-  border-top: 4px solid var(--gold); border-radius: var(--r);
-  padding: 40px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-  transition: box-shadow 0.25s, transform 0.25s;
-}
-.brand-card:hover { box-shadow: 0 12px 36px rgba(0,0,0,0.1); transform: translateY(-3px); }
-.brand-initials {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 56px; height: 56px; border-radius: 12px;
-  background: var(--navy); color: var(--gold);
-  font-size: 18px; font-weight: 800; letter-spacing: 1px;
-  margin-bottom: 20px;
-}
-.brand-name { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
-.brand-tagline { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-.brand-desc { font-size: 14.5px; color: var(--grey); line-height: 1.8; margin-bottom: 20px; }
-.brand-features { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.brand-features li {
-  font-size: 13px; color: var(--grey); display: flex; align-items: center; gap: 8px;
-}
-.brand-features li::before { content: ''; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
-@media (max-width: 767px) { .brands-grid { grid-template-columns: 1fr; } }
-
-/* ── SAUDI POSITION ── */
-.position-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-.position-grid p { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.85; margin-bottom: 20px; }
-.drivers-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
-.drivers-list li {
-  display: flex; align-items: center; gap: 14px;
-  font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.75);
-  padding: 14px 18px;
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: var(--r);
-  background: rgba(255,255,255,0.03);
-  transition: background 0.2s;
-}
-.drivers-list li:hover { background: rgba(255,255,255,0.06); }
-.drivers-list li::before { content: ''; width: 8px; height: 8px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
-.position-highlights { display: flex; flex-direction: column; gap: 24px; }
-.ph-item {
-  padding: 28px; border: 1px solid rgba(255,255,255,0.08);
-  border-left: 3px solid var(--gold); border-radius: 0 var(--r) var(--r) 0;
-  background: rgba(255,255,255,0.03);
-}
-.ph-title { font-size: 14px; font-weight: 700; color: var(--gold); margin-bottom: 6px; letter-spacing: 0.3px; }
-.ph-desc { font-size: 13.5px; color: rgba(255,255,255,0.5); line-height: 1.7; }
-@media (max-width: 960px) { .position-grid { grid-template-columns: 1fr; gap: 40px; } }
-
-/* ── LEADERSHIP ── */
-.leadership-card {
-  max-width: 760px; margin: 0 auto; text-align: center;
-  padding: 56px; border: 1px solid rgba(201,168,76,0.15);
-  border-radius: 16px; background: rgba(255,255,255,0.02);
-}
-.leader-avatar {
-  width: 80px; height: 80px; border-radius: 50%;
-  background: rgba(201,168,76,0.1); border: 2px solid rgba(201,168,76,0.3);
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 20px; font-size: 28px; font-weight: 800;
-  color: var(--gold); letter-spacing: 1px;
-}
-.leader-name { font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
-.leader-title { font-size: 11.5px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
-.leader-bio { font-size: 16px; color: rgba(255,255,255,0.55); line-height: 1.85; }
-.network-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
-.network-item {
-  padding: 24px; border: 1px solid rgba(255,255,255,0.07);
-  border-radius: var(--r); text-align: center;
-  background: rgba(255,255,255,0.03);
-}
-.ni-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(201,168,76,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
-.ni-icon svg { width: 20px; height: 20px; color: var(--gold); }
-.ni-title { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
-.ni-desc { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.6; }
-@media (max-width: 767px) { .network-row { grid-template-columns: 1fr; } .leadership-card { padding: 32px 24px; } }
-
-/* ── EVENTS ── */
-.events-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-.events-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
-.events-list li {
-  display: flex; gap: 14px; align-items: flex-start;
-  padding: 16px 0; border-bottom: 1px solid var(--border);
-  font-size: 14.5px; color: var(--charcoal); font-weight: 500;
-}
-.events-list li:first-child { padding-top: 0; }
-.events-list li::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
-@media (max-width: 960px) { .events-grid { grid-template-columns: 1fr; gap: 40px; } }
-
-/* ── EXPANSION ── */
-.expansion-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 16px; margin-top: 48px; }
-.exp-card {
-  padding: 24px 16px; text-align: center;
-  border: 1px solid var(--border); border-radius: var(--r);
-  background: var(--white); transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
-}
-.exp-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-3px); border-color: rgba(201,168,76,0.4); }
-.exp-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(201,168,76,0.08); display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
-.exp-icon svg { width: 22px; height: 22px; color: var(--gold); }
-.exp-name { font-size: 12px; font-weight: 700; color: var(--navy); line-height: 1.4; }
-@media (max-width: 960px) { .expansion-grid { grid-template-columns: repeat(3,1fr); } }
-@media (max-width: 560px) { .expansion-grid { grid-template-columns: repeat(2,1fr); } }
-
-/* ── ACADEMY ── */
-.academy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-.programs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.program-item {
-  display: flex; gap: 10px; align-items: center;
-  padding: 12px 14px; border: 1px solid rgba(255,255,255,0.07);
-  border-radius: var(--r); font-size: 12.5px; font-weight: 600;
-  color: rgba(255,255,255,0.65); background: rgba(255,255,255,0.03);
-}
-.program-item::before { content: ''; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
-@media (max-width: 960px) { .academy-grid { grid-template-columns: 1fr; gap: 40px; } }
-
-/* ── COMPETITIVE ADVANTAGES ── */
-.advantages-list { list-style: none; display: flex; flex-direction: column; gap: 0; max-width: 820px; margin: 0 auto; }
-.adv-item {
-  display: flex; align-items: center; gap: 20px;
-  padding: 22px 0; border-bottom: 1px solid var(--border);
-  font-size: 15.5px; color: var(--charcoal); font-weight: 500;
-  transition: color 0.2s;
-}
-.adv-item:last-child { border-bottom: none; }
-.adv-item:hover { color: var(--navy); }
-.adv-num { font-size: 11px; font-weight: 700; color: var(--gold); width: 28px; flex-shrink: 0; letter-spacing: 1px; }
-.adv-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; opacity: 0.5; }
-
-/* ── INVESTMENT CTA ── */
-#invest-cta { background: var(--navy); position: relative; overflow: hidden; }
-#invest-cta::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 70%);
-  pointer-events: none;
-}
-.cta-inner { position: relative; z-index: 1; text-align: center; max-width: 700px; margin: 0 auto; }
-.cta-inner h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; color: var(--white); margin-bottom: 20px; letter-spacing: -0.5px; }
-.cta-inner p { font-size: 17px; color: rgba(255,255,255,0.5); line-height: 1.85; margin-bottom: 40px; }
-.investor-types { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 44px; }
-.inv-type {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 100px; padding: 8px 18px;
-  font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.6);
-}
-
-/* ── FOOTER ── */
-#footer { background: #060D14; padding: 60px 0 0; }
-.footer-top {
-  display: flex; align-items: flex-start; justify-content: space-between;
-  gap: 48px; flex-wrap: wrap; padding-bottom: 48px;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-}
-.footer-brand { max-width: 320px; }
-.footer-logo-wrap {
-  background: var(--white); border-radius: 8px;
-  padding: 12px 20px; display: inline-block; margin-bottom: 16px;
-}
-.footer-logo-wrap svg { height: 28px; width: auto; }
-.footer-tagline { font-size: 13px; color: rgba(255,255,255,0.35); line-height: 1.6; }
-.footer-col h4 { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 20px; }
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-.footer-col a { font-size: 13px; color: rgba(255,255,255,0.5); transition: color 0.2s; }
-.footer-col a:hover { color: var(--gold); }
-.footer-bottom {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 16px; padding: 20px 0; flex-wrap: wrap;
-}
-.footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
-.footer-legal { font-size: 11px; color: rgba(255,255,255,0.18); background: rgba(0,0,0,0.2); padding: 16px 24px; text-align: center; line-height: 1.65; border-top: 1px solid rgba(255,255,255,0.04); }
-@media (max-width: 767px) { .footer-top { flex-direction: column; gap: 36px; } .footer-bottom { flex-direction: column; align-items: flex-start; } }
-
-/* ── UTILITY ── */
-.text-gold { color: var(--gold); }
-.text-white { color: var(--white); }
-.mt-0 { margin-top: 0; }
-.divider { width: 100%; height: 1px; background: linear-gradient(to right, transparent, rgba(201,168,76,0.3), transparent); margin: 0; }
-</style>
+    /* PRINT */
+    @media print {
+      #nav, .hero-photo-panel, .mobile-menu-btn, .mobile-nav, .growth-image-strip { display: none !important; }
+      #hero { min-height: auto; grid-template-columns: 1fr; margin-top: 0; background: #fff; }
+      .hero-content { background: #fff; padding: 24px 0; }
+      .hero-eyebrow, #hero h1, .hero-sub { color: #000 !important; }
+      .section { padding: 24px 0; break-inside: avoid; }
+      .biz-profile, .growth-item { break-inside: avoid; }
+      .sec-title { break-after: avoid; color: #000 !important; }
+      #enquiry { break-before: always; background: #fff !important; }
+      #enquiry .sec-title, #enquiry p, #enquiry .eyebrow { color: #000 !important; }
+      .bg-navy, #footer { background: #fff !important; }
+      .footer-tagline, .footer-col a, .footer-legal p { color: #333 !important; }
+      .gold-rule { background: #999; }
+      a[href]::after { content: none; }
+      .portfolio-matrix { font-size: 9pt; }
+      .leadership-image { display: none; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ═══ NAVBAR ═══ -->
-<header id="nav">
-  <div class="nav-inner">
-    <a class="nav-logo" href="#hero">
-      <!-- TAG Holding Logo — inline, dark background version (text in white) -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 288" height="36" aria-label="TAG Holding">
-        <!-- T -->
-        <text x="146" y="155" font-family="'Raleway', Arial, sans-serif" font-weight="800" font-size="88" fill="#FFFFFF">T</text>
-        <!-- A -->
-        <text x="284" y="155" font-family="'Raleway', Arial, sans-serif" font-weight="800" font-size="88" fill="#FFFFFF">A</text>
-        <!-- G -->
-        <text x="462" y="155" font-family="'Raleway', Arial, sans-serif" font-weight="800" font-size="88" fill="#FFFFFF">G</text>
-        <!-- Gold vertical rules -->
-        <line x1="263" y1="151" x2="263" y2="68" stroke="#C9A84C" stroke-width="2.2"/>
-        <line x1="457" y1="151" x2="457" y2="68" stroke="#C9A84C" stroke-width="2.2"/>
-        <!-- HOLDING -->
-        <text x="360" y="222" font-family="'Raleway', Arial, sans-serif" font-weight="500" font-size="28" fill="#FFFFFF" text-anchor="middle" letter-spacing="8">HOLDING</text>
-        <!-- Gold horizontal rules -->
-        <line x1="176" y1="207" x2="234" y2="207" stroke="#C9A84C" stroke-width="2.2"/>
-        <line x1="495" y1="207" x2="553" y2="207" stroke="#C9A84C" stroke-width="2.2"/>
-      </svg>
-    </a>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#sectors">Sectors</a>
-      <a href="#healthcare">Healthcare</a>
-      <a href="#leadership">Leadership</a>
-      <a href="#invest-cta">Invest</a>
-    </nav>
-    <a href="#invest-cta" class="nav-cta">Investment Enquiry</a>
+<!-- NAVIGATION -->
+<header id="nav" role="banner">
+  <div class="nav-logo-wrap">
+    <svg style="height: 34px; width: auto;" aria-label="TAG Holding" role="img" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <path id="n-T" d="M 2336 0 L 1370 0 L 1370 3763 L 128 3763 L 128 4570 L 3578 4570 L 3578 3763 L 2336 3763 L 2336 0 z" transform="scale(0.015625)"/>
+        <path id="n-A" d="M 3373 0 L 3040 1088 L 1376 1088 L 1043 0 L 0 0 L 1613 4589 L 2797 4589 L 4416 0 L 3373 0 z M 2477 2963 Q 2445 3072 2393 3238 Q 2342 3405 2291 3577 Q 2240 3750 2208 3878 Q 2176 3750 2121 3561 Q 2067 3373 2019 3203 Q 1971 3034 1946 2963 L 1619 1901 L 2810 1901 L 2477 2963 z" transform="scale(0.015625)"/>
+        <path id="n-Gb" d="M 2310 2566 L 4122 2566 L 4122 198 Q 3763 77 3376 6 Q 2989 -64 2496 -64 Q 1472 -64 921 537 Q 371 1139 371 2291 Q 371 3008 649 3533 Q 928 4058 1459 4346 Q 1990 4634 2758 4634 Q 3123 4634 3475 4557 Q 3827 4480 4115 4352 L 3795 3578 Q 3584 3686 3315 3756 Q 3046 3827 2752 3827 Q 2330 3827 2019 3635 Q 1709 3443 1539 3094 Q 1370 2746 1370 2272 Q 1370 1824 1491 1478 Q 1613 1133 1875 937 Q 2138 742 2560 742 Q 2765 742 2909 761 Q 3053 781 3174 806 L 3174 1760 L 2310 1760 L 2310 2566 z" transform="scale(0.015625)"/>
+        <path id="n-H" d="M 4115 0 L 3539 0 L 3539 2131 L 1197 2131 L 1197 0 L 621 0 L 621 4570 L 1197 4570 L 1197 2637 L 3539 2637 L 3539 4570 L 4115 4570 L 4115 0 z" transform="scale(0.015625)"/>
+        <path id="n-O" d="M 4608 2291 Q 4608 1581 4368 1053 Q 4128 525 3661 230 Q 3194 -64 2502 -64 Q 1792 -64 1321 230 Q 851 525 620 1056 Q 390 1587 390 2298 Q 390 3002 620 3526 Q 851 4051 1321 4345 Q 1792 4640 2509 4640 Q 3194 4640 3661 4349 Q 4128 4058 4368 3530 Q 4608 3002 4608 2291 z M 998 2291 Q 998 1427 1363 931 Q 1728 435 2502 435 Q 3283 435 3641 931 Q 4000 1427 4000 2291 Q 4000 3155 3641 3644 Q 3283 4134 2509 4134 Q 1734 4134 1366 3644 Q 998 3155 998 2291 z" transform="scale(0.015625)"/>
+        <path id="n-L" d="M 621 0 L 621 4570 L 1197 4570 L 1197 512 L 3194 512 L 3194 0 L 621 0 z" transform="scale(0.015625)"/>
+        <path id="n-D" d="M 4282 2330 Q 4282 1171 3651 585 Q 3021 0 1894 0 L 621 0 L 621 4570 L 2029 4570 Q 2720 4570 3225 4314 Q 3731 4058 4006 3562 Q 4282 3066 4282 2330 z M 3674 2310 Q 3674 3226 3222 3651 Q 2771 4077 1946 4077 L 1197 4077 L 1197 493 L 1818 493 Q 3674 493 3674 2310 z" transform="scale(0.015625)"/>
+        <path id="n-I" d="M 1907 0 L 256 0 L 256 333 L 794 454 L 794 4109 L 256 4237 L 256 4570 L 1907 4570 L 1907 4237 L 1370 4109 L 1370 454 L 1907 333 L 1907 0 z" transform="scale(0.015625)"/>
+        <path id="n-N" d="M 4243 0 L 3571 0 L 1126 3795 L 1101 3795 Q 1114 3571 1133 3238 Q 1152 2906 1152 2554 L 1152 0 L 621 0 L 621 4570 L 1286 4570 L 3725 787 L 3750 787 Q 3744 890 3734 1094 Q 3725 1299 3715 1542 Q 3706 1786 3706 1990 L 3706 4570 L 4243 4570 L 4243 0 z" transform="scale(0.015625)"/>
+        <path id="n-Gr" d="M 2605 2413 L 4186 2413 L 4186 173 Q 3814 51 3436 -6 Q 3059 -64 2579 -64 Q 1869 -64 1382 221 Q 896 506 643 1034 Q 390 1562 390 2285 Q 390 3002 672 3526 Q 954 4051 1482 4342 Q 2010 4634 2758 4634 Q 3142 4634 3484 4563 Q 3827 4493 4122 4365 L 3904 3866 Q 3661 3974 3357 4051 Q 3053 4128 2726 4128 Q 1907 4128 1449 3635 Q 992 3142 992 2285 Q 992 1741 1168 1321 Q 1344 902 1721 668 Q 2099 435 2714 435 Q 3014 435 3225 467 Q 3437 499 3610 544 L 3610 1901 L 2605 1901 L 2605 2413 z" transform="scale(0.015625)"/>
+      </defs>
+      <path d="M 262.8 151.2 L 262.8 68.4" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+      <path d="M 457.2 151.2 L 457.2 68.4" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+      <path d="M 176.4 207.36 L 234 207.36" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+      <path d="M 494.64 207.36 L 552.24 207.36" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+      <g fill="#ffffff" transform="translate(145.999219 138.9) scale(1.05 -1.05)"><use xlink:href="#n-T"/></g>
+      <g fill="#ffffff" transform="translate(323.775 138.9) scale(1.05 -1.05)"><use xlink:href="#n-A"/></g>
+      <g fill="#ffffff" transform="translate(505.586719 138.9) scale(1.05 -1.05)"><use xlink:href="#n-Gb"/></g>
+      <g fill="#ffffff" transform="translate(271.866875 214.64) scale(0.28 -0.28)"><use xlink:href="#n-H"/></g>
+      <g fill="#ffffff" transform="translate(298.666875 214.64) scale(0.28 -0.28)"><use xlink:href="#n-O"/></g>
+      <g fill="#ffffff" transform="translate(329.623125 214.64) scale(0.28 -0.28)"><use xlink:href="#n-L"/></g>
+      <g fill="#ffffff" transform="translate(354.1 214.64) scale(0.28 -0.28)"><use xlink:href="#n-D"/></g>
+      <g fill="#ffffff" transform="translate(386.933125 214.64) scale(0.28 -0.28)"><use xlink:href="#n-I"/></g>
+      <g fill="#ffffff" transform="translate(408.4 214.64) scale(0.28 -0.28)"><use xlink:href="#n-N"/></g>
+      <g fill="#ffffff" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><use xlink:href="#n-Gr"/></g>
+    </svg>
+    <span class="sr-only">TAG Holding</span>
   </div>
+  <nav aria-label="Primary navigation">
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#businesses">Businesses</a></li>
+      <li><a href="#growth">Growth</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+    </ul>
+  </nav>
+  <a href="#enquiry" class="nav-cta">Enquire</a>
+  <button class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
+<nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="#about">About</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#businesses">Businesses</a>
+  <a href="#growth">Growth</a>
+  <a href="#leadership">Leadership</a>
+  <a href="#enquiry">Enquire</a>
+</nav>
 
-<!-- ═══ HERO ═══ -->
-<section id="hero">
-  <div class="hero-inner">
-    <div class="hero-logo-wrap">
-      <!-- TAG Holding Logo — on white card -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 288" height="56" aria-label="TAG Holding">
-        <text x="146" y="155" font-family="'Raleway', Arial, sans-serif" font-weight="800" font-size="88" fill="#0D1B2A">T</text>
-        <text x="284" y="155" font-family="'Raleway', Arial, sans-serif" font-weight="800" font-size="88" fill="#0D1B2A">A</text>
-        <text x="462" y="155" font-family="'Raleway', Arial, sans-serif" font-weight="800" font-size="88" fill="#0D1B2A">G</text>
-        <line x1="263" y1="151" x2="263" y2="68" stroke="#C9A84C" stroke-width="2.5"/>
-        <line x1="457" y1="151" x2="457" y2="68" stroke="#C9A84C" stroke-width="2.5"/>
-        <text x="360" y="222" font-family="'Raleway', Arial, sans-serif" font-weight="500" font-size="28" fill="#0D1B2A" text-anchor="middle" letter-spacing="8">HOLDING</text>
-        <line x1="176" y1="207" x2="234" y2="207" stroke="#C9A84C" stroke-width="2.2"/>
-        <line x1="495" y1="207" x2="553" y2="207" stroke="#C9A84C" stroke-width="2.2"/>
-      </svg>
-    </div>
-
-    <div class="hero-eyebrow">Investor Profile 2026</div>
-
-    <h1 class="hero-title">
-      Building a <em>Healthier, Beautiful</em><br>& Prosperous Future
-    </h1>
-
-    <p class="hero-sub">
-      A uniquely diversified investment platform at the intersection of Healthcare, Medical Technology, Wellness, Luxury Lifestyle, Education, Hospitality, and Global Events — rooted in Saudi Arabia, reaching the world.
-    </p>
-
+<!-- SECTION 1: HERO -->
+<section id="hero" aria-labelledby="hero-heading">
+  <div class="hero-content">
+    <svg style="height: 48px; width: auto;" aria-label="TAG Holding" role="img" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <use xlink:href="#logo-defs" style="display:none"/>
+      <path d="M 262.8 151.2 L 262.8 68.4" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+      <path d="M 457.2 151.2 L 457.2 68.4" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+      <path d="M 176.4 207.36 L 234 207.36" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+      <path d="M 494.64 207.36 L 552.24 207.36" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+      <g fill="#ffffff" transform="translate(145.999219 138.9) scale(1.05 -1.05)"><path d="M 2336 0 L 1370 0 L 1370 3763 L 128 3763 L 128 4570 L 3578 4570 L 3578 3763 L 2336 3763 L 2336 0 z" transform="scale(0.015625)"/></g>
+      <g fill="#ffffff" transform="translate(323.775 138.9) scale(1.05 -1.05)"><path d="M 3373 0 L 3040 1088 L 1376 1088 L 1043 0 L 0 0 L 1613 4589 L 2797 4589 L 4416 0 L 3373 0 z M 2477 2963 Q 2445 3072 2393 3238 Q 2342 3405 2291 3577 Q 2240 3750 2208 3878 Q 2176 3750 2121 3561 Q 2067 3373 2019 3203 Q 1971 3034 1946 2963 L 1619 1901 L 2810 1901 L 2477 2963 z" transform="scale(0.015625)"/></g>
+      <g fill="#ffffff" transform="translate(505.586719 138.9) scale(1.05 -1.05)"><path d="M 2310 2566 L 4122 2566 L 4122 198 Q 3763 77 3376 6 Q 2989 -64 2496 -64 Q 1472 -64 921 537 Q 371 1139 371 2291 Q 371 3008 649 3533 Q 928 4058 1459 4346 Q 1990 4634 2758 4634 Q 3123 4634 3475 4557 Q 3827 4480 4115 4352 L 3795 3578 Q 3584 3686 3315 3756 Q 3046 3827 2752 3827 Q 2330 3827 2019 3635 Q 1709 3443 1539 3094 Q 1370 2746 1370 2272 Q 1370 1824 1491 1478 Q 1613 1133 1875 937 Q 2138 742 2560 742 Q 2765 742 2909 761 Q 3053 781 3174 806 L 3174 1760 L 2310 1760 L 2310 2566 z" transform="scale(0.015625)"/></g>
+      <g fill="#ffffff" transform="translate(271.866875 214.64) scale(0.28 -0.28)"><path d="M 4115 0 L 3539 0 L 3539 2131 L 1197 2131 L 1197 0 L 621 0 L 621 4570 L 1197 4570 L 1197 2637 L 3539 2637 L 3539 4570 L 4115 4570 L 4115 0 z" transform="scale(0.015625)"/></g>
+      <g fill="#ffffff" transform="translate(298.666875 214.64) scale(0.28 -0.28)"><path d="M 4608 2291 Q 4608 1581 4368 1053 Q 4128 525 3661 230 Q 3194 -64 2502 -64 Q 1792 -64 1321 230 Q 851 525 620 1056 Q 390 1587 390 2298 Q 390 3002 620 3526 Q 851 4051 1321 4345 Q 1792 4640 2509 4640 Q 3194 4640 3661 4349 Q 4128 4058 4368 3530 Q 4608 3002 4608 2291 z M 998 2291 Q 998 1427 1363 931 Q 1728 435 2502 435 Q 3283 435 3641 931 Q 4000 1427 4000 2291 Q 4000 3155 3641 3644 Q 3283 4134 2509 4134 Q 1734 4134 1366 3644 Q 998 3155 998 2291 z" transform="scale(0.015625)"/></g>
+      <g fill="#ffffff" transform="translate(329.623125 214.64) scale(0.28 -0.28)"><path d="M 621 0 L 621 4570 L 1197 4570 L 1197 512 L 3194 512 L 3194 0 L 621 0 z" transform="scale(0.015625)"/></g>
+      <g fill="#ffffff" transform="translate(354.1 214.64) scale(0.28 -0.28)"><path d="M 4282 2330 Q 4282 1171 3651 585 Q 3021 0 1894 0 L 621 0 L 621 4570 L 2029 4570 Q 2720 4570 3225 4314 Q 3731 4058 4006 3562 Q 4282 3066 4282 2330 z M 3674 2310 Q 3674 3226 3222 3651 Q 2771 4077 1946 4077 L 1197 4077 L 1197 493 L 1818 493 Q 3674 493 3674 2310 z" transform="scale(0.015625)"/></g>
+      <g fill="#ffffff" transform="translate(386.933125 214.64) scale(0.28 -0.28)"><path d="M 1907 0 L 256 0 L 256 333 L 794 454 L 794 4109 L 256 4237 L 256 4570 L 1907 4570 L 1907 4237 L 1370 4109 L 1370 454 L 1907 333 L 1907 0 z" transform="scale(0.015625)"/></g>
+      <g fill="#ffffff" transform="translate(408.4 214.64) scale(0.28 -0.28)"><path d="M 4243 0 L 3571 0 L 1126 3795 L 1101 3795 Q 1114 3571 1133 3238 Q 1152 2906 1152 2554 L 1152 0 L 621 0 L 621 4570 L 1286 4570 L 3725 787 L 3750 787 Q 3744 890 3734 1094 Q 3725 1299 3715 1542 Q 3706 1786 3706 1990 L 3706 4570 L 4243 4570 L 4243 0 z" transform="scale(0.015625)"/></g>
+      <g fill="#ffffff" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><path d="M 2605 2413 L 4186 2413 L 4186 173 Q 3814 51 3436 -6 Q 3059 -64 2579 -64 Q 1869 -64 1382 221 Q 896 506 643 1034 Q 390 1562 390 2285 Q 390 3002 672 3526 Q 954 4051 1482 4342 Q 2010 4634 2758 4634 Q 3142 4634 3484 4563 Q 3827 4493 4122 4365 L 3904 3866 Q 3661 3974 3357 4051 Q 3053 4128 2726 4128 Q 1907 4128 1449 3635 Q 992 3142 992 2285 Q 992 1741 1168 1321 Q 1344 902 1721 668 Q 2099 435 2714 435 Q 3014 435 3225 467 Q 3437 499 3610 544 L 3610 1901 L 2605 1901 L 2605 2413 z" transform="scale(0.015625)"/></g>
+    </svg>
+    <p class="hero-eyebrow">Investor Profile &middot; 2026</p>
+    <h1 id="hero-heading">Building a Healthier, More Beautiful and Prosperous Future.</h1>
+    <p class="hero-sub">TAG Holding Group is a Saudi holding company led by Dr. Abdulkader Al Gilani, with over 30 years of entrepreneurial experience in healthcare and business development across the Kingdom.</p>
     <div class="hero-actions">
-      <a href="#about" class="btn-primary">
-        Explore the Group
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-      </a>
-      <a href="#invest-cta" class="btn-outline">Investment Enquiry</a>
+      <a href="#portfolio" class="btn-primary">View Portfolio</a>
+      <a href="#enquiry" class="btn-secondary">Enquire</a>
     </div>
+  </div>
+  <div class="hero-photo-panel">
+    <img src="Assets/Riyadh skyline at golden hour-1.png" alt="Riyadh city skyline at golden hour">
   </div>
 </section>
 
-
-<!-- ═══ STATS BAR ═══ -->
-<div class="stats-bar">
-  <div class="stats-row">
-    <div class="stat-item">
-      <div class="stat-num">30<span style="font-size:0.55em;font-weight:600">+</span></div>
-      <div class="stat-lbl">Years of Proven Leadership</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">7</div>
-      <div class="stat-lbl">Business Sectors</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">10<span style="font-size:0.55em;font-weight:600">+</span></div>
-      <div class="stat-lbl">Global Markets</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">KSA</div>
-      <div class="stat-lbl">Headquartered in Riyadh</div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ═══ INTRODUCTION ═══ -->
-<section id="about" class="section bg-white">
+<!-- SECTION 2: ABOUT -->
+<section id="about" class="section bg-white" aria-labelledby="about-heading">
   <div class="container">
-    <div class="intro-grid">
-      <div>
-        <p class="eyebrow">Introduction</p>
-        <h2 class="sec-title">A Vision. A Legacy.<br>A Future Worth Investing In.</h2>
-        <div class="gold-rule"></div>
-        <div class="intro-body">
-          <p>At TAG Holding, we don't just build businesses — we build enduring value, empower people, and shape the future. Founded on more than three decades of entrepreneurial excellence, the Group has established an integrated ecosystem of premium companies designed to serve one of the world's fastest-growing economies.</p>
-          <p>With a strong presence in Riyadh and extensive business relationships across the GCC and global markets, TAG Holding combines trusted operational experience with visionary leadership, creating long-term value through innovation, strategic partnerships, and sustainable growth.</p>
-        </div>
-        <div class="intro-quote">
-          <p>"When you invest with TAG Holding, you are not just investing in companies — you are investing in a vision, a mission, and a legacy of excellence."</p>
-        </div>
-      </div>
-      <div>
-        <p class="eyebrow" style="margin-bottom:24px">Why Invest or Partner</p>
-        <div class="why-grid">
-          <div class="why-item">
-            <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-            <div><div class="why-title">Proven Excellence</div><div class="why-desc">30+ years of building and scaling market-leading companies.</div></div>
-          </div>
-          <div class="why-item">
-            <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-            <div><div class="why-title">Stability & Trust</div><div class="why-desc">Built on integrity, transparency, and long-term governance.</div></div>
-          </div>
-          <div class="why-item">
-            <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
-            <div><div class="why-title">Diversified Portfolio</div><div class="why-desc">Investments across 7 resilient, high-growth sectors.</div></div>
-          </div>
-          <div class="why-item">
-            <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-            <div><div class="why-title">Premium Positioning</div><div class="why-desc">Iconic brands that set the standard in their industries.</div></div>
-          </div>
-          <div class="why-item">
-            <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-            <div><div class="why-title">Strong Partnerships</div><div class="why-desc">A global network of relationships and strategic alliances.</div></div>
-          </div>
-          <div class="why-item">
-            <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
-            <div><div class="why-title">Long-Term Vision</div><div class="why-desc">Sustainable growth that benefits generations to come.</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ SECTORS ═══ -->
-<section id="sectors" class="section bg-navy">
-  <div class="container">
-    <p class="eyebrow">Business Ecosystem</p>
-    <h2 class="sec-title" style="max-width:600px">Seven Sectors.<br>One Integrated Platform.</h2>
+    <p class="eyebrow">Group Overview</p>
+    <h2 class="sec-title" id="about-heading">A Diversified Holding Platform Built for Saudi Arabia</h2>
     <div class="gold-rule"></div>
-    <p style="font-size:16px;color:rgba(255,255,255,0.55);max-width:680px;margin-bottom:0;line-height:1.85">Unlike single-industry investment companies, TAG Holding has developed an interconnected portfolio where each company strengthens the others through cross-referrals, shared expertise, operational integration, and unified strategic direction.</p>
-    <div class="sectors-grid">
-      <div class="sector-card">
-        <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-        <div class="sector-name">Healthcare &amp; Medical</div>
-        <div class="sector-sub">Excellence in Patient Care</div>
-      </div>
-      <div class="sector-card">
-        <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <div class="sector-name">Medical Technology</div>
-        <div class="sector-sub">Innovation in Med-Tech</div>
-      </div>
-      <div class="sector-card">
-        <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div class="sector-name">Wellness &amp; Luxury</div>
-        <div class="sector-sub">Premium Experiences</div>
-      </div>
-      <div class="sector-card">
-        <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <div class="sector-name">Hospitality &amp; Protocol</div>
-        <div class="sector-sub">Exceptional Service</div>
-      </div>
-      <div class="sector-card">
-        <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
-        <div class="sector-name">Education &amp; Academy</div>
-        <div class="sector-sub">Human Capital Development</div>
-      </div>
-      <div class="sector-card">
-        <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 010 8.49m-8.48-.01a6 6 0 010-8.49m11.31-2.82a10 10 0 010 14.14m-14.14 0a10 10 0 010-14.14"/></svg></div>
-        <div class="sector-name">Global Events</div>
-        <div class="sector-sub">Connecting the World</div>
-      </div>
-      <div class="sector-card">
-        <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-        <div class="sector-name">Investment &amp; Finance</div>
-        <div class="sector-sub">Wealth Management</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ HEALTHCARE PORTFOLIO ═══ -->
-<section id="healthcare" class="section bg-navy-md">
-  <div class="container">
-    <p class="eyebrow">Healthcare &amp; Medical Excellence</p>
-    <h2 class="sec-title">The Foundation of<br>TAG Holding's Success</h2>
-    <div class="gold-rule"></div>
-    <div class="portfolio-intro">
-      <p>Healthcare represents the foundation of TAG Holding's success. Its portfolio includes respected medical institutions and healthcare service providers dedicated to delivering advanced patient care and clinical excellence — serving thousands of patients and contributing to the Kingdom's healthcare development.</p>
-    </div>
-    <div class="portfolio-grid">
-      <div class="portfolio-card">
-        <div class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-        <div class="pc-name">Al Olaya Medical Complex</div>
-        <div class="pc-desc">A premier medical complex in Riyadh delivering advanced clinical services and multi-specialty care.</div>
-      </div>
-      <div class="portfolio-card">
-        <div class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
-        <div class="pc-name">Al Warood Medical Center</div>
-        <div class="pc-desc">A trusted community medical center focused on accessible, high-quality primary and specialty healthcare.</div>
-      </div>
-      <div class="portfolio-card">
-        <div class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div class="pc-name">Al Jood Medical</div>
-        <div class="pc-desc">Dedicated to providing generosity in care — delivering essential medical services with clinical precision.</div>
-      </div>
-      <div class="portfolio-card">
-        <div class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <div class="pc-name">Al Enaia Al Rafia'a</div>
-        <div class="pc-desc">Alinaya Alrafia Medical Company — integrating diagnostic precision and professional integrity across the Kingdom.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ INVESTMENT HIGHLIGHTS ═══ -->
-<section class="section bg-off">
-  <div class="container">
-    <div class="highlights-grid">
-      <div class="hl-body">
-        <p class="eyebrow">Investment Highlights</p>
-        <h2 class="sec-title">30+ Years of<br>Proven Leadership</h2>
-        <div class="gold-rule"></div>
-        <p>TAG Holding is founded on more than three decades of successful business development, operational excellence, and trusted relationships across healthcare, medical technology, luxury services, education, and international business.</p>
-        <p>This long-standing track record significantly reduces execution risk while providing investors with a mature platform ready for accelerated expansion.</p>
-        <div class="hl-badges">
-          <span class="hl-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>Proven Track Record</span>
-          <span class="hl-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>Reduced Execution Risk</span>
-          <span class="hl-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>Accelerated Growth Potential</span>
-          <span class="hl-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>Global Expansion Ready</span>
-          <span class="hl-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>Vision 2030 Aligned</span>
-        </div>
-      </div>
-      <div style="display:flex;align-items:center;justify-content:center;">
-        <div class="hl-ring">
-          <div class="hl-ring-inner">
-            <div class="hl-ring-num">30+</div>
-            <div class="hl-ring-lbl">Years</div>
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <p>TAG Holding Group is a Saudi holding company based in Riyadh, led by Founder and Chairman Dr. Abdulkader Al Gilani. With over 30 years of operational and entrepreneurial experience in healthcare and business development, the Group has built a diversified portfolio of operating companies and development-stage ventures.</p>
+        <p>The Group's activities span healthcare services, wellness and beauty, events management, and professional development — with all businesses aligned to the opportunities presented by Saudi Vision 2030 and the Kingdom's expanding private sector.</p>
+        <dl class="group-facts">
+          <div class="gf-row">
+            <dt>Founded</dt>
+            <dd>30+ years of operations</dd>
           </div>
-        </div>
+          <div class="gf-row">
+            <dt>Headquarters</dt>
+            <dd>Riyadh, Saudi Arabia</dd>
+          </div>
+          <div class="gf-row">
+            <dt>Primary Sector</dt>
+            <dd>Healthcare &amp; Medical Services</dd>
+          </div>
+          <div class="gf-row">
+            <dt>Operating Businesses</dt>
+            <dd>4 confirmed healthcare entities, plus wellness, beauty, and events companies</dd>
+          </div>
+          <div class="gf-row">
+            <dt>Strategic Alignment</dt>
+            <dd>Saudi Vision 2030</dd>
+          </div>
+        </dl>
+        <blockquote class="pull-quote">
+          <p>"Our goal is to build businesses that serve people — in their health, their appearance, their professional lives, and the moments that matter most."</p>
+          <cite>— Dr. Abdulkader Al Gilani, Founder &amp; Chairman</cite>
+        </blockquote>
+      </div>
+      <div class="about-image fade-in">
+        <img src="Assets/Quiet consultation in a calm clinic-5.png" alt="Clinician in a quiet consultation room">
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ═══ WELLNESS & BEAUTY ═══ -->
-<section class="section bg-white">
+<!-- SECTION 3: PORTFOLIO MATRIX -->
+<section id="portfolio" class="section bg-offwhite" aria-labelledby="portfolio-heading">
   <div class="container">
-    <p class="eyebrow">Luxury Wellness &amp; Beauty</p>
-    <h2 class="sec-title">Premium Brands in<br>a High-Growth Sector</h2>
+    <p class="eyebrow">Portfolio</p>
+    <h2 class="sec-title" id="portfolio-heading">TAG Holding Group — Business Portfolio</h2>
     <div class="gold-rule"></div>
-    <p style="font-size:16px;color:var(--grey);max-width:680px;margin-bottom:48px;line-height:1.85">The global wellness industry continues to outperform many traditional sectors. TAG Holding has strategically invested in premium beauty and wellness brands designed to meet the increasing demand for luxury personal care experiences.</p>
-    <div class="brands-grid">
-      <div class="brand-card">
-        <div class="brand-initials">GA</div>
-        <div class="brand-name">Gennaro Dell'Aquila</div>
-        <div class="brand-tagline">Premium Luxury Wellness</div>
-        <div class="brand-desc">A premium luxury wellness and beauty brand delivering sophisticated aesthetic experiences, advanced treatments, and international service standards.</div>
-        <ul class="brand-features">
-          <li>Advanced aesthetic treatments</li>
-          <li>International service standards</li>
-          <li>Flagship &amp; licensing model</li>
-          <li>Strategic partnerships</li>
-        </ul>
-      </div>
-      <div class="brand-card">
-        <div class="brand-initials">BA</div>
-        <div class="brand-name">B. Alexander</div>
-        <div class="brand-tagline">Luxury Beauty Concept</div>
-        <div class="brand-desc">A modern luxury beauty concept focused on complete image transformation, hair artistry, wellness, beauty innovation, and premium client experiences.</div>
-        <ul class="brand-features">
-          <li>Complete image transformation</li>
-          <li>Hair artistry &amp; wellness</li>
-          <li>Future franchising opportunities</li>
-          <li>Premium client experience</li>
-        </ul>
-      </div>
+    <p class="section-intro">The Group operates or is developing nine distinct businesses across five sectors.</p>
+    <div class="table-wrapper fade-in" role="region" aria-label="Portfolio matrix" tabindex="0">
+      <table class="portfolio-matrix">
+        <caption class="sr-only">TAG Holding Group — full portfolio of businesses by sector, relationship, status, and location</caption>
+        <thead>
+          <tr>
+            <th scope="col">Business</th>
+            <th scope="col">Sector</th>
+            <th scope="col">Relationship</th>
+            <th scope="col">Status</th>
+            <th scope="col">Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alinaya Alrafia Medical Company</td>
+            <td>Healthcare</td>
+            <td>Subsidiary</td>
+            <td><span class="status-badge status--operating">Operating</span></td>
+            <td>Riyadh</td>
+          </tr>
+          <tr>
+            <td>Al Warood Medical Center</td>
+            <td>Healthcare</td>
+            <td>Portfolio</td>
+            <td><span class="status-badge status--operating">Operating</span></td>
+            <td>Riyadh</td>
+          </tr>
+          <tr>
+            <td>Al Jood Medical Center</td>
+            <td>Healthcare</td>
+            <td>Portfolio</td>
+            <td><span class="status-badge status--operating">Operating</span></td>
+            <td>Riyadh</td>
+          </tr>
+          <tr>
+            <td>Al Khawaled Medical Center</td>
+            <td>Healthcare</td>
+            <td>Portfolio</td>
+            <td><span class="status-badge status--operating">Operating</span></td>
+            <td>Riyadh</td>
+          </tr>
+          <tr>
+            <td>Glamour Affairs (GA)</td>
+            <td>Wellness &amp; Beauty</td>
+            <td>Portfolio</td>
+            <td><span class="status-badge status--operating">Operating</span></td>
+            <td>Riyadh</td>
+          </tr>
+          <tr>
+            <td>Beauty Affairs (BA)</td>
+            <td>Wellness &amp; Beauty</td>
+            <td>Portfolio</td>
+            <td><span class="status-badge status--operating">Operating</span></td>
+            <td>Riyadh</td>
+          </tr>
+          <tr>
+            <td>WAW Event Management</td>
+            <td>Events &amp; Protocol</td>
+            <td>Portfolio</td>
+            <td><span class="status-badge status--development">Under Development</span></td>
+            <td>Riyadh</td>
+          </tr>
+          <tr>
+            <td>Elite Hospitality Protocol (EHP)</td>
+            <td>Hospitality Training</td>
+            <td>Portfolio</td>
+            <td><span class="status-badge status--development">Under Development</span></td>
+            <td>Riyadh</td>
+          </tr>
+          <tr>
+            <td>Royal Academy</td>
+            <td>Professional Development</td>
+            <td>Planned</td>
+            <td><span class="status-badge status--planned">Planned</span></td>
+            <td>Riyadh</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+    <p class="matrix-note">Note: Operating status for WAW Event Management, Elite Hospitality Protocol, and Royal Academy is unconfirmed at time of publication and is subject to change.</p>
   </div>
 </section>
 
-
-<!-- ═══ STRATEGIC POSITION ═══ -->
-<section class="section bg-navy">
+<!-- SECTION 4: BUSINESS PROFILES -->
+<section id="businesses" class="section bg-white" aria-labelledby="businesses-heading">
   <div class="container">
-    <p class="eyebrow">Strategic Position</p>
-    <h2 class="sec-title">Operating at the Heart<br>of Saudi Arabia's Transformation</h2>
+    <p class="eyebrow">Business Profiles</p>
+    <h2 class="sec-title" id="businesses-heading">Our Operating Companies and Ventures</h2>
     <div class="gold-rule"></div>
-    <div class="position-grid">
-      <div>
-        <p>Operating from Riyadh — the political, financial, and commercial heart of the Kingdom — TAG Holding benefits from one of the world's most attractive investment environments. Saudi Arabia continues to experience unprecedented economic transformation.</p>
-        <ul class="drivers-list">
-          <li>Vision 2030 Economic Diversification</li>
-          <li>Rapid Healthcare Sector Expansion</li>
-          <li>Medical Technology Modernization</li>
-          <li>Tourism &amp; Hospitality Growth</li>
-          <li>Luxury Lifestyle Investment</li>
-          <li>Private Sector Development</li>
-          <li>International Investment Attraction</li>
-        </ul>
+
+    <article class="biz-profile fade-in">
+      <div class="biz-header">
+        <h3>Healthcare Services</h3>
+        <span class="status-badge status--operating">Operating</span>
       </div>
-      <div class="position-highlights">
-        <div class="ph-item">
-          <div class="ph-title">Riyadh Headquarters</div>
-          <div class="ph-desc">Strategically based in the Kingdom's capital — the center of decision-making, finance, and enterprise.</div>
+      <p class="biz-desc">The healthcare portfolio forms the core of TAG Holding's operations. Alinaya Alrafia Medical Company serves as the Group's primary healthcare entity, with Al Warood, Al Jood, and Al Khawaled medical centers operating across Riyadh.</p>
+      <div class="biz-profile__entities">
+        <div class="entity-card">
+          <h4>Alinaya Alrafia Medical Company</h4>
+          <p>Primary Healthcare Entity &middot; Riyadh</p>
         </div>
-        <div class="ph-item">
-          <div class="ph-title">GCC &amp; Regional Reach</div>
-          <div class="ph-desc">Extensive business relationships across the Gulf, Levant, and international markets including London, Rome, Geneva, Beijing, and Sydney.</div>
+        <div class="entity-card">
+          <h4>Al Warood Medical Center</h4>
+          <p>Medical Center &middot; Riyadh</p>
         </div>
-        <div class="ph-item">
-          <div class="ph-title">Vision 2030 Aligned</div>
-          <div class="ph-desc">Every business in the TAG portfolio contributes directly to Vision 2030's diversification, health, and quality-of-life objectives.</div>
+        <div class="entity-card">
+          <h4>Al Jood Medical Center</h4>
+          <p>Medical Center &middot; Riyadh</p>
         </div>
-        <div class="ph-item">
-          <div class="ph-title">Multi-Sector Resilience</div>
-          <div class="ph-desc">Exposure across 7 sectors ensures portfolio resilience while capturing structural economic shifts simultaneously.</div>
+        <div class="entity-card">
+          <h4>Al Khawaled Medical Center</h4>
+          <p>Medical Center &middot; Riyadh</p>
         </div>
       </div>
-    </div>
+      <div class="biz-images">
+        <figure>
+          <img src="Assets/Home nurse checks elderly patient's blood pressure-2.png" alt="Home nurse checking elderly patient's blood pressure">
+        </figure>
+        <figure>
+          <img src="Assets/Clinician Consulting with a Saudi Patient-3.png" alt="Clinician consulting with a Saudi patient">
+        </figure>
+      </div>
+    </article>
+
+    <article class="biz-profile fade-in">
+      <div class="biz-header">
+        <h3>Wellness &amp; Luxury Beauty</h3>
+        <span class="status-badge status--operating">Operating</span>
+      </div>
+      <p class="biz-desc">Glamour Affairs and Beauty Affairs are two distinct premium beauty and wellness brands operating under the TAG Holding platform, positioned in Riyadh's growing luxury personal care market.</p>
+      <div class="biz-brand-cards">
+        <div class="biz-brand-card">
+          <h4>Glamour Affairs (GA)</h4>
+          <p>Premium Beauty &amp; Lifestyle</p>
+        </div>
+        <div class="biz-brand-card">
+          <h4>Beauty Affairs (BA)</h4>
+          <p>Luxury Beauty Services</p>
+        </div>
+      </div>
+      <div class="biz-image">
+        <figure>
+          <img src="Assets/Warm Modern Riyadh Salon Interior-4.png" alt="Warm modern salon interior in Riyadh">
+        </figure>
+      </div>
+    </article>
+
+    <article class="biz-profile fade-in">
+      <div class="biz-header">
+        <h3>Events &amp; Hospitality Protocol</h3>
+        <span class="status-badge status--development">Under Development</span>
+      </div>
+      <p class="biz-desc">WAW Event Management and Elite Hospitality Protocol (EHP) are two ventures within the TAG Holding development portfolio. Both are at an early stage; their operating status has not been formally confirmed.</p>
+      <div class="biz-brand-cards">
+        <div class="biz-brand-card">
+          <h4>WAW Event Management</h4>
+          <p>Events &amp; Protocol (Under Development)</p>
+        </div>
+        <div class="biz-brand-card">
+          <h4>Elite Hospitality Protocol (EHP)</h4>
+          <p>Hospitality Training (Under Development)</p>
+        </div>
+      </div>
+      <div class="biz-images">
+        <figure>
+          <img src="Assets/Riyadh Conference With Abstract Stage Screens-7.png" alt="Conference hall with abstract stage screens in Riyadh">
+        </figure>
+        <figure>
+          <img src="Assets/Formal Dining Etiquette Workshop-6.png" alt="Formal dining etiquette workshop">
+        </figure>
+      </div>
+      <p class="profile-disclaimer">WAW Event and EHP are development-stage ventures. Inclusion here reflects strategic intent and does not confirm current operational activity.</p>
+    </article>
+
+    <article class="biz-profile fade-in">
+      <div class="biz-header">
+        <h3>Royal Academy</h3>
+        <span class="status-badge status--planned">Planned</span>
+      </div>
+      <p class="biz-desc">The Royal Academy is a planned professional development institution under the TAG Holding umbrella. It is in the conceptual stage and is not yet operational.</p>
+      <div class="biz-image">
+        <figure>
+          <img src="Assets/Hospitality workshop with refined table setting-9.png" alt="Hospitality workshop with refined table setting">
+        </figure>
+      </div>
+      <p class="profile-disclaimer">Royal Academy is a planned venture. No operational activity has commenced.</p>
+    </article>
+
   </div>
 </section>
 
-
-<!-- ═══ EHP ═══ -->
-<section class="section bg-white">
+<!-- SECTION 5: GROWTH PRIORITIES -->
+<section id="growth" class="section bg-offwhite" aria-labelledby="growth-heading">
   <div class="container">
-    <div class="events-grid">
-      <div>
-        <p class="eyebrow">Hospitality, Lifestyle &amp; Protocol</p>
-        <h2 class="sec-title">EHP — House of Etiquette, Hospitality &amp; Protocol</h2>
-        <div class="gold-rule"></div>
-        <p style="font-size:16px;color:var(--grey);line-height:1.85;margin-bottom:24px">Exceptional service has become a defining competitive advantage in luxury markets. EHP is a premium institution dedicated to training the next generation of hospitality and protocol professionals — serving executives, government institutions, luxury brands, and high-net-worth individuals.</p>
-        <p style="font-size:14px;color:var(--grey);line-height:1.8">EHP serves executives, government institutions, luxury brands, hospitality professionals, and high-net-worth individuals seeking world-class service standards.</p>
-      </div>
-      <div>
-        <p style="font-size:12px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:20px">Areas of Excellence</p>
-        <ul class="events-list">
-          <li>Executive Etiquette &amp; Leadership Presentation</li>
-          <li>Diplomatic &amp; International Protocol</li>
-          <li>Luxury Hospitality Standards</li>
-          <li>Corporate Image Development</li>
-          <li>Personal Branding &amp; VIP Service Excellence</li>
-          <li>Fine Dining &amp; Table Protocol</li>
-          <li>Cross-Cultural Business Etiquette</li>
-          <li>Soft Skills for C-Suite Executives</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ LEADERSHIP ═══ -->
-<section id="leadership" class="section bg-navy-md">
-  <div class="container">
-    <p class="eyebrow" style="justify-content:center">Leadership &amp; Strategic Relationships</p>
-    <h2 class="sec-title" style="text-align:center;margin-bottom:48px">The Vision Behind the Group</h2>
-    <div class="leadership-card">
-      <div class="leader-avatar">AG</div>
-      <div class="leader-name">Dr. Abdulkader Al Gilani</div>
-      <div class="leader-title">Founder &amp; Group Chairman — TAG Holding</div>
-      <p class="leader-bio">Dr. Al Gilani's vision centers on building a sustainable business ecosystem through strategic collaboration, operational excellence, and long-term value creation. His leadership has cultivated extensive relationships with business leaders, healthcare professionals, government stakeholders, entrepreneurs, international partners, and industry experts — forming a network that supports collaboration, business development, and strategic growth across Saudi Arabia and international markets.</p>
-    </div>
-    <div class="network-row">
-      <div class="network-item">
-        <div class="ni-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-        <div class="ni-title">Government Relationships</div>
-        <div class="ni-desc">Strong ties with key stakeholders across Saudi government institutions and regulatory bodies.</div>
-      </div>
-      <div class="network-item">
-        <div class="ni-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
-        <div class="ni-title">International Network</div>
-        <div class="ni-desc">Business connections spanning Europe, Asia, the Americas, and the Middle East.</div>
-      </div>
-      <div class="network-item">
-        <div class="ni-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.61 3.4 2 2 0 013.6 1.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 8.8a16 16 0 006 6l.91-.91a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
-        <div class="ni-title">Healthcare Expertise</div>
-        <div class="ni-desc">Deep industry knowledge and professional medical networks built over three decades.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ GLOBAL EVENTS ═══ -->
-<section class="section bg-off">
-  <div class="container">
-    <div class="events-grid">
-      <div>
-        <p class="eyebrow">Global Events &amp; Strategic Experiences</p>
-        <h2 class="sec-title">WAW Event</h2>
-        <div class="gold-rule"></div>
-        <p style="font-size:16px;color:var(--grey);line-height:1.85;margin-bottom:20px">A full-service international event company delivering premium events that create strategic visibility, facilitate high-value relationships, and connect businesses with investors, governments, and international partners.</p>
-        <p style="font-size:14px;color:var(--grey);line-height:1.8">WAW Event strengthens TAG Holding by positioning the group at the center of major industry conversations, cross-sector deal-making, and international partnership opportunities.</p>
-      </div>
-      <div>
-        <p style="font-size:12px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:20px">Event Portfolio</p>
-        <ul class="events-list">
-          <li>Government Events &amp; Ministerial Summits</li>
-          <li>International Conferences &amp; Medical Congresses</li>
-          <li>Corporate Summits &amp; Investment Forums</li>
-          <li>Awards Ceremonies &amp; Gala Dinners</li>
-          <li>Luxury Product &amp; Brand Launches</li>
-          <li>Business Networking Platforms</li>
-          <li>Global Exhibitions &amp; Trade Shows</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ GLOBAL EXPANSION ═══ -->
-<section class="section bg-white">
-  <div class="container">
-    <p class="eyebrow">Vision for Global Expansion</p>
-    <h2 class="sec-title" style="max-width:600px">Transforming Established Businesses into Scalable Global Platforms</h2>
+    <p class="eyebrow">Strategic Priorities</p>
+    <h2 class="sec-title" id="growth-heading">Four Priorities for the Next Phase</h2>
     <div class="gold-rule"></div>
-    <p style="font-size:16px;color:var(--grey);max-width:680px;line-height:1.85">TAG Holding's next phase focuses on transforming its established businesses into scalable regional and international platforms through strategic investment, technology integration, and cross-border partnership.</p>
-    <div class="expansion-grid">
-      <div class="exp-card">
-        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-        <div class="exp-name">Strategic Acquisitions</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-        <div class="exp-name">Joint Ventures</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
-        <div class="exp-name">International Partnerships</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <div class="exp-name">Technology Integration</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
-        <div class="exp-name">Franchising Opportunities</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-        <div class="exp-name">Medical Innovation</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div class="exp-name">Wellness Expansion</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
-        <div class="exp-name">Education Platforms</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-        <div class="exp-name">Capital Partnerships</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-        <div class="exp-name">Cross-Border Initiatives</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ ROYAL ACADEMY ═══ -->
-<section class="section bg-navy">
-  <div class="container">
-    <div class="academy-grid">
-      <div>
-        <p class="eyebrow">Education &amp; Human Capital</p>
-        <h2 class="sec-title">Royal Academy of Excellence</h2>
-        <div class="gold-rule"></div>
-        <p style="font-size:16px;color:rgba(255,255,255,0.6);line-height:1.85;margin-bottom:24px">Education represents the long-term engine of sustainable growth. The Royal Academy is envisioned as an integrated center of excellence delivering professional education, executive development, and specialized certification across the Group's core sectors.</p>
-        <p style="font-size:14px;color:rgba(255,255,255,0.45);line-height:1.8">By developing highly skilled professionals, the Academy creates a continuous talent pipeline that supports the growth of every TAG Holding business — while contributing to Saudi Arabia's Vision 2030 human capital objectives.</p>
-      </div>
-      <div>
-        <p style="font-size:12px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:24px">Training Programs</p>
-        <div class="programs-grid">
-          <div class="program-item">Healthcare Excellence</div>
-          <div class="program-item">Executive Leadership</div>
-          <div class="program-item">Medical Technology</div>
-          <div class="program-item">Event Management</div>
-          <div class="program-item">Beauty &amp; Wellness</div>
-          <div class="program-item">Customer Experience</div>
-          <div class="program-item">Hospitality Management</div>
-          <div class="program-item">Luxury Service Excellence</div>
-          <div class="program-item">International Etiquette</div>
-          <div class="program-item">Entrepreneurship</div>
+    <ol class="growth-list">
+      <li class="growth-item fade-in">
+        <div class="growth-item__number">01</div>
+        <div>
+          <h3>Expand the Healthcare Network</h3>
+          <p class="growth-item__meta">
+            Businesses: Alinaya Alrafia Medical Company, Al Warood, Al Jood, Al Khawaled<br>
+            Next milestone: Increase patient capacity and geographic reach across Riyadh
+          </p>
         </div>
+      </li>
+      <li class="growth-item fade-in">
+        <div class="growth-item__number">02</div>
+        <div>
+          <h3>Scale Wellness and Beauty Brands Regionally</h3>
+          <p class="growth-item__meta">
+            Businesses: Glamour Affairs, Beauty Affairs<br>
+            Next milestone: Expand to additional Riyadh locations; explore inter-city presence
+          </p>
+        </div>
+      </li>
+      <li class="growth-item fade-in">
+        <div class="growth-item__number">03</div>
+        <div>
+          <h3>Formalise Events and Protocol Businesses</h3>
+          <p class="growth-item__meta">
+            Businesses: WAW Event Management, Elite Hospitality Protocol<br>
+            Next milestone: Establish registered operations and develop service offering
+          </p>
+        </div>
+      </li>
+      <li class="growth-item fade-in">
+        <div class="growth-item__number">04</div>
+        <div>
+          <h3>Launch Royal Academy as a Professional Certification Institution</h3>
+          <p class="growth-item__meta">
+            Business: Royal Academy (Planned)<br>
+            Next milestone: Complete regulatory registration; define curriculum and certification framework
+          </p>
+        </div>
+      </li>
+    </ol>
+    <div class="growth-image-strip fade-in">
+      <img src="Assets/Riyadh executive meeting room-8.png" alt="Executive meeting room in Riyadh">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: LEADERSHIP -->
+<section id="leadership" class="section bg-white" aria-labelledby="leadership-heading">
+  <div class="container">
+    <p class="eyebrow">Leadership</p>
+    <h2 class="sec-title" id="leadership-heading">Founder &amp; Chairman</h2>
+    <div class="gold-rule"></div>
+    <div class="leadership-inner">
+      <div>
+        <div class="leader-card fade-in">
+          <div class="leader-initials" aria-hidden="true">AG</div>
+          <h3>Dr. Abdulkader Al Gilani</h3>
+          <p class="leader-title">Founder &amp; Chairman, TAG Holding Group</p>
+          <p class="leader-bio">Dr. Al Gilani is the Founder and Chairman of TAG Holding, with more than 30 years of entrepreneurial and operational experience in healthcare and business development in Saudi Arabia.</p>
+        </div>
+        <p class="portrait-note">Portrait image required — contact TAG Holding for approved photography.</p>
+      </div>
+      <div class="leadership-image fade-in">
+        <img src="Assets/Riyadh executive meeting room-8.png" alt="Executive meeting room in Riyadh">
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ═══ COMPETITIVE ADVANTAGES ═══ -->
-<section class="section bg-off">
+<!-- SECTION 7: ENQUIRY -->
+<section id="enquiry" class="section bg-navy" aria-labelledby="enquiry-heading">
   <div class="container">
-    <p class="eyebrow" style="justify-content:center">Competitive Advantages</p>
-    <h2 class="sec-title" style="text-align:center;margin-bottom:16px">A Differentiated Platform</h2>
-    <p style="font-size:16px;color:var(--grey);text-align:center;max-width:560px;margin:0 auto 48px;line-height:1.85">TAG Holding offers investors a platform built upon structural advantages that are difficult to replicate.</p>
-    <ul class="advantages-list">
-      <li class="adv-item"><span class="adv-num">01</span><span class="adv-dot"></span>More than 30 years of proven business experience and sustainable growth</li>
-      <li class="adv-item"><span class="adv-num">02</span><span class="adv-dot"></span>Diversified investments across multiple resilient, high-growth sectors</li>
-      <li class="adv-item"><span class="adv-num">03</span><span class="adv-dot"></span>Established healthcare operations with real patient-serving institutions</li>
-      <li class="adv-item"><span class="adv-num">04</span><span class="adv-dot"></span>Integrated medical technology capabilities within the portfolio</li>
-      <li class="adv-item"><span class="adv-num">05</span><span class="adv-dot"></span>Exposure to the rapidly growing global wellness economy</li>
-      <li class="adv-item"><span class="adv-num">06</span><span class="adv-dot"></span>Premium luxury lifestyle positioning across beauty and hospitality brands</li>
-      <li class="adv-item"><span class="adv-num">07</span><span class="adv-dot"></span>Executive education platform creating a self-sustaining talent pipeline</li>
-      <li class="adv-item"><span class="adv-num">08</span><span class="adv-dot"></span>Strong operational synergies between all portfolio companies</li>
-      <li class="adv-item"><span class="adv-num">09</span><span class="adv-dot"></span>Scalable business models with proven regional and international applicability</li>
-      <li class="adv-item"><span class="adv-num">10</span><span class="adv-dot"></span>Long-term expansion opportunities across Saudi Arabia and global markets</li>
-    </ul>
+    <p class="eyebrow">Investment Enquiries</p>
+    <h2 class="sec-title" id="enquiry-heading">Explore Partnership Opportunities with TAG Holding</h2>
+    <div class="gold-rule"></div>
+    <p class="enquiry-intro">TAG Holding Group welcomes enquiries from investors, strategic partners, and healthcare professionals. Please contact the Group directly to discuss opportunities.</p>
+    <!-- TODO: confirm TAG Holding contact email before publication -->
+    <a href="mailto:[to be confirmed]" class="btn-primary">[Email address to be confirmed]</a>
+    <p class="enquiry-disclaimer">This document is prepared for informational purposes only and does not constitute a solicitation for investment. All figures and business descriptions are subject to verification. TAG Holding Group reserves the right to update, revise, or withdraw this information at any time.</p>
   </div>
 </section>
 
-
-<!-- ═══ INVESTMENT CTA ═══ -->
-<section id="invest-cta" class="section bg-navy">
-  <div class="container">
-    <div class="cta-inner">
-      <p class="eyebrow" style="justify-content:center">Investment Opportunity</p>
-      <h2>One Vision.<br>One Network.<br>Endless Possibilities.</h2>
-      <p>TAG Holding offers investors access to a diversified platform operating across sectors with enduring demand drivers — a combination of established healthcare services, medical technology, wellness, hospitality, education, and event management that provides multiple avenues for growth.</p>
-      <div class="investor-types">
-        <span class="inv-type">Institutional Investors</span>
-        <span class="inv-type">Family Offices</span>
-        <span class="inv-type">Strategic Corporate Partners</span>
-        <span class="inv-type">Private Equity Firms</span>
-        <span class="inv-type">Sovereign Investment Entities</span>
-        <span class="inv-type">International Collaborators</span>
-      </div>
-      <div class="hero-actions">
-        <a href="mailto:info@tagholding.com" class="btn-primary">
-          Contact for Investment Enquiry
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ FOOTER ═══ -->
+<!-- FOOTER -->
 <footer id="footer">
   <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo-wrap">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 288" height="28" aria-label="TAG Holding">
-            <text x="146" y="155" font-family="'Raleway', Arial, sans-serif" font-weight="800" font-size="88" fill="#0D1B2A">T</text>
-            <text x="284" y="155" font-family="'Raleway', Arial, sans-serif" font-weight="800" font-size="88" fill="#0D1B2A">A</text>
-            <text x="462" y="155" font-family="'Raleway', Arial, sans-serif" font-weight="800" font-size="88" fill="#0D1B2A">G</text>
-            <line x1="263" y1="151" x2="263" y2="68" stroke="#C9A84C" stroke-width="2.5"/>
-            <line x1="457" y1="151" x2="457" y2="68" stroke="#C9A84C" stroke-width="2.5"/>
-            <text x="360" y="222" font-family="'Raleway', Arial, sans-serif" font-weight="500" font-size="28" fill="#0D1B2A" text-anchor="middle" letter-spacing="8">HOLDING</text>
-            <line x1="176" y1="207" x2="234" y2="207" stroke="#C9A84C" stroke-width="2.2"/>
-            <line x1="495" y1="207" x2="553" y2="207" stroke="#C9A84C" stroke-width="2.2"/>
-          </svg>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <svg style="height: 28px; width: auto;" aria-label="TAG Holding" role="img" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path d="M 262.8 151.2 L 262.8 68.4" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+          <path d="M 457.2 151.2 L 457.2 68.4" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+          <path d="M 176.4 207.36 L 234 207.36" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+          <path d="M 494.64 207.36 L 552.24 207.36" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+          <g fill="#ffffff" transform="translate(145.999219 138.9) scale(1.05 -1.05)"><path d="M 2336 0 L 1370 0 L 1370 3763 L 128 3763 L 128 4570 L 3578 4570 L 3578 3763 L 2336 3763 L 2336 0 z" transform="scale(0.015625)"/></g>
+          <g fill="#ffffff" transform="translate(323.775 138.9) scale(1.05 -1.05)"><path d="M 3373 0 L 3040 1088 L 1376 1088 L 1043 0 L 0 0 L 1613 4589 L 2797 4589 L 4416 0 L 3373 0 z M 2477 2963 Q 2445 3072 2393 3238 Q 2342 3405 2291 3577 Q 2240 3750 2208 3878 Q 2176 3750 2121 3561 Q 2067 3373 2019 3203 Q 1971 3034 1946 2963 L 1619 1901 L 2810 1901 L 2477 2963 z" transform="scale(0.015625)"/></g>
+          <g fill="#ffffff" transform="translate(505.586719 138.9) scale(1.05 -1.05)"><path d="M 2310 2566 L 4122 2566 L 4122 198 Q 3763 77 3376 6 Q 2989 -64 2496 -64 Q 1472 -64 921 537 Q 371 1139 371 2291 Q 371 3008 649 3533 Q 928 4058 1459 4346 Q 1990 4634 2758 4634 Q 3123 4634 3475 4557 Q 3827 4480 4115 4352 L 3795 3578 Q 3584 3686 3315 3756 Q 3046 3827 2752 3827 Q 2330 3827 2019 3635 Q 1709 3443 1539 3094 Q 1370 2746 1370 2272 Q 1370 1824 1491 1478 Q 1613 1133 1875 937 Q 2138 742 2560 742 Q 2765 742 2909 761 Q 3053 781 3174 806 L 3174 1760 L 2310 1760 L 2310 2566 z" transform="scale(0.015625)"/></g>
+          <g fill="#ffffff" transform="translate(271.866875 214.64) scale(0.28 -0.28)"><path d="M 4115 0 L 3539 0 L 3539 2131 L 1197 2131 L 1197 0 L 621 0 L 621 4570 L 1197 4570 L 1197 2637 L 3539 2637 L 3539 4570 L 4115 4570 L 4115 0 z" transform="scale(0.015625)"/></g>
+          <g fill="#ffffff" transform="translate(298.666875 214.64) scale(0.28 -0.28)"><path d="M 4608 2291 Q 4608 1581 4368 1053 Q 4128 525 3661 230 Q 3194 -64 2502 -64 Q 1792 -64 1321 230 Q 851 525 620 1056 Q 390 1587 390 2298 Q 390 3002 620 3526 Q 851 4051 1321 4345 Q 1792 4640 2509 4640 Q 3194 4640 3661 4349 Q 4128 4058 4368 3530 Q 4608 3002 4608 2291 z M 998 2291 Q 998 1427 1363 931 Q 1728 435 2502 435 Q 3283 435 3641 931 Q 4000 1427 4000 2291 Q 4000 3155 3641 3644 Q 3283 4134 2509 4134 Q 1734 4134 1366 3644 Q 998 3155 998 2291 z" transform="scale(0.015625)"/></g>
+          <g fill="#ffffff" transform="translate(329.623125 214.64) scale(0.28 -0.28)"><path d="M 621 0 L 621 4570 L 1197 4570 L 1197 512 L 3194 512 L 3194 0 L 621 0 z" transform="scale(0.015625)"/></g>
+          <g fill="#ffffff" transform="translate(354.1 214.64) scale(0.28 -0.28)"><path d="M 4282 2330 Q 4282 1171 3651 585 Q 3021 0 1894 0 L 621 0 L 621 4570 L 2029 4570 Q 2720 4570 3225 4314 Q 3731 4058 4006 3562 Q 4282 3066 4282 2330 z M 3674 2310 Q 3674 3226 3222 3651 Q 2771 4077 1946 4077 L 1197 4077 L 1197 493 L 1818 493 Q 3674 493 3674 2310 z" transform="scale(0.015625)"/></g>
+          <g fill="#ffffff" transform="translate(386.933125 214.64) scale(0.28 -0.28)"><path d="M 1907 0 L 256 0 L 256 333 L 794 454 L 794 4109 L 256 4237 L 256 4570 L 1907 4570 L 1907 4237 L 1370 4109 L 1370 454 L 1907 333 L 1907 0 z" transform="scale(0.015625)"/></g>
+          <g fill="#ffffff" transform="translate(408.4 214.64) scale(0.28 -0.28)"><path d="M 4243 0 L 3571 0 L 1126 3795 L 1101 3795 Q 1114 3571 1133 3238 Q 1152 2906 1152 2554 L 1152 0 L 621 0 L 621 4570 L 1286 4570 L 3725 787 L 3750 787 Q 3744 890 3734 1094 Q 3725 1299 3715 1542 Q 3706 1786 3706 1990 L 3706 4570 L 4243 4570 L 4243 0 z" transform="scale(0.015625)"/></g>
+          <g fill="#ffffff" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><path d="M 2605 2413 L 4186 2413 L 4186 173 Q 3814 51 3436 -6 Q 3059 -64 2579 -64 Q 1869 -64 1382 221 Q 896 506 643 1034 Q 390 1562 390 2285 Q 390 3002 672 3526 Q 954 4051 1482 4342 Q 2010 4634 2758 4634 Q 3142 4634 3484 4563 Q 3827 4493 4122 4365 L 3904 3866 Q 3661 3974 3357 4051 Q 3053 4128 2726 4128 Q 1907 4128 1449 3635 Q 992 3142 992 2285 Q 992 1741 1168 1321 Q 1344 902 1721 668 Q 2099 435 2714 435 Q 3014 435 3225 467 Q 3437 499 3610 544 L 3610 1901 L 2605 1901 L 2605 2413 z" transform="scale(0.015625)"/></g>
+        </svg>
+        <p class="footer-tagline">TAG Holding Group &middot; Riyadh, Saudi Arabia</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#businesses">Businesses</a>
+          <a href="#growth">Growth</a>
+          <a href="#leadership">Leadership</a>
+          <a href="#enquiry">Enquire</a>
         </div>
-        <div class="footer-tagline">Building a Healthier, Beautiful &amp; Prosperous Future<br>in Saudi Arabia &amp; Around the World.</div>
-      </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#sectors">Business Sectors</a></li>
-          <li><a href="#healthcare">Healthcare Portfolio</a></li>
-          <li><a href="#leadership">Leadership</a></li>
-          <li><a href="#invest-cta">Investment Enquiry</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Portfolio Companies</h4>
-        <ul>
-          <li><a href="#">Al Olaya Medical Complex</a></li>
-          <li><a href="#">Al Warood Medical Center</a></li>
-          <li><a href="#">Al Jood Medical</a></li>
-          <li><a href="https://alinayamedical.com" target="_blank" rel="noopener">Al Enaia Al Rafia'a (Alinaya)</a></li>
-          <li><a href="#">WAW Event</a></li>
-          <li><a href="#">EHP — House of Etiquette</a></li>
-          <li><a href="#">Royal Academy</a></li>
-        </ul>
-      </div>
+      </nav>
       <div class="footer-col">
         <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:info@tagholding.com">info@tagholding.com</a></li>
-          <li><span style="color:rgba(255,255,255,0.35);font-size:13px">Riyadh, Saudi Arabia</span></li>
-          <li><span style="color:rgba(255,255,255,0.35);font-size:13px">One Vision. One Network.</span></li>
-        </ul>
+        <!-- TODO: confirm TAG Holding contact email before publication -->
+        <span style="color: rgba(255,255,255,0.5); font-size: 14px; display: block; margin-bottom: 10px;">[Email to be confirmed]</span>
+        <span style="color: rgba(255,255,255,0.5); font-size: 14px;">Riyadh, Saudi Arabia</span>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span class="footer-copy">© 2026 TAG Holding. All rights reserved.</span>
-      <span style="font-size:12px;color:rgba(255,255,255,0.2)">30+ Years of Trust · Excellence · Innovation · Impact</span>
+    <div class="footer-legal">
+      <p>&copy; 2026 TAG Holding Group &middot; All rights reserved &middot; Information subject to verification</p>
     </div>
-  </div>
-  <div class="footer-legal">
-    This document is prepared for informational and investment discussion purposes only. It does not constitute a public offering, financial advice, or solicitation of any kind. All figures, projections, and strategic plans are subject to change. Recipients should conduct their own due diligence prior to making any investment decisions.
   </div>
 </footer>
 
-
 <script>
-  /* Navbar scroll */
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
+  // Mobile nav toggle
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  menuBtn.addEventListener('click', () => {
+    const open = mobileNav.classList.toggle('is-open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+    mobileNav.setAttribute('aria-hidden', String(!open));
+  });
+  document.addEventListener('click', (e) => {
+    if (!menuBtn.contains(e.target) && !mobileNav.contains(e.target)) {
+      mobileNav.classList.remove('is-open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      mobileNav.setAttribute('aria-hidden', 'true');
+    }
+  });
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileNav.classList.remove('is-open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    mobileNav.setAttribute('aria-hidden', 'true');
+  }));
 
-  /* Scroll fade-in */
-  const observer = new IntersectionObserver((entries) => {
+  // Fade-in on scroll
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  } else {
+    document.querySelectorAll('.fade-in').forEach(el => el.classList.add('is-visible'));
+  }
+
+  // Nav scroll spy
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const scrollSpy = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        e.target.style.opacity = '1';
-        e.target.style.transform = 'translateY(0)';
-        observer.unobserve(e.target);
+        navLinks.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
       }
     });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll(
-    '.why-item, .sector-card, .portfolio-card, .brand-card, .ph-item, .exp-card, .adv-item, .program-item, .network-item, .stat-item'
-  ).forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(16px)';
-    el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
-    observer.observe(el);
-  });
+  }, { rootMargin: '-50% 0px -50% 0px' });
+  sections.forEach(s => scrollSpy.observe(s));
 </script>
 </body>
 </html>
