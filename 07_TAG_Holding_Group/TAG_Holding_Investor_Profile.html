@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TAG Holding Group — Investor Profile 2026</title>
-  <meta name="description" content="TAG Holding Group is a Saudi holding company with operations spanning healthcare, wellness, beauty, events, and professional development.">
+  <meta name="description" content="TAG Holding Group is a Saudi holding company based in Riyadh, chaired by Talal Al Gilani, with operations spanning healthcare, wellness, beauty, events, and professional development.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -134,15 +134,12 @@
     .growth-image-strip::after { content: ''; position: absolute; inset: 0; background: rgba(13,27,42,0.55); }
 
     /* LEADERSHIP */
-    .leadership-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .leader-card { text-align: center; padding: 40px; background: var(--offwhite); border: 1px solid var(--border); border-radius: 4px; }
-    .leader-initials { width: 80px; height: 80px; border-radius: 50%; background: var(--navy); color: var(--gold); font-size: 24px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
-    .leader-card h3 { font-size: 20px; font-weight: 700; color: var(--navy); }
-    .leader-card .leader-title { font-size: 14px; color: var(--gold); font-weight: 600; margin: 4px 0 16px; }
-    .leader-card .leader-bio { font-size: 15px; color: var(--muted); line-height: 1.7; }
-    .portrait-note { font-size: 12px; color: var(--muted); font-style: italic; text-align: center; margin-top: 12px; }
-    .leadership-image { overflow: hidden; border-radius: 4px; }
-    .leadership-image img { width: 100%; height: 400px; object-fit: cover; }
+    .leadership-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+    .leader-card { padding: 32px 36px; background: var(--offwhite); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; }
+    .leader-role-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); margin-bottom: 12px; }
+    .leader-name { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .leader-card .leader-title { font-size: 13px; color: var(--muted); font-weight: 500; margin-bottom: 16px; }
+    .leader-card .leader-bio { font-size: 15px; color: var(--text); line-height: 1.7; }
 
     /* ENQUIRY */
     #enquiry .eyebrow { color: rgba(201,168,76,0.9); }
@@ -175,8 +172,7 @@
       .about-grid { grid-template-columns: 1fr; }
       .about-image { order: -1; }
       .about-image img { height: 240px; }
-      .leadership-inner { grid-template-columns: 1fr; }
-      .leadership-image { display: none; }
+      .leadership-two-col { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .container { padding: 0 24px; }
       .section { padding: 48px 0; }
@@ -208,7 +204,7 @@
       .gold-rule { background: #999; }
       a[href]::after { content: none; }
       .portfolio-matrix { font-size: 9pt; }
-      .leadership-image { display: none; }
+      .leadership-two-col { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -293,7 +289,7 @@
     </svg>
     <p class="hero-eyebrow">Investor Profile &middot; 2026</p>
     <h1 id="hero-heading">Building a Healthier, More Beautiful and Prosperous Future.</h1>
-    <p class="hero-sub">TAG Holding Group is a Saudi holding company led by Dr. Abdulkader Al Gilani, with over 30 years of entrepreneurial experience in healthcare and business development across the Kingdom.</p>
+    <p class="hero-sub">TAG Holding Group is a Saudi holding company based in Riyadh, with a diversified portfolio spanning healthcare, wellness, beauty, events, and professional development.</p>
     <div class="hero-actions">
       <a href="#portfolio" class="btn-primary">View Portfolio</a>
       <a href="#enquiry" class="btn-secondary">Enquire</a>
@@ -312,13 +308,9 @@
     <div class="gold-rule"></div>
     <div class="about-grid">
       <div class="about-text fade-in">
-        <p>TAG Holding Group is a Saudi holding company based in Riyadh, led by Founder and Chairman Dr. Abdulkader Al Gilani. With over 30 years of operational and entrepreneurial experience in healthcare and business development, the Group has built a diversified portfolio of operating companies and development-stage ventures.</p>
+        <p>TAG Holding Group is a Saudi holding company based in Riyadh, with a diversified portfolio of operating companies and development-stage ventures founded on a legacy of healthcare and entrepreneurship.</p>
         <p>The Group's activities span healthcare services, wellness and beauty, events management, and professional development — with all businesses aligned to the opportunities presented by Saudi Vision 2030 and the Kingdom's expanding private sector.</p>
         <dl class="group-facts">
-          <div class="gf-row">
-            <dt>Founded</dt>
-            <dd>30+ years of operations</dd>
-          </div>
           <div class="gf-row">
             <dt>Headquarters</dt>
             <dd>Riyadh, Saudi Arabia</dd>
@@ -326,6 +318,10 @@
           <div class="gf-row">
             <dt>Primary Sector</dt>
             <dd>Healthcare &amp; Medical Services</dd>
+          </div>
+          <div class="gf-row">
+            <dt>Current Chairman</dt>
+            <dd>Talal Al Gilani</dd>
           </div>
           <div class="gf-row">
             <dt>Operating Businesses</dt>
@@ -336,10 +332,6 @@
             <dd>Saudi Vision 2030</dd>
           </div>
         </dl>
-        <blockquote class="pull-quote">
-          <p>"Our goal is to build businesses that serve people — in their health, their appearance, their professional lives, and the moments that matter most."</p>
-          <cite>— Dr. Abdulkader Al Gilani, Founder &amp; Chairman</cite>
-        </blockquote>
       </div>
       <div class="about-image fade-in">
         <img src="Assets/Quiet consultation in a calm clinic-5.png" alt="Clinician in a quiet consultation room">
@@ -604,20 +596,19 @@
 <section id="leadership" class="section bg-white" aria-labelledby="leadership-heading">
   <div class="container">
     <p class="eyebrow">Leadership</p>
-    <h2 class="sec-title" id="leadership-heading">Founder &amp; Chairman</h2>
+    <h2 class="sec-title" id="leadership-heading">Group Leadership</h2>
     <div class="gold-rule"></div>
-    <div class="leadership-inner">
-      <div>
-        <div class="leader-card fade-in">
-          <div class="leader-initials" aria-hidden="true">AG</div>
-          <h3>Dr. Abdulkader Al Gilani</h3>
-          <p class="leader-title">Founder &amp; Chairman, TAG Holding Group</p>
-          <p class="leader-bio">Dr. Al Gilani is the Founder and Chairman of TAG Holding, with more than 30 years of entrepreneurial and operational experience in healthcare and business development in Saudi Arabia.</p>
-        </div>
-        <p class="portrait-note">Portrait image required — contact TAG Holding for approved photography.</p>
+    <div class="leadership-two-col">
+      <div class="leader-card fade-in">
+        <h3 class="leader-role-label">Founder's Legacy</h3>
+        <h4 class="leader-name">The late Dr. Abdulkader Al Gilani</h4>
+        <p class="leader-bio">The late Dr. Abdulkader Al Gilani founded the business, establishing its roots in healthcare and entrepreneurship in Saudi Arabia.</p>
       </div>
-      <div class="leadership-image fade-in">
-        <img src="Assets/Riyadh executive meeting room-8.png" alt="Executive meeting room in Riyadh">
+      <div class="leader-card fade-in">
+        <h3 class="leader-role-label">Current Leadership</h3>
+        <h4 class="leader-name">Talal Al Gilani</h4>
+        <p class="leader-title">Owner &amp; Chairman, TAG Holding Group</p>
+        <p class="leader-bio">Talal, son of the late Dr. Abdulkader Al Gilani, is the current owner and Chairman of TAG Holding.</p>
       </div>
     </div>
   </div>
