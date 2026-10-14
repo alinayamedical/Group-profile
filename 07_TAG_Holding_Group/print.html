@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAG Holding Group — Investor Profile 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:    #0D1B2A;
+  --gold:    #C9A84C;
+  --gol:     #8A6A20;
+  --white:   #FFFFFF;
+  --off:     #F5F6F8;
+  --text:    #1A2332;
+  --muted:   #5A6A7A;
+  --border:  #DDE2E8;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: #d8dce3;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+body { padding: 20px 0; }
+@page { size: A4; margin: 0; }
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  background: var(--white);
+  margin: 0 auto 16px;
+  position: relative;
+  page-break-after: always;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,.12);
+}
+.page:last-child { page-break-after: auto; }
+.inner-page {
+  padding: 13mm 17mm;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Page header ─── */
+.ph {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 7pt;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 13pt;
+  flex-shrink: 0;
+}
+.ph-label {
+  font-size: 7.5pt; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--gol);
+}
+
+/* ─── Page footer ─── */
+.pf {
+  margin-top: auto;
+  padding-top: 7pt;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+.pf span { font-size: 7pt; color: var(--muted); }
+.pf-dot { width: 3px; height: 3px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+.pf-n { margin-left: auto; }
+
+/* ─── Content wrapper ─── */
+.pc { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+/* ─── Headings ─── */
+.eyebrow {
+  font-size: 7.5pt; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--gol); margin-bottom: 5pt;
+}
+.sec-title {
+  font-size: 18pt; font-weight: 700;
+  color: var(--navy); line-height: 1.2; margin-bottom: 7pt;
+}
+.gold-rule { width: 36px; height: 2px; background: var(--gold); margin-bottom: 12pt; }
+.body-p { font-size: 10pt; line-height: 1.65; color: var(--text); margin-bottom: 7pt; }
+.body-p:last-child { margin-bottom: 0; }
+
+/* ─── Group facts ─── */
+.gft { width: 100%; border-collapse: collapse; margin-top: 8pt; }
+.gft tr { border-bottom: 1px solid var(--border); }
+.gft tr:last-child { border-bottom: none; }
+.gft td { padding: 5pt 0; vertical-align: top; }
+.gft td:first-child {
+  font-size: 7.5pt; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: var(--muted);
+  width: 110pt; padding-right: 10pt;
+}
+.gft td:last-child { font-size: 9.5pt; color: var(--text); }
+
+/* ─── Portfolio table ─── */
+.pt-wrap { border: 1px solid var(--border); border-radius: 3px; overflow: hidden; margin-top: 8pt; }
+.ptbl { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+.ptbl th {
+  background: var(--navy); color: var(--white);
+  padding: 7pt 11pt; text-align: left;
+  font-size: 7.5pt; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.ptbl td { padding: 6.5pt 11pt; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.ptbl tr:last-child td { border-bottom: none; }
+.ptbl tr:nth-child(even) td { background: #f9fafb; }
+.ptbl td:first-child { font-weight: 600; color: var(--navy); }
+.ptbl td:last-child { color: var(--muted); }
+
+/* ─── Subsidiary cards ─── */
+.sub-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11pt;
+  margin-top: 8pt;
+  flex: 1;
+}
+.sub-card {
+  border: 1px solid var(--border);
+  border-top: 2.5px solid var(--gold);
+  border-radius: 3px;
+  padding: 13pt;
+  display: flex;
+  flex-direction: column;
+}
+.sub-card h3 { font-size: 11.5pt; font-weight: 700; color: var(--navy); margin-bottom: 3pt; }
+.sub-sub {
+  font-size: 7pt; font-weight: 700; color: var(--gol);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  margin-bottom: 7pt; display: block;
+}
+.sub-desc { font-size: 9pt; color: var(--text); line-height: 1.6; margin-bottom: 6pt; }
+.sub-specs { list-style: none; display: flex; flex-direction: column; gap: 3pt; margin-bottom: 6pt; }
+.sub-specs li { font-size: 8.5pt; color: var(--muted); padding-left: 11pt; position: relative; }
+.sub-specs li::before { content: '—'; position: absolute; left: 0; color: var(--gol); }
+.sub-sup { font-size: 8.5pt; color: var(--muted); line-height: 1.5; margin-bottom: 6pt; }
+.sub-img { margin-top: auto; overflow: hidden; border-radius: 2px; }
+.sub-img img { width: 100%; height: 55px; object-fit: cover; display: block; }
+.img-cap { font-size: 6.5pt; color: var(--muted); font-style: italic; margin-top: 3pt; }
+
+/* ─── Business blocks (page 5) ─── */
+.biz-section { margin-bottom: 9pt; }
+.biz-section:last-child { margin-bottom: 0; }
+.biz-name { font-size: 11pt; font-weight: 700; color: var(--navy); margin-bottom: 1.5pt; }
+.biz-tag {
+  font-size: 7pt; font-weight: 700; color: var(--gol);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  margin-bottom: 4pt; display: block;
+}
+.biz-text { font-size: 9pt; color: var(--text); line-height: 1.55; }
+.biz-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 7pt; margin-top: 5pt; }
+.biz-card {
+  background: var(--off); border: 1px solid var(--border);
+  border-left: 2.5px solid var(--gold); border-radius: 3px; padding: 7pt 10pt;
+}
+.biz-card h4 { font-size: 9.5pt; font-weight: 700; color: var(--navy); }
+.biz-card p { font-size: 8pt; color: var(--muted); margin-top: 1.5pt; }
+.img-strip { overflow: hidden; border-radius: 3px; margin: 7pt 0; }
+.img-strip img { width: 100%; height: 62px; object-fit: cover; display: block; }
+.sec-div { width: 100%; height: 1px; background: var(--border); margin: 9pt 0; }
+
+/* ─── Growth (page 6) ─── */
+.g-list { list-style: none; display: flex; flex-direction: column; gap: 7pt; }
+.g-item { display: grid; grid-template-columns: 28pt 1fr; gap: 8pt; align-items: start; }
+.g-num { font-size: 16pt; font-weight: 700; color: var(--gold); line-height: 1; }
+.g-title { font-size: 10.5pt; font-weight: 700; color: var(--navy); margin-bottom: 1.5pt; }
+.g-meta { font-size: 8.5pt; color: var(--muted); line-height: 1.5; }
+
+/* ─── Leadership (page 6) ─── */
+.l-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; margin-top: 4pt; }
+.l-card {
+  background: var(--off); border: 1px solid var(--border);
+  border-left: 2.5px solid var(--gold); border-radius: 3px; padding: 12pt;
+}
+.l-role { font-size: 7pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gol); margin-bottom: 5pt; }
+.l-name { font-size: 11.5pt; font-weight: 700; color: var(--navy); margin-bottom: 2pt; }
+.l-title-t { font-size: 8.5pt; color: var(--muted); margin-bottom: 7pt; }
+.l-bio { font-size: 9pt; color: var(--text); line-height: 1.6; }
+
+/* ─── Contact (page 6) ─── */
+.contact-block { margin-top: 10pt; }
+.contact-block p { font-size: 9.5pt; color: var(--text); line-height: 1.65; margin-bottom: 6pt; }
+.contact-email { font-size: 11pt; font-weight: 600; color: var(--navy); }
+.disclaimer { font-size: 7.5pt; color: var(--muted); line-height: 1.5; font-style: italic; margin-top: 6pt; }
+</style>
+</head>
+<body>
+
+<!-- shared SVG glyph defs -->
+<svg style="position:absolute;width:0;height:0;overflow:hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path id="nT" d="M 2336 0 L 1370 0 L 1370 3763 L 128 3763 L 128 4570 L 3578 4570 L 3578 3763 L 2336 3763 L 2336 0 z" transform="scale(0.015625)"/>
+    <path id="nA" d="M 3373 0 L 3040 1088 L 1376 1088 L 1043 0 L 0 0 L 1613 4589 L 2797 4589 L 4416 0 L 3373 0 z M 2477 2963 Q 2445 3072 2393 3238 Q 2342 3405 2291 3577 Q 2240 3750 2208 3878 Q 2176 3750 2121 3561 Q 2067 3373 2019 3203 Q 1971 3034 1946 2963 L 1619 1901 L 2810 1901 L 2477 2963 z" transform="scale(0.015625)"/>
+    <path id="nGb" d="M 2310 2566 L 4122 2566 L 4122 198 Q 3763 77 3376 6 Q 2989 -64 2496 -64 Q 1472 -64 921 537 Q 371 1139 371 2291 Q 371 3008 649 3533 Q 928 4058 1459 4346 Q 1990 4634 2758 4634 Q 3123 4634 3475 4557 Q 3827 4480 4115 4352 L 3795 3578 Q 3584 3686 3315 3756 Q 3046 3827 2752 3827 Q 2330 3827 2019 3635 Q 1709 3443 1539 3094 Q 1370 2746 1370 2272 Q 1370 1824 1491 1478 Q 1613 1133 1875 937 Q 2138 742 2560 742 Q 2765 742 2909 761 Q 3053 781 3174 806 L 3174 1760 L 2310 1760 L 2310 2566 z" transform="scale(0.015625)"/>
+    <path id="nH" d="M 4115 0 L 3539 0 L 3539 2131 L 1197 2131 L 1197 0 L 621 0 L 621 4570 L 1197 4570 L 1197 2637 L 3539 2637 L 3539 4570 L 4115 4570 L 4115 0 z" transform="scale(0.015625)"/>
+    <path id="nO" d="M 4608 2291 Q 4608 1581 4368 1053 Q 4128 525 3661 230 Q 3194 -64 2502 -64 Q 1792 -64 1321 230 Q 851 525 620 1056 Q 390 1587 390 2298 Q 390 3002 620 3526 Q 851 4051 1321 4345 Q 1792 4640 2509 4640 Q 3194 4640 3661 4349 Q 4128 4058 4368 3530 Q 4608 3002 4608 2291 z M 998 2291 Q 998 1427 1363 931 Q 1728 435 2502 435 Q 3283 435 3641 931 Q 4000 1427 4000 2291 Q 4000 3155 3641 3644 Q 3283 4134 2509 4134 Q 1734 4134 1366 3644 Q 998 3155 998 2291 z" transform="scale(0.015625)"/>
+    <path id="nL" d="M 621 0 L 621 4570 L 1197 4570 L 1197 512 L 3194 512 L 3194 0 L 621 0 z" transform="scale(0.015625)"/>
+    <path id="nD" d="M 4282 2330 Q 4282 1171 3651 585 Q 3021 0 1894 0 L 621 0 L 621 4570 L 2029 4570 Q 2720 4570 3225 4314 Q 3731 4058 4006 3562 Q 4282 3066 4282 2330 z M 3674 2310 Q 3674 3226 3222 3651 Q 2771 4077 1946 4077 L 1197 4077 L 1197 493 L 1818 493 Q 3674 493 3674 2310 z" transform="scale(0.015625)"/>
+    <path id="nI" d="M 1907 0 L 256 0 L 256 333 L 794 454 L 794 4109 L 256 4237 L 256 4570 L 1907 4570 L 1907 4237 L 1370 4109 L 1370 454 L 1907 333 L 1907 0 z" transform="scale(0.015625)"/>
+    <path id="nN" d="M 4243 0 L 3571 0 L 1126 3795 L 1101 3795 Q 1114 3571 1133 3238 Q 1152 2906 1152 2554 L 1152 0 L 621 0 L 621 4570 L 1286 4570 L 3725 787 L 3750 787 Q 3744 890 3734 1094 Q 3725 1299 3715 1542 Q 3706 1786 3706 1990 L 3706 4570 L 4243 4570 L 4243 0 z" transform="scale(0.015625)"/>
+    <path id="nGr" d="M 2605 2413 L 4186 2413 L 4186 173 Q 3814 51 3436 -6 Q 3059 -64 2579 -64 Q 1869 -64 1382 221 Q 896 506 643 1034 Q 390 1562 390 2285 Q 390 3002 672 3526 Q 954 4051 1482 4342 Q 2010 4634 2758 4634 Q 3142 4634 3484 4563 Q 3827 4493 4122 4365 L 3904 3866 Q 3661 3974 3357 4051 Q 3053 4128 2726 4128 Q 1907 4128 1449 3635 Q 992 3142 992 2285 Q 992 1741 1168 1321 Q 1344 902 1721 668 Q 2099 435 2714 435 Q 3014 435 3225 467 Q 3437 499 3610 544 L 3610 1901 L 2605 1901 L 2605 2413 z" transform="scale(0.015625)"/>
+  </defs>
+</svg>
+
+<!-- ══════════════════════════════
+     PAGE 1 — COVER
+══════════════════════════════════ -->
+<div class="page" style="background:#0D1B2A;">
+  <div class="inner-page" style="justify-content:center;gap:0;padding-bottom:170px;">
+    <!-- Logo — white ink -->
+    <svg style="height:46px;width:auto;display:block;margin-bottom:26pt;" aria-label="TAG Holding" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M 262.8 151.2 L 262.8 68.4" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+      <path d="M 457.2 151.2 L 457.2 68.4" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+      <path d="M 176.4 207.36 L 234 207.36" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+      <path d="M 494.64 207.36 L 552.24 207.36" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
+      <g fill="#fff" transform="translate(145.999219 138.9) scale(1.05 -1.05)"><use xlink:href="#nT"/></g>
+      <g fill="#fff" transform="translate(323.775 138.9) scale(1.05 -1.05)"><use xlink:href="#nA"/></g>
+      <g fill="#fff" transform="translate(505.586719 138.9) scale(1.05 -1.05)"><use xlink:href="#nGb"/></g>
+      <g fill="#fff" transform="translate(271.866875 214.64) scale(0.28 -0.28)"><use xlink:href="#nH"/></g>
+      <g fill="#fff" transform="translate(298.666875 214.64) scale(0.28 -0.28)"><use xlink:href="#nO"/></g>
+      <g fill="#fff" transform="translate(329.623125 214.64) scale(0.28 -0.28)"><use xlink:href="#nL"/></g>
+      <g fill="#fff" transform="translate(354.1 214.64) scale(0.28 -0.28)"><use xlink:href="#nD"/></g>
+      <g fill="#fff" transform="translate(386.933125 214.64) scale(0.28 -0.28)"><use xlink:href="#nI"/></g>
+      <g fill="#fff" transform="translate(408.4 214.64) scale(0.28 -0.28)"><use xlink:href="#nN"/></g>
+      <g fill="#fff" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><use xlink:href="#nGr"/></g>
+    </svg>
+    <div style="width:44px;height:2px;background:#C9A84C;margin-bottom:16pt;"></div>
+    <p style="font-size:8.5pt;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(201,168,76,0.9);margin-bottom:14pt;">Investor Profile &middot; 2026</p>
+    <h1 style="font-size:25pt;font-weight:700;color:#fff;line-height:1.2;max-width:128mm;margin-bottom:16pt;">Building a Healthier, More Beautiful and Prosperous Future.</h1>
+    <p style="font-size:11.5pt;color:rgba(255,255,255,0.7);max-width:120mm;line-height:1.65;">TAG Holding Group is a Saudi holding company based in Riyadh, with a diversified portfolio spanning healthcare, wellness, beauty, events, and professional development.</p>
+  </div>
+  <!-- Riyadh skyline bottom strip -->
+  <div style="position:absolute;bottom:0;left:0;right:0;height:155px;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,#0D1B2A 0%,transparent 45%);z-index:1;"></div>
+    <img src="Assets/Riyadh skyline at golden hour-1.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block;">
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     PAGE 2 — ABOUT THE GROUP
+══════════════════════════════════ -->
+<div class="page">
+  <div class="inner-page">
+    <div class="ph">
+      <svg style="height:20px;width:auto;" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path d="M 262.8 151.2 L 262.8 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 457.2 151.2 L 457.2 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 176.4 207.36 L 234 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 494.64 207.36 L 552.24 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <g fill="#0D1B2A" transform="translate(145.999219 138.9) scale(1.05 -1.05)"><use xlink:href="#nT"/></g>
+        <g fill="#0D1B2A" transform="translate(323.775 138.9) scale(1.05 -1.05)"><use xlink:href="#nA"/></g>
+        <g fill="#0D1B2A" transform="translate(505.586719 138.9) scale(1.05 -1.05)"><use xlink:href="#nGb"/></g>
+        <g fill="#0D1B2A" transform="translate(271.866875 214.64) scale(0.28 -0.28)"><use xlink:href="#nH"/></g>
+        <g fill="#0D1B2A" transform="translate(298.666875 214.64) scale(0.28 -0.28)"><use xlink:href="#nO"/></g>
+        <g fill="#0D1B2A" transform="translate(329.623125 214.64) scale(0.28 -0.28)"><use xlink:href="#nL"/></g>
+        <g fill="#0D1B2A" transform="translate(354.1 214.64) scale(0.28 -0.28)"><use xlink:href="#nD"/></g>
+        <g fill="#0D1B2A" transform="translate(386.933125 214.64) scale(0.28 -0.28)"><use xlink:href="#nI"/></g>
+        <g fill="#0D1B2A" transform="translate(408.4 214.64) scale(0.28 -0.28)"><use xlink:href="#nN"/></g>
+        <g fill="#0D1B2A" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><use xlink:href="#nGr"/></g>
+      </svg>
+      <span class="ph-label">Group Overview</span>
+    </div>
+    <div class="pc">
+      <p class="eyebrow">About TAG Holding</p>
+      <h2 class="sec-title">A Diversified Holding Platform Built for Saudi Arabia</h2>
+      <div class="gold-rule"></div>
+      <div style="display:grid;grid-template-columns:1fr 76mm;gap:16pt;flex:1;overflow:hidden;">
+        <div>
+          <p class="body-p">TAG Holding Group is a Saudi holding company based in Riyadh, with a diversified portfolio of businesses founded on a legacy of healthcare and entrepreneurship.</p>
+          <p class="body-p">The Group's activities span healthcare services, ambulance manufacturing, medical equipment supply, dialysis, medical and scientific services, wellness and beauty, events management, hospitality training, and professional development — aligned to the opportunities of Saudi Vision 2030 and the Kingdom's expanding private sector.</p>
+          <p class="body-p">Anchored in values of excellence, trust, and innovation, TAG Holding works to deliver meaningful outcomes across every sector it serves.</p>
+          <table class="gft">
+            <tr><td>Headquarters</td><td>Riyadh, Saudi Arabia</td></tr>
+            <tr><td>Primary Sector</td><td>Healthcare &amp; Medical Services</td></tr>
+            <tr><td>Current Chairman</td><td>Talal Al Gilani</td></tr>
+            <tr><td>Portfolio</td><td>Healthcare, wellness, beauty, events &amp; professional development businesses</td></tr>
+            <tr><td>Strategic Alignment</td><td>Saudi Vision 2030</td></tr>
+          </table>
+        </div>
+        <div style="display:flex;flex-direction:column;">
+          <div style="overflow:hidden;border-radius:3px;flex:1;">
+            <img src="Assets/Quiet consultation in a calm clinic-5.png" alt="Clinician in consultation" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+          </div>
+          <p style="font-size:6.5pt;color:#5A6A7A;font-style:italic;margin-top:4pt;">Illustrative imagery; does not depict TAG Holding's actual facilities, employees, or projects.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pf">
+      <span>TAG Holding Group &middot; Investor Profile 2026 &middot; Confidential</span>
+      <div class="pf-dot"></div>
+      <span>Information subject to verification</span>
+      <span class="pf-n">2</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     PAGE 3 — PORTFOLIO
+══════════════════════════════════ -->
+<div class="page">
+  <div class="inner-page">
+    <div class="ph">
+      <svg style="height:20px;width:auto;" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path d="M 262.8 151.2 L 262.8 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 457.2 151.2 L 457.2 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 176.4 207.36 L 234 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 494.64 207.36 L 552.24 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <g fill="#0D1B2A" transform="translate(145.999219 138.9) scale(1.05 -1.05)"><use xlink:href="#nT"/></g>
+        <g fill="#0D1B2A" transform="translate(323.775 138.9) scale(1.05 -1.05)"><use xlink:href="#nA"/></g>
+        <g fill="#0D1B2A" transform="translate(505.586719 138.9) scale(1.05 -1.05)"><use xlink:href="#nGb"/></g>
+        <g fill="#0D1B2A" transform="translate(271.866875 214.64) scale(0.28 -0.28)"><use xlink:href="#nH"/></g>
+        <g fill="#0D1B2A" transform="translate(298.666875 214.64) scale(0.28 -0.28)"><use xlink:href="#nO"/></g>
+        <g fill="#0D1B2A" transform="translate(329.623125 214.64) scale(0.28 -0.28)"><use xlink:href="#nL"/></g>
+        <g fill="#0D1B2A" transform="translate(354.1 214.64) scale(0.28 -0.28)"><use xlink:href="#nD"/></g>
+        <g fill="#0D1B2A" transform="translate(386.933125 214.64) scale(0.28 -0.28)"><use xlink:href="#nI"/></g>
+        <g fill="#0D1B2A" transform="translate(408.4 214.64) scale(0.28 -0.28)"><use xlink:href="#nN"/></g>
+        <g fill="#0D1B2A" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><use xlink:href="#nGr"/></g>
+      </svg>
+      <span class="ph-label">Portfolio</span>
+    </div>
+    <div class="pc">
+      <p class="eyebrow">Business Portfolio</p>
+      <h2 class="sec-title">TAG Holding Group — Business Portfolio</h2>
+      <div class="gold-rule"></div>
+      <div class="pt-wrap">
+        <table class="ptbl">
+          <thead>
+            <tr>
+              <th style="width:52%;">Business</th>
+              <th>Focus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Alinaya Alrafia Medical Company</td><td>Healthcare subsidiary of TAG Holding</td></tr>
+            <tr><td>Al Jood Medical</td><td>Ambulance manufacturing &amp; emergency vehicle conversion</td></tr>
+            <tr><td>SATECH</td><td>Medical, scientific &amp; industrial equipment import and supply</td></tr>
+            <tr><td>Alwarood Medical Center</td><td>Multi-specialty outpatient clinical care</td></tr>
+            <tr><td>Alkhawaled Dialysis Center</td><td>Kidney dialysis &amp; renal care</td></tr>
+            <tr><td>Almajorh</td><td>Medical &amp; scientific services; hospital development; medical supplies</td></tr>
+            <tr><td>MEDOOR</td><td>Healthcare</td></tr>
+            <tr><td>Gennaro Dell'Aquila (GA)</td><td>Premium beauty &amp; lifestyle</td></tr>
+            <tr><td>Bechara Iskandar Haddad (BA)</td><td>Luxury beauty services</td></tr>
+            <tr><td>WAW Event Management</td><td>Events &amp; protocol</td></tr>
+            <tr><td>Elite Hospitality Protocol (EHP)</td><td>Hospitality training</td></tr>
+            <tr><td>Royal Academy</td><td>Professional development</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="pf">
+      <span>TAG Holding Group &middot; Investor Profile 2026 &middot; Confidential</span>
+      <div class="pf-dot"></div>
+      <span>Information subject to verification</span>
+      <span class="pf-n">3</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     PAGE 4 — SUBSIDIARIES
+══════════════════════════════════ -->
+<div class="page">
+  <div class="inner-page">
+    <div class="ph">
+      <svg style="height:20px;width:auto;" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path d="M 262.8 151.2 L 262.8 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 457.2 151.2 L 457.2 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 176.4 207.36 L 234 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 494.64 207.36 L 552.24 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <g fill="#0D1B2A" transform="translate(145.999219 138.9) scale(1.05 -1.05)"><use xlink:href="#nT"/></g>
+        <g fill="#0D1B2A" transform="translate(323.775 138.9) scale(1.05 -1.05)"><use xlink:href="#nA"/></g>
+        <g fill="#0D1B2A" transform="translate(505.586719 138.9) scale(1.05 -1.05)"><use xlink:href="#nGb"/></g>
+        <g fill="#0D1B2A" transform="translate(271.866875 214.64) scale(0.28 -0.28)"><use xlink:href="#nH"/></g>
+        <g fill="#0D1B2A" transform="translate(298.666875 214.64) scale(0.28 -0.28)"><use xlink:href="#nO"/></g>
+        <g fill="#0D1B2A" transform="translate(329.623125 214.64) scale(0.28 -0.28)"><use xlink:href="#nL"/></g>
+        <g fill="#0D1B2A" transform="translate(354.1 214.64) scale(0.28 -0.28)"><use xlink:href="#nD"/></g>
+        <g fill="#0D1B2A" transform="translate(386.933125 214.64) scale(0.28 -0.28)"><use xlink:href="#nI"/></g>
+        <g fill="#0D1B2A" transform="translate(408.4 214.64) scale(0.28 -0.28)"><use xlink:href="#nN"/></g>
+        <g fill="#0D1B2A" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><use xlink:href="#nGr"/></g>
+      </svg>
+      <span class="ph-label">Group Structure</span>
+    </div>
+    <div class="pc">
+      <p class="eyebrow">Our Subsidiaries</p>
+      <h2 class="sec-title">Group Structure — Our Subsidiaries</h2>
+      <div class="gold-rule"></div>
+      <p style="font-size:9.5pt;color:#5A6A7A;margin-bottom:8pt;">TAG brings together specialized businesses addressing distinct segments of the Saudi healthcare ecosystem.</p>
+      <div class="sub-grid">
+
+        <div class="sub-card">
+          <h3>Al Jood Medical</h3>
+          <span class="sub-sub">Ambulance Manufacturing &amp; Emergency Vehicle Conversion</span>
+          <p class="sub-desc">Al Jood Medical specializes in the manufacture and conversion of ambulances and emergency response vehicles, supporting the Kingdom's emergency healthcare infrastructure through purpose-built vehicle solutions.</p>
+        </div>
+
+        <div class="sub-card">
+          <h3>SATECH</h3>
+          <span class="sub-sub">Saudi Technology &amp; Equipment Co. — Medical, Scientific &amp; Industrial Equipment</span>
+          <p class="sub-desc">SATECH imports and supplies specialized equipment and products for healthcare, scientific, security, and industrial applications across the Kingdom.</p>
+          <ul class="sub-specs">
+            <li>Security &amp; Forensic Equipment</li>
+            <li>Medical Laboratory Equipment</li>
+            <li>Scientific Laboratory Equipment</li>
+            <li>Material Testing, Industrial Equipment &amp; Accessories</li>
+            <li>Specialty Contact Lenses</li>
+          </ul>
+          <p class="sub-sup">SATECH serves hospitals, diagnostic laboratories, government agencies, academic institutions, and industrial clients.</p>
+        </div>
+
+        <div class="sub-card">
+          <h3>Alwarood Medical Center</h3>
+          <span class="sub-sub">Multi-Specialty Outpatient Clinical Care</span>
+          <p class="sub-desc">Alwarood Medical Center is a multi-specialty outpatient clinic providing primary and specialist care with a patient-centered approach to community healthcare.</p>
+          <div class="sub-img">
+            <img src="Assets/Clinician Consulting with a Saudi Patient-3.png" alt="Clinician with a patient">
+          </div>
+          <p class="img-cap">Illustrative imagery; does not depict actual TAG Holding facilities.</p>
+        </div>
+
+        <div class="sub-card">
+          <h3>Alkhawaled Dialysis Center</h3>
+          <span class="sub-sub">Specialized Kidney &amp; Renal Care</span>
+          <p class="sub-desc">Alkhawaled Dialysis Center focuses on kidney dialysis and ongoing renal care, with an emphasis on patient comfort, clinical safety, and continuity of treatment.</p>
+        </div>
+
+      </div>
+    </div>
+    <div class="pf">
+      <span>TAG Holding Group &middot; Investor Profile 2026 &middot; Confidential</span>
+      <div class="pf-dot"></div>
+      <span>Information subject to verification</span>
+      <span class="pf-n">4</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     PAGE 5 — OTHER BUSINESSES
+══════════════════════════════════ -->
+<div class="page">
+  <div class="inner-page">
+    <div class="ph">
+      <svg style="height:20px;width:auto;" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path d="M 262.8 151.2 L 262.8 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 457.2 151.2 L 457.2 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 176.4 207.36 L 234 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 494.64 207.36 L 552.24 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <g fill="#0D1B2A" transform="translate(145.999219 138.9) scale(1.05 -1.05)"><use xlink:href="#nT"/></g>
+        <g fill="#0D1B2A" transform="translate(323.775 138.9) scale(1.05 -1.05)"><use xlink:href="#nA"/></g>
+        <g fill="#0D1B2A" transform="translate(505.586719 138.9) scale(1.05 -1.05)"><use xlink:href="#nGb"/></g>
+        <g fill="#0D1B2A" transform="translate(271.866875 214.64) scale(0.28 -0.28)"><use xlink:href="#nH"/></g>
+        <g fill="#0D1B2A" transform="translate(298.666875 214.64) scale(0.28 -0.28)"><use xlink:href="#nO"/></g>
+        <g fill="#0D1B2A" transform="translate(329.623125 214.64) scale(0.28 -0.28)"><use xlink:href="#nL"/></g>
+        <g fill="#0D1B2A" transform="translate(354.1 214.64) scale(0.28 -0.28)"><use xlink:href="#nD"/></g>
+        <g fill="#0D1B2A" transform="translate(386.933125 214.64) scale(0.28 -0.28)"><use xlink:href="#nI"/></g>
+        <g fill="#0D1B2A" transform="translate(408.4 214.64) scale(0.28 -0.28)"><use xlink:href="#nN"/></g>
+        <g fill="#0D1B2A" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><use xlink:href="#nGr"/></g>
+      </svg>
+      <span class="ph-label">Our Businesses</span>
+    </div>
+    <div class="pc">
+      <p class="eyebrow">The Broader Portfolio</p>
+      <h2 class="sec-title">The Broader Portfolio</h2>
+      <div class="gold-rule"></div>
+
+      <div class="biz-section">
+        <p class="biz-name">Almajorh</p>
+        <span class="biz-tag">Medical &amp; Scientific Services · Hospital Development · Medical Supplies</span>
+        <p class="biz-text">Almajorh provides medical and scientific services under the TAG Holding platform, with activities spanning hospital and medical center development, and medical supplies distribution. The company supports the Kingdom's growing healthcare infrastructure in alignment with Vision 2030 targets.</p>
+      </div>
+
+      <div class="sec-div"></div>
+
+      <div class="biz-section">
+        <p class="biz-name">MEDOOR</p>
+        <span class="biz-tag">Healthcare</span>
+        <p class="biz-text">MEDOOR is a healthcare entity within the TAG Holding portfolio, operating as part of the Group's integrated medical services network in Riyadh.</p>
+      </div>
+
+      <div class="sec-div"></div>
+
+      <div class="biz-section">
+        <p class="biz-name">Wellness &amp; Luxury Beauty</p>
+        <span class="biz-tag">Premium Beauty &amp; Lifestyle</span>
+        <p class="biz-text">Gennaro Dell'Aquila (GA) and Bechara Iskandar Haddad (BA) are two distinct premium beauty and wellness salons operating under the TAG Holding platform, positioned in Riyadh's growing luxury personal care market.</p>
+        <div class="biz-cards">
+          <div class="biz-card"><h4>Gennaro Dell'Aquila (GA)</h4><p>Premium Beauty &amp; Lifestyle</p></div>
+          <div class="biz-card"><h4>Bechara Iskandar Haddad (BA)</h4><p>Luxury Beauty Services</p></div>
+        </div>
+        <div class="img-strip">
+          <img src="Assets/Warm Modern Riyadh Salon Interior-4.png" alt="Modern salon interior">
+        </div>
+      </div>
+
+      <div class="sec-div"></div>
+
+      <div class="biz-section">
+        <p class="biz-name">Events &amp; Hospitality Protocol</p>
+        <span class="biz-tag">Events Management · Hospitality Training</span>
+        <p class="biz-text">WAW Event Management and Elite Hospitality Protocol (EHP) are two ventures within the TAG Holding portfolio, focused on events management and hospitality training respectively.</p>
+        <div class="biz-cards">
+          <div class="biz-card"><h4>WAW Event Management</h4><p>Events &amp; Protocol</p></div>
+          <div class="biz-card"><h4>Elite Hospitality Protocol (EHP)</h4><p>Hospitality Training</p></div>
+        </div>
+      </div>
+
+      <div class="sec-div"></div>
+
+      <div class="biz-section">
+        <p class="biz-name">Royal Academy</p>
+        <span class="biz-tag">Professional Development</span>
+        <p class="biz-text">Royal Academy is a professional development institution under the TAG Holding umbrella, focused on training and certification programs aligned with the Kingdom's human capital development goals.</p>
+      </div>
+
+    </div>
+    <div class="pf">
+      <span>TAG Holding Group &middot; Investor Profile 2026 &middot; Confidential</span>
+      <div class="pf-dot"></div>
+      <span>Information subject to verification</span>
+      <span class="pf-n">5</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     PAGE 6 — GROWTH · LEADERSHIP · CONTACT
+══════════════════════════════════ -->
+<div class="page">
+  <div class="inner-page">
+    <div class="ph">
+      <svg style="height:20px;width:auto;" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path d="M 262.8 151.2 L 262.8 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 457.2 151.2 L 457.2 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 176.4 207.36 L 234 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <path d="M 494.64 207.36 L 552.24 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+        <g fill="#0D1B2A" transform="translate(145.999219 138.9) scale(1.05 -1.05)"><use xlink:href="#nT"/></g>
+        <g fill="#0D1B2A" transform="translate(323.775 138.9) scale(1.05 -1.05)"><use xlink:href="#nA"/></g>
+        <g fill="#0D1B2A" transform="translate(505.586719 138.9) scale(1.05 -1.05)"><use xlink:href="#nGb"/></g>
+        <g fill="#0D1B2A" transform="translate(271.866875 214.64) scale(0.28 -0.28)"><use xlink:href="#nH"/></g>
+        <g fill="#0D1B2A" transform="translate(298.666875 214.64) scale(0.28 -0.28)"><use xlink:href="#nO"/></g>
+        <g fill="#0D1B2A" transform="translate(329.623125 214.64) scale(0.28 -0.28)"><use xlink:href="#nL"/></g>
+        <g fill="#0D1B2A" transform="translate(354.1 214.64) scale(0.28 -0.28)"><use xlink:href="#nD"/></g>
+        <g fill="#0D1B2A" transform="translate(386.933125 214.64) scale(0.28 -0.28)"><use xlink:href="#nI"/></g>
+        <g fill="#0D1B2A" transform="translate(408.4 214.64) scale(0.28 -0.28)"><use xlink:href="#nN"/></g>
+        <g fill="#0D1B2A" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><use xlink:href="#nGr"/></g>
+      </svg>
+      <span class="ph-label">Strategy &amp; Leadership</span>
+    </div>
+    <div class="pc">
+
+      <!-- Growth Priorities -->
+      <p class="eyebrow">Strategic Priorities</p>
+      <h2 class="sec-title" style="font-size:16pt;margin-bottom:6pt;">Four Priorities for the Next Phase</h2>
+      <div class="gold-rule"></div>
+      <ol class="g-list">
+        <li class="g-item">
+          <span class="g-num">01</span>
+          <div>
+            <p class="g-title">Expand the Healthcare Network</p>
+            <p class="g-meta">Businesses: Alinaya Alrafia Medical Company, Alwarood Medical Center, Alkhawaled Dialysis Center<br>Next milestone: Increase patient capacity and geographic reach across Riyadh</p>
+          </div>
+        </li>
+        <li class="g-item">
+          <span class="g-num">02</span>
+          <div>
+            <p class="g-title">Scale Wellness and Beauty Brands Regionally</p>
+            <p class="g-meta">Businesses: Gennaro Dell'Aquila (GA), Bechara Iskandar Haddad (BA)<br>Next milestone: Expand to additional Riyadh locations; explore inter-city presence</p>
+          </div>
+        </li>
+        <li class="g-item">
+          <span class="g-num">03</span>
+          <div>
+            <p class="g-title">Formalise Events and Protocol Businesses</p>
+            <p class="g-meta">Businesses: WAW Event Management, Elite Hospitality Protocol<br>Next milestone: Establish registered operations and develop service offering</p>
+          </div>
+        </li>
+        <li class="g-item">
+          <span class="g-num">04</span>
+          <div>
+            <p class="g-title">Launch Royal Academy as a Professional Certification Institution</p>
+            <p class="g-meta">Business: Royal Academy<br>Next milestone: Complete regulatory registration; define curriculum and certification framework</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="sec-div" style="margin:11pt 0;"></div>
+
+      <!-- Leadership -->
+      <p class="eyebrow">Group Leadership</p>
+      <div class="l-grid">
+        <div class="l-card">
+          <p class="l-role">Founder's Legacy</p>
+          <p class="l-name">The late Dr. Abdulkader Al Gilani</p>
+          <p class="l-bio">The late Dr. Abdulkader Al Gilani founded the business, establishing its roots in healthcare and entrepreneurship in Saudi Arabia.</p>
+        </div>
+        <div class="l-card">
+          <p class="l-role">Current Leadership</p>
+          <p class="l-name">Talal Al Gilani</p>
+          <p class="l-title-t">Owner &amp; Chairman, TAG Holding Group</p>
+          <p class="l-bio">Talal, son of the late Dr. Abdulkader Al Gilani, is the current owner and Chairman of TAG Holding.</p>
+        </div>
+      </div>
+
+      <div class="sec-div" style="margin:11pt 0;"></div>
+
+      <!-- Contact -->
+      <p class="eyebrow">Investment Enquiries</p>
+      <div class="contact-block">
+        <p>TAG Holding Group welcomes enquiries from investors, strategic partners, and healthcare professionals. Investment and partnership enquiries can be directed to the Alinaya Medical contact address below.</p>
+        <p class="contact-email">info@alinayamedical.com</p>
+        <p class="disclaimer">This document is prepared for informational purposes only and does not constitute a solicitation for investment. All figures and business descriptions are subject to verification. TAG Holding Group reserves the right to update, revise, or withdraw this information at any time.</p>
+      </div>
+
+    </div>
+    <div class="pf">
+      <span>TAG Holding Group &middot; Investor Profile 2026 &middot; Confidential</span>
+      <div class="pf-dot"></div>
+      <span>info@alinayamedical.com</span>
+      <span class="pf-n">6</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
