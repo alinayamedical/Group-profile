@@ -13,6 +13,7 @@
       --navy: #0D1B2A;
       --navy-mid: #122233;
       --gold: #C9A84C;
+      --gold-on-light: #8A6A20;
       --white: #FFFFFF;
       --offwhite: #F5F6F8;
       --text: #1A2332;
@@ -35,6 +36,10 @@
     }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
+    /* SKIP LINK */
+    .skip-link { position: absolute; top: -100px; left: 16px; background: var(--navy); color: var(--white); padding: 8px 16px; border-radius: 4px; font-size: 14px; font-weight: 600; z-index: 200; transition: top 0.2s; }
+    .skip-link:focus { top: 16px; }
+
     /* NAVIGATION */
     #nav { position: fixed; top: 0; left: 0; right: 0; height: 64px; background: var(--navy); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; z-index: 100; }
     .nav-logo-wrap { display: flex; align-items: center; }
@@ -43,7 +48,7 @@
     .nav-links a:hover, .nav-links a.active { color: var(--gold); }
     .nav-cta { background: var(--gold); color: var(--navy); padding: 8px 20px; border-radius: 4px; font-size: 13px; font-weight: 600; transition: opacity 0.2s; }
     .nav-cta:hover { opacity: 0.85; }
-    .mobile-menu-btn { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+    .mobile-menu-btn { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; min-width: 44px; min-height: 44px; justify-content: center; align-items: center; }
     .mobile-menu-btn span { width: 22px; height: 2px; background: var(--white); display: block; border-radius: 1px; transition: transform 0.2s; }
     .mobile-nav { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--navy); z-index: 99; padding: 16px 24px; border-top: 1px solid rgba(255,255,255,0.1); }
     .mobile-nav.is-open { display: block; }
@@ -63,6 +68,7 @@
     .btn-primary:hover { opacity: 0.88; }
     .btn-secondary { border: 1.5px solid rgba(255,255,255,0.5); color: var(--white); padding: 12px 28px; border-radius: 4px; font-weight: 500; font-size: 14px; display: inline-block; transition: border-color 0.2s; }
     .btn-secondary:hover { border-color: var(--white); }
+    .hero-logo-print { display: none; }
 
     /* SECTIONS */
     .section { padding: var(--section-pad) 0; }
@@ -70,7 +76,8 @@
     .bg-white { background: var(--white); }
     .bg-offwhite { background: var(--offwhite); }
     .bg-navy { background: var(--navy); }
-    .eyebrow { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--gold); margin-bottom: 12px; }
+    .eyebrow { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--gold-on-light); margin-bottom: 12px; }
+    .bg-navy .eyebrow { color: rgba(201,168,76,0.9); }
     .sec-title { font-size: clamp(28px, 3vw, 38px); font-weight: 700; color: var(--navy); line-height: 1.25; }
     .bg-navy .sec-title { color: var(--white); }
     .gold-rule { width: 32px; height: 2px; background: var(--gold); margin: 16px 0 32px; }
@@ -80,14 +87,11 @@
     .about-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 56px; align-items: start; }
     .about-text p + p { margin-top: 20px; }
     .about-image { border-radius: 4px; overflow: hidden; }
-    .about-image img { width: 100%; height: 320px; object-fit: cover; }
+    .about-image img { width: 100%; height: 320px; object-fit: cover; object-position: center top; }
     .group-facts { margin-top: 32px; border-top: 1px solid var(--border); }
     .gf-row { display: grid; grid-template-columns: 180px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); }
     .gf-row dt { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
     .gf-row dd { font-size: 15px; color: var(--text); }
-    blockquote.pull-quote { border-left: 3px solid var(--gold); padding: 16px 24px; margin: 32px 0 0; background: var(--offwhite); border-radius: 0 4px 4px 0; }
-    blockquote.pull-quote p { font-style: italic; color: var(--text); font-size: 16px; line-height: 1.7; }
-    blockquote.pull-quote cite { display: block; margin-top: 12px; font-size: 13px; color: var(--muted); font-style: normal; font-weight: 600; }
 
     /* PORTFOLIO TABLE */
     .table-wrapper { overflow-x: auto; border: 1px solid var(--border); border-radius: 4px; }
@@ -97,9 +101,10 @@
     .portfolio-matrix tr:last-child td { border-bottom: none; }
     .portfolio-matrix tr:nth-child(even) td { background: #f9fafb; }
     .status-badge { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 100px; font-size: 12px; font-weight: 600; white-space: nowrap; }
-    .status--operating   { background: rgba(16,185,129,0.1); color: #065f46; border: 1px solid rgba(16,185,129,0.3); }
-    .status--development { background: rgba(245,158,11,0.1);  color: #92400e; border: 1px solid rgba(245,158,11,0.3); }
-    .status--planned     { background: rgba(99,102,241,0.1);  color: #3730a3; border: 1px solid rgba(99,102,241,0.3); }
+    .status--operating    { background: rgba(16,185,129,0.1);  color: #065f46; border: 1px solid rgba(16,185,129,0.3); }
+    .status--development  { background: rgba(245,158,11,0.1);  color: #92400e; border: 1px solid rgba(245,158,11,0.3); }
+    .status--planned      { background: rgba(99,102,241,0.1);  color: #3730a3; border: 1px solid rgba(99,102,241,0.3); }
+    .status--unconfirmed  { background: rgba(107,114,128,0.1); color: #374151; border: 1px solid rgba(107,114,128,0.3); }
     .matrix-note { font-size: 13px; color: var(--muted); margin-top: 16px; font-style: italic; }
 
     /* BUSINESS PROFILES */
@@ -129,14 +134,11 @@
     .growth-item__number { font-size: 32px; font-weight: 700; color: var(--gold); line-height: 1; padding-top: 4px; }
     .growth-item h3 { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
     .growth-item__meta { font-size: 13px; color: var(--muted); line-height: 1.6; }
-    .growth-image-strip { position: relative; height: 300px; overflow: hidden; border-radius: 4px; margin-top: 56px; }
-    .growth-image-strip img { width: 100%; height: 100%; object-fit: cover; }
-    .growth-image-strip::after { content: ''; position: absolute; inset: 0; background: rgba(13,27,42,0.55); }
 
     /* LEADERSHIP */
     .leadership-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
     .leader-card { padding: 32px 36px; background: var(--offwhite); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; }
-    .leader-role-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); margin-bottom: 12px; }
+    .leader-role-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-on-light); margin-bottom: 12px; }
     .leader-name { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
     .leader-card .leader-title { font-size: 13px; color: var(--muted); font-weight: 500; margin-bottom: 16px; }
     .leader-card .leader-bio { font-size: 15px; color: var(--text); line-height: 1.7; }
@@ -145,21 +147,22 @@
     #enquiry .eyebrow { color: rgba(201,168,76,0.9); }
     #enquiry .gold-rule { background: var(--gold); }
     #enquiry .enquiry-intro { color: rgba(255,255,255,0.75); max-width: 560px; margin-bottom: 32px; }
-    .enquiry-disclaimer { font-size: 12px; color: rgba(255,255,255,0.45); font-style: italic; max-width: 640px; margin-top: 32px; line-height: 1.6; }
+    .enquiry-disclaimer { font-size: 12px; color: rgba(255,255,255,0.62); font-style: italic; max-width: 640px; margin-top: 32px; line-height: 1.6; }
 
     /* FOOTER */
     #footer { background: var(--navy); padding: 56px 0 0; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; padding-bottom: 40px; }
     .footer-tagline { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 12px; }
-    .footer-col h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); font-weight: 600; margin-bottom: 16px; }
-    .footer-col a { display: block; color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.65); font-weight: 600; margin-bottom: 16px; }
+    .footer-col a { display: block; color: rgba(255,255,255,0.82); font-size: 14px; margin-bottom: 10px; transition: color 0.2s; }
     .footer-col a:hover { color: var(--gold); }
     .footer-legal { border-top: 1px solid rgba(255,255,255,0.1); padding: 16px 0; }
-    .footer-legal p { font-size: 12px; color: rgba(255,255,255,0.4); text-align: center; }
+    .footer-legal p { font-size: 12px; color: rgba(255,255,255,0.58); text-align: center; }
+    .footer-logo-print { display: none; }
 
-    /* FADE-IN */
-    .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
-    .fade-in.is-visible { opacity: 1; transform: none; }
+    /* FADE-IN — content visible by default; animation gated behind .js-loaded */
+    .js-loaded .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .js-loaded .fade-in.is-visible { opacity: 1; transform: none; }
 
     /* RESPONSIVE */
     @media (max-width: 960px) {
@@ -190,30 +193,79 @@
 
     /* PRINT */
     @media print {
-      #nav, .hero-photo-panel, .mobile-menu-btn, .mobile-nav, .growth-image-strip { display: none !important; }
+      /* Hide interactive and decorative elements */
+      #nav, .mobile-menu-btn, .mobile-nav,
+      .hero-photo-panel, .hero-actions,
+      .btn-primary, .btn-secondary { display: none !important; }
+
+      /* Force all animated content visible */
+      .fade-in { opacity: 1 !important; transform: none !important; }
+
+      /* Page setup */
+      @page { margin: 18mm 16mm; }
+      html { font-size: 11pt; }
+      body { background: #fff; color: #000; }
+
+      /* Hero: single column, white background */
       #hero { min-height: auto; grid-template-columns: 1fr; margin-top: 0; background: #fff; }
-      .hero-content { background: #fff; padding: 24px 0; }
-      .hero-eyebrow, #hero h1, .hero-sub { color: #000 !important; }
-      .section { padding: 24px 0; break-inside: avoid; }
-      .biz-profile, .growth-item { break-inside: avoid; }
-      .sec-title { break-after: avoid; color: #000 !important; }
-      #enquiry { break-before: always; background: #fff !important; }
-      #enquiry .sec-title, #enquiry p, #enquiry .eyebrow { color: #000 !important; }
-      .bg-navy, #footer { background: #fff !important; }
-      .footer-tagline, .footer-col a, .footer-legal p { color: #333 !important; }
-      .gold-rule { background: #999; }
-      a[href]::after { content: none; }
+      .hero-content { background: #fff; padding: 16px 0; }
+      .hero-eyebrow { color: #8A6A20 !important; }
+      #hero h1 { color: #000 !important; font-size: 22pt; }
+      .hero-sub { color: #333 !important; }
+
+      /* Print logo: dark ink version */
+      .hero-logo-print { display: block !important; }
+      .hero-logo-screen { display: none !important; }
+      .footer-logo-print { display: block !important; }
+      .footer-logo-screen { display: none !important; }
+
+      /* Sections */
+      .section { padding: 16px 0; }
+      .container { padding: 0; max-width: none; }
+      h2.sec-title, h3 { color: #000 !important; break-after: avoid; }
+      .gold-rule { background: #000; height: 1px; }
+      .eyebrow { color: #8A6A20 !important; }
+
+      /* Navy backgrounds → white */
+      .bg-navy, #footer, #enquiry { background: #fff !important; }
+      .bg-navy .sec-title, #enquiry .sec-title { color: #000 !important; }
+      .bg-navy p, #enquiry p { color: #333 !important; }
+      #enquiry .eyebrow { color: #8A6A20 !important; }
+      .enquiry-disclaimer { color: #555 !important; }
+
+      /* Table: readable headers */
       .portfolio-matrix { font-size: 9pt; }
-      .leadership-two-col { grid-template-columns: 1fr; }
+      .portfolio-matrix th { background: #e8e8e8 !important; color: #000 !important; border: 1px solid #999; }
+      .portfolio-matrix td { border: 1px solid #ccc; }
+      .portfolio-matrix thead { display: table-header-group; }
+
+      /* Footer */
+      .footer-grid { grid-template-columns: 1fr; gap: 16px; }
+      .footer-tagline { color: #555 !important; }
+      .footer-col h4 { color: #555 !important; }
+      .footer-col a, .footer-col span { color: #333 !important; }
+      .footer-legal p { color: #777 !important; }
+
+      /* Page breaks: headings stay with following content */
+      .biz-profile { break-inside: auto; }
+      .growth-item { break-inside: avoid; }
+      .entity-card { break-inside: avoid; }
+      .gf-row { break-inside: avoid; }
+      #enquiry { break-before: auto; }
+
+      /* Don't print URL after links */
+      a[href]::after { content: none !important; }
     }
   </style>
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <!-- NAVIGATION -->
 <header id="nav" role="banner">
   <div class="nav-logo-wrap">
-    <svg style="height: 34px; width: auto;" aria-label="TAG Holding" role="img" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg class="hero-logo-screen" style="height: 34px; width: auto;" aria-label="TAG Holding" role="img" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
         <path id="n-T" d="M 2336 0 L 1370 0 L 1370 3763 L 128 3763 L 128 4570 L 3578 4570 L 3578 3763 L 2336 3763 L 2336 0 z" transform="scale(0.015625)"/>
         <path id="n-A" d="M 3373 0 L 3040 1088 L 1376 1088 L 1043 0 L 0 0 L 1613 4589 L 2797 4589 L 4416 0 L 3373 0 z M 2477 2963 Q 2445 3072 2393 3238 Q 2342 3405 2291 3577 Q 2240 3750 2208 3878 Q 2176 3750 2121 3561 Q 2067 3373 2019 3203 Q 1971 3034 1946 2963 L 1619 1901 L 2810 1901 L 2477 2963 z" transform="scale(0.015625)"/>
@@ -241,6 +293,22 @@
       <g fill="#ffffff" transform="translate(408.4 214.64) scale(0.28 -0.28)"><use xlink:href="#n-N"/></g>
       <g fill="#ffffff" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><use xlink:href="#n-Gr"/></g>
     </svg>
+    <svg class="hero-logo-print" style="height: 34px; width: auto;" aria-hidden="true" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M 262.8 151.2 L 262.8 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+      <path d="M 457.2 151.2 L 457.2 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+      <path d="M 176.4 207.36 L 234 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+      <path d="M 494.64 207.36 L 552.24 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+      <g fill="#0D1B2A" transform="translate(145.999219 138.9) scale(1.05 -1.05)"><use xlink:href="#n-T"/></g>
+      <g fill="#0D1B2A" transform="translate(323.775 138.9) scale(1.05 -1.05)"><use xlink:href="#n-A"/></g>
+      <g fill="#0D1B2A" transform="translate(505.586719 138.9) scale(1.05 -1.05)"><use xlink:href="#n-Gb"/></g>
+      <g fill="#0D1B2A" transform="translate(271.866875 214.64) scale(0.28 -0.28)"><use xlink:href="#n-H"/></g>
+      <g fill="#0D1B2A" transform="translate(298.666875 214.64) scale(0.28 -0.28)"><use xlink:href="#n-O"/></g>
+      <g fill="#0D1B2A" transform="translate(329.623125 214.64) scale(0.28 -0.28)"><use xlink:href="#n-L"/></g>
+      <g fill="#0D1B2A" transform="translate(354.1 214.64) scale(0.28 -0.28)"><use xlink:href="#n-D"/></g>
+      <g fill="#0D1B2A" transform="translate(386.933125 214.64) scale(0.28 -0.28)"><use xlink:href="#n-I"/></g>
+      <g fill="#0D1B2A" transform="translate(408.4 214.64) scale(0.28 -0.28)"><use xlink:href="#n-N"/></g>
+      <g fill="#0D1B2A" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><use xlink:href="#n-Gr"/></g>
+    </svg>
     <span class="sr-only">TAG Holding</span>
   </div>
   <nav aria-label="Primary navigation">
@@ -267,11 +335,12 @@
   <a href="#enquiry">Enquire</a>
 </nav>
 
+<main id="main-content">
+
 <!-- SECTION 1: HERO -->
 <section id="hero" aria-labelledby="hero-heading">
   <div class="hero-content">
-    <svg style="height: 48px; width: auto;" aria-label="TAG Holding" role="img" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <use xlink:href="#logo-defs" style="display:none"/>
+    <svg class="hero-logo-screen" style="height: 48px; width: auto;" aria-label="TAG Holding" role="img" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <path d="M 262.8 151.2 L 262.8 68.4" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
       <path d="M 457.2 151.2 L 457.2 68.4" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
       <path d="M 176.4 207.36 L 234 207.36" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
@@ -287,6 +356,22 @@
       <g fill="#ffffff" transform="translate(408.4 214.64) scale(0.28 -0.28)"><path d="M 4243 0 L 3571 0 L 1126 3795 L 1101 3795 Q 1114 3571 1133 3238 Q 1152 2906 1152 2554 L 1152 0 L 621 0 L 621 4570 L 1286 4570 L 3725 787 L 3750 787 Q 3744 890 3734 1094 Q 3725 1299 3715 1542 Q 3706 1786 3706 1990 L 3706 4570 L 4243 4570 L 4243 0 z" transform="scale(0.015625)"/></g>
       <g fill="#ffffff" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><path d="M 2605 2413 L 4186 2413 L 4186 173 Q 3814 51 3436 -6 Q 3059 -64 2579 -64 Q 1869 -64 1382 221 Q 896 506 643 1034 Q 390 1562 390 2285 Q 390 3002 672 3526 Q 954 4051 1482 4342 Q 2010 4634 2758 4634 Q 3142 4634 3484 4563 Q 3827 4493 4122 4365 L 3904 3866 Q 3661 3974 3357 4051 Q 3053 4128 2726 4128 Q 1907 4128 1449 3635 Q 992 3142 992 2285 Q 992 1741 1168 1321 Q 1344 902 1721 668 Q 2099 435 2714 435 Q 3014 435 3225 467 Q 3437 499 3610 544 L 3610 1901 L 2605 1901 L 2605 2413 z" transform="scale(0.015625)"/></g>
     </svg>
+    <svg class="hero-logo-print" style="height: 48px; width: auto;" aria-hidden="true" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M 262.8 151.2 L 262.8 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+      <path d="M 457.2 151.2 L 457.2 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+      <path d="M 176.4 207.36 L 234 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+      <path d="M 494.64 207.36 L 552.24 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+      <g fill="#0D1B2A" transform="translate(145.999219 138.9) scale(1.05 -1.05)"><use xlink:href="#n-T"/></g>
+      <g fill="#0D1B2A" transform="translate(323.775 138.9) scale(1.05 -1.05)"><use xlink:href="#n-A"/></g>
+      <g fill="#0D1B2A" transform="translate(505.586719 138.9) scale(1.05 -1.05)"><use xlink:href="#n-Gb"/></g>
+      <g fill="#0D1B2A" transform="translate(271.866875 214.64) scale(0.28 -0.28)"><use xlink:href="#n-H"/></g>
+      <g fill="#0D1B2A" transform="translate(298.666875 214.64) scale(0.28 -0.28)"><use xlink:href="#n-O"/></g>
+      <g fill="#0D1B2A" transform="translate(329.623125 214.64) scale(0.28 -0.28)"><use xlink:href="#n-L"/></g>
+      <g fill="#0D1B2A" transform="translate(354.1 214.64) scale(0.28 -0.28)"><use xlink:href="#n-D"/></g>
+      <g fill="#0D1B2A" transform="translate(386.933125 214.64) scale(0.28 -0.28)"><use xlink:href="#n-I"/></g>
+      <g fill="#0D1B2A" transform="translate(408.4 214.64) scale(0.28 -0.28)"><use xlink:href="#n-N"/></g>
+      <g fill="#0D1B2A" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><use xlink:href="#n-Gr"/></g>
+    </svg>
     <p class="hero-eyebrow">Investor Profile &middot; 2026</p>
     <h1 id="hero-heading">Building a Healthier, More Beautiful and Prosperous Future.</h1>
     <p class="hero-sub">TAG Holding Group is a Saudi holding company based in Riyadh, with a diversified portfolio spanning healthcare, wellness, beauty, events, and professional development.</p>
@@ -296,7 +381,7 @@
     </div>
   </div>
   <div class="hero-photo-panel">
-    <img src="Assets/Riyadh skyline at golden hour-1.png" alt="Riyadh city skyline at golden hour">
+    <img src="Assets/Riyadh skyline at golden hour-1.png" alt="Riyadh city skyline at golden hour" fetchpriority="high" width="1200" height="750">
   </div>
 </section>
 
@@ -334,7 +419,7 @@
         </dl>
       </div>
       <div class="about-image fade-in">
-        <img src="Assets/Quiet consultation in a calm clinic-5.png" alt="Clinician in a quiet consultation room">
+        <img src="Assets/Quiet consultation in a calm clinic-5.png" alt="Clinician in a quiet consultation room" loading="lazy" decoding="async" width="560" height="320">
       </div>
     </div>
   </div>
@@ -406,14 +491,14 @@
             <td>WAW Event Management</td>
             <td>Events &amp; Protocol</td>
             <td>Portfolio</td>
-            <td><span class="status-badge status--development">Under Development</span></td>
+            <td><span class="status-badge status--unconfirmed">Status Unconfirmed</span></td>
             <td>Riyadh</td>
           </tr>
           <tr>
             <td>Elite Hospitality Protocol (EHP)</td>
             <td>Hospitality Training</td>
             <td>Portfolio</td>
-            <td><span class="status-badge status--development">Under Development</span></td>
+            <td><span class="status-badge status--unconfirmed">Status Unconfirmed</span></td>
             <td>Riyadh</td>
           </tr>
           <tr>
@@ -463,10 +548,10 @@
       </div>
       <div class="biz-images">
         <figure>
-          <img src="Assets/Home nurse checks elderly patient's blood pressure-2.png" alt="Home nurse checking elderly patient's blood pressure">
+          <img src="Assets/Home nurse checks elderly patient's blood pressure-2.png" alt="Home nurse checking elderly patient's blood pressure" loading="lazy" decoding="async" width="560" height="220">
         </figure>
         <figure>
-          <img src="Assets/Clinician Consulting with a Saudi Patient-3.png" alt="Clinician consulting with a Saudi patient">
+          <img src="Assets/Clinician Consulting with a Saudi Patient-3.png" alt="Clinician consulting with a Saudi patient" loading="lazy" decoding="async" width="560" height="220">
         </figure>
       </div>
     </article>
@@ -489,7 +574,7 @@
       </div>
       <div class="biz-image">
         <figure>
-          <img src="Assets/Warm Modern Riyadh Salon Interior-4.png" alt="Warm modern salon interior in Riyadh">
+          <img src="Assets/Warm Modern Riyadh Salon Interior-4.png" alt="Warm modern salon interior in Riyadh" loading="lazy" decoding="async" width="1120" height="260">
         </figure>
       </div>
     </article>
@@ -497,25 +582,25 @@
     <article class="biz-profile fade-in">
       <div class="biz-header">
         <h3>Events &amp; Hospitality Protocol</h3>
-        <span class="status-badge status--development">Under Development</span>
+        <span class="status-badge status--unconfirmed">Status Unconfirmed</span>
       </div>
       <p class="biz-desc">WAW Event Management and Elite Hospitality Protocol (EHP) are two ventures within the TAG Holding development portfolio. Both are at an early stage; their operating status has not been formally confirmed.</p>
       <div class="biz-brand-cards">
         <div class="biz-brand-card">
           <h4>WAW Event Management</h4>
-          <p>Events &amp; Protocol (Under Development)</p>
+          <p>Events &amp; Protocol</p>
         </div>
         <div class="biz-brand-card">
           <h4>Elite Hospitality Protocol (EHP)</h4>
-          <p>Hospitality Training (Under Development)</p>
+          <p>Hospitality Training</p>
         </div>
       </div>
       <div class="biz-images">
         <figure>
-          <img src="Assets/Riyadh Conference With Abstract Stage Screens-7.png" alt="Conference hall with abstract stage screens in Riyadh">
+          <img src="Assets/Riyadh Conference With Abstract Stage Screens-7.png" alt="Conference hall with abstract stage screens in Riyadh" loading="lazy" decoding="async" width="560" height="220" style="object-position: center top;">
         </figure>
         <figure>
-          <img src="Assets/Formal Dining Etiquette Workshop-6.png" alt="Formal dining etiquette workshop">
+          <img src="Assets/Formal Dining Etiquette Workshop-6.png" alt="Formal dining etiquette workshop" loading="lazy" decoding="async" width="560" height="220">
         </figure>
       </div>
       <p class="profile-disclaimer">WAW Event and EHP are development-stage ventures. Inclusion here reflects strategic intent and does not confirm current operational activity.</p>
@@ -529,7 +614,7 @@
       <p class="biz-desc">The Royal Academy is a planned professional development institution under the TAG Holding umbrella. It is in the conceptual stage and is not yet operational.</p>
       <div class="biz-image">
         <figure>
-          <img src="Assets/Hospitality workshop with refined table setting-9.png" alt="Hospitality workshop with refined table setting">
+          <img src="Assets/Hospitality workshop with refined table setting-9.png" alt="Hospitality workshop with refined table setting" loading="lazy" decoding="async" width="1120" height="260" style="object-position: center top;">
         </figure>
       </div>
       <p class="profile-disclaimer">Royal Academy is a planned venture. No operational activity has commenced.</p>
@@ -586,9 +671,6 @@
         </div>
       </li>
     </ol>
-    <div class="growth-image-strip fade-in">
-      <img src="Assets/Riyadh executive meeting room-8.png" alt="Executive meeting room in Riyadh">
-    </div>
   </div>
 </section>
 
@@ -611,6 +693,9 @@
         <p class="leader-bio">Talal, son of the late Dr. Abdulkader Al Gilani, is the current owner and Chairman of TAG Holding.</p>
       </div>
     </div>
+    <div style="margin-top: 40px; border-radius: 4px; overflow: hidden;">
+      <img src="Assets/Riyadh executive meeting room-8.png" alt="Executive meeting room in Riyadh" loading="lazy" decoding="async" width="1160" height="400" style="width: 100%; height: 360px; object-fit: cover; display: block;">
+    </div>
   </div>
 </section>
 
@@ -622,17 +707,18 @@
     <div class="gold-rule"></div>
     <p class="enquiry-intro">TAG Holding Group welcomes enquiries from investors, strategic partners, and healthcare professionals. Please contact the Group directly to discuss opportunities.</p>
     <!-- TODO: confirm TAG Holding contact email before publication -->
-    <a href="mailto:[to be confirmed]" class="btn-primary">[Email address to be confirmed]</a>
     <p class="enquiry-disclaimer">This document is prepared for informational purposes only and does not constitute a solicitation for investment. All figures and business descriptions are subject to verification. TAG Holding Group reserves the right to update, revise, or withdraw this information at any time.</p>
   </div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer id="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <svg style="height: 28px; width: auto;" aria-label="TAG Holding" role="img" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg class="footer-logo-screen" style="height: 28px; width: auto;" aria-label="TAG Holding" role="img" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <path d="M 262.8 151.2 L 262.8 68.4" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
           <path d="M 457.2 151.2 L 457.2 68.4" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
           <path d="M 176.4 207.36 L 234 207.36" fill="none" stroke="#c9a84c" stroke-width="2.2"/>
@@ -647,6 +733,22 @@
           <g fill="#ffffff" transform="translate(386.933125 214.64) scale(0.28 -0.28)"><path d="M 1907 0 L 256 0 L 256 333 L 794 454 L 794 4109 L 256 4237 L 256 4570 L 1907 4570 L 1907 4237 L 1370 4109 L 1370 454 L 1907 333 L 1907 0 z" transform="scale(0.015625)"/></g>
           <g fill="#ffffff" transform="translate(408.4 214.64) scale(0.28 -0.28)"><path d="M 4243 0 L 3571 0 L 1126 3795 L 1101 3795 Q 1114 3571 1133 3238 Q 1152 2906 1152 2554 L 1152 0 L 621 0 L 621 4570 L 1286 4570 L 3725 787 L 3750 787 Q 3744 890 3734 1094 Q 3725 1299 3715 1542 Q 3706 1786 3706 1990 L 3706 4570 L 4243 4570 L 4243 0 z" transform="scale(0.015625)"/></g>
           <g fill="#ffffff" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><path d="M 2605 2413 L 4186 2413 L 4186 173 Q 3814 51 3436 -6 Q 3059 -64 2579 -64 Q 1869 -64 1382 221 Q 896 506 643 1034 Q 390 1562 390 2285 Q 390 3002 672 3526 Q 954 4051 1482 4342 Q 2010 4634 2758 4634 Q 3142 4634 3484 4563 Q 3827 4493 4122 4365 L 3904 3866 Q 3661 3974 3357 4051 Q 3053 4128 2726 4128 Q 1907 4128 1449 3635 Q 992 3142 992 2285 Q 992 1741 1168 1321 Q 1344 902 1721 668 Q 2099 435 2714 435 Q 3014 435 3225 467 Q 3437 499 3610 544 L 3610 1901 L 2605 1901 L 2605 2413 z" transform="scale(0.015625)"/></g>
+        </svg>
+        <svg class="footer-logo-print" style="height: 28px; width: auto;" aria-hidden="true" viewBox="120 55 470 180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path d="M 262.8 151.2 L 262.8 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+          <path d="M 457.2 151.2 L 457.2 68.4" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+          <path d="M 176.4 207.36 L 234 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+          <path d="M 494.64 207.36 L 552.24 207.36" fill="none" stroke="#8A6A20" stroke-width="2.2"/>
+          <g fill="#0D1B2A" transform="translate(145.999219 138.9) scale(1.05 -1.05)"><use xlink:href="#n-T"/></g>
+          <g fill="#0D1B2A" transform="translate(323.775 138.9) scale(1.05 -1.05)"><use xlink:href="#n-A"/></g>
+          <g fill="#0D1B2A" transform="translate(505.586719 138.9) scale(1.05 -1.05)"><use xlink:href="#n-Gb"/></g>
+          <g fill="#0D1B2A" transform="translate(271.866875 214.64) scale(0.28 -0.28)"><use xlink:href="#n-H"/></g>
+          <g fill="#0D1B2A" transform="translate(298.666875 214.64) scale(0.28 -0.28)"><use xlink:href="#n-O"/></g>
+          <g fill="#0D1B2A" transform="translate(329.623125 214.64) scale(0.28 -0.28)"><use xlink:href="#n-L"/></g>
+          <g fill="#0D1B2A" transform="translate(354.1 214.64) scale(0.28 -0.28)"><use xlink:href="#n-D"/></g>
+          <g fill="#0D1B2A" transform="translate(386.933125 214.64) scale(0.28 -0.28)"><use xlink:href="#n-I"/></g>
+          <g fill="#0D1B2A" transform="translate(408.4 214.64) scale(0.28 -0.28)"><use xlink:href="#n-N"/></g>
+          <g fill="#0D1B2A" transform="translate(436.208438 214.64) scale(0.28 -0.28)"><use xlink:href="#n-Gr"/></g>
         </svg>
         <p class="footer-tagline">TAG Holding Group &middot; Riyadh, Saudi Arabia</p>
       </div>
@@ -664,8 +766,7 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <!-- TODO: confirm TAG Holding contact email before publication -->
-        <span style="color: rgba(255,255,255,0.5); font-size: 14px; display: block; margin-bottom: 10px;">[Email to be confirmed]</span>
-        <span style="color: rgba(255,255,255,0.5); font-size: 14px;">Riyadh, Saudi Arabia</span>
+        <span style="color: rgba(255,255,255,0.65); font-size: 14px;">Riyadh, Saudi Arabia</span>
       </div>
     </div>
     <div class="footer-legal">
@@ -675,36 +776,49 @@
 </footer>
 
 <script>
+  document.documentElement.classList.add('js-loaded');
+
   // Mobile nav toggle
   const menuBtn = document.querySelector('.mobile-menu-btn');
   const mobileNav = document.getElementById('mobile-nav');
-  menuBtn.addEventListener('click', () => {
-    const open = mobileNav.classList.toggle('is-open');
-    menuBtn.setAttribute('aria-expanded', String(open));
-    mobileNav.setAttribute('aria-hidden', String(!open));
-  });
-  document.addEventListener('click', (e) => {
-    if (!menuBtn.contains(e.target) && !mobileNav.contains(e.target)) {
-      mobileNav.classList.remove('is-open');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      mobileNav.setAttribute('aria-hidden', 'true');
-    }
-  });
-  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+
+  function openNav() {
+    mobileNav.classList.add('is-open');
+    menuBtn.setAttribute('aria-expanded', 'true');
+    menuBtn.setAttribute('aria-label', 'Close navigation');
+    mobileNav.setAttribute('aria-hidden', 'false');
+  }
+  function closeNav() {
     mobileNav.classList.remove('is-open');
     menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-label', 'Open navigation');
     mobileNav.setAttribute('aria-hidden', 'true');
-  }));
+  }
+
+  menuBtn.addEventListener('click', () => {
+    mobileNav.classList.contains('is-open') ? closeNav() : openNav();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) closeNav();
+  });
+  document.addEventListener('click', (e) => {
+    if (!menuBtn.contains(e.target) && !mobileNav.contains(e.target)) closeNav();
+  });
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
 
   // Fade-in on scroll
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!prefersReducedMotion) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    } else {
+      document.querySelectorAll('.fade-in').forEach(el => el.classList.add('is-visible'));
+    }
   } else {
     document.querySelectorAll('.fade-in').forEach(el => el.classList.add('is-visible'));
   }
@@ -712,16 +826,44 @@
   // Nav scroll spy
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
-  const scrollSpy = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        navLinks.forEach(a => a.classList.remove('active'));
-        const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-50% 0px -50% 0px' });
-  sections.forEach(s => scrollSpy.observe(s));
+  if ('IntersectionObserver' in window) {
+    const scrollSpy = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-50% 0px -50% 0px' });
+    sections.forEach(s => scrollSpy.observe(s));
+  }
 </script>
+
+<!--
+=== DELIVERY CHECKLIST — NOT FOR PUBLICATION ===
+
+PENDING APPROVAL / CONFIRMATION:
+[ ] Contact email for TAG Holding — required before Enquire section can include a button or link
+[ ] Exact wording of Dr. Al Gilani's attributed quotation — removed until approved
+[ ] Verified founding/incorporation year for TAG Holding — "Founded" fact row removed until confirmed
+[ ] Confirm operating status of WAW Event Management — currently "Status Unconfirmed"
+[ ] Confirm operating status of Elite Hospitality Protocol (EHP) — currently "Status Unconfirmed"
+[ ] Confirm legal entity name: "Glamour Affairs (GA)" — preserved as-is pending confirmation
+[ ] Confirm legal entity name: "Beauty Affairs (BA)" — preserved as-is pending confirmation
+[ ] Confirm legal entity name: "Elite Hospitality Protocol (EHP)" — preserved as-is pending confirmation
+[ ] Confirm legal entity name: "Al Khawaled Medical Center" — preserved as-is pending confirmation
+[ ] Confirmed relationship type for Al Warood, Al Jood, Al Khawaled (currently "Portfolio" — unverified)
+[ ] Portrait photograph of Dr. Abdulkader Al Gilani (founder, historical)
+[ ] Portrait photograph of Talal Al Gilani (current chairman, min 400×400px)
+[ ] TAG Holding CR (Commercial Registration) number — for legal footer
+[ ] TAG Holding registered address — for contact section
+[ ] Website or social media URLs for Glamour Affairs (GA) and Beauty Affairs (BA)
+
+ASSETS OUTSTANDING:
+[ ] Optimised WebP/AVIF image derivatives — requires cwebp or ImageMagick on build machine
+[ ] Approved business logos for GA, BA, WAW Event, EHP, Royal Academy
+=== END CHECKLIST ===
+-->
 </body>
 </html>
