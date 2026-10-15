@@ -3,7 +3,7 @@ const path = require('path');
 
 const htmlPath = path.resolve(__dirname, 'print.html');
 const fileUrl = 'file:///' + htmlPath.replace(/\\/g, '/');
-const outFile = path.resolve(__dirname, 'Documents', 'TAG_Holding_Investor_Profile_2026.pdf');
+const outFile = path.resolve(__dirname, 'Documents', 'TAG_Holding_Corporate_Profile_2026.pdf');
 
 (async () => {
   const browser = await puppeteer.launch({
